@@ -43,16 +43,16 @@ public:
     QLabel *label_7;
     QLabel *label_6;
     QTextEdit *studentPwTE;
-    QTextEdit *nameTE;
+    QTextEdit *studentNameTE;
     QLabel *label_8;
     QPushButton *registerStudentBtn;
     QWidget *page_2;
-    QTextEdit *pwEdit_3;
-    QTextEdit *emailEdit_5;
+    QTextEdit *teachPwTE;
+    QTextEdit *teachEmailTE;
     QPushButton *pushButton_3;
     QLabel *label_11;
     QLabel *label_10;
-    QTextEdit *emailEdit_4;
+    QTextEdit *teachNameTE;
     QLabel *label_12;
     QPushButton *backButton_3;
     QLabel *label_9;
@@ -152,9 +152,9 @@ public:
         studentPwTE = new QTextEdit(page);
         studentPwTE->setObjectName("studentPwTE");
         studentPwTE->setGeometry(QRect(240, 290, 311, 31));
-        nameTE = new QTextEdit(page);
-        nameTE->setObjectName("nameTE");
-        nameTE->setGeometry(QRect(240, 190, 311, 31));
+        studentNameTE = new QTextEdit(page);
+        studentNameTE->setObjectName("studentNameTE");
+        studentNameTE->setGeometry(QRect(240, 190, 311, 31));
         label_8 = new QLabel(page);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(180, 190, 41, 20));
@@ -165,12 +165,12 @@ public:
         stackedWidget->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
-        pwEdit_3 = new QTextEdit(page_2);
-        pwEdit_3->setObjectName("pwEdit_3");
-        pwEdit_3->setGeometry(QRect(260, 300, 311, 31));
-        emailEdit_5 = new QTextEdit(page_2);
-        emailEdit_5->setObjectName("emailEdit_5");
-        emailEdit_5->setGeometry(QRect(260, 250, 311, 31));
+        teachPwTE = new QTextEdit(page_2);
+        teachPwTE->setObjectName("teachPwTE");
+        teachPwTE->setGeometry(QRect(260, 300, 311, 31));
+        teachEmailTE = new QTextEdit(page_2);
+        teachEmailTE->setObjectName("teachEmailTE");
+        teachEmailTE->setGeometry(QRect(260, 250, 311, 31));
         pushButton_3 = new QPushButton(page_2);
         pushButton_3->setObjectName("pushButton_3");
         pushButton_3->setGeometry(QRect(340, 360, 131, 41));
@@ -182,9 +182,9 @@ public:
         label_10->setObjectName("label_10");
         label_10->setGeometry(QRect(200, 250, 41, 20));
         label_10->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        emailEdit_4 = new QTextEdit(page_2);
-        emailEdit_4->setObjectName("emailEdit_4");
-        emailEdit_4->setGeometry(QRect(260, 200, 311, 31));
+        teachNameTE = new QTextEdit(page_2);
+        teachNameTE->setObjectName("teachNameTE");
+        teachNameTE->setGeometry(QRect(260, 200, 311, 31));
         label_12 = new QLabel(page_2);
         label_12->setObjectName("label_12");
         label_12->setGeometry(QRect(270, 130, 281, 51));
@@ -201,7 +201,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -255,7 +255,7 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        nameTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        studentNameTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
@@ -265,7 +265,7 @@ public:
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         label_8->setText(QCoreApplication::translate("Widget", "Name:", nullptr));
         registerStudentBtn->setText(QCoreApplication::translate("Widget", "Register", nullptr));
-        pwEdit_3->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        teachPwTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
@@ -273,7 +273,7 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        emailEdit_5->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        teachEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
@@ -284,7 +284,7 @@ public:
         pushButton_3->setText(QCoreApplication::translate("Widget", "Register", nullptr));
         label_11->setText(QCoreApplication::translate("Widget", "Password:", nullptr));
         label_10->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
-        emailEdit_4->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        teachNameTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"

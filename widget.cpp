@@ -82,8 +82,52 @@ void Widget::on_registerStudentBtn_clicked()
     if(file.open(QIODevice::Append | QIODevice::Text)) {
         QTextStream out(&file);
 
-        QString name = ui->nameTE->toPlainText();
+        QString name = ui->studentNameTE->toPlainText();
         QString password = ui->studentPwTE->toPlainText();
+
+        if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
+            out << name << Qt::endl << email << Qt::endl << password << Qt::endl;
+            out << Qt::endl;
+            QMessageBox::information(this, "Registration successful", "You have successfully registered your account!");
+        } else {
+            QMessageBox::critical(this, "Invalid details", "One or more fields have been left empty. Please ensure all fields are filled out.");
+            file.close();
+            return;
+        }
+        file.close();
+    } else {
+        qDebug() << "Could not open file for writing.";
+    }
+}
+
+
+void Widget::on_pushButton_3_clicked()
+{
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QFile file(filePath);
+
+    QString email = ui->teachEmailTE->toPlainText();
+
+    if(file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+            if (!email.isEmpty() && line.contains(email)) {
+                QMessageBox::critical(this, "Invalid email", "This email is already taken");
+                file.close();
+                return;
+            }
+        }
+        file.close();
+    } else {
+        qDebug() << "Could not open file for reading.";
+    }
+
+    if(file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+
+        QString name = ui->teachNameTE->toPlainText();
+        QString password = ui->teachPwTE->toPlainText();
 
         if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
             out << name << Qt::endl << email << Qt::endl << password << Qt::endl;
