@@ -29,7 +29,7 @@
     <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="welcomePage">
     <property name="font">
@@ -357,7 +357,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="nameTE">
+    <widget class="QTextEdit" name="studentNameTE">
      <property name="geometry">
       <rect>
        <x>240</x>
@@ -408,7 +408,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </widget>
    </widget>
    <widget class="QWidget" name="page_2">
-    <widget class="QTextEdit" name="pwEdit_3">
+    <widget class="QTextEdit" name="teachPwTE">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -428,7 +428,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="emailEdit_5">
+    <widget class="QTextEdit" name="teachEmailTE">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -493,7 +493,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QTextEdit" name="emailEdit_4">
+    <widget class="QTextEdit" name="teachNameTE">
      <property name="geometry">
       <rect>
        <x>260</x>
