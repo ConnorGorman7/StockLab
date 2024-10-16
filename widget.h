@@ -34,6 +34,8 @@ private slots:
 
     void on_registerTeacherBtn_clicked();
 
+    void on_loginScreenButton_clicked();
+
 private:
     Ui::Widget *ui;
 };

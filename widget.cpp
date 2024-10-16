@@ -144,3 +144,52 @@ void Widget::on_registerTeacherBtn_clicked()
     }
 }
 
+
+void Widget::on_loginScreenButton_clicked()
+{
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QFile file(filePath);
+
+    QString email = ui->loginEmailTE->toPlainText();
+    QString password = ui->loginPwTE->toPlainText();
+
+    if (email.isEmpty() || password.isEmpty()) {
+        QMessageBox::critical(this, "Invalid input", "Email or password was left empty. Please ensure the fields are filled out.");
+        return;
+    }
+
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+        bool emailFound = false;
+
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+            if (QString::compare(line, email) == 0) {
+                emailFound = true;
+                line = in.readLine(); // Read the next line for the password
+
+                if (QString::compare(line, password) == 0) {
+                    QMessageBox::information(this, "Login success", "Successfully logged in!");
+                    file.close();
+                    // Switch to modules screen once implemented
+                    return;
+                } else {
+                    QMessageBox::critical(this, "Incorrect password", "Incorrect password. Please try again.");
+                    file.close();
+                    return;
+                }
+            }
+        }
+
+        // Check if email was found after the loop
+        if (!emailFound) {
+            QMessageBox::critical(this, "Invalid email", "The specified email could not be found. Please try again.");
+        }
+
+        file.close();
+    } else {
+        qDebug() << "Could not open file for reading.";
+    }
+}
+
+

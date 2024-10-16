@@ -29,7 +29,7 @@
     <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
    </property>
    <property name="currentIndex">
-    <number>3</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="welcomePage">
     <property name="font">
@@ -165,7 +165,7 @@
       <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QTextEdit" name="emailEdit">
+    <widget class="QTextEdit" name="loginEmailTE">
      <property name="geometry">
       <rect>
        <x>250</x>
@@ -201,7 +201,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QTextEdit" name="pwEdit">
+    <widget class="QTextEdit" name="loginPwTE">
      <property name="geometry">
       <rect>
        <x>250</x>
@@ -234,7 +234,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <string>Go back</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="loginScreenButton">
      <property name="geometry">
       <rect>
        <x>330</x>

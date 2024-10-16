@@ -31,11 +31,11 @@ public:
     QWidget *loginPage;
     QLabel *label_3;
     QLabel *label_2;
-    QTextEdit *emailEdit;
+    QTextEdit *loginEmailTE;
     QLabel *label_4;
-    QTextEdit *pwEdit;
+    QTextEdit *loginPwTE;
     QPushButton *backButton;
-    QPushButton *pushButton;
+    QPushButton *loginScreenButton;
     QWidget *page;
     QTextEdit *studentEmailTE;
     QLabel *label_5;
@@ -111,22 +111,22 @@ public:
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(190, 200, 41, 20));
         label_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        emailEdit = new QTextEdit(loginPage);
-        emailEdit->setObjectName("emailEdit");
-        emailEdit->setGeometry(QRect(250, 200, 311, 31));
+        loginEmailTE = new QTextEdit(loginPage);
+        loginEmailTE->setObjectName("loginEmailTE");
+        loginEmailTE->setGeometry(QRect(250, 200, 311, 31));
         label_4 = new QLabel(loginPage);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(160, 270, 71, 20));
         label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        pwEdit = new QTextEdit(loginPage);
-        pwEdit->setObjectName("pwEdit");
-        pwEdit->setGeometry(QRect(250, 270, 311, 31));
+        loginPwTE = new QTextEdit(loginPage);
+        loginPwTE->setObjectName("loginPwTE");
+        loginPwTE->setGeometry(QRect(250, 270, 311, 31));
         backButton = new QPushButton(loginPage);
         backButton->setObjectName("backButton");
         backButton->setGeometry(QRect(40, 30, 83, 29));
-        pushButton = new QPushButton(loginPage);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(330, 340, 131, 41));
+        loginScreenButton = new QPushButton(loginPage);
+        loginScreenButton->setObjectName("loginScreenButton");
+        loginScreenButton->setGeometry(QRect(330, 340, 131, 41));
         stackedWidget->addWidget(loginPage);
         page = new QWidget();
         page->setObjectName("page");
@@ -201,7 +201,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -216,7 +216,7 @@ public:
         regTeachButton->setText(QCoreApplication::translate("Widget", "Register as a teacher", nullptr));
         label_3->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
-        emailEdit->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        loginEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
@@ -225,7 +225,7 @@ public:
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         label_4->setText(QCoreApplication::translate("Widget", "Password:", nullptr));
-        pwEdit->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        loginPwTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"
@@ -234,7 +234,7 @@ public:
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         backButton->setText(QCoreApplication::translate("Widget", "Go back", nullptr));
-        pushButton->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
+        loginScreenButton->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
         studentEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
