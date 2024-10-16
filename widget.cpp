@@ -101,7 +101,7 @@ void Widget::on_registerStudentBtn_clicked()
 }
 
 
-void Widget::on_pushButton_3_clicked()
+void Widget::on_registerTeacherBtn_clicked()
 {
     QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
     QFile file(filePath);

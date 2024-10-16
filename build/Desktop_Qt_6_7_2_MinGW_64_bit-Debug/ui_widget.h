@@ -49,7 +49,7 @@ public:
     QWidget *page_2;
     QTextEdit *teachPwTE;
     QTextEdit *teachEmailTE;
-    QPushButton *pushButton_3;
+    QPushButton *registerTeacherBtn;
     QLabel *label_11;
     QLabel *label_10;
     QTextEdit *teachNameTE;
@@ -171,9 +171,9 @@ public:
         teachEmailTE = new QTextEdit(page_2);
         teachEmailTE->setObjectName("teachEmailTE");
         teachEmailTE->setGeometry(QRect(260, 250, 311, 31));
-        pushButton_3 = new QPushButton(page_2);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(340, 360, 131, 41));
+        registerTeacherBtn = new QPushButton(page_2);
+        registerTeacherBtn->setObjectName("registerTeacherBtn");
+        registerTeacherBtn->setGeometry(QRect(340, 360, 131, 41));
         label_11 = new QLabel(page_2);
         label_11->setObjectName("label_11");
         label_11->setGeometry(QRect(170, 300, 71, 20));
@@ -281,7 +281,7 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Widget", "Register", nullptr));
+        registerTeacherBtn->setText(QCoreApplication::translate("Widget", "Register", nullptr));
         label_11->setText(QCoreApplication::translate("Widget", "Password:", nullptr));
         label_10->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
         teachNameTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

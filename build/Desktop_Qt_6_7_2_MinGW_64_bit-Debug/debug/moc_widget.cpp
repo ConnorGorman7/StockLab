@@ -44,7 +44,7 @@ constexpr auto qt_meta_stringdata_CLASSWidgetENDCLASS = QtMocHelpers::stringData
     "on_regStuButton_clicked",
     "on_regTeachButton_clicked",
     "on_registerStudentBtn_clicked",
-    "on_pushButton_3_clicked"
+    "on_registerTeacherBtn_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -110,7 +110,7 @@ Q_CONSTINIT const QMetaObject Widget::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_registerStudentBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButton_3_clicked'
+        // method 'on_registerTeacherBtn_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -129,7 +129,7 @@ void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 4: _t->on_regStuButton_clicked(); break;
         case 5: _t->on_regTeachButton_clicked(); break;
         case 6: _t->on_registerStudentBtn_clicked(); break;
-        case 7: _t->on_pushButton_3_clicked(); break;
+        case 7: _t->on_registerTeacherBtn_clicked(); break;
         default: ;
         }
     }
