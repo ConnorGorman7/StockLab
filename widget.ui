@@ -29,7 +29,7 @@
     <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>4</number>
    </property>
    <widget class="QWidget" name="welcomePage">
     <property name="font">
@@ -248,7 +248,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page">
+   <widget class="QWidget" name="studentReg">
     <widget class="QTextEdit" name="studentEmailTE">
      <property name="geometry">
       <rect>
@@ -407,7 +407,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_2">
+   <widget class="QWidget" name="teacherReg">
     <widget class="QTextEdit" name="teachPwTE">
      <property name="geometry">
       <rect>
@@ -560,6 +560,83 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </property>
      <property name="text">
       <string>Name:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="studentHome">
+    <widget class="QPushButton" name="adminInfo">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>350</y>
+       <width>150</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Admin
+Information</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="settings">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>350</y>
+       <width>150</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Settings</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="dictionary">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>240</y>
+       <width>150</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dictionary</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="modules">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>240</y>
+       <width>150</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Modules</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="studentHomeHeader">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>170</y>
+       <width>150</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Student Homepage</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>

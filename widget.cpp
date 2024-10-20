@@ -56,7 +56,6 @@ void Widget::on_regTeachButton_clicked()
 }
 
 
-
 void Widget::on_registerStudentBtn_clicked()
 {
     QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
@@ -172,6 +171,7 @@ void Widget::on_loginScreenButton_clicked()
                     QMessageBox::information(this, "Login success", "Successfully logged in!");
                     file.close();
                     // Switch to modules screen once implemented
+                    // ui->stackedWidget->setCurrentIndex(4);
                     return;
                 } else {
                     QMessageBox::critical(this, "Incorrect password", "Incorrect password. Please try again.");
