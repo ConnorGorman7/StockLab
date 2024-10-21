@@ -62,6 +62,7 @@ public:
     QPushButton *dictionary;
     QPushButton *modules;
     QLabel *studentHomeHeader;
+    QPushButton *logoutButton;
 
     void setupUi(QWidget *Widget)
     {
@@ -226,11 +227,14 @@ public:
         font3.setBold(true);
         studentHomeHeader->setFont(font3);
         studentHomeHeader->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        logoutButton = new QPushButton(studentHome);
+        logoutButton->setObjectName("logoutButton");
+        logoutButton->setGeometry(QRect(30, 20, 83, 29));
         stackedWidget->addWidget(studentHome);
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -330,6 +334,7 @@ public:
         dictionary->setText(QCoreApplication::translate("Widget", "Dictionary", nullptr));
         modules->setText(QCoreApplication::translate("Widget", "Modules", nullptr));
         studentHomeHeader->setText(QCoreApplication::translate("Widget", "Student Homepage", nullptr));
+        logoutButton->setText(QCoreApplication::translate("Widget", "Log out", nullptr));
     } // retranslateUi
 
 };
