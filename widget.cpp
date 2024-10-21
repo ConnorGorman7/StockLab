@@ -13,11 +13,28 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
+
+    setupReturnButtonConnections();
 }
 
 Widget::~Widget()
 {
     delete ui;
+}
+
+void Widget::setupReturnButtonConnections()
+{
+    // Find all QPushButtons whose object name starts with "RETURNBTN"
+    QList<QPushButton*> returnButtons = findChildren<QPushButton*>();
+
+    for (auto button : returnButtons) {
+        if (button->objectName().startsWith("RETURNBTN")) {
+            // Connect all buttons that start with "RETURNBTN" to the same slot
+            connect(button, &QPushButton::clicked, this, [=]() {
+                ui->moduleStack->setCurrentIndex(0);  // Return to the main module list (index 0 in moduleStack)
+            });
+        }
+    }
 }
 
 void Widget::on_loginButton_clicked()
@@ -171,7 +188,7 @@ void Widget::on_loginScreenButton_clicked()
                     QMessageBox::information(this, "Login success", "Successfully logged in!");
                     file.close();
                     // Switch to modules screen once implemented
-                    // ui->stackedWidget->setCurrentIndex(4);
+                    ui->stackedWidget->setCurrentIndex(4);
                     return;
                 } else {
                     QMessageBox::critical(this, "Incorrect password", "Incorrect password. Please try again.");
@@ -192,4 +209,24 @@ void Widget::on_loginScreenButton_clicked()
     }
 }
 
+void Widget::on_modules_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+    ui->moduleStack->setCurrentIndex(0);
+}
+
+void Widget::on_RETURNBTN_clicked()
+{
+    ui->moduleStack->setCurrentIndex(0);
+}
+
+void Widget::on_mod1_clicked()
+{
+    ui->moduleStack->setCurrentIndex(1);
+}
+
+void Widget::on_mod2_clicked()
+{
+    ui->moduleStack->setCurrentIndex(2);
+}
 

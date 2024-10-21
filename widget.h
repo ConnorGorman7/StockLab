@@ -18,6 +18,7 @@ public:
     ~Widget();
 
 private slots:
+
     void on_loginButton_clicked();
 
     void on_backButton_clicked();
@@ -36,7 +37,19 @@ private slots:
 
     void on_loginScreenButton_clicked();
 
+    void on_modules_clicked();
+
+    void on_mod1_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_RETURNBTN_clicked();
+
+    void on_mod2_clicked();
+
 private:
     Ui::Widget *ui;
+
+    void setupReturnButtonConnections();
 };
 #endif // WIDGET_H
