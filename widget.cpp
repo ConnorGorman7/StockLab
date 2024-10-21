@@ -194,3 +194,9 @@ void Widget::on_loginScreenButton_clicked()
 }
 
 
+
+void Widget::on_logoutButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+

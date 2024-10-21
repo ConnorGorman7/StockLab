@@ -36,6 +36,8 @@ private slots:
 
     void on_loginScreenButton_clicked();
 
+    void on_logoutButton_clicked();
+
 private:
     Ui::Widget *ui;
 };
