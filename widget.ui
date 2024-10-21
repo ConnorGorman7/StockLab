@@ -29,6 +29,7 @@
     <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
    </property>
    <property name="currentIndex">
+    <number>0</number>
     <number>5</number>
    </property>
    <widget class="QWidget" name="welcomePage">
@@ -640,6 +641,19 @@ Information</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="logoutButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Log out</string>
      </property>
     </widget>
    </widget>

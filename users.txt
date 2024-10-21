@@ -1,13 +1,21 @@
 Braeden Boyle
 21blab@queensu.ca
 Tester1
+Student
 
 John Smith
 john.smith@email.com
 JSmith123
+Student
 
 John Teacher
 jteacher@email.com
 TeacherTester
+Teacher
 
+
+Teacher B
+teacher@email.com
+Hello
+Teacher
 

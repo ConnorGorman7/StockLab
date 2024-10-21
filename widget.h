@@ -37,6 +37,8 @@ private slots:
 
     void on_loginScreenButton_clicked();
 
+    void on_logoutButton_clicked();
+
     void on_modules_clicked();
 
     void on_mod1_clicked();

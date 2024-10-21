@@ -102,9 +102,10 @@ void Widget::on_registerStudentBtn_clicked()
         QString password = ui->studentPwTE->toPlainText();
 
         if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
-            out << name << Qt::endl << email << Qt::endl << password << Qt::endl;
+            out << name << Qt::endl << email << Qt::endl << password << Qt::endl << "Student" << Qt::endl;
             out << Qt::endl;
             QMessageBox::information(this, "Registration successful", "You have successfully registered your account!");
+            ui->stackedWidget->setCurrentIndex(4);
         } else {
             QMessageBox::critical(this, "Invalid details", "One or more fields have been left empty. Please ensure all fields are filled out.");
             file.close();
@@ -128,7 +129,7 @@ void Widget::on_registerTeacherBtn_clicked()
         QTextStream in(&file);
         while (!in.atEnd()) {
             QString line = in.readLine();
-            if (!email.isEmpty() && line.contains(email)) {
+            if (!email.isEmpty() && (QString::compare(line, email) == 0)) {
                 QMessageBox::critical(this, "Invalid email", "This email is already taken");
                 file.close();
                 return;
@@ -146,7 +147,7 @@ void Widget::on_registerTeacherBtn_clicked()
         QString password = ui->teachPwTE->toPlainText();
 
         if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
-            out << name << Qt::endl << email << Qt::endl << password << Qt::endl;
+            out << name << Qt::endl << email << Qt::endl << password << Qt::endl << "Teacher" << Qt::endl;
             out << Qt::endl;
             QMessageBox::information(this, "Registration successful", "You have successfully registered your account!");
         } else {
@@ -188,8 +189,12 @@ void Widget::on_loginScreenButton_clicked()
                     QMessageBox::information(this, "Login success", "Successfully logged in!");
                     file.close();
                     // Switch to modules screen once implemented
-                    ui->stackedWidget->setCurrentIndex(4);
-                    return;
+                    if (QString::compare(in.readLine(), "Student") == 0) {
+                        ui->stackedWidget->setCurrentIndex(4);
+                        return;
+                    } else {
+                        // switch to teacher home page
+                    }
                 } else {
                     QMessageBox::critical(this, "Incorrect password", "Incorrect password. Please try again.");
                     file.close();
@@ -209,6 +214,12 @@ void Widget::on_loginScreenButton_clicked()
     }
 }
 
+
+
+void Widget::on_logoutButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
 void Widget::on_modules_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);
