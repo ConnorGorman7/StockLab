@@ -88,6 +88,7 @@ void Widget::on_registerStudentBtn_clicked()
             out << name << Qt::endl << email << Qt::endl << password << Qt::endl;
             out << Qt::endl;
             QMessageBox::information(this, "Registration successful", "You have successfully registered your account!");
+            ui->stackedWidget->setCurrentIndex(4);
         } else {
             QMessageBox::critical(this, "Invalid details", "One or more fields have been left empty. Please ensure all fields are filled out.");
             file.close();
@@ -171,7 +172,7 @@ void Widget::on_loginScreenButton_clicked()
                     QMessageBox::information(this, "Login success", "Successfully logged in!");
                     file.close();
                     // Switch to modules screen once implemented
-                    // ui->stackedWidget->setCurrentIndex(4);
+                    ui->stackedWidget->setCurrentIndex(4);
                     return;
                 } else {
                     QMessageBox::critical(this, "Incorrect password", "Incorrect password. Please try again.");
