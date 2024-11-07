@@ -9,17 +9,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    homework.cpp \
     main.cpp \
     mainwindow.cpp \
     second_window.cpp \
     student_stats.cpp
 
 HEADERS += \
+    homework.h \
     mainwindow.h \
     second_window.h \
     student_stats.h
 
 FORMS += \
+    homework.ui \
     mainwindow.ui \
     second_window.ui \
     student_stats.ui
