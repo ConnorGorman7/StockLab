@@ -6,1059 +6,1573 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>802</width>
     <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <widget class="QStackedWidget" name="stackedWidget">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>11</y>
-     <width>787</width>
-     <height>581</height>
-    </rect>
-   </property>
-   <property name="contextMenuPolicy">
-    <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
-   </property>
-   <property name="currentIndex">
-    <number>0</number>
-    <number>5</number>
-   </property>
-   <widget class="QWidget" name="welcomePage">
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <bold>false</bold>
-     </font>
-    </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>120</y>
-       <width>281</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>16</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Welcome To TradeApp</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="loginButton">
+  <layout class="QGridLayout" name="gridLayout_4">
+   <item row="0" column="0">
+    <widget class="QStackedWidget" name="stackedWidget">
      <property name="enabled">
       <bool>true</bool>
      </property>
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>210</y>
-       <width>321</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>12</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Log in</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="regStuButton">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>310</y>
-       <width>321</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>12</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Register as a student</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="regTeachButton">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>410</y>
-       <width>321</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>12</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Register as a teacher</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="loginPage">
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>100</y>
-       <width>171</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>16</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Log in</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>200</y>
-       <width>41</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Email:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="loginEmailTE">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>200</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>270</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Password:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="loginPwTE">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>270</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="backButton">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>30</y>
-       <width>83</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Go back</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="loginScreenButton">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>340</y>
-       <width>131</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Log in</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="studentReg">
-    <widget class="QTextEdit" name="studentEmailTE">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>240</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>180</x>
-       <y>240</y>
-       <width>41</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Email:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="backButton_2">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>30</y>
-       <width>83</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Go back</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>290</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Password:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>120</y>
-       <width>281</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>16</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Register as a student</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="studentPwTE">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>290</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="studentNameTE">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>190</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>180</x>
-       <y>190</y>
-       <width>41</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Name:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="registerStudentBtn">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>350</y>
-       <width>131</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Register</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="teacherReg">
-    <widget class="QTextEdit" name="teachPwTE">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>300</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="teachEmailTE">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>250</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="registerTeacherBtn">
-     <property name="geometry">
-      <rect>
-       <x>340</x>
-       <y>360</y>
-       <width>131</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Register</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>300</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Password:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>250</y>
-       <width>41</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Email:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="teachNameTE">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>200</y>
-       <width>311</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="html">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_12">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>130</y>
-       <width>281</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>16</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Register as a teacher</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="backButton_3">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>40</y>
-       <width>83</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Go back</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>200</x>
-       <y>200</y>
-       <width>41</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Name:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="studentHome">
-    <widget class="QPushButton" name="adminInfo">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>350</y>
-       <width>150</width>
-       <height>60</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Admin
-Information</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="settings">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>350</y>
-       <width>150</width>
-       <height>60</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Settings</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="dictionary">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>240</y>
-       <width>150</width>
-       <height>60</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Dictionary</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="modules">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>240</y>
-       <width>150</width>
-       <height>60</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Modules</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="studentHomeHeader">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>170</y>
-       <width>150</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Student Homepage</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="logoutButton">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>20</y>
-       <width>83</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Log out</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="moduleWidget">
-    <widget class="QStackedWidget" name="moduleStack">
-     <property name="geometry">
-      <rect>
-       <x>-1</x>
-       <y>-1</y>
-       <width>765</width>
-       <height>581</height>
-      </rect>
+     <property name="contextMenuPolicy">
+      <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>5</number>
      </property>
-     <widget class="QWidget" name="moduleHomepage">
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="6" column="1">
-        <widget class="QPushButton" name="mod6">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="1">
-        <widget class="QPushButton" name="mod8">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <widget class="QPushButton" name="mod1">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="baseSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>M1 - Basic Intuition</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="0">
-        <widget class="QPushButton" name="mod3">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>M3 - Fundamental Analysis</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="0">
-        <widget class="QPushButton" name="mod4">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LayoutDirection::LeftToRight</enum>
-         </property>
-         <property name="text">
-          <string>M4 - Intro to Investment Strategies</string>
-         </property>
-        </widget>
-       </item>
-       <item row="11" column="2">
-        <widget class="QProgressBar" name="advProgress">
-         <property name="value">
-          <number>0</number>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="2">
-        <widget class="QPushButton" name="mod15">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="0">
-        <widget class="QPushButton" name="mod2">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>M2 - Trading Basics</string>
-         </property>
-        </widget>
-       </item>
-       <item row="11" column="1">
-        <widget class="QProgressBar" name="interProgress">
-         <property name="value">
-          <number>0</number>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="1">
-        <widget class="QPushButton" name="mod9">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="introductoryLabel">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Introductory</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="2">
-        <widget class="QLabel" name="advancedLabel">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>25</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Advanced</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="11" column="0">
-        <widget class="QProgressBar" name="beginProgress">
-         <property name="value">
-          <number>0</number>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="0">
-        <widget class="QPushButton" name="mod5">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>M5 - ?</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1">
-        <widget class="QPushButton" name="mod7">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="2">
-        <widget class="QPushButton" name="mod13">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="1">
-        <widget class="QPushButton" name="mod10">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="2">
-        <widget class="QPushButton" name="mod11">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="2">
-        <widget class="QPushButton" name="mod14">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLabel" name="intermediateLabel">
-         <property name="font">
-          <font>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Intermediate</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="2">
-        <widget class="QPushButton" name="mod12">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>40</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>PushButton</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0" colspan="3">
-        <widget class="QLabel" name="moduleWelcome">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Module Home - Are you ready to learn?</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
+     <widget class="QWidget" name="welcomePage">
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <bold>false</bold>
+       </font>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>120</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>16</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Welcome To TradeApp</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="loginButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>210</y>
+         <width>321</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>12</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Log in</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="regStuButton">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>310</y>
+         <width>321</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>12</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Register as a student</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="regTeachButton">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>410</y>
+         <width>321</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>12</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Register as a teacher</string>
+       </property>
+      </widget>
      </widget>
-     <widget class="QWidget" name="module1">
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="1" alignment="|Qt::AlignmentFlag::AlignTop">
-        <widget class="QLabel" name="label_25">
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Mod 1 - Understanding Market Movements and Major Events</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="RETURNBTN">
-         <property name="text">
-          <string>Return</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QScrollArea" name="scrollArea">
-         <property name="widgetResizable">
-          <bool>true</bool>
-         </property>
-         <widget class="QWidget" name="scrollAreaWidgetContents">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>741</width>
-            <height>519</height>
-           </rect>
-          </property>
-          <widget class="QScrollBar" name="verticalScrollBar">
-           <property name="geometry">
-            <rect>
-             <x>740</x>
-             <y>0</y>
-             <width>20</width>
-             <height>521</height>
-            </rect>
+     <widget class="QWidget" name="loginPage">
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>100</y>
+         <width>171</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>16</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Log in</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>200</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Email:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="loginEmailTE">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>200</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>270</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Password:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="loginPwTE">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>270</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="backButton">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>83</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Go back</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="loginScreenButton">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>340</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Log in</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="studentReg">
+      <widget class="QTextEdit" name="studentEmailTE">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>240</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>240</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Email:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="backButton_2">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>83</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Go back</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>290</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Password:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>120</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>16</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Register as a student</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="studentPwTE">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>290</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="studentNameTE">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>190</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>190</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Name:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="registerStudentBtn">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>350</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Register</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="teacherReg">
+      <widget class="QTextEdit" name="teachPwTE">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>300</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="teachEmailTE">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>250</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="registerTeacherBtn">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>360</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Register</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>300</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Password:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>250</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Email:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="teachNameTE">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>200</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>130</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>16</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Register as a teacher</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="backButton_3">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>40</y>
+         <width>83</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Go back</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>200</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Name:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="studentHome">
+      <widget class="QPushButton" name="adminInfo">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>350</y>
+         <width>150</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Admin
+Information</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="settings">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>350</y>
+         <width>150</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Settings</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="dictionary">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>240</y>
+         <width>150</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Dictionary</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="modules">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>240</y>
+         <width>150</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modules</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="studentHomeHeader">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>170</y>
+         <width>150</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Student Homepage</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="logoutButton">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>83</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Log out</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="moduleWidget">
+      <widget class="QStackedWidget" name="moduleStack">
+       <property name="geometry">
+        <rect>
+         <x>-1</x>
+         <y>-11</y>
+         <width>765</width>
+         <height>601</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="moduleHomepage">
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="7" column="2">
+          <widget class="QLabel" name="advancedLabel">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>25</height>
+            </size>
            </property>
-           <property name="orientation">
-            <enum>Qt::Orientation::Vertical</enum>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_26">
-           <property name="geometry">
-            <rect>
-             <x>250</x>
-             <y>240</y>
-             <width>63</width>
-             <height>20</height>
-            </rect>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
            </property>
            <property name="text">
-            <string>TextLabel</string>
+            <string>Advanced</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
-         </widget>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="module2">
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="RETURNBTN_2">
-         <property name="text">
-          <string>Return</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="introductoryLabel">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Introductory</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="0">
+          <widget class="QProgressBar" name="beginProgress">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="2">
+          <widget class="QPushButton" name="mod11">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="1">
+          <widget class="QPushButton" name="mod9">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="1">
+          <widget class="QPushButton" name="mod10">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="2">
+          <widget class="QProgressBar" name="advProgress">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="2">
+          <widget class="QPushButton" name="mod14">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0">
+          <widget class="QPushButton" name="mod4">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LayoutDirection::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string>M4 - Intro to Investment Strategies</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="2">
+          <widget class="QPushButton" name="mod12">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="2">
+          <widget class="QPushButton" name="mod15">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="3">
+          <widget class="QLabel" name="moduleWelcome">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Module Home - Are you ready to learn?</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QPushButton" name="mod1">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>M1 - Basic Intuition</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="1">
+          <widget class="QPushButton" name="mod8">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
+          <widget class="QPushButton" name="mod7">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1">
+          <widget class="QPushButton" name="mod6">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLabel" name="intermediateLabel">
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Intermediate</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QPushButton" name="mod2">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>M2 - Trading Basics</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QPushButton" name="mod3">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>M3 - Fundamental Analysis</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="0">
+          <widget class="QPushButton" name="mod5">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>M5 - ?</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="1">
+          <widget class="QProgressBar" name="interProgress">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="2">
+          <widget class="QPushButton" name="mod13">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="14" column="0" colspan="3">
+          <widget class="QPushButton" name="menu">
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="module1">
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN">
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" alignment="Qt::AlignmentFlag::Qt::AlignmentFlag::AlignTop">
+          <widget class="QLabel" name="mod1header">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 1 - Understanding Market Movements and Major Events</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod1text">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 1: Understanding Market Movements and Major Events
+
+1 - What is the Stock Market?
+The stock market is a collection of exchanges where investors buy and sell shares of publicly traded companies. Think of it as a marketplace for businesses to raise money by offering ownership stakes to investors, and for investors to potentially profit from the company's growth.
+
+2 - How Stocks Represent Ownership in a Company
+When you buy a stock, you're purchasing a small piece of that company, known as a share. This ownership entitles you to a portion of the company's profits and assets. If the company does well, the value of your shares may increase, allowing you to sell them for a profit. Conversely, if the company performs poorly, the value of your shares may decrease.
+
+3 - Basic Terminology
+    -&gt; Stocks/Shares: Units of ownership in a company.
+    -&gt; Equities: Another term for stocks, representing ownership interest.
+    -&gt; Stock Exchange: A platform where stocks are bought and sold (e.g., New York Stock Exchange, NASDAQ).
+    -&gt; Investor/Shareholder: An individual or entity that owns shares in a company.
+    -&gt; Dividends: A portion of a company's earnings distributed to shareholders.
+
+4 - Explanation of Bull and Bear Markets
+    -&gt; Bull Market: A period when stock prices are generally rising. Optimism is high, and investors are confident that the upward trend will continue. It's called a bull market because bulls charge forward with their horns up.
+
+    -&gt; Bear Market: A period when stock prices are generally falling. Pessimism prevails, and investors may start selling off stocks to prevent further losses. It's termed a bear market because bears swipe downward with their paws.
+
+5 - Factors Influencing Stock Prices
+1. Supply and Demand:
+    -&gt; Supply: The number of shares available for sale.
+    -&gt; Demand: The number of shares investors want to buy.
+    -&gt; Prices rise when demand exceeds supply and fall when supply exceeds demand.
+
+2. Company Performance:
+    -&gt; Earnings reports, product launches, and leadership changes can affect stock prices.
+
+3. Economic Indicators:
+    -&gt; Interest rates, inflation, and employment rates influence investor decisions.
+
+4. Market Sentiment:
+    -&gt; The overall attitude of investors toward the market or a particular stock.
+
+6 - The Role of Investor Sentiment
+Investor sentiment reflects the mood of investors at a given time. It's shaped by news, economic indicators, and global events. Positive sentiment can drive prices up as more investors buy stocks, while negative sentiment can lead to selling and price declines.
+
+7 - How Global Events Affect the Stock Market
+Global events—such as political elections, natural disasters, pandemics, and economic policies—can have immediate and significant impacts on stock markets. They can influence investor confidence and lead to rapid changes in supply and demand for stocks.
+
+8 - Case Study: The 2008 Financial Crisis
+
+8.1 - Causes of the Crisis
+1. Subprime Mortgage Lending:
+    -&gt; Banks and financial institutions gave mortgages to borrowers with poor credit histories (subprime borrowers).
+    -&gt; These high-risk loans were bundled into complex financial products called mortgage-backed securities and sold to investors.
+
+2. Financial Derivatives:
+    -&gt; Instruments like collateralized debt obligations (CDOs) spread the risk across the financial system.
+    -&gt; Lack of transparency and understanding of these products amplified the risk.
+
+3. Housing Bubble:
+    -&gt; Housing prices soared due to high demand fueled by easy credit.
+    -&gt; Borrowers believed housing prices would continue to rise, making it easier to refinance or sell at a profit.
+
+8.2 - The Collapse of Major Financial Institutions
+- Lehman Brothers Bankruptcy:
+    -&gt; In September 2008, Lehman Brothers, a major investment bank, filed for bankruptcy due to massive losses in mortgage-backed securities.
+- Other Institutions Affected:
+    -&gt; Bear Stearns, Merrill Lynch, AIG, and others faced severe financial distress.
+
+8.3 - Government Interventions and Bailouts
+- Emergency Measures:
+    -&gt; Governments worldwide injected capital into banks and financial systems to prevent total collapse.
+- Key Actions in the U.S.:
+    -&gt; Troubled Asset Relief Program (TARP):
+       - A $700 billion bailout plan to purchase toxic assets from banks.
+- Federal Reserve Policies:
+    -&gt; Lowered interest rates and provided emergency lending facilities.
+
+8.4 - Effects on Global Markets and Economies
+- Stock Market Declines:
+    -&gt; Major indices like the Dow Jones Industrial Average and S&amp;P 500 saw significant drops.
+- Economic Recession:
+    -&gt; Global economies entered a recession marked by high unemployment and reduced consumer spending.
+- Credit Crunch:
+    -&gt; Banks became hesitant to lend, making it difficult for businesses and individuals to obtain loans.
+
+8.5 - Lessons Learned and Regulatory Changes**
+1. Importance of Financial Oversight:
+    -&gt; The crisis highlighted the need for better regulation of financial institutions and markets.
+
+2. Regulatory Reforms:
+- Dodd-Frank Act (2010):
+    -&gt; Implemented comprehensive financial reforms to increase transparency and reduce risk.
+    -&gt; Created the Consumer Financial Protection Bureau (CFPB) to protect consumers from unfair lending practices.
+
+3. Risk Management:
+    -&gt; Emphasis on the importance of understanding and managing financial risks, both by institutions and individual investors.
+
+9 - Conclusion
+Understanding how the stock market works and how major events can impact market movements is crucial for any investor or trader. The 2008 financial crisis serves as a significant example of how interconnected the global financial system is and the importance of informed decision-making.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="module2">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN_2">
+           <property name="maximumSize">
+            <size>
+             <width>96</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod2text">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 2: Basics of Stock Trading
+
+1 - Types of Stocks
+1.1 - Common vs. Preferred Stocks
+Common Stocks: When you purchase common stock, you're buying a piece of ownership in a company. Common shareholders have voting rights, allowing them to influence corporate decisions like electing the board of directors. Dividends may be paid out to common stockholders, but they are not guaranteed and can fluctuate based on the company's profitability.
+
+Preferred Stocks: Preferred stockholders have a higher claim on assets and earnings than common shareholders. They usually receive fixed dividends and are paid out before common shareholders in the event of liquidation. However, preferred stocks typically do not come with voting rights.
+
+1.2 - Blue-Chip Stocks
+Blue-chip stocks are shares of large, well-established, and financially sound companies with a history of reliable performance. These companies are leaders in their industries and are known for their quality products or services. Companies like Apple, Microsoft, and Coca-Cola are considered blue-chip stocks due to their market dominance and consistent earnings.
+
+1.3 - Penny Stocks
+Penny stocks refer to shares of small companies that trade at low prices, typically under $5 per share. They are often not listed on major exchanges and trade over-the-counter. Penny stocks are highly speculative and carry significant risk due to low liquidity, limited disclosure, and higher volatility.
+
+2 - Stock Exchanges
+2.1 - Major Exchanges (NYSE and NASDAQ)
+New York Stock Exchange (NYSE): The NYSE is the world's largest stock exchange by market capitalization. It operates as an auction market, where trades occur directly between buyers and sellers.
+
+NASDAQ: An electronic marketplace known for its high concentration of technology stocks. It operates as a dealer market, where trades are executed via a network of dealers or market makers.
+
+2.2 - How Exchanges Facilitate Trading
+Exchanges provide a regulated platform where stocks are bought and sold. They ensure fair trading practices, transparency, and efficient price discovery by matching buy and sell orders.
+
+2.3 - Role of Market Makers
+Market makers are firms or individuals that buy and sell securities at specified prices to facilitate liquidity in the market. They ensure there's enough volume of trading so that trades can be executed quickly, helping to prevent drastic price changes due to supply and demand imbalances.
+
+3 - How to Buy and Sell Stocks
+3.1 - Setting Up a Brokerage Account
+Choosing a Broker -&gt; Select a brokerage firm that suits your needs, considering factors like fees, investment options, and customer service.
+
+Account Types -&gt; Decide between different types of accounts such as individual, joint, or retirement accounts.
+
+Verification -&gt; Complete the application process, which may require personal identification and financial information.
+
+3.2 - Market Orders vs. Limit Orders
+Market Orders are an instruction to buy or sell a stock immediately at the best available current price. Execution is guaranteed, but the price is not. Limit orders are an order to buy or sell a stock at a specific price or better, where execution is not guaranteed, but you have control over the price.
+
+3.3 - Introduction to Online Trading Platforms
+Features: Online platforms offer tools for trading, research, portfolio tracking, and educational resources.
+Benefits: Convenience, lower fees, and the ability to execute trades quickly from anywhere.
+
+4 - Reading Stock Information
+4.1 - Ticker Symbols
+Ticker symbols unique series of letters assigned to a security for trading purposes, such as &quot;AAPL&quot; for Apple Inc., &quot;TSLA&quot; for Tesla Inc., and &quot;NVDA&quot; for Nvidia.
+
+4.2 - Understanding Stock Quotes
+Last Price =&gt; The most recent price at which the stock traded.
+Change -&gt; The difference in price from the previous day's closing.
+Open -&gt; The price at which the stock opened trading for the day.
+High/Low -&gt; The highest and lowest prices at which the stock has traded during the day.
+
+4.3 - Bid and Ask Prices
+Bid Price -&gt; The highest price a buyer is willing to pay for a stock.
+Ask Price -&gt; The lowest price a seller is willing to accept.
+Spread -&gt; The difference between the bid and ask prices, representing the transaction cost and market liquidity.
+
+4.4 - Market Indices (Dow Jones, S&amp;P 500)
+The Dow Jones Industrial Average (DJIA) tracks 30 large, publicly-owned companies based in the United States, representing various industries, whereas the S&amp;P 500 measures stock performance of 500 large companies listed on exchanges in the U.S., serving as an indicator of the overall stock market health.
+
+5 - The Role of Brokers in Stock Trading
+Brokers act as intermediaries between investors and the stock market, executing buy and sell orders on behalf of clients. Some brokers offer investment advice, research, and portfolio management services. Brokers charge fees for their services, which can be based on per-trade commissions or account management fees, typically percentage-based.
+
+6 - Understanding Trading Costs
+Commissions -&gt; Fees charged by brokers for executing a trade.
+Bid-Ask Spread -&gt; The indirect cost of trading, representing the difference between the buying and selling prices.
+Other Fees -&gt; May include account maintenance fees, withdrawal fees, or inactivity fees.
+
+7 - Risks and Rewards in Stock Trading
+Potential Gains -&gt; Investors may earn returns through price appreciation and dividends.
+Market Risk -&gt; The possibility of losing some or all of the original investment due to market fluctuations.
+Volatility -&gt; Stocks can be volatile, leading to rapid changes in stock prices.
+Diversification -&gt; Spreading investments across various assets to mitigate risk.
+
+8 - Conclusion
+Understanding the basics of stock trading is essential for anyone looking to invest in the stock market. By familiarizing yourself with the types of stocks, how exchanges operate, the process of buying and selling, and interpreting stock information, you lay a strong foundation for making informed trades and investment decisions.</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mod2header">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 2 - Trading Basics</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="module3">
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN_3">
+           <property name="maximumSize">
+            <size>
+             <width>96</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mod2header_2">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 3 - Fundamental Analysis</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod2text_2">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 3: Fundamental Analysis
+
+1 - Understanding Financial Statements
+1.1 - Income Statements
+An income statement summarizes a company's revenues and expenses over a specific period, showing how the company performed financially, and has the following components:
+Revenue -&gt; Total income from sales of goods or services.
+Expenses -&gt; Costs incurred in earning the revenue, including operating expenses and taxes.
+Net Income -&gt; The profit after all expenses have been deducted from revenue.
+
+1.2 - Balance Sheets
+Balance sheets are a snapshot of a company's financial position at a specific point in time, detailing assets, liabilities, and shareholders' equity, consisting of:
+Assets -&gt; What the company owns (cash, inventory, property).
+Liabilities -&gt; What the company owes (loans, accounts payable).
+Shareholders' Equity -&gt; The residual interest in the assets after deducting liabilities.
+
+1.3 - Cash Flow Statements
+These show how changes in the balance sheet and income affect cash and cash equivalents, breaking down analysis into operating, investing, and financing activities:
+Operating Activities -&gt; Cash generated from core business operations.
+Investing Activities -&gt; Cash used for investing in assets or received from the sale of assets.
+Financing Activities -&gt; Cash received from or paid to investors and creditors.
+
+2 - Key Financial Ratios
+2.1 - Price-to-Earnings (P/E) Ratio
+Definition -&gt; Measures a company's current share price relative to its per-share earnings.
+Calculation -&gt; P/E Ratio = Market Value per Share / Earnings per Share (EPS).
+Interpretation -&gt; A higher P/E ratio may indicate that the stock is overvalued, or investors expect high growth rates in the future.
+
+2.2 - Earnings per Share (EPS)
+Definition -&gt; Indicates a company's profitability allocated to each outstanding share of common stock.
+Calculation -&gt; EPS = (Net Income - Preferred Dividends) / Average Outstanding Shares.
+Significance -&gt; Higher EPS suggests better profitability.
+
+2.3 - Return on Equity (ROE)
+Definition -&gt; Measures a corporation's profitability by revealing how much profit a company generates with the money shareholders have invested.
+Calculation -&gt; ROE = Net Income / Shareholders' Equity.
+Interpretation -&gt; Higher ROE indicates efficient use of equity capital.
+
+2.4 - Debt-to-Equity Ratio
+Definition -&gt; Indicates the relative proportion of shareholders' equity and debt used to finance a company's assets.
+Calculation -&gt; Debt-to-Equity Ratio = Total Liabilities / Shareholders' Equity.
+Significance -&gt; A higher ratio implies more leverage and financial risk.
+
+3 - Evaluating Company Performance
+3.1 - Revenue Growth
+Consistent revenue growth suggests a company's products or services are in demand.
+Considerations: Compare revenue growth to industry peers and economic conditions.
+
+3.2 - Profit Margins
+Gross Margin -&gt; (Revenue - Cost of Goods Sold) / Revenue.
+Operating Margin -&gt; Operating Income / Revenue.
+Net Margin -&gt; Net Income / Revenue.
+Interpretation -&gt; Higher margins indicate better efficiency and profitability.
+
+3.3 - Analyzing Expenses and Costs
+Cost Control -&gt; Evaluate how well a company manages its operating expenses relative to revenue.
+Expense Trends: Rising expenses without corresponding revenue increases can signal potential issues.
+
+4 - Qualitative Factors
+4.1 - Management Effectiveness
+Leadership Quality -&gt; Strong, experienced leadership can drive a company's success.
+Corporate Governance -&gt; Effective policies and practices ensure accountability and transparency.
+
+4.2 - Competitive Advantage
+Unique Selling Proposition -&gt; What sets the company apart from competitors.
+Barriers to Entry -&gt; Patents, brand recognition, or economies of scale that protect the company from new competitors.
+
+4.3 - Industry Position
+Market Share -&gt; The company's portion of sales in its industry.
+Industry Trends -&gt; Understanding the dynamics, challenges, and growth potential within the industry.
+
+5 - The Importance of Fundamental Analysis
+Fundamental investment analysis helps determine a stock's intrinsic value and whether it is undervalued or overvalued. A long-term perspective focuses on a company's ability to generate earnings over time, supporting long-term investment strategies.
+
+6 - Limitations of Fundamental Analysis
+Market Efficiency -&gt; The market may have already priced in all available information.
+Unpredictable Factors -&gt; Economic downturns, regulatory changes, or unforeseen events can impact a company's performance.
+
+7 - Combining Quantitative and Qualitative Analysis
+Holistic Approach -&gt; Using both numerical data and qualitative insights provides a more comprehensive evaluation of a company's potential.
+Risk Assessment -&gt; Identifies potential risks that may not be evident through financial ratios alone.
+
+8 - Conclusion
+Fundamental analysis is a critical tool for investors aiming to make informed decisions. By understanding financial statements, key ratios, and qualitative factors, you can evaluate a company's true worth and growth prospects, aligning your investments with your financial goals.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="module5">
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN_5">
+           <property name="maximumSize">
+            <size>
+             <width>96</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mod2header_4">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 2 - Trading Basics</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod2text_4">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 2: Basics of Stock Trading
+
+1 - Types of Stocks
+1.1 - Common vs. Preferred Stocks
+Common Stocks: When you purchase common stock, you're buying a piece of ownership in a company. Common shareholders have voting rights, allowing them to influence corporate decisions like electing the board of directors. Dividends may be paid out to common stockholders, but they are not guaranteed and can fluctuate based on the company's profitability.
+
+Preferred Stocks: Preferred stockholders have a higher claim on assets and earnings than common shareholders. They usually receive fixed dividends and are paid out before common shareholders in the event of liquidation. However, preferred stocks typically do not come with voting rights.
+
+1.2 - Blue-Chip Stocks
+Blue-chip stocks are shares of large, well-established, and financially sound companies with a history of reliable performance. These companies are leaders in their industries and are known for their quality products or services. Companies like Apple, Microsoft, and Coca-Cola are considered blue-chip stocks due to their market dominance and consistent earnings.
+
+1.3 - Penny Stocks
+Penny stocks refer to shares of small companies that trade at low prices, typically under $5 per share. They are often not listed on major exchanges and trade over-the-counter. Penny stocks are highly speculative and carry significant risk due to low liquidity, limited disclosure, and higher volatility.
+
+2 - Stock Exchanges
+2.1 - Major Exchanges (NYSE and NASDAQ)
+New York Stock Exchange (NYSE): The NYSE is the world's largest stock exchange by market capitalization. It operates as an auction market, where trades occur directly between buyers and sellers.
+
+NASDAQ: An electronic marketplace known for its high concentration of technology stocks. It operates as a dealer market, where trades are executed via a network of dealers or market makers.
+
+2.2 - How Exchanges Facilitate Trading
+Exchanges provide a regulated platform where stocks are bought and sold. They ensure fair trading practices, transparency, and efficient price discovery by matching buy and sell orders.
+
+2.3 - Role of Market Makers
+Market makers are firms or individuals that buy and sell securities at specified prices to facilitate liquidity in the market. They ensure there's enough volume of trading so that trades can be executed quickly, helping to prevent drastic price changes due to supply and demand imbalances.
+
+3 - How to Buy and Sell Stocks
+3.1 - Setting Up a Brokerage Account
+Choosing a Broker -&gt; Select a brokerage firm that suits your needs, considering factors like fees, investment options, and customer service.
+
+Account Types -&gt; Decide between different types of accounts such as individual, joint, or retirement accounts.
+
+Verification -&gt; Complete the application process, which may require personal identification and financial information.
+
+3.2 - Market Orders vs. Limit Orders
+Market Orders are an instruction to buy or sell a stock immediately at the best available current price. Execution is guaranteed, but the price is not. Limit orders are an order to buy or sell a stock at a specific price or better, where execution is not guaranteed, but you have control over the price.
+
+3.3 - Introduction to Online Trading Platforms
+Features: Online platforms offer tools for trading, research, portfolio tracking, and educational resources.
+Benefits: Convenience, lower fees, and the ability to execute trades quickly from anywhere.
+
+4 - Reading Stock Information
+4.1 - Ticker Symbols
+Ticker symbols unique series of letters assigned to a security for trading purposes, such as &quot;AAPL&quot; for Apple Inc., &quot;TSLA&quot; for Tesla Inc., and &quot;NVDA&quot; for Nvidia.
+
+4.2 - Understanding Stock Quotes
+Last Price =&gt; The most recent price at which the stock traded.
+Change -&gt; The difference in price from the previous day's closing.
+Open -&gt; The price at which the stock opened trading for the day.
+High/Low -&gt; The highest and lowest prices at which the stock has traded during the day.
+
+4.3 - Bid and Ask Prices
+Bid Price -&gt; The highest price a buyer is willing to pay for a stock.
+Ask Price -&gt; The lowest price a seller is willing to accept.
+Spread -&gt; The difference between the bid and ask prices, representing the transaction cost and market liquidity.
+
+4.4 - Market Indices (Dow Jones, S&amp;P 500)
+The Dow Jones Industrial Average (DJIA) tracks 30 large, publicly-owned companies based in the United States, representing various industries, whereas the S&amp;P 500 measures stock performance of 500 large companies listed on exchanges in the U.S., serving as an indicator of the overall stock market health.
+
+5 - The Role of Brokers in Stock Trading
+Brokers act as intermediaries between investors and the stock market, executing buy and sell orders on behalf of clients. Some brokers offer investment advice, research, and portfolio management services. Brokers charge fees for their services, which can be based on per-trade commissions or account management fees, typically percentage-based.
+
+6 - Understanding Trading Costs
+Commissions -&gt; Fees charged by brokers for executing a trade.
+Bid-Ask Spread -&gt; The indirect cost of trading, representing the difference between the buying and selling prices.
+Other Fees -&gt; May include account maintenance fees, withdrawal fees, or inactivity fees.
+
+7 - Risks and Rewards in Stock Trading
+Potential Gains -&gt; Investors may earn returns through price appreciation and dividends.
+Market Risk -&gt; The possibility of losing some or all of the original investment due to market fluctuations.
+Volatility -&gt; Stocks can be volatile, leading to rapid changes in stock prices.
+Diversification -&gt; Spreading investments across various assets to mitigate risk.
+
+8 - Conclusion
+Understanding the basics of stock trading is essential for anyone looking to invest in the stock market. By familiarizing yourself with the types of stocks, how exchanges operate, the process of buying and selling, and interpreting stock information, you lay a strong foundation for making informed trades and investment decisions.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="module4">
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN_4">
+           <property name="maximumSize">
+            <size>
+             <width>96</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mod2header_3">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 2 - Trading Basics</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod2text_3">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 2: Basics of Stock Trading
+
+1 - Types of Stocks
+1.1 - Common vs. Preferred Stocks
+Common Stocks: When you purchase common stock, you're buying a piece of ownership in a company. Common shareholders have voting rights, allowing them to influence corporate decisions like electing the board of directors. Dividends may be paid out to common stockholders, but they are not guaranteed and can fluctuate based on the company's profitability.
+
+Preferred Stocks: Preferred stockholders have a higher claim on assets and earnings than common shareholders. They usually receive fixed dividends and are paid out before common shareholders in the event of liquidation. However, preferred stocks typically do not come with voting rights.
+
+1.2 - Blue-Chip Stocks
+Blue-chip stocks are shares of large, well-established, and financially sound companies with a history of reliable performance. These companies are leaders in their industries and are known for their quality products or services. Companies like Apple, Microsoft, and Coca-Cola are considered blue-chip stocks due to their market dominance and consistent earnings.
+
+1.3 - Penny Stocks
+Penny stocks refer to shares of small companies that trade at low prices, typically under $5 per share. They are often not listed on major exchanges and trade over-the-counter. Penny stocks are highly speculative and carry significant risk due to low liquidity, limited disclosure, and higher volatility.
+
+2 - Stock Exchanges
+2.1 - Major Exchanges (NYSE and NASDAQ)
+New York Stock Exchange (NYSE): The NYSE is the world's largest stock exchange by market capitalization. It operates as an auction market, where trades occur directly between buyers and sellers.
+
+NASDAQ: An electronic marketplace known for its high concentration of technology stocks. It operates as a dealer market, where trades are executed via a network of dealers or market makers.
+
+2.2 - How Exchanges Facilitate Trading
+Exchanges provide a regulated platform where stocks are bought and sold. They ensure fair trading practices, transparency, and efficient price discovery by matching buy and sell orders.
+
+2.3 - Role of Market Makers
+Market makers are firms or individuals that buy and sell securities at specified prices to facilitate liquidity in the market. They ensure there's enough volume of trading so that trades can be executed quickly, helping to prevent drastic price changes due to supply and demand imbalances.
+
+3 - How to Buy and Sell Stocks
+3.1 - Setting Up a Brokerage Account
+Choosing a Broker -&gt; Select a brokerage firm that suits your needs, considering factors like fees, investment options, and customer service.
+
+Account Types -&gt; Decide between different types of accounts such as individual, joint, or retirement accounts.
+
+Verification -&gt; Complete the application process, which may require personal identification and financial information.
+
+3.2 - Market Orders vs. Limit Orders
+Market Orders are an instruction to buy or sell a stock immediately at the best available current price. Execution is guaranteed, but the price is not. Limit orders are an order to buy or sell a stock at a specific price or better, where execution is not guaranteed, but you have control over the price.
+
+3.3 - Introduction to Online Trading Platforms
+Features: Online platforms offer tools for trading, research, portfolio tracking, and educational resources.
+Benefits: Convenience, lower fees, and the ability to execute trades quickly from anywhere.
+
+4 - Reading Stock Information
+4.1 - Ticker Symbols
+Ticker symbols unique series of letters assigned to a security for trading purposes, such as &quot;AAPL&quot; for Apple Inc., &quot;TSLA&quot; for Tesla Inc., and &quot;NVDA&quot; for Nvidia.
+
+4.2 - Understanding Stock Quotes
+Last Price =&gt; The most recent price at which the stock traded.
+Change -&gt; The difference in price from the previous day's closing.
+Open -&gt; The price at which the stock opened trading for the day.
+High/Low -&gt; The highest and lowest prices at which the stock has traded during the day.
+
+4.3 - Bid and Ask Prices
+Bid Price -&gt; The highest price a buyer is willing to pay for a stock.
+Ask Price -&gt; The lowest price a seller is willing to accept.
+Spread -&gt; The difference between the bid and ask prices, representing the transaction cost and market liquidity.
+
+4.4 - Market Indices (Dow Jones, S&amp;P 500)
+The Dow Jones Industrial Average (DJIA) tracks 30 large, publicly-owned companies based in the United States, representing various industries, whereas the S&amp;P 500 measures stock performance of 500 large companies listed on exchanges in the U.S., serving as an indicator of the overall stock market health.
+
+5 - The Role of Brokers in Stock Trading
+Brokers act as intermediaries between investors and the stock market, executing buy and sell orders on behalf of clients. Some brokers offer investment advice, research, and portfolio management services. Brokers charge fees for their services, which can be based on per-trade commissions or account management fees, typically percentage-based.
+
+6 - Understanding Trading Costs
+Commissions -&gt; Fees charged by brokers for executing a trade.
+Bid-Ask Spread -&gt; The indirect cost of trading, representing the difference between the buying and selling prices.
+Other Fees -&gt; May include account maintenance fees, withdrawal fees, or inactivity fees.
+
+7 - Risks and Rewards in Stock Trading
+Potential Gains -&gt; Investors may earn returns through price appreciation and dividends.
+Market Risk -&gt; The possibility of losing some or all of the original investment due to market fluctuations.
+Volatility -&gt; Stocks can be volatile, leading to rapid changes in stock prices.
+Diversification -&gt; Spreading investments across various assets to mitigate risk.
+
+8 - Conclusion
+Understanding the basics of stock trading is essential for anyone looking to invest in the stock market. By familiarizing yourself with the types of stocks, how exchanges operate, the process of buying and selling, and interpreting stock information, you lay a strong foundation for making informed trades and investment decisions.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
      </widget>
     </widget>
-   </widget>
-  </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

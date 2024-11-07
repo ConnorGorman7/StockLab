@@ -220,6 +220,7 @@ void Widget::on_logoutButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
+
 void Widget::on_modules_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);
@@ -239,5 +240,26 @@ void Widget::on_mod1_clicked()
 void Widget::on_mod2_clicked()
 {
     ui->moduleStack->setCurrentIndex(2);
+}
+
+void Widget::on_mod3_clicked()
+{
+    ui->moduleStack->setCurrentIndex(3);
+}
+
+void Widget::on_mod4_clicked()
+{
+    ui->moduleStack->setCurrentIndex(4);
+}
+
+void Widget::on_mod5_clicked()
+{
+    ui->moduleStack->setCurrentIndex(5);
+}
+
+void Widget::on_menu_clicked()
+{
+    ui->moduleStack->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
