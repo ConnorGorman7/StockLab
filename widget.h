@@ -57,6 +57,14 @@ private slots:
 
     void on_menu_clicked();
 
+    void on_mod6_clicked();
+
+    void on_mod7_clicked();
+
+    void on_mod8_clicked();
+
+    void on_mod9_clicked();
+
 private:
     Ui::Widget *ui;
 

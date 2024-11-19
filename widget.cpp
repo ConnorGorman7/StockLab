@@ -221,6 +221,12 @@ void Widget::on_logoutButton_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
+void Widget::on_menu_clicked()
+{
+    ui->moduleStack->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
 void Widget::on_modules_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);
@@ -234,32 +240,46 @@ void Widget::on_RETURNBTN_clicked()
 
 void Widget::on_mod1_clicked()
 {
-    ui->moduleStack->setCurrentIndex(1);
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module1));
 }
 
 void Widget::on_mod2_clicked()
 {
-    ui->moduleStack->setCurrentIndex(2);
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module2));
 }
 
 void Widget::on_mod3_clicked()
 {
-    ui->moduleStack->setCurrentIndex(3);
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module3));
 }
 
 void Widget::on_mod4_clicked()
 {
-    ui->moduleStack->setCurrentIndex(4);
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module4));
 }
 
 void Widget::on_mod5_clicked()
 {
-    ui->moduleStack->setCurrentIndex(5);
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module5));
 }
 
-void Widget::on_menu_clicked()
+void Widget::on_mod6_clicked()
 {
-    ui->moduleStack->setCurrentIndex(0);
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module6));
+}
+
+void Widget::on_mod7_clicked()
+{
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module7));
+}
+
+void Widget::on_mod8_clicked()
+{
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module8));
+}
+
+void Widget::on_mod9_clicked()
+{
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module9));
 }
 

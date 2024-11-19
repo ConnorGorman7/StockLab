@@ -656,8 +656,8 @@ Information</string>
         <rect>
          <x>-1</x>
          <y>-11</y>
-         <width>765</width>
-         <height>601</height>
+         <width>781</width>
+         <height>591</height>
         </rect>
        </property>
        <property name="currentIndex">
@@ -686,6 +686,32 @@ Information</string>
            </property>
           </widget>
          </item>
+         <item row="8" column="2">
+          <widget class="QPushButton" name="mod7">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>M7 - Advanced Tech. Analysis</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="2">
+          <widget class="QPushButton" name="mod9">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>M9 - Portfolio Management</string>
+           </property>
+          </widget>
+         </item>
          <item row="7" column="0">
           <widget class="QLabel" name="introductoryLabel">
            <property name="maximumSize">
@@ -707,73 +733,7 @@ Information</string>
            </property>
           </widget>
          </item>
-         <item row="13" column="0">
-          <widget class="QProgressBar" name="beginProgress">
-           <property name="value">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="2">
-          <widget class="QPushButton" name="mod11">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>PushButton</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="1">
-          <widget class="QPushButton" name="mod9">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>PushButton</string>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="1">
-          <widget class="QPushButton" name="mod10">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>PushButton</string>
-           </property>
-          </widget>
-         </item>
-         <item row="13" column="2">
-          <widget class="QProgressBar" name="advProgress">
-           <property name="value">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="2">
-          <widget class="QPushButton" name="mod14">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>PushButton</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="0">
+         <item row="8" column="1">
           <widget class="QPushButton" name="mod4">
            <property name="minimumSize">
             <size>
@@ -781,16 +741,13 @@ Information</string>
              <height>40</height>
             </size>
            </property>
-           <property name="layoutDirection">
-            <enum>Qt::LayoutDirection::LeftToRight</enum>
-           </property>
            <property name="text">
-            <string>M4 - Intro to Investment Strategies</string>
+            <string>M4 - Technical Analysis</string>
            </property>
           </widget>
          </item>
          <item row="9" column="2">
-          <widget class="QPushButton" name="mod12">
+          <widget class="QPushButton" name="mod8">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -798,39 +755,19 @@ Information</string>
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>M8 - Derivatives and Options</string>
            </property>
           </widget>
          </item>
-         <item row="12" column="2">
-          <widget class="QPushButton" name="mod15">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>PushButton</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0" colspan="3">
-          <widget class="QLabel" name="moduleWelcome">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>30</height>
-            </size>
-           </property>
+         <item row="7" column="1">
+          <widget class="QLabel" name="intermediateLabel">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="text">
-            <string>Module Home - Are you ready to learn?</string>
+            <string>Intermediate</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -856,21 +793,15 @@ Information</string>
            </property>
           </widget>
          </item>
-         <item row="10" column="1">
-          <widget class="QPushButton" name="mod8">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>PushButton</string>
+         <item row="11" column="0">
+          <widget class="QProgressBar" name="beginProgress">
+           <property name="value">
+            <number>0</number>
            </property>
           </widget>
          </item>
          <item row="9" column="1">
-          <widget class="QPushButton" name="mod7">
+          <widget class="QPushButton" name="mod5">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -878,11 +809,25 @@ Information</string>
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>M5 - Risk Management</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="1">
+         <item row="11" column="1">
+          <widget class="QProgressBar" name="interProgress">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="0" colspan="3">
+          <widget class="QPushButton" name="menu">
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="1">
           <widget class="QPushButton" name="mod6">
            <property name="minimumSize">
             <size>
@@ -891,35 +836,29 @@ Information</string>
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>M6 - Trading Strategies</string>
            </property>
           </widget>
          </item>
-         <item row="7" column="1">
-          <widget class="QLabel" name="intermediateLabel">
+         <item row="4" column="0" colspan="3">
+          <widget class="QLabel" name="moduleWelcome">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>30</height>
+            </size>
+           </property>
            <property name="font">
             <font>
+             <pointsize>14</pointsize>
              <bold>true</bold>
             </font>
            </property>
            <property name="text">
-            <string>Intermediate</string>
+            <string>Module Home - Are you ready to learn?</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignmentFlag::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QPushButton" name="mod2">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M2 - Trading Basics</string>
            </property>
           </widget>
          </item>
@@ -936,28 +875,15 @@ Information</string>
            </property>
           </widget>
          </item>
-         <item row="12" column="0">
-          <widget class="QPushButton" name="mod5">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M5 - ?</string>
-           </property>
-          </widget>
-         </item>
-         <item row="13" column="1">
-          <widget class="QProgressBar" name="interProgress">
+         <item row="11" column="2">
+          <widget class="QProgressBar" name="advProgress">
            <property name="value">
             <number>0</number>
            </property>
           </widget>
          </item>
-         <item row="10" column="2">
-          <widget class="QPushButton" name="mod13">
+         <item row="9" column="0">
+          <widget class="QPushButton" name="mod2">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -965,14 +891,7 @@ Information</string>
             </size>
            </property>
            <property name="text">
-            <string>PushButton</string>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="0" colspan="3">
-          <widget class="QPushButton" name="menu">
-           <property name="text">
-            <string>Return</string>
+            <string>M2 - Trading Basics</string>
            </property>
           </widget>
          </item>
@@ -1234,7 +1153,7 @@ Understanding the basics of stock trading is essential for anyone looking to inv
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLabel" name="mod2header_2">
+          <widget class="QLabel" name="mod3header">
            <property name="font">
             <font>
              <pointsize>14</pointsize>
@@ -1247,7 +1166,7 @@ Understanding the basics of stock trading is essential for anyone looking to inv
           </widget>
          </item>
          <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod2text_2">
+          <widget class="QPlainTextEdit" name="mod3text">
            <property name="readOnly">
             <bool>true</bool>
            </property>
@@ -1356,7 +1275,7 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLabel" name="mod2header_4">
+          <widget class="QLabel" name="mod5header">
            <property name="font">
             <font>
              <pointsize>14</pointsize>
@@ -1364,17 +1283,257 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
             </font>
            </property>
            <property name="text">
-            <string>Mod 2 - Trading Basics</string>
+            <string>Mod 5 - Risk Management and Trading Psychology</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod2text_4">
+          <widget class="QPlainTextEdit" name="mod5text">
            <property name="readOnly">
             <bool>true</bool>
            </property>
            <property name="plainText">
-            <string>Module 2: Basics of Stock Trading
+            <string>Module 5: Risk Management and Trading Psychology
+
+1 - Risk vs. Reward
+Understanding the balance between the potential profit and the risk of loss in trading.
+
+Defining Acceptable Risk:
+Risk Tolerance -&gt; The amount of loss an investor is willing to accept.
+Risk-Reward Ratio -&gt; The expected return divided by the potential loss.
+
+Setting Objectives:
+Profit Targets -&gt; Predetermined levels at which to exit for a profit.
+Loss Limits -&gt; Maximum acceptable losses per trade or period.
+
+2 - Position Sizing
+Techniques to determine how much capital to allocate to a single trade.
+
+Fixed Dollar Amount:
+Description -&gt; Investing a set amount of money per trade.
+Pros -&gt; Simple to implement.
+Cons -&gt; Doesn't account for varying levels of risk.
+
+Percentage of Account:
+Description -&gt; Allocating a fixed percentage of total capital.
+Pros -&gt; Adjusts position size as account balance changes.
+
+Risk-Based Position Sizing:
+Description -&gt; Calculating position size based on the amount willing to lose.
+Calculation -&gt; Position Size = (Account Balance x Risk Percentage) / (Stop Loss in Dollars).
+
+3 - Stop Losses and Take Profit Orders
+Tools to manage risk and secure profits.
+
+3.1 - Stop Loss Orders
+Definition -&gt; An order to sell a security when it reaches a certain price.
+Usage:
+Protects Capital -&gt; Limits potential losses on a trade.
+Types:
+Fixed Stop -&gt; Set at a specific price level.
+Trailing Stop -&gt; Moves with the price in a favorable direction.
+
+3.2 - Take Profit Orders
+Definition -&gt; An order to sell a security when it reaches a predetermined profit level.
+Usage:
+Secures Gains -&gt; Automatically exits a trade when the target is met.
+Strategy -&gt; Set based on risk-reward ratio or technical analysis levels.
+
+4 - Diversification
+Minimizing risk by spreading investments across different assets.
+
+Asset Allocation:
+Definition -&gt; Distributing investments among various asset classes (stocks, bonds, commodities).
+Purpose -&gt; Reduces the impact of a single underperforming asset.
+
+Sector Diversification:
+Description -&gt; Investing in different industries.
+Benefit -&gt; Mitigates sector-specific risks.
+
+Geographical Diversification:
+Description -&gt; Investing in different countries or regions.
+Benefit -&gt; Reduces exposure to country-specific economic conditions.
+
+5 - Managing Emotions
+Psychological aspects that affect trading decisions.
+
+5.1 Overcoming Fear and Greed
+Fear:
+Impact -&gt; Can lead to premature selling or avoiding trades.
+Management -&gt; Stick to the trading plan and use stop losses.
+
+Greed:
+Impact -&gt; May cause overtrading or holding losing positions too long.
+Management -&gt; Set realistic profit targets and adhere to them.
+
+5.2 Discipline in Trading
+Consistency -&gt; Following the trading plan regardless of market conditions.
+Avoiding Impulsiveness -&gt; Making decisions based on analysis, not emotions.
+Mindfulness Techniques -&gt; Practices like meditation to maintain focus and control.
+
+6 - Trading Plan
+Creating and adhering to a structured approach to trading.
+
+Components of a Trading Plan:
+Trading Goals -&gt; Clear, measurable objectives.
+Risk Management Rules -&gt; Guidelines for position sizing, stop losses.
+Market Analysis Methods -&gt; Techniques for selecting trades.
+Trade Execution Criteria -&gt; Specific conditions for entering and exiting trades.
+
+Benefits:
+Clarity -&gt; Provides a roadmap for trading activities.
+Accountability -&gt; Helps track performance against objectives.
+Emotional Control -&gt; Reduces impulsive decisions.
+
+7 - Conclusion
+Effective risk management and psychological discipline are crucial for long-term trading success. By defining acceptable risk levels, utilizing position sizing techniques, and maintaining emotional control, traders can improve their decision-making processes and increase the likelihood of achieving their trading goals.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="module6">
+        <layout class="QGridLayout" name="gridLayout_11">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN_6">
+           <property name="maximumSize">
+            <size>
+             <width>96</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mod6header">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 6 - Types of Trading Strategies</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod6text">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 6: Types of Trading Strategies
+
+1 - Day Trading vs. Swing Trading
+Understanding the differences between day trading and swing trading is essential for choosing a trading style that fits your lifestyle and risk tolerance.
+
+1.1 - Day Trading
+Definition -&gt; Involves buying and selling securities within the same trading day, with all positions closed before the market closes.
+
+Pros:
+No Overnight Risk -&gt; Avoids unexpected events that could affect prices after the market closes.
+Frequent Opportunities -&gt; Multiple trades per day can lead to numerous profit chances.
+
+Cons:
+High Time Commitment -&gt; Requires constant monitoring of the markets throughout the day.
+Increased Transaction Costs -&gt; Frequent trading can result in higher fees and commissions.
+
+1.2 - Swing Trading
+Definition -&gt; Involves holding positions for several days to weeks, aiming to profit from short- to medium-term price movements.
+
+Pros:
+Less Intensive Monitoring -&gt; Doesn't require watching the markets constantly; suitable for those with other commitments.
+Potential for Larger Gains -&gt; Captures more significant price swings than day trading.
+
+Cons:
+Overnight Risk -&gt; Exposed to market events and news that can affect prices when the market is closed.
+Fewer Trading Opportunities -&gt; Fewer trades mean potentially fewer profit opportunities.
+
+2 - Scalping
+Scalping is a high-speed trading strategy focusing on making small profits from minor price changes.
+
+Quick Trades for Small Profits -&gt; Traders execute numerous trades throughout the day, often holding positions for mere seconds or minutes.
+Requires Fast Decision-Making -&gt; Success depends on the trader's ability to make rapid decisions and execute orders swiftly.
+Challenges:
+High Transaction Costs -&gt; The large number of trades can accumulate significant fees, which can eat into profits.
+Emotional Stress -&gt; The fast-paced nature can be mentally exhausting, requiring intense focus and discipline.
+
+3 - Trend Following
+Trend following involves identifying and trading in the direction of a prevailing market trend.
+
+Identifying Trends -&gt; Traders use tools like moving averages, trendlines, and other indicators to determine the market's direction.
+Aligning with Market Momentum -&gt; By trading in the direction of the trend, traders aim to capitalize on sustained price movements.
+
+Advantages:
+Simplicity -&gt; Easier to execute since it follows the market's general direction.
+Potential for Significant Profits -&gt; Trends can last for extended periods, allowing traders to ride substantial moves.
+
+Disadvantages:
+Delayed Signals -&gt; Traders may enter or exit positions after the initial move, potentially reducing profits.
+Risk of Reversals _&gt; Sudden changes in trend can lead to losses if not managed properly.
+
+4 - Mean Reversion
+Mean reversion strategies are based on the concept that prices and returns eventually move back towards the mean or average.
+
+Trading on Price Deviations -&gt; Traders look for securities that have significantly deviated from their historical averages.
+
+Executing Trades:
+Buying Undervalued Assets -&gt; Purchasing when prices are below the mean, expecting an upward correction.
+Selling Overvalued Assets -&gt; Shorting or selling when prices are above the mean, anticipating a downward adjustment.
+
+Considerations:
+Market Conditions -&gt; Must ensure that deviations are temporary and not due to fundamental changes.
+Timing -&gt; Accurate timing is crucial; entering too early or late can result in losses.
+
+5 - Momentum Trading
+Momentum trading involves buying securities that are rising and selling those that are falling, betting that the trend will continue.
+
+Analyzing Market Strength -&gt; Traders use indicators like the Relative Strength Index (RSI) or Moving Average Convergence Divergence (MACD) to assess momentum.
+Entering Trades Based on Momentum -&gt; Positions are taken in the direction of strong price movements.
+
+Risks:
+Volatility -&gt; High momentum can lead to rapid and unpredictable price changes.
+Reversal Risk -&gt; Momentum can quickly fade, leading to potential losses if the trend reverses.
+
+6 - Strategy Examples
+Applying these strategies in real-world scenarios helps illustrate their practical use.
+
+6.1 - Day Trading Example
+Scenario -&gt; A trader observes that a tech stock is experiencing high volatility due to an upcoming product launch.
+Action -&gt; Executes several trades throughout the day to capitalize on the price fluctuations caused by the news.
+Outcome -&gt; Closes all positions before the market closes, avoiding overnight risk and profiting from intraday movements.
+
+6.2 - Swing Trading Example
+Scenario -&gt; A trader identifies a pharmaceutical company's stock that has just broken out of a consolidation pattern.
+Action -&gt; Buys shares, anticipating that the breakout will lead to a sustained upward move over the next few weeks.
+Outcome -&gt; Holds the position for several weeks and sells at a higher price, capturing the medium-term trend.
+
+6.3 - Scalping Example
+Scenario -&gt; A trader focuses on a popular currency pair in the forex market with tight spreads.
+Action -&gt; Makes rapid trades, aiming to profit from small price increments of just a few pips.
+Outcome -&gt; Over the course of the day, the small gains from numerous trades accumulate into a substantial profit.
+
+6.4 - Trend Following Example
+Scenario -&gt; Commodity prices are on a steady rise due to increasing global demand.
+Action -&gt; The trader buys futures contracts in line with the upward trend.
+Outcome -&gt; Maintains the position as long as indicators confirm the trend, exiting when signs of reversal appear.
+
+6.5 - Mean Reversion Example
+Scenario -&gt; A company's stock price drops sharply due to a temporary supply chain issue.
+Action -&gt; The trader buys the stock at the lower price, expecting it to rebound once the issue is resolved.
+Outcome -&gt; The price returns to its average level, and the trader sells for a profit.
+
+6.6 - Momentum Trading Example
+Scenario -&gt; After a major merger announcement, a stock begins to surge with increased trading volume.
+Action -&gt; The trader buys shares to take advantage of the strong upward momentum.
+Outcome -&gt; Sells the shares when indicators suggest that the momentum is slowing down, securing gains.
+
+7 - Conclusion
+Choosing the right trading strategy is a critical step in achieving success in the financial markets. By understanding and applying various strategies such as day trading, swing trading, scalping, trend following, mean reversion, and momentum trading, traders can align their approach with their individual goals, risk tolerance, and time availability. Real-world examples highlight how these strategies operate in practice, providing valuable insights for traders looking to refine their techniques and improve their performance.Module 2: Basics of Stock Trading
 
 1 - Types of Stocks
 1.1 - Common vs. Preferred Stocks
@@ -1454,6 +1613,524 @@ Understanding the basics of stock trading is essential for anyone looking to inv
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="module7">
+        <layout class="QGridLayout" name="gridLayout_10">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN_7">
+           <property name="maximumSize">
+            <size>
+             <width>96</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mod7header">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 7 - Advanced Technical Analysis Tools</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod7text">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 7: Advanced Technical Analysis Tools
+
+1 - Fibonacci Retracement and Extensions
+Fibonacci tools are used by traders to identify potential support and resistance levels based on key ratios derived from the Fibonacci sequence.
+
+1.1 - Fibonacci Retracement
+Definition -&gt; Fibonacci retracement levels are horizontal lines indicating where support and resistance are likely to occur.
+
+Using Fibonacci Retracement:
+Identifying Reversal Points -&gt; Traders apply retracement levels to find possible reversal areas during pullbacks.
+Common Levels -&gt; Key percentages include 23.6%, 38.2%, 50%, 61.8%, and 78.6%.
+
+1.2 - Fibonacci Extensions
+Definition -&gt; Fibonacci extensions are levels used to forecast areas where the price may move following a retracement.
+
+Applying Extensions:
+Setting Profit Targets -&gt; Extensions help in determining potential exit points in trending markets.
+Common Levels -&gt; Important extension levels are 127.2%, 161.8%, and 261.8%.
+
+2 - Advanced Indicators
+Advanced technical indicators provide deeper insights into market trends, momentum, and potential reversal points.
+
+2.1 - Ichimoku Cloud
+Definition -&gt; A comprehensive indicator that shows support and resistance, trend direction, and momentum all in one view.
+
+Components:
+Tenkan-sen (Conversion Line) -&gt; A moving average over a short period, indicating short-term momentum.
+Kijun-sen (Base Line) -&gt; A moving average over a longer period, signaling medium-term momentum.
+Senkou Span A &amp; B (Leading Spans) -&gt; Form the 'cloud,' projecting future support and resistance levels.
+Chikou Span (Lagging Span) -&gt; Plots the current closing price shifted back over past periods, helping to confirm trends.
+
+Using Ichimoku Cloud:
+Determining Trend Direction -&gt; If the price is above the cloud, it's a bullish signal; below the cloud indicates bearishness.
+Identifying Support and Resistance -&gt; The cloud's thickness and position provide dynamic support and resistance zones.
+
+2.2 - Parabolic SAR
+Definition -&gt; The Parabolic Stop and Reverse (SAR) indicator helps identify potential trend reversals and optimal exit points.
+
+Applying Parabolic SAR:
+Entry and Exit Signals -&gt; When the dots switch from below to above the price (or vice versa), it signals a potential reversal.
+Setting Stop Losses -&gt; Traders use the dots as trailing stop-loss levels to lock in profits.
+
+3 - Chart Patterns
+Chart patterns are visual formations on price charts that can indicate future market movements based on historical behavior.
+
+3.1 - Double Top and Double Bottom
+Definition -&gt; Reversal patterns signaling a potential change in the current trend.
+
+Double Top:
+Formation -&gt; Two consecutive peaks at a similar price level with a moderate decline between them.
+Implication -&gt; Suggests that upward momentum is weakening, potentially leading to a downtrend.
+
+Double Bottom:
+Formation -&gt; Two consecutive troughs at a similar price level with a moderate rise between them.
+Implication -&gt; Indicates weakening downward momentum, possibly leading to an uptrend.
+
+3.2 - Head and Shoulders
+Definition -&gt; A reversal pattern that predicts a bullish-to-bearish trend change.
+
+Components:
+Left Shoulder -&gt; A peak followed by a decline.
+Head -&gt; A higher peak followed by a decline.
+Right Shoulder -&gt; A lower peak similar to the left shoulder.
+
+Interpretation:
+Completion of the pattern suggests a potential sell-off, signaling traders to consider short positions.
+
+3.3 - Cup and Handle
+Definition -&gt; A continuation pattern indicating a potential breakout after a period of consolidation.
+
+Characteristics:
+Cup Shape -&gt; A rounded bottom resembling a 'U' shape, showing a period of consolidation.
+Handle -&gt; A small downward drift following the cup, representing a final consolidation before a breakout.
+
+Trading the Pattern:
+Entry Point -&gt; Traders often enter positions when the price breaks above the handle's resistance level.
+Profit Targets -&gt; Estimated by measuring the depth of the cup and projecting it upward from the breakout point.
+
+4 - Elliott Wave Theory
+Elliott Wave Theory is a form of technical analysis that traders use to analyze financial market cycles and forecast trends.
+
+Principles:
+Wave Patterns -&gt; Markets move in repetitive cycles consisting of five impulse waves in the direction of the main trend and three corrective waves against it.
+Fractals -&gt; Each wave pattern can be broken down into smaller waves, allowing analysis on multiple timeframes.
+
+Applying the Theory:
+Identifying Wave Counts -&gt; Traders label waves to anticipate future price movements.
+Predicting Market Cycles -&gt; Helps in forecasting potential market tops and bottoms.
+
+5 - Combining Indicators
+Using multiple indicators together can enhance the accuracy of trading signals and reduce the likelihood of false entries.
+
+Strategies:
+Confirmation -&gt; Wait for agreement among different indicators before executing a trade.
+Complementary Indicators -&gt; Combine leading indicators (predictive) with lagging indicators (confirmatory) for a balanced approach.
+
+Examples:
+Pairing RSI with Moving Averages -&gt; Use RSI to identify overbought or oversold conditions and moving averages to confirm trend direction.
+Using Fibonacci Levels with Chart Patterns -&gt; Identify potential reversal zones where patterns like head and shoulders coincide with Fibonacci retracement levels.
+
+6 - Case Study: Applying Advanced Technical Tools to Analyze a Stock
+Scenario -&gt; A trader is analyzing Stock ABC, which has been in a strong uptrend but shows signs of potential weakness.
+
+Analysis Steps:
+1. Fibonacci Retracement:
+Action -&gt; Draw retracement levels from the recent swing low to swing high.
+Observation -&gt; Price is approaching the 61.8% retracement level, a key support area.
+
+2. Ichimoku Cloud:
+Action -&gt; Add the Ichimoku Cloud to the chart.
+Observation -&gt; Price has broken below the Tenkan-sen and is approaching the Kijun-sen, indicating weakening momentum.
+
+3. Chart Patterns:
+Action -&gt; Look for any reversal patterns.
+Observation -&gt; A potential head and shoulders pattern is forming, suggesting a bearish reversal.
+
+4. Parabolic SAR:
+Action -&gt; Apply Parabolic SAR to identify exit points.
+Observation -&gt; Dots have appeared above the price, signaling a possible downtrend.
+
+Decision:
+Based on the confluence of signals, the trader decides to exit long positions or consider entering a short position, setting a stop-loss above the recent high and targeting the next support level.
+
+Outcome -&gt; The stock begins to decline, validating the analysis and resulting in a profitable trade.
+
+7 - Conclusion
+By mastering advanced technical analysis tools like Fibonacci retracement, advanced indicators, chart patterns, and Elliott Wave Theory, traders can gain a more nuanced understanding of market dynamics. Combining these tools enhances decision-making and increases the likelihood of successful trades by providing multiple layers of confirmation.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="module8">
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN_8">
+           <property name="maximumSize">
+            <size>
+             <width>96</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mod8header">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 8 - Derivatives and Options Trading</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod8text">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 8: Derivatives and Options Trading
+
+1 - Introduction to Derivatives
+Understanding derivatives is crucial for advanced trading strategies, as they allow traders to hedge positions, speculate on price movements, and enhance portfolio performance.
+
+1.1 - Futures
+Definition -&gt; Futures contracts obligate the buyer to purchase, and the seller to sell, an asset at a predetermined future date and price.
+
+Usage:
+Hedging -&gt; Protect against price fluctuations in commodities or financial instruments.
+Speculation -&gt; Bet on the direction of price movements to profit from expected changes.
+
+1.2 - Options
+Definition -&gt; Options contracts give the buyer the right, but not the obligation, to buy (call option) or sell (put option) an asset at a specified price within a certain period.
+
+Components:
+Strike Price -&gt; The predetermined price at which the asset can be bought or sold.
+Expiration Date -&gt; The last date the option can be exercised.
+
+1.3 - Contracts for Difference (CFDs)
+Definition -&gt; CFDs are agreements to exchange the difference in the value of an asset between the time the contract is opened and closed.
+
+Usage:
+Leverage -&gt; Allows traders to gain exposure to markets with a small initial investment.
+Access -&gt; Trade a variety of assets without owning them directly.
+
+Risks:
+High Potential for Losses -&gt; Due to leverage, losses can exceed the initial investment.
+
+2 - Options Strategies
+Options provide flexibility in trading, allowing investors to tailor their risk and reward profiles through various strategies.
+
+2.1 - Covered Calls
+Definition -&gt; Involves selling call options on assets you already own.
+
+Purpose:
+Income Generation -&gt; Earn premium income from the options sold.
+Limited Upside -&gt; Caps potential profit if the underlying asset's price rises significantly.
+
+Risk:
+Limited Profit Potential -&gt; If the stock price soars, gains are capped at the strike price.
+
+2.2 - Protective Puts
+Definition -&gt; Buying put options to hedge against a decline in the price of assets you own.
+
+Purpose:
+Insurance -&gt; Protects against downside risk by limiting potential losses.
+Cost -&gt; The premium paid reduces net profits but provides safety.
+
+Benefit:
+Downside Protection -&gt; Limits potential losses while retaining upside potential.
+
+2.3 - Straddles
+Definition -&gt; Buying both a call and a put option at the same strike price and expiration date.
+
+Usage:
+Volatility Strategy -&gt; Profits from significant price movements in either direction.
+
+Risk:
+Losses if Price Remains Stable -&gt; Both premiums may be lost if the price does not move significantly.
+
+2.4 - Strangles
+Definition -&gt; Buying a call and a put option with different strike prices but the same expiration date.
+
+Usage:
+Cost-Effective Volatility Play -&gt; Cheaper than straddles due to out-of-the-money options.
+
+Risk:
+Requires Larger Price Movement -&gt; Needs a more significant price change to be profitable compared to straddles.
+
+3 - Leverage and Margin
+Leveraging allows traders to control larger positions with a smaller amount of capital, amplifying both potential gains and losses.
+
+3.1 - How Leverage Works
+Definition -&gt; Using borrowed funds to increase potential returns on an investment.
+
+Mechanism:
+Margin Trading -&gt; Borrowing money from a broker to trade larger positions.
+Leverage Ratio -&gt; The multiple of exposure to capital, e.g., 10:1.
+
+Impact:
+Amplified Gains -&gt; Potential for higher profits.
+Amplified Losses -&gt; Increased risk of losses, potentially exceeding the initial investment.
+
+3.2 - Margin Requirements
+Initial Margin -&gt; The minimum amount required to open a leveraged position.
+Maintenance Margin -&gt; The minimum account balance to keep the position open.
+Margin Calls -&gt; If the account falls below the maintenance margin, additional funds are required.
+
+3.3 - Risks of Leverage
+Market Volatility -&gt; Small market movements can lead to significant losses.
+Liquidation Risk -&gt; Positions may be closed automatically if margin requirements are not met.
+
+4 - Hedging Strategies
+Using derivatives to reduce exposure to price movements and manage risk.
+
+Options Hedging -&gt; Using put options to protect against stock price declines.
+Futures Hedging -&gt; Locking in prices for commodities or currencies to mitigate price risk.
+
+Cost of Hedging:
+Premiums and Fees -&gt; These reduce overall returns but provide protection against adverse price movements.
+
+5 - Risk Assessment
+Understanding the risks involved in derivatives trading is essential for effective risk management.
+
+Market Risk -&gt; Potential losses due to adverse market movements.
+Counterparty Risk -&gt; The risk that the other party in the derivative contract defaults.
+Liquidity Risk -&gt; Difficulty in entering or exiting positions due to low market activity.
+Regulatory Risk -&gt; Changes in laws and regulations that affect derivatives trading.
+
+6 - Real-World Application
+Applying options for both speculation and hedging can enhance trading strategies and manage risk effectively.
+
+6.1 - Example Trade: Speculation with Options
+Scenario -&gt; An investor believes that ABC Corp's stock will increase over the next month.
+Action -&gt; Buys call options with a strike price near the current market price.
+Outcome -&gt; If the stock rises, the investor can exercise the option or sell it for a profit. If the stock falls, the loss is limited to the premium paid.
+
+6.2 - Example Trade: Hedging with Options
+Scenario -&gt; An investor owns shares of XYZ Corp and fears a short-term decline.
+Action -&gt; Buys put options to protect against a drop in the stock price.
+Outcome -&gt; If the stock falls, gains on the put options offset losses on the shares. If the stock rises, the loss is limited to the premium, while gains on the shares continue.
+
+7 - Conclusion
+Derivatives and options offer powerful tools for both speculation and risk management. By understanding how to employ various options strategies, leveraging positions carefully, and implementing effective hedging techniques, traders and investors can enhance their portfolios and protect against adverse market movements.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="module9">
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="RETURNBTN_9">
+           <property name="maximumSize">
+            <size>
+             <width>96</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Return</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mod9header">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Mod 9 - Portfolio Management and Advanced Strategies</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPlainTextEdit" name="mod9text">
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="plainText">
+            <string>Module 9: Portfolio Management and Advanced Investment Strategies
+
+1 - Portfolio Construction
+Understanding how to construct a well-balanced portfolio is fundamental to achieving investment goals while managing risk.
+
+1.1 - Balancing Risk and Return
+Investors must find the optimal balance between risk and expected return to meet their financial objectives.
+
+Risk Tolerance -&gt; Assessing how much volatility an investor is willing to accept in their portfolio.
+Return Objectives -&gt; Defining the desired level of income or growth from investments.
+
+1.2 - Asset Allocation
+Diversifying investments across different asset classes to spread risk.
+
+Equities -&gt; Stocks offering potential for high returns but with higher risk.
+Bonds -&gt; Fixed-income securities providing regular interest payments with lower risk.
+Cash and Cash Equivalents -&gt; Highly liquid assets like money market funds offering stability.
+
+2 - Modern Portfolio Theory (MPT)
+Modern Portfolio Theory provides a framework for constructing portfolios that maximize expected return for a given level of risk.
+
+2.1 - Diversification to Maximize Returns
+By combining assets with varying correlations, investors can reduce overall portfolio risk.
+
+Efficient Frontier -&gt; A curve representing portfolios that offer the highest expected return for a defined level of risk.
+Capital Asset Pricing Model (CAPM) -&gt; Used to determine the expected return of an asset based on its systemic risk.
+
+2.2 - Optimizing Asset Allocation
+Using mathematical models to select the mix of assets that will lie on the efficient frontier.
+
+Risk-Adjusted Returns -&gt; Evaluating investments based on returns relative to the risk taken.
+Portfolio Optimization Tools -&gt; Software and algorithms that aid in constructing efficient portfolios.
+
+3 - Value vs. Growth Investing
+Choosing between value and growth investing strategies depends on investor preferences and market conditions.
+
+3.1 - Value Investing
+Focuses on finding undervalued stocks that are trading below their intrinsic value.
+
+Characteristics:
+Low P/E Ratios -&gt; Stocks priced low relative to earnings.
+High Dividend Yields -&gt; Companies returning profits to shareholders.
+
+Advantages:
+Margin of Safety -&gt; Reduced risk due to purchasing at discounted prices.
+Potential for Appreciation -&gt; Stocks may rise as the market recognizes their true value.
+
+Considerations:
+Patience Required -&gt; May take time for undervalued stocks to reach their potential.
+Risk of Value Traps -&gt; Stocks may be undervalued for valid reasons.
+
+3.2 - Growth Investing
+Targets companies with strong potential for future growth in earnings, revenues, or cash flow.
+
+Characteristics:
+High P/E Ratios -&gt; Reflecting high expectations for future growth.
+Reinvestment of Earnings -&gt; Companies often reinvest profits back into the business.
+
+Advantages:
+Capital Appreciation -&gt; Potential for significant gains if the company grows as expected.
+
+Considerations:
+Higher Risk -&gt; Growth may not materialize, leading to price declines.
+Market Sensitivity -&gt; Growth stocks can be more volatile.
+
+4 - Active vs. Passive Investing
+Deciding between active and passive investing strategies involves weighing potential returns against costs and effort.
+
+4.1 - Active Investing
+Involves hands-on management, with investors or fund managers making specific investments to outperform the market.
+
+Strategies:
+Stock Picking -&gt; Selecting individual stocks believed to outperform.
+Market Timing -&gt; Attempting to buy low and sell high based on market predictions.
+
+Pros:
+Potential to Outperform -&gt; Opportunity to achieve returns above market averages.
+
+Cons:
+Higher Costs -&gt; Increased fees due to frequent trading and management expenses.
+Time-Intensive -&gt; Requires continuous research and monitoring.
+
+4.2 - Passive Investing
+Focuses on replicating market indexes to match market performance.
+
+Strategies:
+Index Funds -&gt; Investing in funds that track a specific index like the S&amp;P 500.
+Exchange-Traded Funds (ETFs) -&gt; Traded like stocks but designed to follow an index.
+
+Pros:
+Lower Costs -&gt; Reduced fees due to minimal trading and management.
+Simplicity -&gt; Easier to manage with less need for active decision-making.
+
+Cons:
+Limited Flexibility -&gt; Cannot adjust holdings based on market conditions.
+Market Returns Only -&gt; No potential to outperform the market.
+
+5 - Rebalancing
+Regularly adjusting the portfolio to maintain the desired asset allocation is key to managing risk and ensuring alignment with investment goals.
+
+5.1 - Adjusting Asset Allocation
+Rebalancing brings the portfolio back to its original or updated target allocation.
+
+Methods:
+Time-Based Rebalancing -&gt; Rebalancing at set intervals, such as quarterly or annually.
+Threshold-Based Rebalancing -&gt; Rebalancing when asset allocations deviate by a predetermined percentage.
+
+5.2 - Benefits of Rebalancing
+Risk Management -&gt; Prevents the portfolio from becoming too heavily weighted in one asset class.
+Discipline -&gt; Encourages selling high and buying low.
+
+5.3 - Considerations
+Transaction Costs -&gt; Frequent rebalancing may incur fees and taxes.
+Market Conditions -&gt; Must consider current market trends and potential impacts.
+
+6 - Case Study: Constructing and Managing a Diversified Investment Portfolio
+Scenario -&gt; An investor aged 40 wants to build a portfolio for retirement in 25 years, aiming for moderate growth with acceptable risk.
+
+6.1 - Assessing Investor Profile
+Risk Tolerance -&gt; Moderate, willing to accept some volatility for higher returns.
+Investment Horizon -&gt; Long-term, allowing for growth over 25 years.
+Financial Goals -&gt; Accumulate sufficient funds for a comfortable retirement.
+
+6.2 - Portfolio Construction
+Asset Allocation:
+Equities -&gt; 60% allocated to stocks for growth potential.
+Bonds -&gt; 30% in bonds for income and stability.
+Cash and Equivalents -&gt; 10% for liquidity and emergency funds.
+
+Diversification:
+Domestic and International Stocks -&gt; Spreading equity investments globally.
+Sector Diversification -&gt; Investing across various industries like technology, healthcare, and consumer goods.
+Bond Types -&gt; Including government and corporate bonds with different maturities.
+
+6.3 - Implementing Investment Strategies
+Combining Active and Passive Approaches:
+Active Funds -&gt; Selecting actively managed funds for sectors where the investor believes outperformance is possible.
+Passive Funds -&gt; Using index funds or ETFs to ensure broad market exposure at a low cost.
+
+6.4 - Regular Rebalancing
+Time-Based Rebalancing -&gt; Reviewing and adjusting the portfolio annually.
+Threshold-Based Rebalancing -&gt; Rebalancing if any asset class moves more than 5% from its target allocation.
+
+6.5 - Monitoring and Adjusting
+Performance Review -&gt; Evaluating returns against benchmarks and goals.
+Adjusting Strategies -&gt; Making changes based on life events, market conditions, or shifts in risk tolerance.
+
+7 - Conclusion
+Effective portfolio management involves strategic asset allocation, regular rebalancing, and selecting appropriate investment strategies aligned with individual goals and risk tolerance. By understanding and applying advanced investment concepts such as Modern Portfolio Theory, value versus growth investing, and active versus passive management, investors can construct portfolios designed to optimize returns while managing risk. Regular monitoring and adjustments ensure the portfolio remains aligned with changing objectives and market dynamics.</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
        <widget class="QWidget" name="module4">
         <layout class="QGridLayout" name="gridLayout_6">
          <item row="0" column="0">
@@ -1470,7 +2147,7 @@ Understanding the basics of stock trading is essential for anyone looking to inv
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLabel" name="mod2header_3">
+          <widget class="QLabel" name="mod4header">
            <property name="font">
             <font>
              <pointsize>14</pointsize>
@@ -1478,91 +2155,136 @@ Understanding the basics of stock trading is essential for anyone looking to inv
             </font>
            </property>
            <property name="text">
-            <string>Mod 2 - Trading Basics</string>
+            <string>Mod 4 - Technical Analysis</string>
            </property>
           </widget>
          </item>
          <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod2text_3">
+          <widget class="QPlainTextEdit" name="mod4text">
            <property name="readOnly">
             <bool>true</bool>
            </property>
            <property name="plainText">
-            <string>Module 2: Basics of Stock Trading
+            <string>Module 4 - Technical Analysis
 
-1 - Types of Stocks
-1.1 - Common vs. Preferred Stocks
-Common Stocks: When you purchase common stock, you're buying a piece of ownership in a company. Common shareholders have voting rights, allowing them to influence corporate decisions like electing the board of directors. Dividends may be paid out to common stockholders, but they are not guaranteed and can fluctuate based on the company's profitability.
+1 - Introduction to Technical Analysis
+Technical analysis involves evaluating securities by analyzing statistics generated by market activity, such as past prices and volume. Unlike fundamental analysis, which seeks to assess a company's intrinsic value, technical analysis focuses on identifying patterns and trends that suggest future price movements.
 
-Preferred Stocks: Preferred stockholders have a higher claim on assets and earnings than common shareholders. They usually receive fixed dividends and are paid out before common shareholders in the event of liquidation. However, preferred stocks typically do not come with voting rights.
+Price Trends -&gt; The general direction in which a security's price is moving.
+Chart Patterns -&gt; Recognizable formations on price charts that can indicate future market behavior.
+Predictive Tools -&gt; Utilizing indicators and oscillators to forecast potential price movements.
 
-1.2 - Blue-Chip Stocks
-Blue-chip stocks are shares of large, well-established, and financially sound companies with a history of reliable performance. These companies are leaders in their industries and are known for their quality products or services. Companies like Apple, Microsoft, and Coca-Cola are considered blue-chip stocks due to their market dominance and consistent earnings.
 
-1.3 - Penny Stocks
-Penny stocks refer to shares of small companies that trade at low prices, typically under $5 per share. They are often not listed on major exchanges and trade over-the-counter. Penny stocks are highly speculative and carry significant risk due to low liquidity, limited disclosure, and higher volatility.
+2 - Chart Types
+Charts are essential tools in technical analysis, providing visual representations of price movements over time.
 
-2 - Stock Exchanges
-2.1 - Major Exchanges (NYSE and NASDAQ)
-New York Stock Exchange (NYSE): The NYSE is the world's largest stock exchange by market capitalization. It operates as an auction market, where trades occur directly between buyers and sellers.
+2.1 - Line Charts
+Description: Plots a line connecting successive closing prices.
+Usage: Offers a clear view of the overall price movement over a period.
+Limitations: Does not show intra-period price variations like highs and lows.
 
-NASDAQ: An electronic marketplace known for its high concentration of technology stocks. It operates as a dealer market, where trades are executed via a network of dealers or market makers.
+2.2 - Bar Charts
+Description: Displays the open, high, low, and close (OHLC) prices for each period.
+Components: 
+Vertical Line -&gt; Represents the price range (high to low).
+Left Tick -&gt; Indicates the opening price.
+Right Tick -&gt; Indicates the closing price.
+Usage -&gt; Provides detailed information about each trading period.
 
-2.2 - How Exchanges Facilitate Trading
-Exchanges provide a regulated platform where stocks are bought and sold. They ensure fair trading practices, transparency, and efficient price discovery by matching buy and sell orders.
+2.3 Candlestick Charts
+Description: Similar to bar charts but with a more visual representation using &quot;candlesticks.&quot;
+Components:
+Body -&gt; The area between the open and close prices.
+Shadows (Wicks) -&gt; Lines extending from the body to the high and low prices.
+Color Coding -&gt; Typically, green (or white) for closing higher than opening, red (or black) for closing lower.
+Usage -&gt; Popular for identifying patterns and making quick assessments of market sentiment.
 
-2.3 - Role of Market Makers
-Market makers are firms or individuals that buy and sell securities at specified prices to facilitate liquidity in the market. They ensure there's enough volume of trading so that trades can be executed quickly, helping to prevent drastic price changes due to supply and demand imbalances.
+3 - Indicators and Oscillators
+Technical indicators are mathematical calculations based on price and volume that help traders interpret market behavior.
 
-3 - How to Buy and Sell Stocks
-3.1 - Setting Up a Brokerage Account
-Choosing a Broker -&gt; Select a brokerage firm that suits your needs, considering factors like fees, investment options, and customer service.
+3.1 - Moving Averages
+Simple Moving Average (SMA):
+Calculation -&gt; Average closing price over a specified number of periods.
+Usage -&gt; Smooths out price data to identify trends.
+Exponential Moving Average (EMA):
+Calculation -&gt; Gives more weight to recent prices.
+Usage -&gt; More responsive to recent price changes.
 
-Account Types -&gt; Decide between different types of accounts such as individual, joint, or retirement accounts.
+3.2 - Relative Strength Index (RSI)
+Description -&gt; An oscillator that measures the speed and change of price movements.
+Scale -&gt; Ranges from 0 to 100.
+Interpretation:
+Above 70 -&gt; Indicates overbought conditions.
+Below 30 -&gt; Indicates oversold conditions.
 
-Verification -&gt; Complete the application process, which may require personal identification and financial information.
+3.3 - Moving Average Convergence Divergence (MACD)
+Description -&gt; Shows the relationship between two EMAs.
+Components:
+MACD Line -&gt; Difference between the 12-period EMA and the 26-period EMA.
+Signal Line -&gt; 9-period EMA of the MACD Line.
+Usage:
+Bullish Signal -&gt; MACD Line crosses above Signal Line.
+Bearish Signal -&gt; MACD Line crosses below Signal Line.
 
-3.2 - Market Orders vs. Limit Orders
-Market Orders are an instruction to buy or sell a stock immediately at the best available current price. Execution is guaranteed, but the price is not. Limit orders are an order to buy or sell a stock at a specific price or better, where execution is not guaranteed, but you have control over the price.
+3.4 - Bollinger Bands
+Description -&gt; Consists of a middle band (usually a 20-day SMA) and upper and lower bands set two standard deviations away.
+Usage:
+Volatility Measurement -&gt; Bands widen during high volatility and narrow during low volatility.
+Trading Signals:
+Price touches upper band -&gt; Potential overbought signal.
+Price touches lower band -&gt; Potential oversold signal.
 
-3.3 - Introduction to Online Trading Platforms
-Features: Online platforms offer tools for trading, research, portfolio tracking, and educational resources.
-Benefits: Convenience, lower fees, and the ability to execute trades quickly from anywhere.
+4 - Support and Resistance Levels
+Identifying key price levels where a stock tends to stop and reverse.
 
-4 - Reading Stock Information
-4.1 - Ticker Symbols
-Ticker symbols unique series of letters assigned to a security for trading purposes, such as &quot;AAPL&quot; for Apple Inc., &quot;TSLA&quot; for Tesla Inc., and &quot;NVDA&quot; for Nvidia.
+4.1 - Support Levels
+Definition -&gt; A price level where demand is strong enough to prevent the price from falling further.
+Identification -&gt; Previous lows, high trading volumes at certain price points.
+Usage -&gt; Considered potential entry points for buying.
 
-4.2 - Understanding Stock Quotes
-Last Price =&gt; The most recent price at which the stock traded.
-Change -&gt; The difference in price from the previous day's closing.
-Open -&gt; The price at which the stock opened trading for the day.
-High/Low -&gt; The highest and lowest prices at which the stock has traded during the day.
+4.2 - Resistance Levels
+Definition &gt; A price level where selling pressure prevents the price from rising further.
+Identification -&gt; Previous highs, psychological price barriers.
+Usage -&gt; Considered potential exit points for selling.
 
-4.3 - Bid and Ask Prices
-Bid Price -&gt; The highest price a buyer is willing to pay for a stock.
-Ask Price -&gt; The lowest price a seller is willing to accept.
-Spread -&gt; The difference between the bid and ask prices, representing the transaction cost and market liquidity.
+5 - Trend Analysis
+Understanding and identifying the direction of market movements.
 
-4.4 - Market Indices (Dow Jones, S&amp;P 500)
-The Dow Jones Industrial Average (DJIA) tracks 30 large, publicly-owned companies based in the United States, representing various industries, whereas the S&amp;P 500 measures stock performance of 500 large companies listed on exchanges in the U.S., serving as an indicator of the overall stock market health.
+5.1 - Uptrends
+Characteristics -&gt; Series of higher highs and higher lows.
+Identification -&gt; Drawing trendlines connecting the lows.
+Strategy -&gt; Buying on dips during an uptrend.
 
-5 - The Role of Brokers in Stock Trading
-Brokers act as intermediaries between investors and the stock market, executing buy and sell orders on behalf of clients. Some brokers offer investment advice, research, and portfolio management services. Brokers charge fees for their services, which can be based on per-trade commissions or account management fees, typically percentage-based.
+5.2 - Downtrends
+Characteristics -&gt; Series of lower highs and lower lows.
+Identification -&gt; Drawing trendlines connecting the highs.
+Strategy -&gt; Selling on rallies during a downtrend.
 
-6 - Understanding Trading Costs
-Commissions -&gt; Fees charged by brokers for executing a trade.
-Bid-Ask Spread -&gt; The indirect cost of trading, representing the difference between the buying and selling prices.
-Other Fees -&gt; May include account maintenance fees, withdrawal fees, or inactivity fees.
+5.3 - Range-Bound Markets
+Definition -&gt; Prices oscillate between support and resistance levels.
+Strategy -&gt; Buying at support levels and selling at resistance levels.
 
-7 - Risks and Rewards in Stock Trading
-Potential Gains -&gt; Investors may earn returns through price appreciation and dividends.
-Market Risk -&gt; The possibility of losing some or all of the original investment due to market fluctuations.
-Volatility -&gt; Stocks can be volatile, leading to rapid changes in stock prices.
-Diversification -&gt; Spreading investments across various assets to mitigate risk.
+6 - Practical Examples
+Applying technical analysis to identify trading opportunities.
 
-8 - Conclusion
-Understanding the basics of stock trading is essential for anyone looking to invest in the stock market. By familiarizing yourself with the types of stocks, how exchanges operate, the process of buying and selling, and interpreting stock information, you lay a strong foundation for making informed trades and investment decisions.</string>
+6.1 - Using Moving Averages
+Golden Cross -&gt; When a short-term MA crosses above a long-term MA, signaling a potential uptrend.
+Death Cross -&gt; When a short-term MA crosses below a long-term MA, signaling a potential downtrend.
+
+6.2 - Identifying Chart Patterns
+Head and Shoulders:
+Pattern -&gt; A peak (shoulder), followed by a higher peak (head), then another peak (shoulder).
+Signal -&gt; Indicates a potential reversal from bullish to bearish.
+Double Top/Bottom:
+Pattern -&gt; Two consecutive peaks (tops) or troughs (bottoms) at the same price level.
+Signal -&gt; Suggests a potential trend reversal.
+
+6.3 - Using RSI for Trading Decisions
+Overbought Conditions -&gt; Consider selling or shorting when RSI exceeds 70.
+Oversold Conditions -&gt; Consider buying when RSI falls below 30.
+
+7 - Conclusion
+Technical analysis provides traders with tools to interpret market data and make informed trading decisions. By understanding chart types, indicators, support and resistance levels, and trend analysis, traders can better predict future price movements and identify potential trading opportunities.</string>
            </property>
           </widget>
          </item>
