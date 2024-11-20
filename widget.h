@@ -67,6 +67,26 @@ private slots:
 
     void on_quizButton1_clicked();
 
+    void on_quizButton2_clicked();
+
+    void on_quizButton3_clicked();
+
+    void on_quizButton4_clicked();
+
+    void on_quizButton5_clicked();
+
+    void on_quizButton6_clicked();
+
+    void on_quizButton7_clicked();
+
+    void on_quizButton8_clicked();
+
+    void on_quizButton9_clicked();
+
+    void resetQuiz(QWidget *quizContainer);
+
+    void on_submitQuiz1_clicked();
+
 private:
     Ui::Widget *ui;
 

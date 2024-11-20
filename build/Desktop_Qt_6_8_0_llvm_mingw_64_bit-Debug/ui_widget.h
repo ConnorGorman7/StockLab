@@ -12,12 +12,16 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTextEdit>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -99,6 +103,42 @@ public:
     QLabel *mod1header;
     QPlainTextEdit *mod1text;
     QWidget *mod1quiz;
+    QGridLayout *gridLayout_23;
+    QScrollArea *quiz1scrollarea;
+    QWidget *quiz1scrolwidgetl;
+    QVBoxLayout *verticalLayout;
+    QGroupBox *M1Question1;
+    QVBoxLayout *verticalLayout_8;
+    QRadioButton *M1Q1A1;
+    QRadioButton *M1Q1A2_C;
+    QRadioButton *M1Q1A3;
+    QRadioButton *M1Q1A4;
+    QGroupBox *M1Question2;
+    QVBoxLayout *verticalLayout_7;
+    QRadioButton *M1Q2A1;
+    QRadioButton *M1Q2A2;
+    QRadioButton *M1Q2A3_C;
+    QRadioButton *M1Q2A4;
+    QGroupBox *M1Question3;
+    QVBoxLayout *verticalLayout_6;
+    QRadioButton *M1Q3A1;
+    QRadioButton *M1Q3A2;
+    QRadioButton *M1Q3A3;
+    QRadioButton *M1Q3A4_C;
+    QGroupBox *M1Question4;
+    QVBoxLayout *verticalLayout_5;
+    QRadioButton *M1Q4A1;
+    QRadioButton *M1Q4A2;
+    QRadioButton *M1Q4A3_C;
+    QRadioButton *M1Q4A4;
+    QGroupBox *M1Question5;
+    QVBoxLayout *verticalLayout_4;
+    QRadioButton *M1Q5A1_C;
+    QRadioButton *M1Q5A4;
+    QRadioButton *M1Q5A3;
+    QRadioButton *M1Q5A2;
+    QLabel *quiz1header;
+    QPushButton *submitQuiz1;
     QWidget *module2;
     QGridLayout *gridLayout_3;
     QStackedWidget *mod2stack;
@@ -514,9 +554,175 @@ public:
         mod1stack->addWidget(mod1content);
         mod1quiz = new QWidget();
         mod1quiz->setObjectName("mod1quiz");
+        gridLayout_23 = new QGridLayout(mod1quiz);
+        gridLayout_23->setObjectName("gridLayout_23");
+        quiz1scrollarea = new QScrollArea(mod1quiz);
+        quiz1scrollarea->setObjectName("quiz1scrollarea");
+        quiz1scrollarea->setWidgetResizable(true);
+        quiz1scrolwidgetl = new QWidget();
+        quiz1scrolwidgetl->setObjectName("quiz1scrolwidgetl");
+        quiz1scrolwidgetl->setGeometry(QRect(0, -153, 761, 804));
+        verticalLayout = new QVBoxLayout(quiz1scrolwidgetl);
+        verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(3, 3, 3, 3);
+        M1Question1 = new QGroupBox(quiz1scrolwidgetl);
+        M1Question1->setObjectName("M1Question1");
+        verticalLayout_8 = new QVBoxLayout(M1Question1);
+        verticalLayout_8->setObjectName("verticalLayout_8");
+        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        M1Q1A1 = new QRadioButton(M1Question1);
+        M1Q1A1->setObjectName("M1Q1A1");
+
+        verticalLayout_8->addWidget(M1Q1A1);
+
+        M1Q1A2_C = new QRadioButton(M1Question1);
+        M1Q1A2_C->setObjectName("M1Q1A2_C");
+
+        verticalLayout_8->addWidget(M1Q1A2_C);
+
+        M1Q1A3 = new QRadioButton(M1Question1);
+        M1Q1A3->setObjectName("M1Q1A3");
+
+        verticalLayout_8->addWidget(M1Q1A3);
+
+        M1Q1A4 = new QRadioButton(M1Question1);
+        M1Q1A4->setObjectName("M1Q1A4");
+
+        verticalLayout_8->addWidget(M1Q1A4);
+
+
+        verticalLayout->addWidget(M1Question1);
+
+        M1Question2 = new QGroupBox(quiz1scrolwidgetl);
+        M1Question2->setObjectName("M1Question2");
+        verticalLayout_7 = new QVBoxLayout(M1Question2);
+        verticalLayout_7->setObjectName("verticalLayout_7");
+        verticalLayout_7->setContentsMargins(0, 0, 0, 0);
+        M1Q2A1 = new QRadioButton(M1Question2);
+        M1Q2A1->setObjectName("M1Q2A1");
+
+        verticalLayout_7->addWidget(M1Q2A1);
+
+        M1Q2A2 = new QRadioButton(M1Question2);
+        M1Q2A2->setObjectName("M1Q2A2");
+
+        verticalLayout_7->addWidget(M1Q2A2);
+
+        M1Q2A3_C = new QRadioButton(M1Question2);
+        M1Q2A3_C->setObjectName("M1Q2A3_C");
+
+        verticalLayout_7->addWidget(M1Q2A3_C);
+
+        M1Q2A4 = new QRadioButton(M1Question2);
+        M1Q2A4->setObjectName("M1Q2A4");
+
+        verticalLayout_7->addWidget(M1Q2A4);
+
+
+        verticalLayout->addWidget(M1Question2);
+
+        M1Question3 = new QGroupBox(quiz1scrolwidgetl);
+        M1Question3->setObjectName("M1Question3");
+        verticalLayout_6 = new QVBoxLayout(M1Question3);
+        verticalLayout_6->setObjectName("verticalLayout_6");
+        verticalLayout_6->setContentsMargins(0, 0, 0, 0);
+        M1Q3A1 = new QRadioButton(M1Question3);
+        M1Q3A1->setObjectName("M1Q3A1");
+
+        verticalLayout_6->addWidget(M1Q3A1);
+
+        M1Q3A2 = new QRadioButton(M1Question3);
+        M1Q3A2->setObjectName("M1Q3A2");
+
+        verticalLayout_6->addWidget(M1Q3A2);
+
+        M1Q3A3 = new QRadioButton(M1Question3);
+        M1Q3A3->setObjectName("M1Q3A3");
+
+        verticalLayout_6->addWidget(M1Q3A3);
+
+        M1Q3A4_C = new QRadioButton(M1Question3);
+        M1Q3A4_C->setObjectName("M1Q3A4_C");
+
+        verticalLayout_6->addWidget(M1Q3A4_C);
+
+
+        verticalLayout->addWidget(M1Question3);
+
+        M1Question4 = new QGroupBox(quiz1scrolwidgetl);
+        M1Question4->setObjectName("M1Question4");
+        verticalLayout_5 = new QVBoxLayout(M1Question4);
+        verticalLayout_5->setObjectName("verticalLayout_5");
+        verticalLayout_5->setContentsMargins(0, 0, 0, 0);
+        M1Q4A1 = new QRadioButton(M1Question4);
+        M1Q4A1->setObjectName("M1Q4A1");
+
+        verticalLayout_5->addWidget(M1Q4A1);
+
+        M1Q4A2 = new QRadioButton(M1Question4);
+        M1Q4A2->setObjectName("M1Q4A2");
+
+        verticalLayout_5->addWidget(M1Q4A2);
+
+        M1Q4A3_C = new QRadioButton(M1Question4);
+        M1Q4A3_C->setObjectName("M1Q4A3_C");
+
+        verticalLayout_5->addWidget(M1Q4A3_C);
+
+        M1Q4A4 = new QRadioButton(M1Question4);
+        M1Q4A4->setObjectName("M1Q4A4");
+
+        verticalLayout_5->addWidget(M1Q4A4);
+
+
+        verticalLayout->addWidget(M1Question4);
+
+        M1Question5 = new QGroupBox(quiz1scrolwidgetl);
+        M1Question5->setObjectName("M1Question5");
+        verticalLayout_4 = new QVBoxLayout(M1Question5);
+        verticalLayout_4->setObjectName("verticalLayout_4");
+        verticalLayout_4->setContentsMargins(0, 0, 0, 0);
+        M1Q5A1_C = new QRadioButton(M1Question5);
+        M1Q5A1_C->setObjectName("M1Q5A1_C");
+
+        verticalLayout_4->addWidget(M1Q5A1_C);
+
+        M1Q5A4 = new QRadioButton(M1Question5);
+        M1Q5A4->setObjectName("M1Q5A4");
+
+        verticalLayout_4->addWidget(M1Q5A4);
+
+        M1Q5A3 = new QRadioButton(M1Question5);
+        M1Q5A3->setObjectName("M1Q5A3");
+
+        verticalLayout_4->addWidget(M1Q5A3);
+
+        M1Q5A2 = new QRadioButton(M1Question5);
+        M1Q5A2->setObjectName("M1Q5A2");
+
+        verticalLayout_4->addWidget(M1Q5A2);
+
+
+        verticalLayout->addWidget(M1Question5);
+
+        quiz1scrollarea->setWidget(quiz1scrolwidgetl);
+
+        gridLayout_23->addWidget(quiz1scrollarea, 2, 0, 1, 1);
+
+        quiz1header = new QLabel(mod1quiz);
+        quiz1header->setObjectName("quiz1header");
+        quiz1header->setFont(font5);
+
+        gridLayout_23->addWidget(quiz1header, 0, 0, 1, 1);
+
+        submitQuiz1 = new QPushButton(mod1quiz);
+        submitQuiz1->setObjectName("submitQuiz1");
+
+        gridLayout_23->addWidget(submitQuiz1, 3, 0, 1, 1);
+
         mod1stack->addWidget(mod1quiz);
 
-        gridLayout->addWidget(mod1stack, 0, 0, 3, 2);
+        gridLayout->addWidget(mod1stack, 0, 0, 1, 1);
 
         moduleStack->addWidget(module1);
         module2 = new QWidget();
@@ -880,7 +1086,7 @@ public:
         retranslateUi(Widget);
 
         stackedWidget->setCurrentIndex(5);
-        moduleStack->setCurrentIndex(8);
+        moduleStack->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -1096,6 +1302,33 @@ public:
 "\n"
 "9 - Conclusion\n"
 "Understanding how the stock market works and how major events can impact market movements is crucial for any investor or trader. The 2008 financial crisis serves as a significant example of how interconnected the global financial system is and the importance of informed decision-making.", nullptr));
+        M1Question1->setTitle(QCoreApplication::translate("Widget", "Question 1: What is the primary role of the stock market?", nullptr));
+        M1Q1A1->setText(QCoreApplication::translate("Widget", "A) To allow companies to buy other companies", nullptr));
+        M1Q1A2_C->setText(QCoreApplication::translate("Widget", "B) To provide a platform where investors buy and sell shares of publicly traded companies.", nullptr));
+        M1Q1A3->setText(QCoreApplication::translate("Widget", "C) To control the economy through government policies.", nullptr));
+        M1Q1A4->setText(QCoreApplication::translate("Widget", "D) To set interest rates for banks.", nullptr));
+        M1Question2->setTitle(QCoreApplication::translate("Widget", "Question 2: In a bull market, investor sentiment is typically characterized by:", nullptr));
+        M1Q2A1->setText(QCoreApplication::translate("Widget", "A) Pessimism and selling off stocks.", nullptr));
+        M1Q2A2->setText(QCoreApplication::translate("Widget", "B) Uncertainty and low trading volumes.", nullptr));
+        M1Q2A3_C->setText(QCoreApplication::translate("Widget", "C) Optimism and confidence that stock prices will rise.", nullptr));
+        M1Q2A4->setText(QCoreApplication::translate("Widget", "D) Fear due to declining stock prices.", nullptr));
+        M1Question3->setTitle(QCoreApplication::translate("Widget", "Question 3: Which of the following is NOT a factor influencing stock prices?", nullptr));
+        M1Q3A1->setText(QCoreApplication::translate("Widget", "A) Company performance.", nullptr));
+        M1Q3A2->setText(QCoreApplication::translate("Widget", "B) Supply and demand", nullptr));
+        M1Q3A3->setText(QCoreApplication::translate("Widget", "C) Economic indicators.", nullptr));
+        M1Q3A4_C->setText(QCoreApplication::translate("Widget", "D) Investor's personal hobbies.", nullptr));
+        M1Question4->setTitle(QCoreApplication::translate("Widget", "Question 4: What was one of the main causes of the 2008 financial crisis?", nullptr));
+        M1Q4A1->setText(QCoreApplication::translate("Widget", "A) High demand for government bonds.", nullptr));
+        M1Q4A2->setText(QCoreApplication::translate("Widget", "B) Overregulation of financial markets.", nullptr));
+        M1Q4A3_C->setText(QCoreApplication::translate("Widget", "C) Subprime mortgage lending and complex financial derivatives.", nullptr));
+        M1Q4A4->setText(QCoreApplication::translate("Widget", "D) A significant increase in global oil prices.", nullptr));
+        M1Question5->setTitle(QCoreApplication::translate("Widget", "Question 5: What is a key lesson learned from the 2008 financial crisis?", nullptr));
+        M1Q5A1_C->setText(QCoreApplication::translate("Widget", "A) The importance of financial oversight and regulation to reduce risk.", nullptr));
+        M1Q5A4->setText(QCoreApplication::translate("Widget", "B) Diversification is unnecessary in a global economy.", nullptr));
+        M1Q5A3->setText(QCoreApplication::translate("Widget", "C) Financial markets require less oversight to operate efficiently.", nullptr));
+        M1Q5A2->setText(QCoreApplication::translate("Widget", "D) Stock markets are unaffected by global events.", nullptr));
+        quiz1header->setText(QCoreApplication::translate("Widget", "Mod 1 - Understanding Movements and Major Events", nullptr));
+        submitQuiz1->setText(QCoreApplication::translate("Widget", "Submit Quiz", nullptr));
         RETURNBTN_2->setText(QCoreApplication::translate("Widget", "Return", nullptr));
         quizButton2->setText(QCoreApplication::translate("Widget", "Quiz 2", nullptr));
         mod2header->setText(QCoreApplication::translate("Widget", "Mod 2 - Trading Basics", nullptr));

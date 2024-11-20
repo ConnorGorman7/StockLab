@@ -685,7 +685,7 @@ Information</string>
           </size>
          </property>
          <property name="currentIndex">
-          <number>8</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="moduleHomepage">
           <layout class="QGridLayout" name="gridLayout_2">
@@ -935,7 +935,7 @@ Information</string>
            <property name="bottomMargin">
             <number>0</number>
            </property>
-           <item row="0" column="0" rowspan="3" colspan="2">
+           <item row="0" column="0">
             <widget class="QStackedWidget" name="mod1stack">
              <widget class="QWidget" name="mod1content">
               <layout class="QGridLayout" name="gridLayout_12">
@@ -1082,7 +1082,306 @@ Understanding how the stock market works and how major events can impact market 
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="mod1quiz"/>
+             <widget class="QWidget" name="mod1quiz">
+              <layout class="QGridLayout" name="gridLayout_23">
+               <item row="2" column="0">
+                <widget class="QScrollArea" name="quiz1scrollarea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz1scrolwidgetl">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-153</y>
+                    <width>761</width>
+                    <height>804</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M1Question1">
+                     <property name="title">
+                      <string>Question 1: What is the primary role of the stock market?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_8">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q1A1">
+                        <property name="text">
+                         <string>A) To allow companies to buy other companies</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q1A2_C">
+                        <property name="text">
+                         <string>B) To provide a platform where investors buy and sell shares of publicly traded companies.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q1A3">
+                        <property name="text">
+                         <string>C) To control the economy through government policies.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q1A4">
+                        <property name="text">
+                         <string>D) To set interest rates for banks.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M1Question2">
+                     <property name="title">
+                      <string>Question 2: In a bull market, investor sentiment is typically characterized by:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_7">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q2A1">
+                        <property name="text">
+                         <string>A) Pessimism and selling off stocks.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q2A2">
+                        <property name="text">
+                         <string>B) Uncertainty and low trading volumes.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q2A3_C">
+                        <property name="text">
+                         <string>C) Optimism and confidence that stock prices will rise.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q2A4">
+                        <property name="text">
+                         <string>D) Fear due to declining stock prices.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M1Question3">
+                     <property name="title">
+                      <string>Question 3: Which of the following is NOT a factor influencing stock prices?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_6">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q3A1">
+                        <property name="text">
+                         <string>A) Company performance.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q3A2">
+                        <property name="text">
+                         <string>B) Supply and demand</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q3A3">
+                        <property name="text">
+                         <string>C) Economic indicators.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q3A4_C">
+                        <property name="text">
+                         <string>D) Investor's personal hobbies.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M1Question4">
+                     <property name="title">
+                      <string>Question 4: What was one of the main causes of the 2008 financial crisis?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_5">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q4A1">
+                        <property name="text">
+                         <string>A) High demand for government bonds.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q4A2">
+                        <property name="text">
+                         <string>B) Overregulation of financial markets.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q4A3_C">
+                        <property name="text">
+                         <string>C) Subprime mortgage lending and complex financial derivatives.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q4A4">
+                        <property name="text">
+                         <string>D) A significant increase in global oil prices.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M1Question5">
+                     <property name="title">
+                      <string>Question 5: What is a key lesson learned from the 2008 financial crisis?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_4">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q5A1_C">
+                        <property name="text">
+                         <string>A) The importance of financial oversight and regulation to reduce risk.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q5A4">
+                        <property name="text">
+                         <string>B) Diversification is unnecessary in a global economy.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q5A3">
+                        <property name="text">
+                         <string>C) Financial markets require less oversight to operate efficiently.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M1Q5A2">
+                        <property name="text">
+                         <string>D) Stock markets are unaffected by global events.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="quiz1header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 1 - Understanding Movements and Major Events</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QPushButton" name="submitQuiz1">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>

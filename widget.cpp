@@ -294,6 +294,92 @@ void Widget::on_mod9_clicked()
 
 void Widget::on_quizButton1_clicked()
 {
-    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module1));
+    ui->mod1stack->setCurrentIndex(ui->mod1stack->indexOf(ui->mod1quiz));
+}
+
+void Widget::on_quizButton2_clicked()
+{
+    ui->mod2stack->setCurrentIndex(ui->mod2stack->indexOf(ui->mod2quiz));
+}
+
+void Widget::on_quizButton3_clicked()
+{
+    ui->mod3stack->setCurrentIndex(ui->mod3stack->indexOf(ui->mod3quiz));
+}
+
+void Widget::on_quizButton4_clicked()
+{
+    ui->mod4stack->setCurrentIndex(ui->mod4stack->indexOf(ui->mod4quiz));
+}
+
+void Widget::on_quizButton5_clicked()
+{
+    ui->mod5stack->setCurrentIndex(ui->mod5stack->indexOf(ui->mod5quiz));
+}
+
+void Widget::on_quizButton6_clicked()
+{
+    ui->mod6stack->setCurrentIndex(ui->mod6stack->indexOf(ui->mod6quiz));
+}
+
+void Widget::on_quizButton7_clicked()
+{
+    ui->mod7stack->setCurrentIndex(ui->mod7stack->indexOf(ui->mod7quiz));
+}
+
+void Widget::on_quizButton8_clicked()
+{
+    ui->mod8stack->setCurrentIndex(ui->mod8stack->indexOf(ui->mod8quiz));
+}
+
+void Widget::on_quizButton9_clicked()
+{
+    ui->mod9stack->setCurrentIndex(ui->mod9stack->indexOf(ui->mod9quiz));
+}
+
+void Widget::resetQuiz(QWidget *quizContainer)
+{
+    // find all QRadioButton elements that are children of the provided container
+    QList<QRadioButton *> radioButtons = quizContainer->findChildren<QRadioButton *>();
+
+    // iterate through the list and uncheck each QRadioButton
+    for (QRadioButton *radioButton : radioButtons) {
+        // disable auto-exclusivity, uncheck, and re-enable auto-exclusivity to reset properly
+        radioButton->setAutoExclusive(false);
+        radioButton->setChecked(false);
+        radioButton->setAutoExclusive(true);
+    }
+}
+
+bool q1Complete = false;
+void Widget::on_submitQuiz1_clicked()
+{
+    int score = 0;
+
+    QRadioButton *q1 = findChild<QRadioButton *>("M1Q1A2_C");
+    QRadioButton *q2 = findChild<QRadioButton *>("M1Q2A3_C");
+    QRadioButton *q3 = findChild<QRadioButton *>("M1Q3A4_C");
+    QRadioButton *q4 = findChild<QRadioButton *>("M1Q4A3_C");
+    QRadioButton *q5 = findChild<QRadioButton *>("M1Q5A1_C");
+
+    if (q1 && q1->isChecked()) { score+=20; }
+    if (q2 && q2->isChecked()) { score+=20; }
+    if (q3 && q3->isChecked()) { score+=20; }
+    if (q4 && q4->isChecked()) { score+=20; }
+    if (q5 && q5->isChecked()) { score+=20; }
+
+    QString message;
+    if (score >= 60) {
+        message = QString("Congratulations! You passed the quiz!\nYou got a %1%.").arg(score);
+        if(q1Complete == false) { ui->beginProgress->setValue(ui->beginProgress->value() + 33); }
+        q1Complete = true;
+        ui->mod1->setText("M1 - Basic Intuition - ✓");
+    } else {
+        message = QString("Unfortunately, you did not pass the quiz.\nYou got a %1%. Please try again.").arg(score);
+    }
+    QMessageBox::information(this, "Quiz Result", message);
+
+    resetQuiz(ui->mod1quiz);
+    ui->moduleStack->setCurrentIndex(0);
 }
 
