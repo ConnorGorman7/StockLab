@@ -65,6 +65,8 @@ private slots:
 
     void on_mod9_clicked();
 
+    void on_quizButton1_clicked();
+
 private:
     Ui::Widget *ui;
 

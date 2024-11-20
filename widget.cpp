@@ -241,45 +241,59 @@ void Widget::on_RETURNBTN_clicked()
 void Widget::on_mod1_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module1));
+    ui->mod1stack->setCurrentIndex(ui->mod1stack->indexOf(ui->mod1content));
 }
 
 void Widget::on_mod2_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module2));
+    ui->mod2stack->setCurrentIndex(ui->mod2stack->indexOf(ui->mod2content));
 }
 
 void Widget::on_mod3_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module3));
+    ui->mod3stack->setCurrentIndex(ui->mod3stack->indexOf(ui->mod3content));
 }
 
 void Widget::on_mod4_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module4));
+    ui->mod4stack->setCurrentIndex(ui->mod4stack->indexOf(ui->mod4content));
 }
 
 void Widget::on_mod5_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module5));
+    ui->mod5stack->setCurrentIndex(ui->mod5stack->indexOf(ui->mod5content));
 }
 
 void Widget::on_mod6_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module6));
+    ui->mod6stack->setCurrentIndex(ui->mod6stack->indexOf(ui->mod6content));
 }
 
 void Widget::on_mod7_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module7));
+    ui->mod7stack->setCurrentIndex(ui->mod7stack->indexOf(ui->mod7content));
 }
 
 void Widget::on_mod8_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module8));
+    ui->mod8stack->setCurrentIndex(ui->mod8stack->indexOf(ui->mod8content));
 }
 
 void Widget::on_mod9_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module9));
+    ui->mod9stack->setCurrentIndex(ui->mod9stack->indexOf(ui->mod9content));
+}
+
+void Widget::on_quizButton1_clicked()
+{
+    ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module1));
 }
 

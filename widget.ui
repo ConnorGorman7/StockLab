@@ -14,7 +14,19 @@
    <string>Widget</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_4">
-   <item row="0" column="0">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0" rowspan="2">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="enabled">
       <bool>true</bool>
@@ -651,281 +663,328 @@ Information</string>
       </widget>
      </widget>
      <widget class="QWidget" name="moduleWidget">
-      <widget class="QStackedWidget" name="moduleStack">
-       <property name="geometry">
-        <rect>
-         <x>-1</x>
-         <y>-11</y>
-         <width>781</width>
-         <height>591</height>
-        </rect>
-       </property>
-       <property name="currentIndex">
+      <layout class="QGridLayout" name="gridLayout_21">
+       <property name="leftMargin">
         <number>0</number>
        </property>
-       <widget class="QWidget" name="moduleHomepage">
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="7" column="2">
-          <widget class="QLabel" name="advancedLabel">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Advanced</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignmentFlag::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="2">
-          <widget class="QPushButton" name="mod7">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M7 - Advanced Tech. Analysis</string>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="2">
-          <widget class="QPushButton" name="mod9">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M9 - Portfolio Management</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="introductoryLabel">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Introductory</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignmentFlag::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="1">
-          <widget class="QPushButton" name="mod4">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M4 - Technical Analysis</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="2">
-          <widget class="QPushButton" name="mod8">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M8 - Derivatives and Options</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="1">
-          <widget class="QLabel" name="intermediateLabel">
-           <property name="font">
-            <font>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Intermediate</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignmentFlag::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QPushButton" name="mod1">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="baseSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M1 - Basic Intuition</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="0">
-          <widget class="QProgressBar" name="beginProgress">
-           <property name="value">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QStackedWidget" name="moduleStack">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="currentIndex">
+          <number>8</number>
+         </property>
+         <widget class="QWidget" name="moduleHomepage">
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="7" column="2">
+            <widget class="QLabel" name="advancedLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Advanced</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QPushButton" name="mod7">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M7 - Advanced Tech. Analysis</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QPushButton" name="mod9">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M9 - Portfolio Management</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="introductoryLabel">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Introductory</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QPushButton" name="mod4">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M4 - Technical Analysis</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QPushButton" name="mod8">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M8 - Derivatives and Options</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLabel" name="intermediateLabel">
+             <property name="font">
+              <font>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Intermediate</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QPushButton" name="mod1">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M1 - Basic Intuition</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QProgressBar" name="beginProgress">
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QPushButton" name="mod5">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M5 - Risk Management</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QProgressBar" name="interProgress">
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="0" colspan="3">
+            <widget class="QPushButton" name="menu">
+             <property name="text">
+              <string>Return</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QPushButton" name="mod6">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M6 - Trading Strategies</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="3">
+            <widget class="QLabel" name="moduleWelcome">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Module Home - Are you ready to learn?</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QPushButton" name="mod3">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M3 - Fundamental Analysis</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="2">
+            <widget class="QProgressBar" name="advProgress">
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QPushButton" name="mod2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>M2 - Trading Basics</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module1">
+          <layout class="QGridLayout" name="gridLayout">
+           <property name="leftMargin">
             <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="9" column="1">
-          <widget class="QPushButton" name="mod5">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M5 - Risk Management</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="1">
-          <widget class="QProgressBar" name="interProgress">
-           <property name="value">
+           <property name="topMargin">
             <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="12" column="0" colspan="3">
-          <widget class="QPushButton" name="menu">
-           <property name="text">
-            <string>Return</string>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="1">
-          <widget class="QPushButton" name="mod6">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M6 - Trading Strategies</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0" colspan="3">
-          <widget class="QLabel" name="moduleWelcome">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Module Home - Are you ready to learn?</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignmentFlag::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="0">
-          <widget class="QPushButton" name="mod3">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>M3 - Fundamental Analysis</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="2">
-          <widget class="QProgressBar" name="advProgress">
-           <property name="value">
+           <property name="rightMargin">
             <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QPushButton" name="mod2">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>M2 - Trading Basics</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module1">
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN">
-           <property name="text">
-            <string>Return</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1" alignment="Qt::AlignmentFlag::Qt::AlignmentFlag::AlignTop">
-          <widget class="QLabel" name="mod1header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Mod 1 - Understanding Market Movements and Major Events</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod1text">
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="plainText">
-            <string>Module 1: Understanding Market Movements and Major Events
+           <item row="0" column="0" rowspan="3" colspan="2">
+            <widget class="QStackedWidget" name="mod1stack">
+             <widget class="QWidget" name="mod1content">
+              <layout class="QGridLayout" name="gridLayout_12">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_1">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton1">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 1</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod1header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 1 - Understanding Movements and Major Events</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="3">
+                <widget class="QPlainTextEdit" name="mod1text">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 1: Understanding Market Movements and Major Events
 
 1 - What is the Stock Market?
 The stock market is a collection of exchanges where investors buy and sell shares of publicly traded companies. Think of it as a marketplace for businesses to raise money by offering ownership stakes to investors, and for investors to potentially profit from the company's growth.
@@ -1018,33 +1077,83 @@ Global events—such as political elections, natural disasters, pandemics, and e
 
 9 - Conclusion
 Understanding how the stock market works and how major events can impact market movements is crucial for any investor or trader. The 2008 financial crisis serves as a significant example of how interconnected the global financial system is and the importance of informed decision-making.</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="mod1quiz"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module2">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="leftMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module2">
-        <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN_2">
-           <property name="maximumSize">
-            <size>
-             <width>96</width>
-             <height>29</height>
-            </size>
+           <property name="topMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Return</string>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="2" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod2text">
-           <property name="readOnly">
-            <bool>true</bool>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="plainText">
-            <string>Module 2: Basics of Stock Trading
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="mod2stack">
+             <widget class="QWidget" name="mod2content">
+              <layout class="QGridLayout" name="gridLayout_13">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_2">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton2">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 2</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod2header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 2 - Trading Basics</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="3">
+                <widget class="QPlainTextEdit" name="mod2text">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 2: Basics of Stock Trading
 
 1 - Types of Stocks
 1.1 - Common vs. Preferred Stocks
@@ -1119,59 +1228,41 @@ Diversification -&gt; Spreading investments across various assets to mitigate ri
 
 8 - Conclusion
 Understanding the basics of stock trading is essential for anyone looking to invest in the stock market. By familiarizing yourself with the types of stocks, how exchanges operate, the process of buying and selling, and interpreting stock information, you lay a strong foundation for making informed trades and investment decisions.</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="mod2quiz"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module3">
+          <layout class="QGridLayout" name="gridLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="mod2header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
+           <property name="topMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Mod 2 - Trading Basics</string>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module3">
-        <layout class="QGridLayout" name="gridLayout_5">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN_3">
-           <property name="maximumSize">
-            <size>
-             <width>96</width>
-             <height>29</height>
-            </size>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Return</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="mod3header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Mod 3 - Fundamental Analysis</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod3text">
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="plainText">
-            <string>Module 3: Fundamental Analysis
+           <item row="1" column="0">
+            <widget class="QStackedWidget" name="mod3stack">
+             <widget class="QWidget" name="mod3content">
+              <layout class="QGridLayout" name="gridLayout_14">
+               <item row="2" column="0" colspan="4">
+                <widget class="QPlainTextEdit" name="mod3text">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 3: Fundamental Analysis
 
 1 - Understanding Financial Statements
 1.1 - Income Statements
@@ -1254,46 +1345,93 @@ Risk Assessment -&gt; Identifies potential risks that may not be evident through
 
 8 - Conclusion
 Fundamental analysis is a critical tool for investors aiming to make informed decisions. By understanding financial statements, key ratios, and qualitative factors, you can evaluate a company's true worth and growth prospects, aligning your investments with your financial goals.</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_3">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton3">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 3</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod3header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 3 - Fundamental Analysis</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="mod3quiz"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module5">
+          <layout class="QGridLayout" name="gridLayout_7">
+           <property name="leftMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module5">
-        <layout class="QGridLayout" name="gridLayout_7">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN_5">
-           <property name="maximumSize">
-            <size>
-             <width>96</width>
-             <height>29</height>
-            </size>
+           <property name="topMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Return</string>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="mod5header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Mod 5 - Risk Management and Trading Psychology</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod5text">
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="plainText">
-            <string>Module 5: Risk Management and Trading Psychology
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="mod5stack">
+             <widget class="QWidget" name="mod5content">
+              <layout class="QGridLayout" name="gridLayout_16">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_5">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" colspan="5">
+                <widget class="QPlainTextEdit" name="mod5text">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 5: Risk Management and Trading Psychology
 
 1 - Risk vs. Reward
 Understanding the balance between the potential profit and the risk of loss in trading.
@@ -1387,46 +1525,67 @@ Emotional Control -&gt; Reduces impulsive decisions.
 
 7 - Conclusion
 Effective risk management and psychological discipline are crucial for long-term trading success. By defining acceptable risk levels, utilizing position sizing techniques, and maintaining emotional control, traders can improve their decision-making processes and increase the likelihood of achieving their trading goals.</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton5">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 5</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod5header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 5 - Risk Management and Trading Psychology</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="mod5quiz"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module6">
+          <layout class="QGridLayout" name="gridLayout_11">
+           <property name="leftMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module6">
-        <layout class="QGridLayout" name="gridLayout_11">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN_6">
-           <property name="maximumSize">
-            <size>
-             <width>96</width>
-             <height>29</height>
-            </size>
+           <property name="topMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Return</string>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="mod6header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Mod 6 - Types of Trading Strategies</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod6text">
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="plainText">
-            <string>Module 6: Types of Trading Strategies
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="mod6stack">
+             <widget class="QWidget" name="mod6content">
+              <layout class="QGridLayout" name="gridLayout_17">
+               <item row="2" column="0" colspan="4">
+                <widget class="QPlainTextEdit" name="mod6text">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 6: Types of Trading Strategies
 
 1 - Day Trading vs. Swing Trading
 Understanding the differences between day trading and swing trading is essential for choosing a trading style that fits your lifestyle and risk tolerance.
@@ -1608,46 +1767,80 @@ Diversification -&gt; Spreading investments across various assets to mitigate ri
 
 8 - Conclusion
 Understanding the basics of stock trading is essential for anyone looking to invest in the stock market. By familiarizing yourself with the types of stocks, how exchanges operate, the process of buying and selling, and interpreting stock information, you lay a strong foundation for making informed trades and investment decisions.</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_6">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton6">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 6</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod6header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 6 - Types of Trading Strategies</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="mod6quiz"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module7">
+          <layout class="QGridLayout" name="gridLayout_10">
+           <property name="leftMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module7">
-        <layout class="QGridLayout" name="gridLayout_10">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN_7">
-           <property name="maximumSize">
-            <size>
-             <width>96</width>
-             <height>29</height>
-            </size>
+           <property name="topMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Return</string>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="mod7header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Mod 7 - Advanced Technical Analysis Tools</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod7text">
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="plainText">
-            <string>Module 7: Advanced Technical Analysis Tools
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="mod7stack">
+             <widget class="QWidget" name="mod7content">
+              <layout class="QGridLayout" name="gridLayout_18">
+               <item row="2" column="0" colspan="4">
+                <widget class="QPlainTextEdit" name="mod7text">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 7: Advanced Technical Analysis Tools
 
 1 - Fibonacci Retracement and Extensions
 Fibonacci tools are used by traders to identify potential support and resistance levels based on key ratios derived from the Fibonacci sequence.
@@ -1774,46 +1967,80 @@ Outcome -&gt; The stock begins to decline, validating the analysis and resulting
 
 7 - Conclusion
 By mastering advanced technical analysis tools like Fibonacci retracement, advanced indicators, chart patterns, and Elliott Wave Theory, traders can gain a more nuanced understanding of market dynamics. Combining these tools enhances decision-making and increases the likelihood of successful trades by providing multiple layers of confirmation.</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_7">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton7">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 7</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod7header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 7 - Advanced Technical Analysis Tools</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="mod7quiz"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module8">
+          <layout class="QGridLayout" name="gridLayout_9">
+           <property name="leftMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module8">
-        <layout class="QGridLayout" name="gridLayout_9">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN_8">
-           <property name="maximumSize">
-            <size>
-             <width>96</width>
-             <height>29</height>
-            </size>
+           <property name="topMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Return</string>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="mod8header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Mod 8 - Derivatives and Options Trading</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod8text">
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="plainText">
-            <string>Module 8: Derivatives and Options Trading
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="mod8stack">
+             <widget class="QWidget" name="mod8content">
+              <layout class="QGridLayout" name="gridLayout_19">
+               <item row="2" column="0" colspan="4">
+                <widget class="QPlainTextEdit" name="mod8text">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 8: Derivatives and Options Trading
 
 1 - Introduction to Derivatives
 Understanding derivatives is crucial for advanced trading strategies, as they allow traders to hedge positions, speculate on price movements, and enhance portfolio performance.
@@ -1938,46 +2165,80 @@ Outcome -&gt; If the stock falls, gains on the put options offset losses on the 
 
 7 - Conclusion
 Derivatives and options offer powerful tools for both speculation and risk management. By understanding how to employ various options strategies, leveraging positions carefully, and implementing effective hedging techniques, traders and investors can enhance their portfolios and protect against adverse market movements.</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_8">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton8">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 8</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod8header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 8 - Derivatives and Options Trading</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="mod8quiz"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module9">
+          <layout class="QGridLayout" name="gridLayout_8">
+           <property name="leftMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module9">
-        <layout class="QGridLayout" name="gridLayout_8">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN_9">
-           <property name="maximumSize">
-            <size>
-             <width>96</width>
-             <height>29</height>
-            </size>
+           <property name="topMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Return</string>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="mod9header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Mod 9 - Portfolio Management and Advanced Strategies</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod9text">
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="plainText">
-            <string>Module 9: Portfolio Management and Advanced Investment Strategies
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="mod9stack">
+             <widget class="QWidget" name="mod9content">
+              <layout class="QGridLayout" name="gridLayout_20">
+               <item row="2" column="0" colspan="4">
+                <widget class="QPlainTextEdit" name="mod9text">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 9: Portfolio Management and Advanced Investment Strategies
 
 1 - Portfolio Construction
 Understanding how to construct a well-balanced portfolio is fundamental to achieving investment goals while managing risk.
@@ -2126,46 +2387,87 @@ Adjusting Strategies -&gt; Making changes based on life events, market condition
 
 7 - Conclusion
 Effective portfolio management involves strategic asset allocation, regular rebalancing, and selecting appropriate investment strategies aligned with individual goals and risk tolerance. By understanding and applying advanced investment concepts such as Modern Portfolio Theory, value versus growth investing, and active versus passive management, investors can construct portfolios designed to optimize returns while managing risk. Regular monitoring and adjustments ensure the portfolio remains aligned with changing objectives and market dynamics.</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_9">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton9">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 9</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod9header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 9 - Portfolio Management</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="mod9quiz"/>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="module4">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <property name="leftMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="module4">
-        <layout class="QGridLayout" name="gridLayout_6">
-         <item row="0" column="0">
-          <widget class="QPushButton" name="RETURNBTN_4">
-           <property name="maximumSize">
-            <size>
-             <width>96</width>
-             <height>29</height>
-            </size>
+           <property name="topMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Return</string>
+           <property name="rightMargin">
+            <number>0</number>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="mod4header">
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <bold>true</bold>
-            </font>
+           <property name="bottomMargin">
+            <number>0</number>
            </property>
-           <property name="text">
-            <string>Mod 4 - Technical Analysis</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="2">
-          <widget class="QPlainTextEdit" name="mod4text">
-           <property name="readOnly">
-            <bool>true</bool>
-           </property>
-           <property name="plainText">
-            <string>Module 4 - Technical Analysis
+           <item row="0" column="0">
+            <widget class="QStackedWidget" name="mod4stack">
+             <widget class="QWidget" name="mod4quiz"/>
+             <widget class="QWidget" name="mod4content">
+              <layout class="QGridLayout" name="gridLayout_15">
+               <item row="2" column="0" colspan="4">
+                <widget class="QPlainTextEdit" name="mod4text">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="plainText">
+                  <string>Module 4 - Technical Analysis
 
 1 - Introduction to Technical Analysis
 Technical analysis involves evaluating securities by analyzing statistics generated by market activity, such as past prices and volume. Unlike fundamental analysis, which seeks to assess a company's intrinsic value, technical analysis focuses on identifying patterns and trends that suggest future price movements.
@@ -2285,12 +2587,57 @@ Oversold Conditions -&gt; Consider buying when RSI falls below 30.
 
 7 - Conclusion
 Technical analysis provides traders with tools to interpret market data and make informed trading decisions. By understanding chart types, indicators, support and resistance levels, and trend analysis, traders can better predict future price movements and identify potential trading opportunities.</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QPushButton" name="RETURNBTN_4">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Return</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QPushButton" name="quizButton4">
+                 <property name="maximumSize">
+                  <size>
+                   <width>86</width>
+                   <height>29</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Quiz 4</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="mod4header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 4 - Technical Analysis</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>

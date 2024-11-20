@@ -68,6 +68,7 @@ public:
     QLabel *studentHomeHeader;
     QPushButton *logoutButton;
     QWidget *moduleWidget;
+    QGridLayout *gridLayout_21;
     QStackedWidget *moduleStack;
     QWidget *moduleHomepage;
     QGridLayout *gridLayout_2;
@@ -90,49 +91,94 @@ public:
     QPushButton *mod2;
     QWidget *module1;
     QGridLayout *gridLayout;
-    QPushButton *RETURNBTN;
+    QStackedWidget *mod1stack;
+    QWidget *mod1content;
+    QGridLayout *gridLayout_12;
+    QPushButton *RETURNBTN_1;
+    QPushButton *quizButton1;
     QLabel *mod1header;
     QPlainTextEdit *mod1text;
+    QWidget *mod1quiz;
     QWidget *module2;
     QGridLayout *gridLayout_3;
+    QStackedWidget *mod2stack;
+    QWidget *mod2content;
+    QGridLayout *gridLayout_13;
     QPushButton *RETURNBTN_2;
-    QPlainTextEdit *mod2text;
+    QPushButton *quizButton2;
     QLabel *mod2header;
+    QPlainTextEdit *mod2text;
+    QWidget *mod2quiz;
     QWidget *module3;
     QGridLayout *gridLayout_5;
-    QPushButton *RETURNBTN_3;
-    QLabel *mod3header;
+    QStackedWidget *mod3stack;
+    QWidget *mod3content;
+    QGridLayout *gridLayout_14;
     QPlainTextEdit *mod3text;
+    QPushButton *RETURNBTN_3;
+    QPushButton *quizButton3;
+    QLabel *mod3header;
+    QWidget *mod3quiz;
     QWidget *module5;
     QGridLayout *gridLayout_7;
+    QStackedWidget *mod5stack;
+    QWidget *mod5content;
+    QGridLayout *gridLayout_16;
     QPushButton *RETURNBTN_5;
-    QLabel *mod5header;
     QPlainTextEdit *mod5text;
+    QPushButton *quizButton5;
+    QLabel *mod5header;
+    QWidget *mod5quiz;
     QWidget *module6;
     QGridLayout *gridLayout_11;
-    QPushButton *RETURNBTN_6;
-    QLabel *mod6header;
+    QStackedWidget *mod6stack;
+    QWidget *mod6content;
+    QGridLayout *gridLayout_17;
     QPlainTextEdit *mod6text;
+    QPushButton *RETURNBTN_6;
+    QPushButton *quizButton6;
+    QLabel *mod6header;
+    QWidget *mod6quiz;
     QWidget *module7;
     QGridLayout *gridLayout_10;
-    QPushButton *RETURNBTN_7;
-    QLabel *mod7header;
+    QStackedWidget *mod7stack;
+    QWidget *mod7content;
+    QGridLayout *gridLayout_18;
     QPlainTextEdit *mod7text;
+    QPushButton *RETURNBTN_7;
+    QPushButton *quizButton7;
+    QLabel *mod7header;
+    QWidget *mod7quiz;
     QWidget *module8;
     QGridLayout *gridLayout_9;
-    QPushButton *RETURNBTN_8;
-    QLabel *mod8header;
+    QStackedWidget *mod8stack;
+    QWidget *mod8content;
+    QGridLayout *gridLayout_19;
     QPlainTextEdit *mod8text;
+    QPushButton *RETURNBTN_8;
+    QPushButton *quizButton8;
+    QLabel *mod8header;
+    QWidget *mod8quiz;
     QWidget *module9;
     QGridLayout *gridLayout_8;
-    QPushButton *RETURNBTN_9;
-    QLabel *mod9header;
+    QStackedWidget *mod9stack;
+    QWidget *mod9content;
+    QGridLayout *gridLayout_20;
     QPlainTextEdit *mod9text;
+    QPushButton *RETURNBTN_9;
+    QPushButton *quizButton9;
+    QLabel *mod9header;
+    QWidget *mod9quiz;
     QWidget *module4;
     QGridLayout *gridLayout_6;
-    QPushButton *RETURNBTN_4;
-    QLabel *mod4header;
+    QStackedWidget *mod4stack;
+    QWidget *mod4quiz;
+    QWidget *mod4content;
+    QGridLayout *gridLayout_15;
     QPlainTextEdit *mod4text;
+    QPushButton *RETURNBTN_4;
+    QPushButton *quizButton4;
+    QLabel *mod4header;
 
     void setupUi(QWidget *Widget)
     {
@@ -141,6 +187,7 @@ public:
         Widget->resize(802, 600);
         gridLayout_4 = new QGridLayout(Widget);
         gridLayout_4->setObjectName("gridLayout_4");
+        gridLayout_4->setContentsMargins(0, 0, 0, 0);
         stackedWidget = new QStackedWidget(Widget);
         stackedWidget->setObjectName("stackedWidget");
         stackedWidget->setEnabled(true);
@@ -304,9 +351,12 @@ public:
         stackedWidget->addWidget(studentHome);
         moduleWidget = new QWidget();
         moduleWidget->setObjectName("moduleWidget");
+        gridLayout_21 = new QGridLayout(moduleWidget);
+        gridLayout_21->setObjectName("gridLayout_21");
+        gridLayout_21->setContentsMargins(0, 0, 0, 0);
         moduleStack = new QStackedWidget(moduleWidget);
         moduleStack->setObjectName("moduleStack");
-        moduleStack->setGeometry(QRect(-1, -11, 781, 591));
+        moduleStack->setMaximumSize(QSize(16777215, 16777215));
         moduleHomepage = new QWidget();
         moduleHomepage->setObjectName("moduleHomepage");
         gridLayout_2 = new QGridLayout(moduleHomepage);
@@ -430,217 +480,407 @@ public:
         module1->setObjectName("module1");
         gridLayout = new QGridLayout(module1);
         gridLayout->setObjectName("gridLayout");
-        RETURNBTN = new QPushButton(module1);
-        RETURNBTN->setObjectName("RETURNBTN");
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        mod1stack = new QStackedWidget(module1);
+        mod1stack->setObjectName("mod1stack");
+        mod1content = new QWidget();
+        mod1content->setObjectName("mod1content");
+        gridLayout_12 = new QGridLayout(mod1content);
+        gridLayout_12->setObjectName("gridLayout_12");
+        RETURNBTN_1 = new QPushButton(mod1content);
+        RETURNBTN_1->setObjectName("RETURNBTN_1");
+        RETURNBTN_1->setMaximumSize(QSize(86, 29));
 
-        gridLayout->addWidget(RETURNBTN, 0, 0, 1, 1);
+        gridLayout_12->addWidget(RETURNBTN_1, 0, 0, 1, 1);
 
-        mod1header = new QLabel(module1);
+        quizButton1 = new QPushButton(mod1content);
+        quizButton1->setObjectName("quizButton1");
+        quizButton1->setMaximumSize(QSize(86, 29));
+
+        gridLayout_12->addWidget(quizButton1, 0, 1, 1, 1);
+
+        mod1header = new QLabel(mod1content);
         mod1header->setObjectName("mod1header");
         mod1header->setFont(font5);
 
-        gridLayout->addWidget(mod1header, 0, 1, 1, 1, Qt::AlignmentFlag::AlignTop);
+        gridLayout_12->addWidget(mod1header, 0, 2, 1, 1);
 
-        mod1text = new QPlainTextEdit(module1);
+        mod1text = new QPlainTextEdit(mod1content);
         mod1text->setObjectName("mod1text");
         mod1text->setReadOnly(true);
 
-        gridLayout->addWidget(mod1text, 1, 0, 1, 2);
+        gridLayout_12->addWidget(mod1text, 1, 0, 1, 3);
+
+        mod1stack->addWidget(mod1content);
+        mod1quiz = new QWidget();
+        mod1quiz->setObjectName("mod1quiz");
+        mod1stack->addWidget(mod1quiz);
+
+        gridLayout->addWidget(mod1stack, 0, 0, 3, 2);
 
         moduleStack->addWidget(module1);
         module2 = new QWidget();
         module2->setObjectName("module2");
         gridLayout_3 = new QGridLayout(module2);
         gridLayout_3->setObjectName("gridLayout_3");
-        RETURNBTN_2 = new QPushButton(module2);
+        gridLayout_3->setContentsMargins(0, 0, 0, 0);
+        mod2stack = new QStackedWidget(module2);
+        mod2stack->setObjectName("mod2stack");
+        mod2content = new QWidget();
+        mod2content->setObjectName("mod2content");
+        gridLayout_13 = new QGridLayout(mod2content);
+        gridLayout_13->setObjectName("gridLayout_13");
+        RETURNBTN_2 = new QPushButton(mod2content);
         RETURNBTN_2->setObjectName("RETURNBTN_2");
-        RETURNBTN_2->setMaximumSize(QSize(96, 29));
+        RETURNBTN_2->setEnabled(true);
+        RETURNBTN_2->setMaximumSize(QSize(86, 29));
 
-        gridLayout_3->addWidget(RETURNBTN_2, 0, 0, 1, 1);
+        gridLayout_13->addWidget(RETURNBTN_2, 0, 0, 1, 1);
 
-        mod2text = new QPlainTextEdit(module2);
-        mod2text->setObjectName("mod2text");
-        mod2text->setReadOnly(true);
+        quizButton2 = new QPushButton(mod2content);
+        quizButton2->setObjectName("quizButton2");
+        quizButton2->setMaximumSize(QSize(86, 29));
 
-        gridLayout_3->addWidget(mod2text, 2, 0, 1, 2);
+        gridLayout_13->addWidget(quizButton2, 0, 1, 1, 1);
 
-        mod2header = new QLabel(module2);
+        mod2header = new QLabel(mod2content);
         mod2header->setObjectName("mod2header");
         mod2header->setFont(font5);
 
-        gridLayout_3->addWidget(mod2header, 0, 1, 1, 1);
+        gridLayout_13->addWidget(mod2header, 0, 2, 1, 1);
+
+        mod2text = new QPlainTextEdit(mod2content);
+        mod2text->setObjectName("mod2text");
+        mod2text->setReadOnly(true);
+
+        gridLayout_13->addWidget(mod2text, 1, 0, 1, 3);
+
+        mod2stack->addWidget(mod2content);
+        mod2quiz = new QWidget();
+        mod2quiz->setObjectName("mod2quiz");
+        mod2stack->addWidget(mod2quiz);
+
+        gridLayout_3->addWidget(mod2stack, 0, 0, 1, 1);
 
         moduleStack->addWidget(module2);
         module3 = new QWidget();
         module3->setObjectName("module3");
         gridLayout_5 = new QGridLayout(module3);
         gridLayout_5->setObjectName("gridLayout_5");
-        RETURNBTN_3 = new QPushButton(module3);
-        RETURNBTN_3->setObjectName("RETURNBTN_3");
-        RETURNBTN_3->setMaximumSize(QSize(96, 29));
-
-        gridLayout_5->addWidget(RETURNBTN_3, 0, 0, 1, 1);
-
-        mod3header = new QLabel(module3);
-        mod3header->setObjectName("mod3header");
-        mod3header->setFont(font5);
-
-        gridLayout_5->addWidget(mod3header, 0, 1, 1, 1);
-
-        mod3text = new QPlainTextEdit(module3);
+        gridLayout_5->setContentsMargins(0, 0, 0, 0);
+        mod3stack = new QStackedWidget(module3);
+        mod3stack->setObjectName("mod3stack");
+        mod3content = new QWidget();
+        mod3content->setObjectName("mod3content");
+        gridLayout_14 = new QGridLayout(mod3content);
+        gridLayout_14->setObjectName("gridLayout_14");
+        mod3text = new QPlainTextEdit(mod3content);
         mod3text->setObjectName("mod3text");
         mod3text->setReadOnly(true);
 
-        gridLayout_5->addWidget(mod3text, 1, 0, 1, 2);
+        gridLayout_14->addWidget(mod3text, 2, 0, 1, 4);
+
+        RETURNBTN_3 = new QPushButton(mod3content);
+        RETURNBTN_3->setObjectName("RETURNBTN_3");
+        RETURNBTN_3->setMaximumSize(QSize(86, 29));
+
+        gridLayout_14->addWidget(RETURNBTN_3, 0, 0, 1, 1);
+
+        quizButton3 = new QPushButton(mod3content);
+        quizButton3->setObjectName("quizButton3");
+        quizButton3->setMaximumSize(QSize(86, 29));
+
+        gridLayout_14->addWidget(quizButton3, 0, 1, 1, 1);
+
+        mod3header = new QLabel(mod3content);
+        mod3header->setObjectName("mod3header");
+        mod3header->setFont(font5);
+
+        gridLayout_14->addWidget(mod3header, 0, 2, 1, 1);
+
+        mod3stack->addWidget(mod3content);
+        mod3quiz = new QWidget();
+        mod3quiz->setObjectName("mod3quiz");
+        mod3stack->addWidget(mod3quiz);
+
+        gridLayout_5->addWidget(mod3stack, 1, 0, 1, 1);
 
         moduleStack->addWidget(module3);
         module5 = new QWidget();
         module5->setObjectName("module5");
         gridLayout_7 = new QGridLayout(module5);
         gridLayout_7->setObjectName("gridLayout_7");
-        RETURNBTN_5 = new QPushButton(module5);
+        gridLayout_7->setContentsMargins(0, 0, 0, 0);
+        mod5stack = new QStackedWidget(module5);
+        mod5stack->setObjectName("mod5stack");
+        mod5content = new QWidget();
+        mod5content->setObjectName("mod5content");
+        gridLayout_16 = new QGridLayout(mod5content);
+        gridLayout_16->setObjectName("gridLayout_16");
+        RETURNBTN_5 = new QPushButton(mod5content);
         RETURNBTN_5->setObjectName("RETURNBTN_5");
-        RETURNBTN_5->setMaximumSize(QSize(96, 29));
+        RETURNBTN_5->setMaximumSize(QSize(86, 29));
 
-        gridLayout_7->addWidget(RETURNBTN_5, 0, 0, 1, 1);
+        gridLayout_16->addWidget(RETURNBTN_5, 0, 0, 1, 1);
 
-        mod5header = new QLabel(module5);
-        mod5header->setObjectName("mod5header");
-        mod5header->setFont(font5);
-
-        gridLayout_7->addWidget(mod5header, 0, 1, 1, 1);
-
-        mod5text = new QPlainTextEdit(module5);
+        mod5text = new QPlainTextEdit(mod5content);
         mod5text->setObjectName("mod5text");
         mod5text->setReadOnly(true);
 
-        gridLayout_7->addWidget(mod5text, 1, 0, 1, 2);
+        gridLayout_16->addWidget(mod5text, 2, 0, 1, 5);
+
+        quizButton5 = new QPushButton(mod5content);
+        quizButton5->setObjectName("quizButton5");
+        quizButton5->setMaximumSize(QSize(86, 29));
+
+        gridLayout_16->addWidget(quizButton5, 0, 1, 1, 1);
+
+        mod5header = new QLabel(mod5content);
+        mod5header->setObjectName("mod5header");
+        mod5header->setFont(font5);
+
+        gridLayout_16->addWidget(mod5header, 0, 2, 1, 1);
+
+        mod5stack->addWidget(mod5content);
+        mod5quiz = new QWidget();
+        mod5quiz->setObjectName("mod5quiz");
+        mod5stack->addWidget(mod5quiz);
+
+        gridLayout_7->addWidget(mod5stack, 0, 0, 1, 1);
 
         moduleStack->addWidget(module5);
         module6 = new QWidget();
         module6->setObjectName("module6");
         gridLayout_11 = new QGridLayout(module6);
         gridLayout_11->setObjectName("gridLayout_11");
-        RETURNBTN_6 = new QPushButton(module6);
-        RETURNBTN_6->setObjectName("RETURNBTN_6");
-        RETURNBTN_6->setMaximumSize(QSize(96, 29));
-
-        gridLayout_11->addWidget(RETURNBTN_6, 0, 0, 1, 1);
-
-        mod6header = new QLabel(module6);
-        mod6header->setObjectName("mod6header");
-        mod6header->setFont(font5);
-
-        gridLayout_11->addWidget(mod6header, 0, 1, 1, 1);
-
-        mod6text = new QPlainTextEdit(module6);
+        gridLayout_11->setContentsMargins(0, 0, 0, 0);
+        mod6stack = new QStackedWidget(module6);
+        mod6stack->setObjectName("mod6stack");
+        mod6content = new QWidget();
+        mod6content->setObjectName("mod6content");
+        gridLayout_17 = new QGridLayout(mod6content);
+        gridLayout_17->setObjectName("gridLayout_17");
+        mod6text = new QPlainTextEdit(mod6content);
         mod6text->setObjectName("mod6text");
         mod6text->setReadOnly(true);
 
-        gridLayout_11->addWidget(mod6text, 1, 0, 1, 2);
+        gridLayout_17->addWidget(mod6text, 2, 0, 1, 4);
+
+        RETURNBTN_6 = new QPushButton(mod6content);
+        RETURNBTN_6->setObjectName("RETURNBTN_6");
+        RETURNBTN_6->setMaximumSize(QSize(86, 29));
+
+        gridLayout_17->addWidget(RETURNBTN_6, 0, 0, 1, 1);
+
+        quizButton6 = new QPushButton(mod6content);
+        quizButton6->setObjectName("quizButton6");
+        quizButton6->setMaximumSize(QSize(86, 29));
+
+        gridLayout_17->addWidget(quizButton6, 0, 1, 1, 1);
+
+        mod6header = new QLabel(mod6content);
+        mod6header->setObjectName("mod6header");
+        mod6header->setFont(font5);
+
+        gridLayout_17->addWidget(mod6header, 0, 2, 1, 1);
+
+        mod6stack->addWidget(mod6content);
+        mod6quiz = new QWidget();
+        mod6quiz->setObjectName("mod6quiz");
+        mod6stack->addWidget(mod6quiz);
+
+        gridLayout_11->addWidget(mod6stack, 0, 0, 1, 1);
 
         moduleStack->addWidget(module6);
         module7 = new QWidget();
         module7->setObjectName("module7");
         gridLayout_10 = new QGridLayout(module7);
         gridLayout_10->setObjectName("gridLayout_10");
-        RETURNBTN_7 = new QPushButton(module7);
-        RETURNBTN_7->setObjectName("RETURNBTN_7");
-        RETURNBTN_7->setMaximumSize(QSize(96, 29));
-
-        gridLayout_10->addWidget(RETURNBTN_7, 0, 0, 1, 1);
-
-        mod7header = new QLabel(module7);
-        mod7header->setObjectName("mod7header");
-        mod7header->setFont(font5);
-
-        gridLayout_10->addWidget(mod7header, 0, 1, 1, 1);
-
-        mod7text = new QPlainTextEdit(module7);
+        gridLayout_10->setContentsMargins(0, 0, 0, 0);
+        mod7stack = new QStackedWidget(module7);
+        mod7stack->setObjectName("mod7stack");
+        mod7content = new QWidget();
+        mod7content->setObjectName("mod7content");
+        gridLayout_18 = new QGridLayout(mod7content);
+        gridLayout_18->setObjectName("gridLayout_18");
+        mod7text = new QPlainTextEdit(mod7content);
         mod7text->setObjectName("mod7text");
         mod7text->setReadOnly(true);
 
-        gridLayout_10->addWidget(mod7text, 1, 0, 1, 2);
+        gridLayout_18->addWidget(mod7text, 2, 0, 1, 4);
+
+        RETURNBTN_7 = new QPushButton(mod7content);
+        RETURNBTN_7->setObjectName("RETURNBTN_7");
+        RETURNBTN_7->setMaximumSize(QSize(86, 29));
+
+        gridLayout_18->addWidget(RETURNBTN_7, 0, 0, 1, 1);
+
+        quizButton7 = new QPushButton(mod7content);
+        quizButton7->setObjectName("quizButton7");
+        quizButton7->setMaximumSize(QSize(86, 29));
+
+        gridLayout_18->addWidget(quizButton7, 0, 1, 1, 1);
+
+        mod7header = new QLabel(mod7content);
+        mod7header->setObjectName("mod7header");
+        mod7header->setFont(font5);
+
+        gridLayout_18->addWidget(mod7header, 0, 2, 1, 1);
+
+        mod7stack->addWidget(mod7content);
+        mod7quiz = new QWidget();
+        mod7quiz->setObjectName("mod7quiz");
+        mod7stack->addWidget(mod7quiz);
+
+        gridLayout_10->addWidget(mod7stack, 0, 0, 1, 1);
 
         moduleStack->addWidget(module7);
         module8 = new QWidget();
         module8->setObjectName("module8");
         gridLayout_9 = new QGridLayout(module8);
         gridLayout_9->setObjectName("gridLayout_9");
-        RETURNBTN_8 = new QPushButton(module8);
-        RETURNBTN_8->setObjectName("RETURNBTN_8");
-        RETURNBTN_8->setMaximumSize(QSize(96, 29));
-
-        gridLayout_9->addWidget(RETURNBTN_8, 0, 0, 1, 1);
-
-        mod8header = new QLabel(module8);
-        mod8header->setObjectName("mod8header");
-        mod8header->setFont(font5);
-
-        gridLayout_9->addWidget(mod8header, 0, 1, 1, 1);
-
-        mod8text = new QPlainTextEdit(module8);
+        gridLayout_9->setContentsMargins(0, 0, 0, 0);
+        mod8stack = new QStackedWidget(module8);
+        mod8stack->setObjectName("mod8stack");
+        mod8content = new QWidget();
+        mod8content->setObjectName("mod8content");
+        gridLayout_19 = new QGridLayout(mod8content);
+        gridLayout_19->setObjectName("gridLayout_19");
+        mod8text = new QPlainTextEdit(mod8content);
         mod8text->setObjectName("mod8text");
         mod8text->setReadOnly(true);
 
-        gridLayout_9->addWidget(mod8text, 1, 0, 1, 2);
+        gridLayout_19->addWidget(mod8text, 2, 0, 1, 4);
+
+        RETURNBTN_8 = new QPushButton(mod8content);
+        RETURNBTN_8->setObjectName("RETURNBTN_8");
+        RETURNBTN_8->setMaximumSize(QSize(86, 29));
+
+        gridLayout_19->addWidget(RETURNBTN_8, 0, 0, 1, 1);
+
+        quizButton8 = new QPushButton(mod8content);
+        quizButton8->setObjectName("quizButton8");
+        quizButton8->setMaximumSize(QSize(86, 29));
+
+        gridLayout_19->addWidget(quizButton8, 0, 1, 1, 1);
+
+        mod8header = new QLabel(mod8content);
+        mod8header->setObjectName("mod8header");
+        mod8header->setFont(font5);
+
+        gridLayout_19->addWidget(mod8header, 0, 2, 1, 1);
+
+        mod8stack->addWidget(mod8content);
+        mod8quiz = new QWidget();
+        mod8quiz->setObjectName("mod8quiz");
+        mod8stack->addWidget(mod8quiz);
+
+        gridLayout_9->addWidget(mod8stack, 0, 0, 1, 1);
 
         moduleStack->addWidget(module8);
         module9 = new QWidget();
         module9->setObjectName("module9");
         gridLayout_8 = new QGridLayout(module9);
         gridLayout_8->setObjectName("gridLayout_8");
-        RETURNBTN_9 = new QPushButton(module9);
-        RETURNBTN_9->setObjectName("RETURNBTN_9");
-        RETURNBTN_9->setMaximumSize(QSize(96, 29));
-
-        gridLayout_8->addWidget(RETURNBTN_9, 0, 0, 1, 1);
-
-        mod9header = new QLabel(module9);
-        mod9header->setObjectName("mod9header");
-        mod9header->setFont(font5);
-
-        gridLayout_8->addWidget(mod9header, 0, 1, 1, 1);
-
-        mod9text = new QPlainTextEdit(module9);
+        gridLayout_8->setContentsMargins(0, 0, 0, 0);
+        mod9stack = new QStackedWidget(module9);
+        mod9stack->setObjectName("mod9stack");
+        mod9content = new QWidget();
+        mod9content->setObjectName("mod9content");
+        gridLayout_20 = new QGridLayout(mod9content);
+        gridLayout_20->setObjectName("gridLayout_20");
+        mod9text = new QPlainTextEdit(mod9content);
         mod9text->setObjectName("mod9text");
         mod9text->setReadOnly(true);
 
-        gridLayout_8->addWidget(mod9text, 1, 0, 1, 2);
+        gridLayout_20->addWidget(mod9text, 2, 0, 1, 4);
+
+        RETURNBTN_9 = new QPushButton(mod9content);
+        RETURNBTN_9->setObjectName("RETURNBTN_9");
+        RETURNBTN_9->setMaximumSize(QSize(86, 29));
+
+        gridLayout_20->addWidget(RETURNBTN_9, 0, 0, 1, 1);
+
+        quizButton9 = new QPushButton(mod9content);
+        quizButton9->setObjectName("quizButton9");
+        quizButton9->setMaximumSize(QSize(86, 29));
+
+        gridLayout_20->addWidget(quizButton9, 0, 1, 1, 1);
+
+        mod9header = new QLabel(mod9content);
+        mod9header->setObjectName("mod9header");
+        mod9header->setFont(font5);
+
+        gridLayout_20->addWidget(mod9header, 0, 2, 1, 1);
+
+        mod9stack->addWidget(mod9content);
+        mod9quiz = new QWidget();
+        mod9quiz->setObjectName("mod9quiz");
+        mod9stack->addWidget(mod9quiz);
+
+        gridLayout_8->addWidget(mod9stack, 0, 0, 1, 1);
 
         moduleStack->addWidget(module9);
         module4 = new QWidget();
         module4->setObjectName("module4");
         gridLayout_6 = new QGridLayout(module4);
         gridLayout_6->setObjectName("gridLayout_6");
-        RETURNBTN_4 = new QPushButton(module4);
+        gridLayout_6->setContentsMargins(0, 0, 0, 0);
+        mod4stack = new QStackedWidget(module4);
+        mod4stack->setObjectName("mod4stack");
+        mod4quiz = new QWidget();
+        mod4quiz->setObjectName("mod4quiz");
+        mod4stack->addWidget(mod4quiz);
+        mod4content = new QWidget();
+        mod4content->setObjectName("mod4content");
+        gridLayout_15 = new QGridLayout(mod4content);
+        gridLayout_15->setObjectName("gridLayout_15");
+        mod4text = new QPlainTextEdit(mod4content);
+        mod4text->setObjectName("mod4text");
+        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(mod4text->sizePolicy().hasHeightForWidth());
+        mod4text->setSizePolicy(sizePolicy);
+        mod4text->setReadOnly(true);
+
+        gridLayout_15->addWidget(mod4text, 2, 0, 1, 4);
+
+        RETURNBTN_4 = new QPushButton(mod4content);
         RETURNBTN_4->setObjectName("RETURNBTN_4");
-        RETURNBTN_4->setMaximumSize(QSize(96, 29));
+        RETURNBTN_4->setMaximumSize(QSize(86, 29));
 
-        gridLayout_6->addWidget(RETURNBTN_4, 0, 0, 1, 1);
+        gridLayout_15->addWidget(RETURNBTN_4, 0, 0, 1, 1);
 
-        mod4header = new QLabel(module4);
+        quizButton4 = new QPushButton(mod4content);
+        quizButton4->setObjectName("quizButton4");
+        quizButton4->setMaximumSize(QSize(86, 29));
+
+        gridLayout_15->addWidget(quizButton4, 0, 1, 1, 1);
+
+        mod4header = new QLabel(mod4content);
         mod4header->setObjectName("mod4header");
         mod4header->setFont(font5);
 
-        gridLayout_6->addWidget(mod4header, 0, 1, 1, 1);
+        gridLayout_15->addWidget(mod4header, 0, 2, 1, 1);
 
-        mod4text = new QPlainTextEdit(module4);
-        mod4text->setObjectName("mod4text");
-        mod4text->setReadOnly(true);
+        mod4stack->addWidget(mod4content);
 
-        gridLayout_6->addWidget(mod4text, 1, 0, 1, 2);
+        gridLayout_6->addWidget(mod4stack, 0, 0, 1, 1);
 
         moduleStack->addWidget(module4);
+
+        gridLayout_21->addWidget(moduleStack, 0, 0, 1, 1);
+
         stackedWidget->addWidget(moduleWidget);
 
-        gridLayout_4->addWidget(stackedWidget, 0, 0, 1, 1);
+        gridLayout_4->addWidget(stackedWidget, 0, 0, 2, 1);
 
 
         retranslateUi(Widget);
 
         stackedWidget->setCurrentIndex(5);
-        moduleStack->setCurrentIndex(0);
+        moduleStack->setCurrentIndex(8);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -755,8 +995,9 @@ public:
         moduleWelcome->setText(QCoreApplication::translate("Widget", "Module Home - Are you ready to learn?", nullptr));
         mod3->setText(QCoreApplication::translate("Widget", "M3 - Fundamental Analysis", nullptr));
         mod2->setText(QCoreApplication::translate("Widget", "M2 - Trading Basics", nullptr));
-        RETURNBTN->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        mod1header->setText(QCoreApplication::translate("Widget", "Mod 1 - Understanding Market Movements and Major Events", nullptr));
+        RETURNBTN_1->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        quizButton1->setText(QCoreApplication::translate("Widget", "Quiz 1", nullptr));
+        mod1header->setText(QCoreApplication::translate("Widget", "Mod 1 - Understanding Movements and Major Events", nullptr));
         mod1text->setPlainText(QCoreApplication::translate("Widget", "Module 1: Understanding Market Movements and Major Events\n"
 "\n"
 "1 - What is the Stock Market?\n"
@@ -856,6 +1097,8 @@ public:
 "9 - Conclusion\n"
 "Understanding how the stock market works and how major events can impact market movements is crucial for any investor or trader. The 2008 financial crisis serves as a significant example of how interconnected the global financial system is and the importance of informed decision-making.", nullptr));
         RETURNBTN_2->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        quizButton2->setText(QCoreApplication::translate("Widget", "Quiz 2", nullptr));
+        mod2header->setText(QCoreApplication::translate("Widget", "Mod 2 - Trading Basics", nullptr));
         mod2text->setPlainText(QCoreApplication::translate("Widget", "Module 2: Basics of Stock Trading\n"
 "\n"
 "1 - Types of Stocks\n"
@@ -937,9 +1180,6 @@ public:
 "8 - Conclusion\n"
 "Understanding the basics of stock trading is essential for anyone looking to invest in the stock market. By familiarizing yourse"
                         "lf with the types of stocks, how exchanges operate, the process of buying and selling, and interpreting stock information, you lay a strong foundation for making informed trades and investment decisions.", nullptr));
-        mod2header->setText(QCoreApplication::translate("Widget", "Mod 2 - Trading Basics", nullptr));
-        RETURNBTN_3->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        mod3header->setText(QCoreApplication::translate("Widget", "Mod 3 - Fundamental Analysis", nullptr));
         mod3text->setPlainText(QCoreApplication::translate("Widget", "Module 3: Fundamental Analysis\n"
 "\n"
 "1 - Understanding Financial Statements\n"
@@ -1028,8 +1268,10 @@ public:
 "8 - Conclusion\n"
 "Fundamental analysis is "
                         "a critical tool for investors aiming to make informed decisions. By understanding financial statements, key ratios, and qualitative factors, you can evaluate a company's true worth and growth prospects, aligning your investments with your financial goals.", nullptr));
+        RETURNBTN_3->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        quizButton3->setText(QCoreApplication::translate("Widget", "Quiz 3", nullptr));
+        mod3header->setText(QCoreApplication::translate("Widget", "Mod 3 - Fundamental Analysis", nullptr));
         RETURNBTN_5->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        mod5header->setText(QCoreApplication::translate("Widget", "Mod 5 - Risk Management and Trading Psychology", nullptr));
         mod5text->setPlainText(QCoreApplication::translate("Widget", "Module 5: Risk Management and Trading Psychology\n"
 "\n"
 "1 - Risk vs. Reward\n"
@@ -1128,8 +1370,8 @@ public:
 "7 - Conclusion\n"
 "Effective risk management and psychological discipline are crucial for long-term trading success. By defining acceptable risk levels, utilizing position sizing techniques, and maintaining emotional control, traders can improve their decision-making processes and increase the likeliho"
                         "od of achieving their trading goals.", nullptr));
-        RETURNBTN_6->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        mod6header->setText(QCoreApplication::translate("Widget", "Mod 6 - Types of Trading Strategies", nullptr));
+        quizButton5->setText(QCoreApplication::translate("Widget", "Quiz 5", nullptr));
+        mod5header->setText(QCoreApplication::translate("Widget", "Mod 5 - Risk Management and Trading Psychology", nullptr));
         mod6text->setPlainText(QCoreApplication::translate("Widget", "Module 6: Types of Trading Strategies\n"
 "\n"
 "1 - Day Trading vs. Swing Trading\n"
@@ -1325,8 +1567,9 @@ public:
 "8 - Conclusion\n"
 "Understanding the basics of stock trading is essential for anyone looking to invest in the stock market. By familiarizing yourself with the types of "
                         "stocks, how exchanges operate, the process of buying and selling, and interpreting stock information, you lay a strong foundation for making informed trades and investment decisions.", nullptr));
-        RETURNBTN_7->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        mod7header->setText(QCoreApplication::translate("Widget", "Mod 7 - Advanced Technical Analysis Tools", nullptr));
+        RETURNBTN_6->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        quizButton6->setText(QCoreApplication::translate("Widget", "Quiz 6", nullptr));
+        mod6header->setText(QCoreApplication::translate("Widget", "Mod 6 - Types of Trading Strategies", nullptr));
         mod7text->setPlainText(QCoreApplication::translate("Widget", "Module 7: Advanced Technical Analysis Tools\n"
 "\n"
 "1 - Fibonacci Retracement and Extensions\n"
@@ -1461,8 +1704,9 @@ public:
 "7 - Conclusion\n"
 "By mastering advanced technical analysis tools like Fibonacci retracement, advanced indicators, chart patterns, and Elliott Wave Theory, traders can gain a more nuance"
                         "d understanding of market dynamics. Combining these tools enhances decision-making and increases the likelihood of successful trades by providing multiple layers of confirmation.", nullptr));
-        RETURNBTN_8->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        mod8header->setText(QCoreApplication::translate("Widget", "Mod 8 - Derivatives and Options Trading", nullptr));
+        RETURNBTN_7->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        quizButton7->setText(QCoreApplication::translate("Widget", "Quiz 7", nullptr));
+        mod7header->setText(QCoreApplication::translate("Widget", "Mod 7 - Advanced Technical Analysis Tools", nullptr));
         mod8text->setPlainText(QCoreApplication::translate("Widget", "Module 8: Derivatives and Options Trading\n"
 "\n"
 "1 - Introduction to Derivatives\n"
@@ -1594,8 +1838,9 @@ public:
 "7 -"
                         " Conclusion\n"
 "Derivatives and options offer powerful tools for both speculation and risk management. By understanding how to employ various options strategies, leveraging positions carefully, and implementing effective hedging techniques, traders and investors can enhance their portfolios and protect against adverse market movements.", nullptr));
-        RETURNBTN_9->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        mod9header->setText(QCoreApplication::translate("Widget", "Mod 9 - Portfolio Management and Advanced Strategies", nullptr));
+        RETURNBTN_8->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        quizButton8->setText(QCoreApplication::translate("Widget", "Quiz 8", nullptr));
+        mod8header->setText(QCoreApplication::translate("Widget", "Mod 8 - Derivatives and Options Trading", nullptr));
         mod9text->setPlainText(QCoreApplication::translate("Widget", "Module 9: Portfolio Management and Advanced Investment Strategies\n"
 "\n"
 "1 - Portfolio Construction\n"
@@ -1752,8 +1997,9 @@ public:
 "\n"
 "7 - Conclusion\n"
 "Effective portfolio management involves strategic asset allocation, regular rebalancing, and selecting appropriate investment strategies aligned with individual goals and risk tolerance. By understanding and applying advanced investment concepts such as Modern Portfolio Theory, value versus growth investing, and active versus passive management, investors can construct portfolios designed to optimize returns while managing risk. Regular monitoring and adjustments ensure the portfolio remains aligned with changing objectives and market dynamics.", nullptr));
-        RETURNBTN_4->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        mod4header->setText(QCoreApplication::translate("Widget", "Mod 4 - Technical Analysis", nullptr));
+        RETURNBTN_9->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        quizButton9->setText(QCoreApplication::translate("Widget", "Quiz 9", nullptr));
+        mod9header->setText(QCoreApplication::translate("Widget", "Mod 9 - Portfolio Management", nullptr));
         mod4text->setPlainText(QCoreApplication::translate("Widget", "Module 4 - Technical Analysis\n"
 "\n"
 "1 - Introduction to Technical Analysis\n"
@@ -1879,6 +2125,9 @@ public:
 "\n"
 "7 - Conclusion\n"
 "Technical analysis provides traders with tools to interpret market data and make informed trading decisions. By understanding chart types, indicators, support and resistance levels, and trend analysis, traders can better predict future price movements and identify potential trading opportunities.", nullptr));
+        RETURNBTN_4->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        quizButton4->setText(QCoreApplication::translate("Widget", "Quiz 4", nullptr));
+        mod4header->setText(QCoreApplication::translate("Widget", "Mod 4 - Technical Analysis", nullptr));
     } // retranslateUi
 
 };
