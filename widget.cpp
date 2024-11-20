@@ -383,3 +383,67 @@ void Widget::on_submitQuiz1_clicked()
     ui->moduleStack->setCurrentIndex(0);
 }
 
+bool q2Complete = false;
+void Widget::on_submitQuiz2_clicked()
+{
+    int score = 0;
+
+    QRadioButton *q1 = findChild<QRadioButton *>("M2Q1A4_C");
+    QRadioButton *q2 = findChild<QRadioButton *>("M2Q2A2_C");
+    QRadioButton *q3 = findChild<QRadioButton *>("M2Q3A1_C");
+    QRadioButton *q4 = findChild<QRadioButton *>("M2Q4A3_C");
+    QRadioButton *q5 = findChild<QRadioButton *>("M2Q5A3_C");
+
+    if (q1 && q1->isChecked()) { score+=20; }
+    if (q2 && q2->isChecked()) { score+=20; }
+    if (q3 && q3->isChecked()) { score+=20; }
+    if (q4 && q4->isChecked()) { score+=20; }
+    if (q5 && q5->isChecked()) { score+=20; }
+
+    QString message;
+    if (score >= 60) {
+        message = QString("Congratulations! You passed the quiz!\nYou got a %1%.").arg(score);
+        if(q2Complete == false) { ui->beginProgress->setValue(ui->beginProgress->value() + 33); }
+        q2Complete = true;
+        ui->mod1->setText("M2 - Trading Basics - ✓");
+    } else {
+        message = QString("Unfortunately, you did not pass the quiz.\nYou got a %1%. Please try again.").arg(score);
+    }
+    QMessageBox::information(this, "Quiz Result", message);
+
+    resetQuiz(ui->mod2quiz);
+    ui->moduleStack->setCurrentIndex(0);
+}
+
+bool q3Complete = false;
+void Widget::on_submitQuiz3_clicked()
+{
+    int score = 0;
+
+    QRadioButton *q1 = findChild<QRadioButton *>("M3Q1A4_C");
+    QRadioButton *q2 = findChild<QRadioButton *>("M3Q2A4_C");
+    QRadioButton *q3 = findChild<QRadioButton *>("M3Q3A1_C");
+    QRadioButton *q4 = findChild<QRadioButton *>("M3Q4A2_C");
+    QRadioButton *q5 = findChild<QRadioButton *>("M3Q5A3_C");
+
+    if (q1 && q1->isChecked()) { score+=20; }
+    if (q2 && q2->isChecked()) { score+=20; }
+    if (q3 && q3->isChecked()) { score+=20; }
+    if (q4 && q4->isChecked()) { score+=20; }
+    if (q5 && q5->isChecked()) { score+=20; }
+
+    QString message;
+    if (score >= 60) {
+        message = QString("Congratulations! You passed the quiz!\nYou got a %1%.").arg(score);
+        if(q3Complete == false) { ui->beginProgress->setValue(ui->beginProgress->value() + 34); }
+        q3Complete = true;
+        ui->mod1->setText("M3 - Fundamental Analysis - ✓");
+    } else {
+        message = QString("Unfortunately, you did not pass the quiz.\nYou got a %1%. Please try again.").arg(score);
+    }
+    QMessageBox::information(this, "Quiz Result", message);
+
+    resetQuiz(ui->mod3quiz);
+    ui->moduleStack->setCurrentIndex(0);
+}
+

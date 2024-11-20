@@ -1085,15 +1085,15 @@ Understanding how the stock market works and how major events can impact market 
              <widget class="QWidget" name="mod1quiz">
               <layout class="QGridLayout" name="gridLayout_23">
                <item row="2" column="0">
-                <widget class="QScrollArea" name="quiz1scrollarea">
+                <widget class="QScrollArea" name="quiz1scrollArea">
                  <property name="widgetResizable">
                   <bool>true</bool>
                  </property>
-                 <widget class="QWidget" name="quiz1scrolwidgetl">
+                 <widget class="QWidget" name="quiz1scrollWidget">
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-153</y>
+                    <y>0</y>
                     <width>761</width>
                     <height>804</height>
                    </rect>
@@ -1532,7 +1532,306 @@ Understanding the basics of stock trading is essential for anyone looking to inv
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="mod2quiz"/>
+             <widget class="QWidget" name="mod2quiz">
+              <layout class="QGridLayout" name="gridLayout_22">
+               <item row="0" column="0">
+                <widget class="QLabel" name="quiz2header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 2 - Basics of Stock Trading</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QScrollArea" name="quiz2scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz2scrollWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-302</y>
+                    <width>761</width>
+                    <height>804</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M2Question1">
+                     <property name="title">
+                      <string>Question 1: Which of the following best describes preferred stocks?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_10">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q1A1">
+                        <property name="text">
+                         <string>A) They usually come with voting rights.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q1A2">
+                        <property name="text">
+                         <string>B) They represent ownership in a company without any claim on assets.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q1A3">
+                        <property name="text">
+                         <string>C) They are shares of small companies trading under $5.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q1A4_C">
+                        <property name="text">
+                         <string>D) They have a higher claim on assets and earnings than common stocks.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M2Question2">
+                     <property name="title">
+                      <string>Question 2: What is the main function of market makers?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_11">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q2A1">
+                        <property name="text">
+                         <string>A) To set the prices of stocks on the exchange.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q2A2_C">
+                        <property name="text">
+                         <string>B) To ensure liquidity by buying and selling securities at specified prices.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q2A3">
+                        <property name="text">
+                         <string>C) To regulate the financial markets.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q2A4">
+                        <property name="text">
+                         <string>D) To provide investment advice to traders.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M2Question3">
+                     <property name="title">
+                      <string>Question 3: A limit order is an order to buy or sell a stock:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_12">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q3A1_C">
+                        <property name="text">
+                         <string>A) At a specific price or better, with no guarantee of execution.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q3A2">
+                        <property name="text">
+                         <string>B) Immediately at the best available price.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q3A3">
+                        <property name="text">
+                         <string>C) At the closing price of the trading day.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q3A4">
+                        <property name="text">
+                         <string>D) Only when the stock reaches a new high.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M2Question4">
+                     <property name="title">
+                      <string>Question 4: Which of the following is an index that tracks 500 large companies listed on U.S. exchanges?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_13">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q4A1">
+                        <property name="text">
+                         <string>A) Dow Jones Industrial Average (DJIA)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q4A2">
+                        <property name="text">
+                         <string>B) NASDAQ Composite</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q4A3_C">
+                        <property name="text">
+                         <string>C) S&amp;&amp;P 500</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q4A4">
+                        <property name="text">
+                         <string>D) Russell 2000</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M2Question5">
+                     <property name="title">
+                      <string>Question 5: Which of the following is NOT typically considered a trading cost?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_14">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q5A1">
+                        <property name="text">
+                         <string>A) Commissions charged by brokers.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q5A4">
+                        <property name="text">
+                         <string>B) Bid-ask spread.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q5A3_C">
+                        <property name="text">
+                         <string>C) Stock dividends.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M2Q5A2">
+                        <property name="text">
+                         <string>D) Account maintenance fees.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QPushButton" name="submitQuiz2">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -1688,7 +1987,315 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="mod3quiz"/>
+             <widget class="QWidget" name="mod3quiz">
+              <layout class="QVBoxLayout" name="verticalLayout_21">
+               <item>
+                <widget class="QLabel" name="quiz3header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 3 - Fundamental Analysis</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="quiz3scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz3scrollWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-294</y>
+                    <width>761</width>
+                    <height>804</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_15">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M3Question1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="title">
+                      <string>Question 1: Which financial statement shows assets, liabilities, and equity at a specific point in time?</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_16">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q1A1">
+                        <property name="text">
+                         <string>A) Income Statement</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q1A2">
+                        <property name="text">
+                         <string>B) Cash Flow Statement</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q1A3">
+                        <property name="text">
+                         <string>C) Statement of Retained Earnings</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q1A4_C">
+                        <property name="text">
+                         <string>D) Balance Sheet</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M3Question2">
+                     <property name="title">
+                      <string>Question 2: The Price-to-Earnings (P/E) ratio is calculated by:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_17">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q2A1">
+                        <property name="text">
+                         <string>A) Subtracting liabilities from assets.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q2A2">
+                        <property name="text">
+                         <string>B) Multiplying earnings per share by the dividend payout ratio.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q2A3">
+                        <property name="text">
+                         <string>C) Dividing net income by total assets.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q2A4_C">
+                        <property name="text">
+                         <string>D) Dividing market value per share by earnings per share.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M3Question3">
+                     <property name="title">
+                      <string>Question 3: A high Return on Equity (ROE) indicates:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_18">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q3A1_C">
+                        <property name="text">
+                         <string>A) Efficient use of shareholders' equity to generate profits.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q3A2">
+                        <property name="text">
+                         <string>B) High levels of debt financing.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q3A3">
+                        <property name="text">
+                         <string>C) Low profitability.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q3A4">
+                        <property name="text">
+                         <string>D) Inefficient use of equity capital.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M3Question4">
+                     <property name="title">
+                      <string>Question 4: Which of the following is considered a qualitative factor in fundamental analysis?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_19">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q4A1">
+                        <property name="text">
+                         <string>A) Net Profit Margin</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q4A2_C">
+                        <property name="text">
+                         <string>B) Management Effectiveness</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q4A3">
+                        <property name="text">
+                         <string>C) Debt-to-Equity Ratio</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q4A4">
+                        <property name="text">
+                         <string>D) Earnings per Share</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M3Question5">
+                     <property name="title">
+                      <string>Question 5: One limitation of fundamental analysis is that:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_20">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q5A1">
+                        <property name="text">
+                         <string>A) It always predicts future stock prices accurately.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q5A4">
+                        <property name="text">
+                         <string>B) It ignores company financials.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q5A3_C">
+                        <property name="text">
+                         <string>C) Unpredictable factors like economic downturns can impact company performance.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="M3Q5A2">
+                        <property name="text">
+                         <string>D) It focuses only on technical indicators.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submitQuiz3">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
