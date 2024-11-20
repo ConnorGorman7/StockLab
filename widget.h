@@ -91,6 +91,18 @@ private slots:
 
     void on_submitQuiz3_clicked();
 
+    void on_submitQuiz4_clicked();
+
+    void on_submitQuiz5_clicked();
+
+    void on_submitQuiz6_clicked();
+
+    void on_submitQuiz7_clicked();
+
+    void on_submitQuiz8_clicked();
+
+    void on_submitQuiz9_clicked();
+
 private:
     Ui::Widget *ui;
 

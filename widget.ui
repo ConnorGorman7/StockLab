@@ -685,7 +685,7 @@ Information</string>
           </size>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>8</number>
          </property>
          <widget class="QWidget" name="moduleHomepage">
           <layout class="QGridLayout" name="gridLayout_2">
@@ -779,7 +779,7 @@ Information</string>
               </size>
              </property>
              <property name="text">
-              <string>M8 - Derivatives and Options</string>
+              <string>M8 - Derivatives &amp;&amp; Options</string>
              </property>
             </widget>
            </item>
@@ -974,7 +974,7 @@ Information</string>
                   </font>
                  </property>
                  <property name="text">
-                  <string>Mod 1 - Understanding Movements and Major Events</string>
+                  <string>Mod 1 - Understanding Movements &amp; Major Events</string>
                  </property>
                 </widget>
                </item>
@@ -1369,7 +1369,7 @@ Understanding how the stock market works and how major events can impact market 
                   </font>
                  </property>
                  <property name="text">
-                  <string>Mod 1 - Understanding Movements and Major Events</string>
+                  <string>Mod 1 - Understanding Movements &amp; Major Events</string>
                  </property>
                 </widget>
                </item>
@@ -1556,7 +1556,7 @@ Understanding the basics of stock trading is essential for anyone looking to inv
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-302</y>
+                    <y>0</y>
                     <width>761</width>
                     <height>804</height>
                    </rect>
@@ -2011,7 +2011,7 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>-294</y>
+                    <y>0</y>
                     <width>761</width>
                     <height>804</height>
                    </rect>
@@ -2456,13 +2456,321 @@ Effective risk management and psychological discipline are crucial for long-term
                   </font>
                  </property>
                  <property name="text">
-                  <string>Mod 5 - Risk Management and Trading Psychology</string>
+                  <string>Mod 5 - Risk Management &amp; Trading Psychology</string>
                  </property>
                 </widget>
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="mod5quiz"/>
+             <widget class="QWidget" name="mod5quiz">
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <item>
+                <widget class="QLabel" name="quiz5header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 5 - Risk Management &amp; Trading Psychology</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="quiz5scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz5scrollWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-302</y>
+                    <width>761</width>
+                    <height>804</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_28">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M5Question1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="title">
+                      <string>Question 1: Which position sizing method adjusts size based on the investor's risk tolerance per trade?</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_29">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A1_5C">
+                        <property name="text">
+                         <string>A) Risk-Based Position Sizing</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A2_5">
+                        <property name="text">
+                         <string>B) Percentage of Account</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A3_5">
+                        <property name="text">
+                         <string>C) Fixed Dollar Amount</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A4_5">
+                        <property name="text">
+                         <string>D) Random Allocation</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M5Question2">
+                     <property name="title">
+                      <string>Question 2: A trailing stop-loss order is designed to:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_30">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A1_5">
+                        <property name="text">
+                         <string>A) Sell a security immediately at the current market price.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A2_5">
+                        <property name="text">
+                         <string>B) Buy a security when it reaches a specific lower price.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A3_5">
+                        <property name="text">
+                         <string>C) Execute a trade at the opening of the market.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A4_5C">
+                        <property name="text">
+                         <string>D) Move with the price in a favorable direction to lock in profits.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M5Question3">
+                     <property name="title">
+                      <string>Question 3: Diversification in a portfolio helps to:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_31">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A1_5">
+                        <property name="text">
+                         <string>A) Maximize risk exposure.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A2_5">
+                        <property name="text">
+                         <string>B) Ensure all investments are in the same sector.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A3_5C">
+                        <property name="text">
+                         <string>C) Minimize risk by spreading investments across different assets.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A4_5">
+                        <property name="text">
+                         <string>D) Increase the impact of a single underperforming asset.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M5Question4">
+                     <property name="title">
+                      <string>Question 4: Which of the following emotions can lead to overtrading or holding losing positions too long?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_32">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A1_5">
+                        <property name="text">
+                         <string>A) Fear</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A2_5">
+                        <property name="text">
+                         <string>B) Discipline</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A3_5">
+                        <property name="text">
+                         <string>C) Patience</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A4_5C">
+                        <property name="text">
+                         <string>D) Greed</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M5Question5">
+                     <property name="title">
+                      <string>Question 5: One benefit of creating and following a trading plan is:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_33">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A1_5">
+                        <property name="text">
+                         <string>A) Increased impulsiveness in trading decisions.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A4_5C">
+                        <property name="text">
+                         <string>B) Emotional control by reducing impulsive decisions.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A3_5">
+                        <property name="text">
+                         <string>C) Reduced clarity in trading activities.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A2_5">
+                        <property name="text">
+                         <string>D) Elimination of the need for market analysis.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submitQuiz5">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -2717,7 +3025,316 @@ Understanding the basics of stock trading is essential for anyone looking to inv
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="mod6quiz"/>
+             <widget class="QWidget" name="mod6quiz">
+              <layout class="QVBoxLayout" name="verticalLayout_58">
+               <item>
+                <widget class="QLabel" name="quiz6header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 6 - Trading Strategies</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="quiz6scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz6scrollWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-322</y>
+                    <width>761</width>
+                    <height>824</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_34">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M6Question1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="title">
+                      <string>Question 1: What trading strategy buys and sells securities within the same day, closing positions by close?</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_35">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A1_6">
+                        <property name="text">
+                         <string>A) Swing Trading</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A2_6">
+                        <property name="text">
+                         <string>B) Scalping</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A3_6">
+                        <property name="text">
+                         <string>C) Position Trading</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A4_6C">
+                        <property name="text">
+                         <string>D) Day Trading</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M6Question2">
+                     <property name="title">
+                      <string>Question 2: Scalping as a trading strategy is characterized by:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_36">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A1_6">
+                        <property name="text">
+                         <string>A) Holding positions for several months to years.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A2_6">
+                        <property name="text">
+                         <string>B) Investing based on fundamental analysis of company financials.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A3_6C">
+                        <property name="text">
+                         <string>C) Making rapid trades aiming for small profits from minor price changes.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A4_6">
+                        <property name="text">
+                         <string>D) Focusing on buying undervalued stocks for long-term growth.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M6Question3">
+                     <property name="title">
+                      <string>Question 3: Mean reversion strategies are based on the concept that:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_37">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A1_6">
+                        <property name="text">
+                         <string>A) High momentum will continue indefinitely.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A2_6C">
+                        <property name="text">
+                         <string>B) Prices and returns eventually move back towards the mean or average.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A3_6">
+                        <property name="text">
+                         <string>C) Markets always trend upward over the long term.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A4_6">
+                        <property name="text">
+                         <string>D) Trading volume is the primary driver of price changes.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M6Question4">
+                     <property name="title">
+                      <string>Question 4: Momentum trading involves:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_38">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A1_6">
+                        <property name="text">
+                         <string>A) Purchasing assets at their mean price levels.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A2_6">
+                        <property name="text">
+                         <string>B) Shorting stocks that have low trading volume.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A3_6">
+                        <property name="text">
+                         <string>C) Focusing solely on dividend-paying stocks.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A4_6C">
+                        <property name="text">
+                         <string>D) Buying securities that are rising and selling those that are falling.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M6Question5">
+                     <property name="title">
+                      <string>Question 5: A key difference between day trading and swing trading is:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_39">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A1_6C">
+                        <property name="text">
+                         <string>A) Swing trading involves holding positions for several days to weeks, while day trading closes all positions
+before the market closes.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A4_6">
+                        <property name="text">
+                         <string>B) Day trading involves holding positions for weeks, while swing trading involves intraday trades.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A3_6">
+                        <property name="text">
+                         <string>C) Day trading requires less time commitment than swing trading.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A2_6">
+                        <property name="text">
+                         <string>D) Swing trading incurs higher transaction costs due to frequent trades.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submitQuiz6">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -2917,7 +3534,315 @@ By mastering advanced technical analysis tools like Fibonacci retracement, advan
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="mod7quiz"/>
+             <widget class="QWidget" name="mod7quiz">
+              <layout class="QVBoxLayout" name="verticalLayout_59">
+               <item>
+                <widget class="QLabel" name="quiz7header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 7 - Advanced Technical Analysis Tools</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="quiz7scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz7scrollWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-302</y>
+                    <width>761</width>
+                    <height>804</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_40">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M7Question1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="title">
+                      <string>Question 1: Fibonacci retracement levels are used by traders to:</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_41">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A1_7">
+                        <property name="text">
+                         <string>A) Determine market volatility.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A2_7">
+                        <property name="text">
+                         <string>B) Measure the strength of a trend.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A3_7">
+                        <property name="text">
+                         <string>C) Calculate moving averages over time.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A4_7C">
+                        <property name="text">
+                         <string>D) Identify potential support and resistance levels based on key ratios.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M7Question2">
+                     <property name="title">
+                      <string>Question 2: Which of the following is a component of the Ichimoku Cloud indicator?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_42">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A1_7">
+                        <property name="text">
+                         <string>A) Bollinger Band</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A2_7">
+                        <property name="text">
+                         <string>B) Parabolic SAR</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A3_7C">
+                        <property name="text">
+                         <string>C) Tenkan-sen (Conversion Line)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A4_7">
+                        <property name="text">
+                         <string>D) Relative Strength Index</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M7Question3">
+                     <property name="title">
+                      <string>Question 3: The 'Head and Shoulders' chart pattern is typically indicative of:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_43">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A1_7C">
+                        <property name="text">
+                         <string>A) A bearish reversal.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A2_7">
+                        <property name="text">
+                         <string>B) A continuation of the current trend.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A3_7">
+                        <property name="text">
+                         <string>C) A bullish reversal.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A4_7">
+                        <property name="text">
+                         <string>D) An overbought market.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M7Question4">
+                     <property name="title">
+                      <string>Question 4: Elliott Wave Theory is based on the idea that markets move in:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_44">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A1_7">
+                        <property name="text">
+                         <string>A) Fixed cycles of seven waves.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A2_7">
+                        <property name="text">
+                         <string>B) Random patterns with no predictability.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A3_7">
+                        <property name="text">
+                         <string>C) Straight lines determined by economic indicators.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A4_7C">
+                        <property name="text">
+                         <string>D) Repetitive cycles consisting of five impulse waves and three corrective waves.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M7Question5">
+                     <property name="title">
+                      <string>Question 5: When combining technical indicators, traders should:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_45">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A1_7">
+                        <property name="text">
+                         <string>A) Use as many indicators as possible to confirm signals.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A4_7">
+                        <property name="text">
+                         <string>B) Wait for agreement among different indicators before executing a trade.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A3_7">
+                        <property name="text">
+                         <string>C) Rely solely on one indicator to make trading decisions.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A2_7C">
+                        <property name="text">
+                         <string>D) Avoid using leading indicators.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submitQuiz7">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -3109,13 +4034,321 @@ Derivatives and options offer powerful tools for both speculation and risk manag
                   </font>
                  </property>
                  <property name="text">
-                  <string>Mod 8 - Derivatives and Options Trading</string>
+                  <string>Mod 8 - Derivatives &amp; Options Trading</string>
                  </property>
                 </widget>
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="mod8quiz"/>
+             <widget class="QWidget" name="mod8quiz">
+              <layout class="QVBoxLayout" name="verticalLayout_60">
+               <item>
+                <widget class="QLabel" name="quiz8header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 8 - Derivatives &amp; Options Trading</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="quiz8scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz8scrollWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-302</y>
+                    <width>761</width>
+                    <height>804</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_46">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M8Question1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="title">
+                      <string>Question 1: What is an option contract that allows the buyer to purchase an asset at a specified price called?</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_47">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A1_8">
+                        <property name="text">
+                         <string>A) Put Option</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A2_8">
+                        <property name="text">
+                         <string>B) Futures Contract</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A3_8">
+                        <property name="text">
+                         <string>C) Swap Agreement</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A4_8C">
+                        <property name="text">
+                         <string>D) Call Option</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M8Question2">
+                     <property name="title">
+                      <string>Question 2:  Which options strategy buys a call and put at the same strike to profit from large price moves?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_48">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A1_8C">
+                        <property name="text">
+                         <string>A) Saddle</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A2_8">
+                        <property name="text">
+                         <string>B) Covered Call</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A3_8">
+                        <property name="text">
+                         <string>C) Protective Put</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A4_8">
+                        <property name="text">
+                         <string>D) Iron Condor</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M8Question3">
+                     <property name="title">
+                      <string>Question 3: Leverage in trading allows a trader to:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_49">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A1_8">
+                        <property name="text">
+                         <string>A) Eliminate all trading risks.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A2_8">
+                        <property name="text">
+                         <string>B) Trade only with their own capital without borrowing.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A3_8">
+                        <property name="text">
+                         <string>C) Guarantee profits in volatile markets.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A4_8C">
+                        <property name="text">
+                         <string>D) Increase potential returns by using borrowed funds.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M8Question4">
+                     <property name="title">
+                      <string>Question 4: What is a primary risk associated with trading derivatives like CFDs?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_50">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A1_8">
+                        <property name="text">
+                         <string>A) Limited potential for losses.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A2_8C">
+                        <property name="text">
+                         <string>B) Losses can exceed the initial investment due to leverage.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A3_8">
+                        <property name="text">
+                         <string>C) No exposure to market volatility.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A4_8">
+                        <property name="text">
+                         <string>D) Guaranteed returns regardless of market movements.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M8Question5">
+                     <property name="title">
+                      <string>Question 5: Which hedging strategy uses options to protect against asset price declines?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_51">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A1_8">
+                        <property name="text">
+                         <string>A) Covered Call</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A4_8">
+                        <property name="text">
+                         <string>B) Strangle</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A3_8C">
+                        <property name="text">
+                         <string>C) Protective Put</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A2_8">
+                        <property name="text">
+                         <string>D) Short Selling</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submitQuiz8">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -3337,7 +4570,315 @@ Effective portfolio management involves strategic asset allocation, regular reba
                </item>
               </layout>
              </widget>
-             <widget class="QWidget" name="mod9quiz"/>
+             <widget class="QWidget" name="mod9quiz">
+              <layout class="QVBoxLayout" name="verticalLayout_61">
+               <item>
+                <widget class="QLabel" name="quiz9header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 9 - Portfolio Management &amp; Advanced Investment Strategies</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="quiz9scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz9scrollWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-302</y>
+                    <width>761</width>
+                    <height>804</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_52">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M9Question1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="title">
+                      <string>Question 1: According to Modern Portfolio Theory (MPT), diversification helps to:</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_53">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A1_9">
+                        <property name="text">
+                         <string>A) Increase overall portfolio risk.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A2_9">
+                        <property name="text">
+                         <string>B) Eliminate all investment risks.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A3_9">
+                        <property name="text">
+                         <string>C) Maximize returns by investing only in high-risk assets.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A4_9C">
+                        <property name="text">
+                         <string>D) Reduce overall portfolio risk by combining assets with varying correlations.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M9Question2">
+                     <property name="title">
+                      <string>Question 2: Value investing focuses on:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_54">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A1_9">
+                        <property name="text">
+                         <string>A) Finding overvalued stocks that are expected to drop in price.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A2_9">
+                        <property name="text">
+                         <string>B) Short-term trading based on technical indicators.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A3_9C">
+                        <property name="text">
+                         <string>C) Identifying undervalued stocks trading below their intrinsic value.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A4_9">
+                        <property name="text">
+                         <string>D) Investing only in government bonds.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M9Question3">
+                     <property name="title">
+                      <string>Question 3: One of the main advantages of passive investing is:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_55">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A1_9C">
+                        <property name="text">
+                         <string>A) Lower costs due to minimal trading and management.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A2_9">
+                        <property name="text">
+                         <string>B) Higher management fees.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A3_9">
+                        <property name="text">
+                         <string>C) Potential to outperform the market.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A4_9">
+                        <property name="text">
+                         <string>D) Requirement for constant market monitoring.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M9Question4">
+                     <property name="title">
+                      <string>Question 4: Rebalancing a portfolio is important because it:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_56">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A1_9">
+                        <property name="text">
+                         <string>A) Ensures that the portfolio becomes heavily weighted in one asset class.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A2_9">
+                        <property name="text">
+                         <string>B) Eliminates the need for diversification.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A3_9">
+                        <property name="text">
+                         <string>C) Increases exposure to market volatility.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A4_9C">
+                        <property name="text">
+                         <string>D) Helps manage risk by maintaining the desired asset allocation.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M9Question5">
+                     <property name="title">
+                      <string>Question 5: Which investment strategy uses constant management to outperform the market?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_57">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A1_9">
+                        <property name="text">
+                         <string>A) Passive Investing</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A4_9">
+                        <property name="text">
+                         <string>B) Dollar-Cost Averaging</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A3_9C">
+                        <property name="text">
+                         <string>C) Active Investing</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A2_9">
+                        <property name="text">
+                         <string>D) Index Investing</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submitQuiz9">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
             </widget>
            </item>
           </layout>
@@ -3358,7 +4899,315 @@ Effective portfolio management involves strategic asset allocation, regular reba
            </property>
            <item row="0" column="0">
             <widget class="QStackedWidget" name="mod4stack">
-             <widget class="QWidget" name="mod4quiz"/>
+             <widget class="QWidget" name="mod4quiz">
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QLabel" name="quiz4header">
+                 <property name="font">
+                  <font>
+                   <pointsize>14</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Mod 4 - Technical Analysis</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="quiz4scrollArea">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="quiz4scrollWidget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>-302</y>
+                    <width>761</width>
+                    <height>804</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_22">
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QGroupBox" name="M4Question1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="title">
+                      <string>Question 1: Which chart type uses &quot;candlesticks&quot; to show open, high, low, and close prices?</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_23">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A1_4">
+                        <property name="text">
+                         <string>A) Line Chart</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A2_4">
+                        <property name="text">
+                         <string>B) Bar Chart</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A3_4">
+                        <property name="text">
+                         <string>C) Point and Figure Chart</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q1A4_4C">
+                        <property name="text">
+                         <string>D) Candlestick Chart</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M4Question2">
+                     <property name="title">
+                      <string>Question 2: What does an RSI value above 70 typically indicate for an asset?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_24">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A1_4C">
+                        <property name="text">
+                         <string>A) Overbought</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A2_4">
+                        <property name="text">
+                         <string>B) Fairly Valued</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A3_4">
+                        <property name="text">
+                         <string>C) In a strong downtrend</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q2A4_4">
+                        <property name="text">
+                         <string>D) Oversold</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M4Question3">
+                     <property name="title">
+                      <string>Question 3: In technical analysis, a support level is:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_25">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A1_4C">
+                        <property name="text">
+                         <string>A) A price level where demand is strong enough to prevent prices from falling further.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A2_4">
+                        <property name="text">
+                         <string>B) A price level where selling pressure is strong enough to prevent prices from rising further.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A3_4">
+                        <property name="text">
+                         <string>C) A moving average that provides buy signals.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q3A4_4">
+                        <property name="text">
+                         <string>D) The average price over the past 50 days.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M4Question4">
+                     <property name="title">
+                      <string>Question 4: Which indicator shows the relationship between two EMAs to identify trend reversals?</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_26">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A1_4">
+                        <property name="text">
+                         <string>A) Bollinger Bands</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A2_4">
+                        <property name="text">
+                         <string>B) Fibonacci Retracement</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A3_4C">
+                        <property name="text">
+                         <string>C) Moving Average Convergence Divergence (MACD)</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q4A4_4">
+                        <property name="text">
+                         <string>D) Relative Strength Index (RSI)</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="M4Question5">
+                     <property name="title">
+                      <string>Question 5: An uptrend is characterized by:</string>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_27">
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A1_4">
+                        <property name="text">
+                         <string>A) A series of lower highs and lower lows.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A4_4C">
+                        <property name="text">
+                         <string>B) A series of higher highs and higher lows.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A3_4">
+                        <property name="text">
+                         <string>C) Price oscillating between support and resistance levels without a clear direction.</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QRadioButton" name="Q5A2_4">
+                        <property name="text">
+                         <string>D) Prices remaining constant over time.</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submitQuiz4">
+                 <property name="text">
+                  <string>Submit Quiz</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
              <widget class="QWidget" name="mod4content">
               <layout class="QGridLayout" name="gridLayout_15">
                <item row="2" column="0" colspan="4">
