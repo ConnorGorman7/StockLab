@@ -8,22 +8,24 @@
 #include <unordered_set>
 #include <fstream>
 
+// Struct to hold definition data with its associated module
 struct Definition {
     std::string meaning;
     std::string module; // Module this definition belongs to
 };
 
+// Struct to hold student data
 struct Student {
     int studentID;
     std::unordered_set<std::string> completedModules; // Track the modules the student has completed
 };
 
+// Dict Class
 class Dict {
-private:
-    std::unordered_map<std::string, std::vector<Definition>> dict; // Dictionary storing words and definitions
-    std::unordered_map<int, Student> students; // Mapping studentID to student data
 
 public:
+    std::unordered_map<std::string, std::vector<Definition>> dict; // Dictionary storing words and definitions
+    std::unordered_map<int, Student> students; // Mapping studentID to student data
     Dict();
 
     // Add a word with its meaning and associated module
