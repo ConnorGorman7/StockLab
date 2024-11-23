@@ -32,7 +32,7 @@
    <property name="bottomMargin">
     <number>0</number>
    </property>
-   <item row="0" column="0">
+   <item row="1" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="enabled">
       <bool>true</bool>
@@ -41,7 +41,7 @@
       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="welcomePage">
       <property name="font">
@@ -204,15 +204,172 @@
       </layout>
      </widget>
      <widget class="QWidget" name="settingPage">
-      <layout class="QGridLayout" name="gridLayout_26">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="settingBackButton">
-         <property name="text">
-          <string>Return</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="settingBackButton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Return</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="version">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>410</y>
+         <width>221</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Version 1.0.0 Developed by 376 Group 2</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="helpButton">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>440</y>
+         <width>101</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Help and Support</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="appPreference">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>190</y>
+         <width>321</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>App Preferences</string>
+       </property>
+       <widget class="QCheckBox" name="darkMode">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Dark Mode</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="notification">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Notifications</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="titleSetting">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>50</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Settings</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="accSettings">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>321</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>Account Settings</string>
+       </property>
+       <widget class="QCheckBox" name="emailChange">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Change Email</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="passUpdate">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Update Password</string>
+        </property>
+       </widget>
+      </widget>
      </widget>
      <widget class="QWidget" name="loginPage">
       <property name="sizePolicy">
@@ -1040,22 +1197,32 @@ Information</string>
       </layout>
      </widget>
      <widget class="QWidget" name="adminPage">
-      <layout class="QGridLayout" name="gridLayout_24">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="adminInfoBackButton">
-         <property name="text">
-          <string>Return</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLabel" name="adminInfoLabel">
-         <property name="text">
-          <string>Admin Information will be placed here.</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QLabel" name="adminInfoLabel">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>100</y>
+         <width>241</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Admin Information will be placed here.</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="adminInfoBackButton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Return</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="moduleWidget">
       <layout class="QGridLayout" name="gridLayout_21">
@@ -2882,8 +3049,8 @@ Effective risk management and psychological discipline are crucial for long-term
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>739</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_28">

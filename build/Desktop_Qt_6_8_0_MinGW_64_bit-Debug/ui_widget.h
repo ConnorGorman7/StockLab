@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
@@ -38,6 +39,15 @@ public:
     QPushButton *regTeachButton;
     QWidget *settingPage;
     QPushButton *settingBackButton;
+    QLabel *version;
+    QPushButton *helpButton;
+    QGroupBox *appPreference;
+    QCheckBox *darkMode;
+    QCheckBox *notification;
+    QLabel *titleSetting;
+    QGroupBox *accSettings;
+    QCheckBox *emailChange;
+    QCheckBox *passUpdate;
     QWidget *loginPage;
     QLabel *label_3;
     QLabel *label_2;
@@ -563,6 +573,47 @@ public:
         settingBackButton = new QPushButton(settingPage);
         settingBackButton->setObjectName("settingBackButton");
         settingBackButton->setGeometry(QRect(20, 20, 75, 24));
+        version = new QLabel(settingPage);
+        version->setObjectName("version");
+        version->setGeometry(QRect(250, 410, 221, 31));
+        helpButton = new QPushButton(settingPage);
+        helpButton->setObjectName("helpButton");
+        helpButton->setGeometry(QRect(300, 440, 101, 24));
+        appPreference = new QGroupBox(settingPage);
+        appPreference->setObjectName("appPreference");
+        appPreference->setGeometry(QRect(10, 190, 321, 80));
+        QFont font3;
+        font3.setPointSize(12);
+        appPreference->setFont(font3);
+        darkMode = new QCheckBox(appPreference);
+        darkMode->setObjectName("darkMode");
+        darkMode->setGeometry(QRect(10, 30, 91, 20));
+        QFont font4;
+        font4.setPointSize(9);
+        darkMode->setFont(font4);
+        notification = new QCheckBox(appPreference);
+        notification->setObjectName("notification");
+        notification->setGeometry(QRect(10, 50, 91, 20));
+        notification->setFont(font4);
+        titleSetting = new QLabel(settingPage);
+        titleSetting->setObjectName("titleSetting");
+        titleSetting->setGeometry(QRect(320, 50, 81, 31));
+        QFont font5;
+        font5.setPointSize(14);
+        font5.setBold(true);
+        titleSetting->setFont(font5);
+        accSettings = new QGroupBox(settingPage);
+        accSettings->setObjectName("accSettings");
+        accSettings->setGeometry(QRect(10, 100, 321, 81));
+        accSettings->setFont(font3);
+        emailChange = new QCheckBox(accSettings);
+        emailChange->setObjectName("emailChange");
+        emailChange->setGeometry(QRect(10, 30, 101, 20));
+        emailChange->setFont(font4);
+        passUpdate = new QCheckBox(accSettings);
+        passUpdate->setObjectName("passUpdate");
+        passUpdate->setGeometry(QRect(10, 50, 121, 20));
+        passUpdate->setFont(font4);
         stackedWidget->addWidget(settingPage);
         loginPage = new QWidget();
         loginPage->setObjectName("loginPage");
@@ -679,10 +730,10 @@ public:
         studentHomeHeader = new QLabel(studentHome);
         studentHomeHeader->setObjectName("studentHomeHeader");
         studentHomeHeader->setGeometry(QRect(320, 170, 150, 20));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Segoe UI")});
-        font3.setBold(true);
-        studentHomeHeader->setFont(font3);
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Segoe UI")});
+        font6.setBold(true);
+        studentHomeHeader->setFont(font6);
         studentHomeHeader->setAlignment(Qt::AlignmentFlag::AlignCenter);
         logoutButton = new QPushButton(studentHome);
         logoutButton->setObjectName("logoutButton");
@@ -692,10 +743,10 @@ public:
         adminPage->setObjectName("adminPage");
         adminInfoLabel = new QLabel(adminPage);
         adminInfoLabel->setObjectName("adminInfoLabel");
-        adminInfoLabel->setGeometry(QRect(230, 160, 241, 191));
+        adminInfoLabel->setGeometry(QRect(160, 100, 241, 191));
         adminInfoBackButton = new QPushButton(adminPage);
         adminInfoBackButton->setObjectName("adminInfoBackButton");
-        adminInfoBackButton->setGeometry(QRect(130, 110, 75, 24));
+        adminInfoBackButton->setGeometry(QRect(20, 20, 75, 24));
         stackedWidget->addWidget(adminPage);
         moduleWidget = new QWidget();
         moduleWidget->setObjectName("moduleWidget");
@@ -712,9 +763,9 @@ public:
         advancedLabel = new QLabel(moduleHomepage);
         advancedLabel->setObjectName("advancedLabel");
         advancedLabel->setMaximumSize(QSize(16777215, 25));
-        QFont font4;
-        font4.setBold(true);
-        advancedLabel->setFont(font4);
+        QFont font7;
+        font7.setBold(true);
+        advancedLabel->setFont(font7);
         advancedLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_2->addWidget(advancedLabel, 7, 2, 1, 1);
@@ -734,7 +785,7 @@ public:
         introductoryLabel = new QLabel(moduleHomepage);
         introductoryLabel->setObjectName("introductoryLabel");
         introductoryLabel->setMaximumSize(QSize(16777215, 25));
-        introductoryLabel->setFont(font4);
+        introductoryLabel->setFont(font7);
         introductoryLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_2->addWidget(introductoryLabel, 7, 0, 1, 1);
@@ -753,7 +804,7 @@ public:
 
         intermediateLabel = new QLabel(moduleHomepage);
         intermediateLabel->setObjectName("intermediateLabel");
-        intermediateLabel->setFont(font4);
+        intermediateLabel->setFont(font7);
         intermediateLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_2->addWidget(intermediateLabel, 7, 1, 1, 1);
@@ -797,9 +848,6 @@ public:
         moduleWelcome = new QLabel(moduleHomepage);
         moduleWelcome->setObjectName("moduleWelcome");
         moduleWelcome->setMaximumSize(QSize(16777215, 30));
-        QFont font5;
-        font5.setPointSize(14);
-        font5.setBold(true);
         moduleWelcome->setFont(font5);
         moduleWelcome->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
@@ -1509,7 +1557,7 @@ public:
         quiz5scrollArea->setWidgetResizable(true);
         quiz5scrollWidget = new QWidget();
         quiz5scrollWidget->setObjectName("quiz5scrollWidget");
-        quiz5scrollWidget->setGeometry(QRect(0, 0, 586, 610));
+        quiz5scrollWidget->setGeometry(QRect(0, 0, 765, 610));
         verticalLayout_28 = new QVBoxLayout(quiz5scrollWidget);
         verticalLayout_28->setObjectName("verticalLayout_28");
         verticalLayout_28->setContentsMargins(3, 3, 3, 3);
@@ -2740,12 +2788,12 @@ public:
 
         stackedWidget->addWidget(moduleWidget);
 
-        gridLayout_4->addWidget(stackedWidget, 0, 0, 1, 1);
+        gridLayout_4->addWidget(stackedWidget, 1, 0, 1, 1);
 
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(1);
         moduleStack->setCurrentIndex(0);
 
 
@@ -2760,6 +2808,15 @@ public:
         regStuButton->setText(QCoreApplication::translate("Widget", "Register as a student", nullptr));
         regTeachButton->setText(QCoreApplication::translate("Widget", "Register as a teacher", nullptr));
         settingBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        version->setText(QCoreApplication::translate("Widget", "Version 1.0.0 Developed by 376 Group 2", nullptr));
+        helpButton->setText(QCoreApplication::translate("Widget", "Help and Support", nullptr));
+        appPreference->setTitle(QCoreApplication::translate("Widget", "App Preferences", nullptr));
+        darkMode->setText(QCoreApplication::translate("Widget", "Dark Mode", nullptr));
+        notification->setText(QCoreApplication::translate("Widget", "Notifications", nullptr));
+        titleSetting->setText(QCoreApplication::translate("Widget", "Settings", nullptr));
+        accSettings->setTitle(QCoreApplication::translate("Widget", "Account Settings", nullptr));
+        emailChange->setText(QCoreApplication::translate("Widget", "Change Email", nullptr));
+        passUpdate->setText(QCoreApplication::translate("Widget", "Update Password", nullptr));
         label_3->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
         loginEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

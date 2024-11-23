@@ -6,7 +6,10 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QRandomGenerator>
-
+#include <QStyle>
+#include <QInputDialog>
+#include <QMessageBox>
+#include <QRegularExpression>
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -656,9 +659,116 @@ void Widget::on_settings_clicked()
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->settingPage));
 }
 
-
 void Widget::on_settingBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
 }
 
+void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
+{
+    if (arg1 == Qt::Checked) {
+        QPalette darkPalette;
+        darkPalette.setColor(QPalette::Window, QColor(53, 53, 53));
+        darkPalette.setColor(QPalette::WindowText, Qt::white);
+        darkPalette.setColor(QPalette::Base, QColor(25, 25, 25));
+        darkPalette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
+        darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
+        darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+        darkPalette.setColor(QPalette::Text, Qt::white);
+        darkPalette.setColor(QPalette::Button, QColor(53, 53, 53));
+        darkPalette.setColor(QPalette::ButtonText, Qt::white);
+        darkPalette.setColor(QPalette::BrightText, Qt::red);
+        darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
+        darkPalette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+        darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+
+        QApplication::setPalette(darkPalette);
+          qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
+    } else {
+        QApplication::setPalette(QApplication::style()->standardPalette());
+        qApp->setStyleSheet("");
+    }
+
+}
+
+void Widget::on_emailChange_clicked()
+{
+    if (ui->emailChange->isChecked()) {
+        bool ok;
+        QString newEmail = QInputDialog::getText(this, tr("Change Email"),
+                                                 tr("Enter your new email:"), QLineEdit::Normal,
+                                                 "", &ok);
+
+        if (ok && !newEmail.isEmpty()) {
+            QRegularExpression emailRegex(R"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)");
+            QRegularExpressionMatch match = emailRegex.match(newEmail);
+
+            if (match.hasMatch()) {
+                QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+                QFile file(filePath);
+
+                if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                    QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+                    ui->emailChange->setChecked(false);
+                    return;
+                }
+
+                QTextStream in(&file);
+                QString currentEmail = ui->loginEmailTE->toPlainText();
+                bool emailExists = false;
+                QStringList lines;
+
+                while (!in.atEnd()) {
+                    QString line = in.readLine();
+                    if (line == newEmail) {
+                        emailExists = true;
+                    }
+                    lines.append(line);
+                }
+
+                file.close();
+
+                if (emailExists) {
+                    QMessageBox::warning(this, tr("Email Already Exists"), tr("The email you entered already exists. Please choose another email."));
+                    ui->emailChange->setChecked(false);
+                    return;
+                }
+
+                bool emailUpdated = false;
+                for (int i = 0; i < lines.size(); ++i) {
+                    if (lines[i] == currentEmail && !emailUpdated) {
+                        lines[i] = newEmail;
+                        emailUpdated = true;
+                    }
+                }
+
+                if (!emailUpdated) {
+                    QMessageBox::warning(this, tr("Email Not Found"), tr("The current email was not found in the file."));
+                    ui->emailChange->setChecked(false);
+                    return;
+                }
+
+                if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+                    QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+                    ui->emailChange->setChecked(false);
+                    return;
+                }
+
+                QTextStream out(&file);
+                for (const QString &line : lines) {
+                    out << line << "\n";
+                }
+
+                file.close();
+
+                QMessageBox::information(this, tr("Success"), tr("Your email has been successfully updated."));
+            } else {
+                QMessageBox::critical(this, tr("Invalid Email"), tr("The entered email is not valid. Please try again."));
+            }
+        } else if (ok && newEmail.isEmpty()) {
+            QMessageBox::warning(this, tr("Empty Input"), tr("No email was entered. Please try again."));
+        }
+
+        ui->emailChange->setChecked(false);
+    }
+}
