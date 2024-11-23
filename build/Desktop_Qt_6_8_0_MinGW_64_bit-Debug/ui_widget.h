@@ -36,7 +36,7 @@ public:
     QPushButton *loginButton;
     QPushButton *regStuButton;
     QPushButton *regTeachButton;
-    QWidget *adminPage2;
+    QWidget *settingPage;
     QWidget *loginPage;
     QLabel *label_3;
     QLabel *label_2;
@@ -557,9 +557,9 @@ public:
         regTeachButton->setGeometry(QRect(230, 410, 321, 71));
         regTeachButton->setFont(font2);
         stackedWidget->addWidget(welcomePage);
-        adminPage2 = new QWidget();
-        adminPage2->setObjectName("adminPage2");
-        stackedWidget->addWidget(adminPage2);
+        settingPage = new QWidget();
+        settingPage->setObjectName("settingPage");
+        stackedWidget->addWidget(settingPage);
         loginPage = new QWidget();
         loginPage->setObjectName("loginPage");
         label_3 = new QLabel(loginPage);
@@ -2741,7 +2741,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(1);
         moduleStack->setCurrentIndex(0);
 
 

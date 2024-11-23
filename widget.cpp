@@ -663,11 +663,15 @@ void Widget::on_adminInfo_clicked()
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->adminPage));         // Switch to Admin Information page
 }
 
-
-
-
 void Widget::on_adminInfoBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+}
+
+
+
+void Widget::on_settings_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->settingPage));
 }
 

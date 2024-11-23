@@ -67,6 +67,8 @@ private slots:
 
     void on_adminInfo_clicked();
 
+    void on_settings_clicked();
+
 private:
     Ui::Widget *ui;
     void setupReturnButtonConnections();

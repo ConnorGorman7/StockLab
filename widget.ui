@@ -35,7 +35,7 @@
       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>6</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="welcomePage">
       <property name="font">
@@ -131,7 +131,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QWidget" name="adminPage2"/>
+     <widget class="QWidget" name="settingPage"/>
      <widget class="QWidget" name="loginPage">
       <widget class="QLabel" name="label_3">
        <property name="geometry">
