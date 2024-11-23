@@ -37,6 +37,7 @@ public:
     QPushButton *regStuButton;
     QPushButton *regTeachButton;
     QWidget *settingPage;
+    QPushButton *settingBackButton;
     QWidget *loginPage;
     QLabel *label_3;
     QLabel *label_2;
@@ -559,6 +560,9 @@ public:
         stackedWidget->addWidget(welcomePage);
         settingPage = new QWidget();
         settingPage->setObjectName("settingPage");
+        settingBackButton = new QPushButton(settingPage);
+        settingBackButton->setObjectName("settingBackButton");
+        settingBackButton->setGeometry(QRect(20, 20, 75, 24));
         stackedWidget->addWidget(settingPage);
         loginPage = new QWidget();
         loginPage->setObjectName("loginPage");
@@ -2736,12 +2740,12 @@ public:
 
         stackedWidget->addWidget(moduleWidget);
 
-        gridLayout_4->addWidget(stackedWidget, 1, 0, 1, 1);
+        gridLayout_4->addWidget(stackedWidget, 0, 0, 1, 1);
 
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(6);
         moduleStack->setCurrentIndex(0);
 
 
@@ -2755,6 +2759,7 @@ public:
         loginButton->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
         regStuButton->setText(QCoreApplication::translate("Widget", "Register as a student", nullptr));
         regTeachButton->setText(QCoreApplication::translate("Widget", "Register as a teacher", nullptr));
+        settingBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
         label_3->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
         loginEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

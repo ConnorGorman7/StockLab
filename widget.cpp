@@ -641,26 +641,9 @@ void Widget::on_submitQuiz9_clicked()
     ui->moduleStack->setCurrentIndex(0);
 }
 
-
-QString Widget::generateRandomAdminInfo()
-{
-    QStringList adminNames = {"John Doe", "Jane Smith", "Alice Johnson", "Bob Brown"};
-    QStringList adminRoles = {"Manager", "Supervisor", "Support Lead", "System Admin"};
-    QStringList adminEmails = {"admin1@example.com", "admin2@example.com", "admin3@example.com", "admin4@example.com"};
-
-    QString name = adminNames[QRandomGenerator::global()->bounded(adminNames.size())];
-    QString role = adminRoles[QRandomGenerator::global()->bounded(adminRoles.size())];
-    QString email = adminEmails[QRandomGenerator::global()->bounded(adminEmails.size())];
-
-    return QString("Name: %1\nRole: %2\nEmail: %3").arg(name, role, email);
-}
-
-
 void Widget::on_adminInfo_clicked()
 {
-    QString randomInfo = generateRandomAdminInfo(); // Calls the member function
-    ui->adminInfo->setText(randomInfo);            // Ensure the QLabel object is named "adminInfo"
-    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->adminPage));         // Switch to Admin Information page
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->adminPage));
 }
 
 void Widget::on_adminInfoBackButton_clicked()
@@ -673,5 +656,11 @@ void Widget::on_adminInfoBackButton_clicked()
 void Widget::on_settings_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->settingPage));
+}
+
+
+void Widget::on_settingBackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
 }
 
