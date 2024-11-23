@@ -5,6 +5,7 @@
 #include <QTextStream>
 #include <QDebug>
 #include <QMessageBox>
+#include <QRandomGenerator>
 
 
 Widget::Widget(QWidget *parent)
@@ -39,43 +40,43 @@ void Widget::setupReturnButtonConnections()
 
 void Widget::on_loginButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->loginPage));
 }
 
 
 void Widget::on_backButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
 }
 
 
 void Widget::on_backButton_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
 }
 
 
 void Widget::on_backButton_3_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
 }
 
 
 void Widget::on_regStuButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentReg));
 }
 
 
 void Widget::on_regTeachButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(3);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->teacherReg));
 }
 
 
 void Widget::on_registerStudentBtn_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
 
     QString email = ui->studentEmailTE->toPlainText();
@@ -105,7 +106,7 @@ void Widget::on_registerStudentBtn_clicked()
             out << name << Qt::endl << email << Qt::endl << password << Qt::endl << "Student" << Qt::endl;
             out << Qt::endl;
             QMessageBox::information(this, "Registration successful", "You have successfully registered your account!");
-            ui->stackedWidget->setCurrentIndex(4);
+            ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
         } else {
             QMessageBox::critical(this, "Invalid details", "One or more fields have been left empty. Please ensure all fields are filled out.");
             file.close();
@@ -120,7 +121,7 @@ void Widget::on_registerStudentBtn_clicked()
 
 void Widget::on_registerTeacherBtn_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
 
     QString email = ui->teachEmailTE->toPlainText();
@@ -150,6 +151,7 @@ void Widget::on_registerTeacherBtn_clicked()
             out << name << Qt::endl << email << Qt::endl << password << Qt::endl << "Teacher" << Qt::endl;
             out << Qt::endl;
             QMessageBox::information(this, "Registration successful", "You have successfully registered your account!");
+            ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
         } else {
             QMessageBox::critical(this, "Invalid details", "One or more fields have been left empty. Please ensure all fields are filled out.");
             file.close();
@@ -164,7 +166,7 @@ void Widget::on_registerTeacherBtn_clicked()
 
 void Widget::on_loginScreenButton_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
 
     QString email = ui->loginEmailTE->toPlainText();
@@ -190,7 +192,7 @@ void Widget::on_loginScreenButton_clicked()
                     file.close();
                     // Switch to modules screen once implemented
                     if (QString::compare(in.readLine(), "Student") == 0) {
-                        ui->stackedWidget->setCurrentIndex(4);
+                        ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
                         return;
                     } else {
                         // switch to teacher home page
@@ -218,18 +220,18 @@ void Widget::on_loginScreenButton_clicked()
 
 void Widget::on_logoutButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
 }
 
 void Widget::on_menu_clicked()
 {
     ui->moduleStack->setCurrentIndex(0);
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
 }
 
 void Widget::on_modules_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(5);
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->moduleWidget));
     ui->moduleStack->setCurrentIndex(0);
 }
 
@@ -637,5 +639,35 @@ void Widget::on_submitQuiz9_clicked()
 
     resetQuiz(ui->mod9quiz);
     ui->moduleStack->setCurrentIndex(0);
+}
+
+
+QString Widget::generateRandomAdminInfo()
+{
+    QStringList adminNames = {"John Doe", "Jane Smith", "Alice Johnson", "Bob Brown"};
+    QStringList adminRoles = {"Manager", "Supervisor", "Support Lead", "System Admin"};
+    QStringList adminEmails = {"admin1@example.com", "admin2@example.com", "admin3@example.com", "admin4@example.com"};
+
+    QString name = adminNames[QRandomGenerator::global()->bounded(adminNames.size())];
+    QString role = adminRoles[QRandomGenerator::global()->bounded(adminRoles.size())];
+    QString email = adminEmails[QRandomGenerator::global()->bounded(adminEmails.size())];
+
+    return QString("Name: %1\nRole: %2\nEmail: %3").arg(name, role, email);
+}
+
+
+void Widget::on_adminInfo_clicked()
+{
+    QString randomInfo = generateRandomAdminInfo(); // Calls the member function
+    ui->adminInfo->setText(randomInfo);            // Ensure the QLabel object is named "adminInfo"
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->adminPage));         // Switch to Admin Information page
+}
+
+
+
+
+void Widget::on_adminInfoBackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
 }
 
