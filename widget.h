@@ -73,6 +73,10 @@ private slots:
 
     void on_darkMode_checkStateChanged(const Qt::CheckState &arg1);
 
+    void on_passUpdate_clicked();
+
+    void on_emailChange_clicked();
+
 private:
     Ui::Widget *ui;
     void setupReturnButtonConnections();

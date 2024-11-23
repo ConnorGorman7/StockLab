@@ -46,8 +46,8 @@ public:
     QCheckBox *notification;
     QLabel *titleSetting;
     QGroupBox *accSettings;
+    QCheckBox *emailChange;
     QCheckBox *passUpdate;
-    QCheckBox *checkBox_2;
     QWidget *loginPage;
     QLabel *label_3;
     QLabel *label_2;
@@ -606,14 +606,14 @@ public:
         accSettings->setObjectName("accSettings");
         accSettings->setGeometry(QRect(10, 100, 321, 81));
         accSettings->setFont(font3);
+        emailChange = new QCheckBox(accSettings);
+        emailChange->setObjectName("emailChange");
+        emailChange->setGeometry(QRect(10, 30, 101, 20));
+        emailChange->setFont(font4);
         passUpdate = new QCheckBox(accSettings);
         passUpdate->setObjectName("passUpdate");
-        passUpdate->setGeometry(QRect(10, 30, 91, 20));
+        passUpdate->setGeometry(QRect(10, 50, 121, 20));
         passUpdate->setFont(font4);
-        checkBox_2 = new QCheckBox(accSettings);
-        checkBox_2->setObjectName("checkBox_2");
-        checkBox_2->setGeometry(QRect(10, 50, 111, 20));
-        checkBox_2->setFont(font4);
         stackedWidget->addWidget(settingPage);
         loginPage = new QWidget();
         loginPage->setObjectName("loginPage");
@@ -2815,8 +2815,8 @@ public:
         notification->setText(QCoreApplication::translate("Widget", "Notifications", nullptr));
         titleSetting->setText(QCoreApplication::translate("Widget", "Settings", nullptr));
         accSettings->setTitle(QCoreApplication::translate("Widget", "Account Settings", nullptr));
-        passUpdate->setText(QCoreApplication::translate("Widget", "Change Email", nullptr));
-        checkBox_2->setText(QCoreApplication::translate("Widget", "Update Password", nullptr));
+        emailChange->setText(QCoreApplication::translate("Widget", "Change Email", nullptr));
+        passUpdate->setText(QCoreApplication::translate("Widget", "Update Password", nullptr));
         label_3->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
         loginEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

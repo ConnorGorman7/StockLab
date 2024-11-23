@@ -261,12 +261,12 @@
        <property name="title">
         <string>Account Settings</string>
        </property>
-       <widget class="QCheckBox" name="passUpdate">
+       <widget class="QCheckBox" name="emailChange">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>91</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
@@ -279,12 +279,12 @@
          <string>Change Email</string>
         </property>
        </widget>
-       <widget class="QCheckBox" name="checkBox_2">
+       <widget class="QCheckBox" name="passUpdate">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>50</y>
-          <width>111</width>
+          <width>121</width>
           <height>20</height>
          </rect>
         </property>
