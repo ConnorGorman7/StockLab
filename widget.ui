@@ -204,172 +204,178 @@
       </layout>
      </widget>
      <widget class="QWidget" name="settingPage">
-      <widget class="QPushButton" name="settingBackButton">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>20</y>
-         <width>75</width>
-         <height>24</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Return</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="version">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>410</y>
-         <width>221</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Version 1.0.0 Developed by 376 Group 2</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="helpButton">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>440</y>
-         <width>101</width>
-         <height>24</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Help and Support</string>
-       </property>
-      </widget>
-      <widget class="QGroupBox" name="appPreference">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>190</y>
-         <width>321</width>
-         <height>80</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="title">
-        <string>App Preferences</string>
-       </property>
-       <widget class="QCheckBox" name="darkMode">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>30</y>
-          <width>91</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>9</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Dark Mode</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="notification">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>50</y>
-          <width>91</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>9</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Notifications</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QLabel" name="titleSetting">
-       <property name="geometry">
-        <rect>
-         <x>320</x>
-         <y>50</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Settings</string>
-       </property>
-      </widget>
-      <widget class="QGroupBox" name="accSettings">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>100</y>
-         <width>321</width>
-         <height>81</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="title">
-        <string>Account Settings</string>
-       </property>
-       <widget class="QCheckBox" name="emailChange">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>30</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>9</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Change Email</string>
-        </property>
-       </widget>
-       <widget class="QCheckBox" name="passUpdate">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>50</y>
-          <width>121</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>9</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Update Password</string>
-        </property>
-       </widget>
-      </widget>
+      <layout class="QGridLayout" name="gridLayout_24">
+       <item row="5" column="1">
+        <widget class="QPushButton" name="helpButton">
+         <property name="text">
+          <string>Help and Support</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <spacer name="horizontalSpacer_13">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="QGroupBox" name="appPreference">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>App Preferences</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_31">
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="darkMode">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Dark Mode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="notification">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Notifications</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="4">
+        <widget class="QGroupBox" name="accSettings">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="title">
+          <string>Account Settings</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_26">
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="emailChange">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Change Email</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="passUpdate">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Update Password</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QLabel" name="version">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Version 1.0.0 Developed by ELEC376 Group 2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <spacer name="horizontalSpacer_14">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="titleSetting">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Settings</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="settingBackButton">
+         <property name="text">
+          <string>Return</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <spacer name="horizontalSpacer_15">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="loginPage">
       <property name="sizePolicy">
@@ -633,7 +639,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
          </property>
         </widget>
        </item>
-       <item row="6" column="2" alignment="">
+       <item row="6" column="2">
         <widget class="QPushButton" name="registerStudentBtn">
          <property name="maximumSize">
           <size>
@@ -3049,8 +3055,8 @@ Effective risk management and psychological discipline are crucial for long-term
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>765</width>
-                    <height>610</height>
+                    <width>739</width>
+                    <height>804</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_28">

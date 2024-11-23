@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
@@ -43,8 +44,22 @@ public:
     QLabel *label;
     QSpacerItem *horizontalSpacer_10;
     QWidget *settingPage;
+    QGridLayout *gridLayout_24;
+    QPushButton *helpButton;
+    QSpacerItem *horizontalSpacer_13;
+    QGroupBox *appPreference;
+    QGridLayout *gridLayout_31;
+    QCheckBox *darkMode;
+    QCheckBox *notification;
+    QGroupBox *accSettings;
     QGridLayout *gridLayout_26;
+    QCheckBox *emailChange;
+    QCheckBox *passUpdate;
+    QLabel *version;
+    QSpacerItem *horizontalSpacer_14;
+    QLabel *titleSetting;
     QPushButton *settingBackButton;
+    QSpacerItem *horizontalSpacer_15;
     QWidget *loginPage;
     QGridLayout *gridLayout_25;
     QLabel *label_4;
@@ -103,9 +118,8 @@ public:
     QPushButton *adminInfo;
     QPushButton *logoutButton;
     QWidget *adminPage;
-    QGridLayout *gridLayout_24;
-    QPushButton *adminInfoBackButton;
     QLabel *adminInfoLabel;
+    QPushButton *adminInfoBackButton;
     QWidget *moduleWidget;
     QGridLayout *gridLayout_21;
     QStackedWidget *moduleStack;
@@ -629,12 +643,92 @@ public:
         stackedWidget->addWidget(welcomePage);
         settingPage = new QWidget();
         settingPage->setObjectName("settingPage");
-        gridLayout_26 = new QGridLayout(settingPage);
+        gridLayout_24 = new QGridLayout(settingPage);
+        gridLayout_24->setObjectName("gridLayout_24");
+        helpButton = new QPushButton(settingPage);
+        helpButton->setObjectName("helpButton");
+
+        gridLayout_24->addWidget(helpButton, 5, 1, 1, 1);
+
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_24->addItem(horizontalSpacer_13, 4, 0, 1, 1);
+
+        appPreference = new QGroupBox(settingPage);
+        appPreference->setObjectName("appPreference");
+        QFont font3;
+        font3.setPointSize(12);
+        appPreference->setFont(font3);
+        gridLayout_31 = new QGridLayout(appPreference);
+        gridLayout_31->setObjectName("gridLayout_31");
+        darkMode = new QCheckBox(appPreference);
+        darkMode->setObjectName("darkMode");
+        QFont font4;
+        font4.setPointSize(9);
+        darkMode->setFont(font4);
+
+        gridLayout_31->addWidget(darkMode, 0, 0, 1, 1);
+
+        notification = new QCheckBox(appPreference);
+        notification->setObjectName("notification");
+        notification->setFont(font4);
+
+        gridLayout_31->addWidget(notification, 1, 0, 1, 1);
+
+
+        gridLayout_24->addWidget(appPreference, 3, 0, 1, 4);
+
+        accSettings = new QGroupBox(settingPage);
+        accSettings->setObjectName("accSettings");
+        accSettings->setFont(font3);
+        gridLayout_26 = new QGridLayout(accSettings);
         gridLayout_26->setObjectName("gridLayout_26");
+        emailChange = new QCheckBox(accSettings);
+        emailChange->setObjectName("emailChange");
+        emailChange->setFont(font4);
+
+        gridLayout_26->addWidget(emailChange, 1, 0, 1, 1);
+
+        passUpdate = new QCheckBox(accSettings);
+        passUpdate->setObjectName("passUpdate");
+        passUpdate->setFont(font4);
+
+        gridLayout_26->addWidget(passUpdate, 2, 0, 1, 1);
+
+
+        gridLayout_24->addWidget(accSettings, 2, 0, 1, 4);
+
+        version = new QLabel(settingPage);
+        version->setObjectName("version");
+        version->setMaximumSize(QSize(16777215, 40));
+
+        gridLayout_24->addWidget(version, 4, 1, 1, 2);
+
+        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_24->addItem(horizontalSpacer_14, 4, 3, 1, 1);
+
+        titleSetting = new QLabel(settingPage);
+        titleSetting->setObjectName("titleSetting");
+        sizePolicy.setHeightForWidth(titleSetting->sizePolicy().hasHeightForWidth());
+        titleSetting->setSizePolicy(sizePolicy);
+        QFont font5;
+        font5.setPointSize(14);
+        font5.setBold(true);
+        titleSetting->setFont(font5);
+        titleSetting->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        titleSetting->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_24->addWidget(titleSetting, 1, 1, 1, 1);
+
         settingBackButton = new QPushButton(settingPage);
         settingBackButton->setObjectName("settingBackButton");
 
-        gridLayout_26->addWidget(settingBackButton, 0, 0, 1, 1);
+        gridLayout_24->addWidget(settingBackButton, 1, 0, 1, 1);
+
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+
+        gridLayout_24->addItem(horizontalSpacer_15, 1, 3, 1, 1);
 
         stackedWidget->addWidget(settingPage);
         loginPage = new QWidget();
@@ -886,11 +980,11 @@ public:
         studentHomeHeader->setSizePolicy(sizePolicy);
         studentHomeHeader->setMinimumSize(QSize(0, 50));
         studentHomeHeader->setMaximumSize(QSize(16777215, 30));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Segoe UI")});
-        font3.setPointSize(20);
-        font3.setBold(true);
-        studentHomeHeader->setFont(font3);
+        QFont font6;
+        font6.setFamilies({QString::fromUtf8("Segoe UI")});
+        font6.setPointSize(20);
+        font6.setBold(true);
+        studentHomeHeader->setFont(font6);
         studentHomeHeader->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_27->addWidget(studentHomeHeader, 6, 0, 1, 4);
@@ -965,18 +1059,12 @@ public:
         stackedWidget->addWidget(studentHome);
         adminPage = new QWidget();
         adminPage->setObjectName("adminPage");
-        gridLayout_24 = new QGridLayout(adminPage);
-        gridLayout_24->setObjectName("gridLayout_24");
-        adminInfoBackButton = new QPushButton(adminPage);
-        adminInfoBackButton->setObjectName("adminInfoBackButton");
-
-        gridLayout_24->addWidget(adminInfoBackButton, 0, 0, 1, 1);
-
         adminInfoLabel = new QLabel(adminPage);
         adminInfoLabel->setObjectName("adminInfoLabel");
-
-        gridLayout_24->addWidget(adminInfoLabel, 1, 1, 1, 1);
-
+        adminInfoLabel->setGeometry(QRect(160, 100, 241, 191));
+        adminInfoBackButton = new QPushButton(adminPage);
+        adminInfoBackButton->setObjectName("adminInfoBackButton");
+        adminInfoBackButton->setGeometry(QRect(20, 20, 75, 24));
         stackedWidget->addWidget(adminPage);
         moduleWidget = new QWidget();
         moduleWidget->setObjectName("moduleWidget");
@@ -993,9 +1081,9 @@ public:
         advancedLabel = new QLabel(moduleHomepage);
         advancedLabel->setObjectName("advancedLabel");
         advancedLabel->setMaximumSize(QSize(16777215, 25));
-        QFont font4;
-        font4.setBold(true);
-        advancedLabel->setFont(font4);
+        QFont font7;
+        font7.setBold(true);
+        advancedLabel->setFont(font7);
         advancedLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_2->addWidget(advancedLabel, 7, 2, 1, 1);
@@ -1015,7 +1103,7 @@ public:
         introductoryLabel = new QLabel(moduleHomepage);
         introductoryLabel->setObjectName("introductoryLabel");
         introductoryLabel->setMaximumSize(QSize(16777215, 25));
-        introductoryLabel->setFont(font4);
+        introductoryLabel->setFont(font7);
         introductoryLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_2->addWidget(introductoryLabel, 7, 0, 1, 1);
@@ -1034,7 +1122,7 @@ public:
 
         intermediateLabel = new QLabel(moduleHomepage);
         intermediateLabel->setObjectName("intermediateLabel");
-        intermediateLabel->setFont(font4);
+        intermediateLabel->setFont(font7);
         intermediateLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_2->addWidget(intermediateLabel, 7, 1, 1, 1);
@@ -1078,9 +1166,6 @@ public:
         moduleWelcome = new QLabel(moduleHomepage);
         moduleWelcome->setObjectName("moduleWelcome");
         moduleWelcome->setMaximumSize(QSize(16777215, 30));
-        QFont font5;
-        font5.setPointSize(14);
-        font5.setBold(true);
         moduleWelcome->setFont(font5);
         moduleWelcome->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
@@ -3021,12 +3106,12 @@ public:
 
         stackedWidget->addWidget(moduleWidget);
 
-        gridLayout_4->addWidget(stackedWidget, 0, 0, 1, 1);
+        gridLayout_4->addWidget(stackedWidget, 1, 0, 1, 1);
 
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(1);
         moduleStack->setCurrentIndex(0);
 
 
@@ -3040,6 +3125,15 @@ public:
         regTeachButton->setText(QCoreApplication::translate("Widget", "Register as a Teacher", nullptr));
         regStuButton->setText(QCoreApplication::translate("Widget", "Register as a Student", nullptr));
         label->setText(QCoreApplication::translate("Widget", "Welcome To TradeApp", nullptr));
+        helpButton->setText(QCoreApplication::translate("Widget", "Help and Support", nullptr));
+        appPreference->setTitle(QCoreApplication::translate("Widget", "App Preferences", nullptr));
+        darkMode->setText(QCoreApplication::translate("Widget", "Dark Mode", nullptr));
+        notification->setText(QCoreApplication::translate("Widget", "Notifications", nullptr));
+        accSettings->setTitle(QCoreApplication::translate("Widget", "Account Settings", nullptr));
+        emailChange->setText(QCoreApplication::translate("Widget", "Change Email", nullptr));
+        passUpdate->setText(QCoreApplication::translate("Widget", "Update Password", nullptr));
+        version->setText(QCoreApplication::translate("Widget", "Version 1.0.0 Developed by ELEC376 Group 2", nullptr));
+        titleSetting->setText(QCoreApplication::translate("Widget", "Settings", nullptr));
         settingBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
         label_4->setText(QCoreApplication::translate("Widget", "Password:", nullptr));
         loginScreenButton->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
@@ -3131,8 +3225,8 @@ public:
         adminInfo->setText(QCoreApplication::translate("Widget", "Admin\n"
 "Information", nullptr));
         logoutButton->setText(QCoreApplication::translate("Widget", "Log out", nullptr));
-        adminInfoBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
         adminInfoLabel->setText(QCoreApplication::translate("Widget", "Admin Information will be placed here.", nullptr));
+        adminInfoBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
         advancedLabel->setText(QCoreApplication::translate("Widget", "Advanced", nullptr));
         mod7->setText(QCoreApplication::translate("Widget", "M7 - Advanced Tech. Analysis", nullptr));
         mod9->setText(QCoreApplication::translate("Widget", "M9 - Portfolio Management", nullptr));
