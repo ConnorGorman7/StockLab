@@ -4,6 +4,12 @@
 Dict::Dict() {
     dict = std::unordered_map<std::string, std::vector<Definition>>();
     students = std::unordered_map<int, Student>();
+    addWord("Stock", "A type of security that signifies ownership in a corporation. Mod 1", "1");
+    addWord("Bond", "A fixed income instrument representing a loan made by an investor to a borrower. Mod 1", "1");
+    addWord("Dividend", "A distribution of profits by a corporation to its shareholders. Mod 2", "2");
+    addWord("ETF", "An Exchange Traded Fund is a type of investment fund traded on stock exchanges. Mod 2", "2");
+    addWord("IPO", "An Initial Public Offering is when a private company offers shares to the public. Mod 3", "3");
+    addWord("Blue Chip Stocks", "Shares of large, well-established companies with a history of reliable performance. Mod 3", "3");
 }
 
 // Add a word to the dictionary
