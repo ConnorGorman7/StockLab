@@ -71,10 +71,13 @@ private slots:
 
     void on_settingBackButton_clicked();
 
+    void on_darkMode_checkStateChanged(const Qt::CheckState &arg1);
+
 private:
     Ui::Widget *ui;
     void setupReturnButtonConnections();
     QString generateRandomAdminInfo();
 };
+
 
 #endif // WIDGET_H
