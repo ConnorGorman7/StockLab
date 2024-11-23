@@ -36,7 +36,8 @@ public:
     QPushButton *loginButton;
     QPushButton *regStuButton;
     QPushButton *regTeachButton;
-    QWidget *adminPage2;
+    QWidget *settingPage;
+    QPushButton *settingBackButton;
     QWidget *loginPage;
     QLabel *label_3;
     QLabel *label_2;
@@ -557,9 +558,12 @@ public:
         regTeachButton->setGeometry(QRect(230, 410, 321, 71));
         regTeachButton->setFont(font2);
         stackedWidget->addWidget(welcomePage);
-        adminPage2 = new QWidget();
-        adminPage2->setObjectName("adminPage2");
-        stackedWidget->addWidget(adminPage2);
+        settingPage = new QWidget();
+        settingPage->setObjectName("settingPage");
+        settingBackButton = new QPushButton(settingPage);
+        settingBackButton->setObjectName("settingBackButton");
+        settingBackButton->setGeometry(QRect(20, 20, 75, 24));
+        stackedWidget->addWidget(settingPage);
         loginPage = new QWidget();
         loginPage->setObjectName("loginPage");
         label_3 = new QLabel(loginPage);
@@ -2736,7 +2740,7 @@ public:
 
         stackedWidget->addWidget(moduleWidget);
 
-        gridLayout_4->addWidget(stackedWidget, 1, 0, 1, 1);
+        gridLayout_4->addWidget(stackedWidget, 0, 0, 1, 1);
 
 
         retranslateUi(Widget);
@@ -2755,6 +2759,7 @@ public:
         loginButton->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
         regStuButton->setText(QCoreApplication::translate("Widget", "Register as a student", nullptr));
         regTeachButton->setText(QCoreApplication::translate("Widget", "Register as a teacher", nullptr));
+        settingBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
         label_3->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
         label_2->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
         loginEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
