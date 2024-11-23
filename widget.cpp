@@ -76,7 +76,7 @@ void Widget::on_regTeachButton_clicked()
 
 void Widget::on_registerStudentBtn_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     QString email = ui->studentEmailTE->toPlainText();
@@ -121,7 +121,7 @@ void Widget::on_registerStudentBtn_clicked()
 
 void Widget::on_registerTeacherBtn_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     QString email = ui->teachEmailTE->toPlainText();
@@ -166,7 +166,7 @@ void Widget::on_registerTeacherBtn_clicked()
 
 void Widget::on_loginScreenButton_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     QString email = ui->loginEmailTE->toPlainText();
@@ -650,8 +650,6 @@ void Widget::on_adminInfoBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
 }
-
-
 
 void Widget::on_settings_clicked()
 {
