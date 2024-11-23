@@ -2,13 +2,43 @@
 #define DICTIONARY_H
 
 #include <QMainWindow>
-#include "dict.h"
+#include <QString>
+#include <QDebug>
+#include <unordered_map>
+#include <unordered_set>
+#include <string>
+#include <vector>
 
-QT_BEGIN_NAMESPACE
+// Struct to hold definition data with its associated module
+struct Definition {
+    std::string meaning;
+    std::string module; // Module this definition belongs to
+};
+
+// Struct to hold student data
+struct Student {
+    int studentID;
+    std::unordered_set<std::string> completedModules; // Track completed modules
+};
+
+// Dict Class
+class Dict {
+public:
+    std::unordered_map<std::string, std::vector<Definition>> dict; // Dictionary storing words and definitions
+    std::unordered_map<int, Student> students;                    // Mapping studentID to student data
+
+    Dict();
+
+    // Add a word with its meaning and associated module
+    void addWord(const std::string &word, const std::string &meaning, const std::string &module);
+
+    // Mark a module as completed for a student
+    void completeModule(int studentID, const std::string &module);
+};
+
 namespace Ui {
 class Dictionary;
 }
-QT_END_NAMESPACE
 
 class Dictionary : public QMainWindow
 {
@@ -27,7 +57,7 @@ private slots:
 
 private:
     Ui::Dictionary *ui;
-    Dict dictionary; // Instance of the backend dictionary class
+    Dict dictionary; // Instance of the Dict class
 };
 
 #endif // DICTIONARY_H
