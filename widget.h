@@ -79,14 +79,15 @@ private slots:
 
     void on_passwordUp_clicked();
 
-private:
-    Ui::Widget *ui;
-    void setupReturnButtonConnections();
-    void updateStatistics();
     void on_viewAllUsersButton_clicked();
     void on_addUserButton_clicked();
     void on_editUserButton_clicked();
     void on_deleteUserButton_clicked();
+
+private:
+    Ui::Widget *ui;
+    void setupReturnButtonConnections();
+    void updateStatistics();
     QString generateRandomAdminInfo();
 };
 

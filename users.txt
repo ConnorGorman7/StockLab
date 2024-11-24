@@ -28,5 +28,8 @@ tristan tester
 1
 Student
 
-
+Tristan Guevarra
+21tag10@queensu.ca
+tristan
+Student
 

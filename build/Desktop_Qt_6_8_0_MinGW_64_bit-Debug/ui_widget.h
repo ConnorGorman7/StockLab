@@ -1099,11 +1099,11 @@ public:
         deleteUserButton->setFont(font4);
         statisticTitle = new QGroupBox(adminPage);
         statisticTitle->setObjectName("statisticTitle");
-        statisticTitle->setGeometry(QRect(20, 130, 291, 121));
+        statisticTitle->setGeometry(QRect(20, 140, 291, 111));
         statisticTitle->setFont(font3);
         statisticsLabel = new QLabel(statisticTitle);
         statisticsLabel->setObjectName("statisticsLabel");
-        statisticsLabel->setGeometry(QRect(30, 20, 131, 81));
+        statisticsLabel->setGeometry(QRect(30, 30, 131, 61));
         statisticsLabel->setFont(font4);
         stackedWidget->addWidget(adminPage);
         moduleWidget = new QWidget();
