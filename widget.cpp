@@ -10,6 +10,9 @@
 #include <QInputDialog>
 #include <QMessageBox>
 #include <QRegularExpression>
+#include <QDialog>
+#include <QTableWidget>
+#include <QVBoxLayout>
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -710,17 +713,60 @@ void Widget::on_submitQuiz9_clicked()
 
 void Widget::on_adminInfo_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->adminPage));
+    updateStatistics();
+
+    ui->stackedWidget->setCurrentWidget(ui->adminPage);
+
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");
 }
 
 void Widget::on_adminInfoBackButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+    ui->stackedWidget->setCurrentWidget(ui->studentHome);
+
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");
 }
+
+void Widget::updateStatistics()
+{
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QTextStream in(&file);
+    int studentCount = 0;
+    int teacherCount = 0;
+
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        if (line == "Student") {
+            studentCount++;
+        } else if (line == "Teacher") {
+            teacherCount++;
+        }
+    }
+
+    file.close();
+
+    QString statistics = QString(
+                             "Total Registered Users: %1\n"
+                             "Students: %2\n"
+                             "Teachers: %3\n"
+                             ).arg(studentCount + teacherCount).arg(studentCount).arg(teacherCount);
+
+    if (ui->statisticsLabel) { // Check if QLabel exists to avoid crashing
+        ui->statisticsLabel->setText(statistics);
+    } else {
+        QMessageBox::critical(this, tr("Error"), tr("Statistics label not found in the UI."));
+    }
+}
+
 
 void Widget::on_settings_clicked()
 {
@@ -914,4 +960,297 @@ void Widget::on_passwordUp_clicked()
 
         ui->passwordUp->setChecked(false);
     }
+}
+
+void Widget::on_viewAllUsersButton_clicked()
+{
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QDialog usersDialog(this);
+    usersDialog.setWindowTitle("All Registered Users");
+
+    QTableWidget *table = new QTableWidget(&usersDialog);
+    table->setColumnCount(4);
+    table->setHorizontalHeaderLabels({"Name", "Email", "Password", "Role"});
+    table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    table->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    QTextStream in(&file);
+    int row = 0;
+
+    while (!in.atEnd()) {
+        QString name = in.readLine();
+        QString email = in.readLine();
+        QString password = in.readLine();
+        QString role = in.readLine();
+        in.readLine();
+
+        table->insertRow(row);
+        table->setItem(row, 0, new QTableWidgetItem(name));
+        table->setItem(row, 1, new QTableWidgetItem(email));
+        table->setItem(row, 2, new QTableWidgetItem(password));
+        table->setItem(row, 3, new QTableWidgetItem(role));
+        row++;
+    }
+
+    file.close();
+
+    QVBoxLayout *layout = new QVBoxLayout(&usersDialog);
+    layout->addWidget(table);
+    usersDialog.setLayout(layout);
+
+    usersDialog.exec();
+}
+
+void Widget::on_addUserButton_clicked()
+{
+    bool ok;
+    QString name = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's name:"), QLineEdit::Normal, "", &ok);
+    if (!ok || name.isEmpty()) return;
+
+    QString email = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's email:"), QLineEdit::Normal, "", &ok);
+    if (!ok || email.isEmpty()) return;
+
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QTextStream in(&file);
+    bool emailExists = false;
+    while (!in.atEnd()) {
+        QString existingName = in.readLine();
+        QString existingEmail = in.readLine();
+        in.readLine();
+        in.readLine();
+        in.readLine();
+
+        if (existingEmail == email) {
+            emailExists = true;
+            break;
+        }
+    }
+    file.close();
+
+    if (emailExists) {
+        QMessageBox::warning(this, tr("Error"), tr("This email already exists."));
+        return;
+    }
+
+    QString password = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's password:"), QLineEdit::Password, "", &ok);
+    if (!ok || password.isEmpty()) return;
+
+    QStringList roles = {"Student", "Teacher"};
+    QString role = QInputDialog::getItem(this, tr("Add User"), tr("Select the user's role:"), roles, 0, false, &ok);
+    if (!ok) return;
+
+    if (!file.open(QIODevice::Append | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+        return;
+    }
+
+    QTextStream out(&file);
+    out << name << "\n" << email << "\n" << password << "\n" << role << "\n\n";
+    file.close();
+
+    QMessageBox::information(this, tr("Success"), tr("User has been successfully added."));
+    updateStatistics();
+}
+
+void Widget::on_editUserButton_clicked()
+{
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QDialog usersDialog(this);
+    usersDialog.setWindowTitle("Select User to Edit");
+
+    QTableWidget *table = new QTableWidget(&usersDialog);
+    table->setColumnCount(4);
+    table->setHorizontalHeaderLabels({"Name", "Email", "Password", "Role"});
+    table->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    QTextStream in(&file);
+    int row = 0;
+
+    QStringList lines;
+    while (!in.atEnd()) {
+        QString name = in.readLine();
+        QString email = in.readLine();
+        QString password = in.readLine();
+        QString role = in.readLine();
+        in.readLine();
+
+        lines << name << email << password << role << "";
+
+        table->insertRow(row);
+        table->setItem(row, 0, new QTableWidgetItem(name));
+        table->setItem(row, 1, new QTableWidgetItem(email));
+        table->setItem(row, 2, new QTableWidgetItem(password));
+        table->setItem(row, 3, new QTableWidgetItem(role));
+        row++;
+    }
+    file.close();
+
+    QVBoxLayout *layout = new QVBoxLayout(&usersDialog);
+    layout->addWidget(table);
+
+    QPushButton *editButton = new QPushButton("Edit Selected User");
+    layout->addWidget(editButton);
+
+    usersDialog.setLayout(layout);
+
+    connect(editButton, &QPushButton::clicked, &usersDialog, [&]() {
+        int selectedRow = table->currentRow();
+        if (selectedRow < 0) {
+            QMessageBox::warning(&usersDialog, tr("Error"), tr("No user selected."));
+            return;
+        }
+
+        QString name = table->item(selectedRow, 0)->text();
+        QString email = table->item(selectedRow, 1)->text();
+        QString password = table->item(selectedRow, 2)->text();
+        QString role = table->item(selectedRow, 3)->text();
+
+        bool ok;
+        name = QInputDialog::getText(&usersDialog, tr("Edit User"), tr("Name:"), QLineEdit::Normal, name, &ok);
+        if (!ok || name.isEmpty()) return;
+
+        email = QInputDialog::getText(&usersDialog, tr("Edit User"), tr("Email:"), QLineEdit::Normal, email, &ok);
+        if (!ok || email.isEmpty()) return;
+
+        password = QInputDialog::getText(&usersDialog, tr("Edit User"), tr("Password:"), QLineEdit::Normal, password, &ok);
+        if (!ok || password.isEmpty()) return;
+
+        role = QInputDialog::getItem(&usersDialog, tr("Edit User"), tr("Role:"), {"Student", "Teacher"}, role == "Teacher" ? 1 : 0, false, &ok);
+        if (!ok) return;
+
+        table->setItem(selectedRow, 0, new QTableWidgetItem(name));
+        table->setItem(selectedRow, 1, new QTableWidgetItem(email));
+        table->setItem(selectedRow, 2, new QTableWidgetItem(password));
+        table->setItem(selectedRow, 3, new QTableWidgetItem(role));
+
+        int lineIndex = selectedRow * 5;
+        lines[lineIndex] = name;
+        lines[lineIndex + 1] = email;
+        lines[lineIndex + 2] = password;
+        lines[lineIndex + 3] = role;
+
+        QMessageBox::information(&usersDialog, tr("Success"), tr("User details updated."));
+    });
+
+    usersDialog.exec();
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+        return;
+    }
+
+    QTextStream out(&file);
+    for (const QString &line : lines) {
+        out << line << "\n";
+    }
+    file.close();
+
+    QMessageBox::information(this, tr("Success"), tr("User data has been updated."));
+    updateStatistics();
+}
+
+void Widget::on_deleteUserButton_clicked()
+{
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QDialog usersDialog(this);
+    usersDialog.setWindowTitle("Select User to Delete");
+
+    QTableWidget *table = new QTableWidget(&usersDialog);
+    table->setColumnCount(4);
+    table->setHorizontalHeaderLabels({"Name", "Email", "Password", "Role"});
+    table->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    QTextStream in(&file);
+    int row = 0;
+
+    QStringList lines;
+    while (!in.atEnd()) {
+        QString name = in.readLine();
+        QString email = in.readLine();
+        QString password = in.readLine();
+        QString role = in.readLine();
+        in.readLine();
+
+        lines << name << email << password << role << "";
+
+        table->insertRow(row);
+        table->setItem(row, 0, new QTableWidgetItem(name));
+        table->setItem(row, 1, new QTableWidgetItem(email));
+        table->setItem(row, 2, new QTableWidgetItem(password));
+        table->setItem(row, 3, new QTableWidgetItem(role));
+        row++;
+    }
+    file.close();
+
+    QVBoxLayout *layout = new QVBoxLayout(&usersDialog);
+    layout->addWidget(table);
+
+    QPushButton *deleteButton = new QPushButton("Delete Selected User");
+    layout->addWidget(deleteButton);
+
+    usersDialog.setLayout(layout);
+
+    connect(deleteButton, &QPushButton::clicked, &usersDialog, [&]() {
+        int selectedRow = table->currentRow();
+        if (selectedRow < 0) {
+            QMessageBox::warning(&usersDialog, tr("Error"), tr("No user selected."));
+            return;
+        }
+
+        int ret = QMessageBox::warning(&usersDialog, tr("Delete User"),
+                                       tr("Are you sure you want to delete this user?"),
+                                       QMessageBox::Yes | QMessageBox::No);
+        if (ret == QMessageBox::No) return;
+
+        table->removeRow(selectedRow);
+        int lineIndex = selectedRow * 5;
+        for (int i = 0; i < 5; ++i) {
+            lines.removeAt(lineIndex);
+        }
+
+        QMessageBox::information(&usersDialog, tr("Success"), tr("User deleted."));
+    });
+
+    usersDialog.exec();
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+        return;
+    }
+
+    QTextStream out(&file);
+    for (const QString &line : lines) {
+        out << line << "\n";
+    }
+    file.close();
+
+    QMessageBox::information(this, tr("Success"), tr("User data has been updated."));
+    updateStatistics();
 }

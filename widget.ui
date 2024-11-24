@@ -41,7 +41,7 @@
       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>6</number>
      </property>
      <widget class="QWidget" name="welcomePage">
       <property name="font">
@@ -1206,10 +1206,10 @@ Information</string>
       <widget class="QLabel" name="adminInfoLabel">
        <property name="geometry">
         <rect>
-         <x>160</x>
-         <y>100</y>
-         <width>241</width>
-         <height>191</height>
+         <x>20</x>
+         <y>80</y>
+         <width>231</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="text">
@@ -1228,6 +1228,151 @@ Information</string>
        <property name="text">
         <string>Return</string>
        </property>
+      </widget>
+      <widget class="QLabel" name="adminTitle">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>50</y>
+         <width>181</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Admin Information</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="manageUsers">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>250</y>
+         <width>291</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>Manage Users</string>
+       </property>
+       <widget class="QPushButton" name="viewAllUsersButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>91</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>View All Users</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="addUserButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>91</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Add User</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="editUserButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>91</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Edit User</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="deleteUserButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>91</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Delete User</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="statisticTitle">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>291</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="title">
+        <string>Statistics</string>
+       </property>
+       <widget class="QLabel" name="statisticsLabel">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>131</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>statistics</string>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="moduleWidget">

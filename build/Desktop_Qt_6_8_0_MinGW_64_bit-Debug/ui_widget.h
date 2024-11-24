@@ -120,6 +120,14 @@ public:
     QWidget *adminPage;
     QLabel *adminInfoLabel;
     QPushButton *adminInfoBackButton;
+    QLabel *adminTitle;
+    QGroupBox *manageUsers;
+    QPushButton *viewAllUsersButton;
+    QPushButton *addUserButton;
+    QPushButton *editUserButton;
+    QPushButton *deleteUserButton;
+    QGroupBox *statisticTitle;
+    QLabel *statisticsLabel;
     QWidget *moduleWidget;
     QGridLayout *gridLayout_21;
     QStackedWidget *moduleStack;
@@ -1061,10 +1069,42 @@ public:
         adminPage->setObjectName("adminPage");
         adminInfoLabel = new QLabel(adminPage);
         adminInfoLabel->setObjectName("adminInfoLabel");
-        adminInfoLabel->setGeometry(QRect(160, 100, 241, 191));
+        adminInfoLabel->setGeometry(QRect(20, 80, 231, 31));
         adminInfoBackButton = new QPushButton(adminPage);
         adminInfoBackButton->setObjectName("adminInfoBackButton");
         adminInfoBackButton->setGeometry(QRect(20, 20, 75, 24));
+        adminTitle = new QLabel(adminPage);
+        adminTitle->setObjectName("adminTitle");
+        adminTitle->setGeometry(QRect(240, 50, 181, 16));
+        adminTitle->setFont(font5);
+        manageUsers = new QGroupBox(adminPage);
+        manageUsers->setObjectName("manageUsers");
+        manageUsers->setGeometry(QRect(20, 250, 291, 161));
+        manageUsers->setFont(font3);
+        viewAllUsersButton = new QPushButton(manageUsers);
+        viewAllUsersButton->setObjectName("viewAllUsersButton");
+        viewAllUsersButton->setGeometry(QRect(10, 30, 91, 24));
+        viewAllUsersButton->setFont(font4);
+        addUserButton = new QPushButton(manageUsers);
+        addUserButton->setObjectName("addUserButton");
+        addUserButton->setGeometry(QRect(10, 60, 91, 24));
+        addUserButton->setFont(font4);
+        editUserButton = new QPushButton(manageUsers);
+        editUserButton->setObjectName("editUserButton");
+        editUserButton->setGeometry(QRect(10, 90, 91, 24));
+        editUserButton->setFont(font4);
+        deleteUserButton = new QPushButton(manageUsers);
+        deleteUserButton->setObjectName("deleteUserButton");
+        deleteUserButton->setGeometry(QRect(10, 120, 91, 24));
+        deleteUserButton->setFont(font4);
+        statisticTitle = new QGroupBox(adminPage);
+        statisticTitle->setObjectName("statisticTitle");
+        statisticTitle->setGeometry(QRect(20, 130, 291, 121));
+        statisticTitle->setFont(font3);
+        statisticsLabel = new QLabel(statisticTitle);
+        statisticsLabel->setObjectName("statisticsLabel");
+        statisticsLabel->setGeometry(QRect(30, 20, 131, 81));
+        statisticsLabel->setFont(font4);
         stackedWidget->addWidget(adminPage);
         moduleWidget = new QWidget();
         moduleWidget->setObjectName("moduleWidget");
@@ -3111,7 +3151,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(6);
         moduleStack->setCurrentIndex(0);
 
 
@@ -3227,6 +3267,14 @@ public:
         logoutButton->setText(QCoreApplication::translate("Widget", "Log out", nullptr));
         adminInfoLabel->setText(QCoreApplication::translate("Widget", "Admin Information will be placed here.", nullptr));
         adminInfoBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        adminTitle->setText(QCoreApplication::translate("Widget", "Admin Information", nullptr));
+        manageUsers->setTitle(QCoreApplication::translate("Widget", "Manage Users", nullptr));
+        viewAllUsersButton->setText(QCoreApplication::translate("Widget", "View All Users", nullptr));
+        addUserButton->setText(QCoreApplication::translate("Widget", "Add User", nullptr));
+        editUserButton->setText(QCoreApplication::translate("Widget", "Edit User", nullptr));
+        deleteUserButton->setText(QCoreApplication::translate("Widget", "Delete User", nullptr));
+        statisticTitle->setTitle(QCoreApplication::translate("Widget", "Statistics", nullptr));
+        statisticsLabel->setText(QCoreApplication::translate("Widget", "statistics", nullptr));
         advancedLabel->setText(QCoreApplication::translate("Widget", "Advanced", nullptr));
         mod7->setText(QCoreApplication::translate("Widget", "M7 - Advanced Tech. Analysis", nullptr));
         mod9->setText(QCoreApplication::translate("Widget", "M9 - Portfolio Management", nullptr));
