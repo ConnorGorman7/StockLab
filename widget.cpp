@@ -713,13 +713,57 @@ void Widget::on_submitQuiz9_clicked()
 
 void Widget::on_adminInfo_clicked()
 {
-    updateStatistics();
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
 
-    ui->stackedWidget->setCurrentWidget(ui->adminPage);
+    // Prompt the user to enter teacher credentials
+    bool ok;
+    QString email = QInputDialog::getText(this, tr("Admin Login"), tr("Enter Teacher Email:"), QLineEdit::Normal, "", &ok);
+    if (!ok || email.isEmpty()) {
+        QMessageBox::warning(this, tr("Access Denied"), tr("Email input canceled."));
+        return;
+    }
 
-    QApplication::setPalette(QApplication::style()->standardPalette());
-    qApp->setStyleSheet("");
+    QString password = QInputDialog::getText(this, tr("Admin Login"), tr("Enter Teacher Password:"), QLineEdit::Password, "", &ok);
+    if (!ok || password.isEmpty()) {
+        QMessageBox::warning(this, tr("Access Denied"), tr("Password input canceled."));
+        return;
+    }
+
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QTextStream in(&file);
+    bool accessGranted = false;
+
+    while (!in.atEnd()) {
+        QString name = in.readLine();
+        QString fileEmail = in.readLine();
+        QString filePassword = in.readLine();
+        QString role = in.readLine();
+        in.readLine(); // Skip the empty line between user entries
+
+        if (fileEmail == email && filePassword == password && role == "Teacher") {
+            accessGranted = true;
+            break;
+        }
+    }
+
+    file.close();
+
+    if (accessGranted) {
+        QMessageBox::information(this, tr("Access Granted"), tr("Welcome to the Admin Page."));
+        updateStatistics();
+        ui->stackedWidget->setCurrentWidget(ui->adminPage);
+        QApplication::setPalette(QApplication::style()->standardPalette());
+        qApp->setStyleSheet("");
+    } else {
+        QMessageBox::critical(this, tr("Access Denied"), tr("Invalid credentials or not a teacher. Access denied."));
+    }
 }
+
 
 void Widget::on_adminInfoBackButton_clicked()
 {

@@ -23,11 +23,6 @@ test
 11
 Teacher
 
-tristan tester
-1@1.com
-1
-Student
-
 Tristan Guevarra
 21tag10@queensu.ca
 tristan
