@@ -17,6 +17,8 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 
     setupReturnButtonConnections();
 }
@@ -44,43 +46,57 @@ void Widget::setupReturnButtonConnections()
 void Widget::on_loginButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->loginPage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_backButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_backButton_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_backButton_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_regStuButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentReg));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_regTeachButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->teacherReg));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_registerStudentBtn_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 
     QString email = ui->studentEmailTE->toPlainText();
 
@@ -124,8 +140,10 @@ void Widget::on_registerStudentBtn_clicked()
 
 void Widget::on_registerTeacherBtn_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 
     QString email = ui->teachEmailTE->toPlainText();
 
@@ -169,8 +187,10 @@ void Widget::on_registerTeacherBtn_clicked()
 
 void Widget::on_loginScreenButton_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 
     QString email = ui->loginEmailTE->toPlainText();
     QString password = ui->loginPwTE->toPlainText();
@@ -224,122 +244,166 @@ void Widget::on_loginScreenButton_clicked()
 void Widget::on_logoutButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_menu_clicked()
 {
     ui->moduleStack->setCurrentIndex(0);
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_modules_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->moduleWidget));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
     ui->moduleStack->setCurrentIndex(0);
 }
 
 void Widget::on_RETURNBTN_clicked()
 {
     ui->moduleStack->setCurrentIndex(0);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod1_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module1));
     ui->mod1stack->setCurrentIndex(ui->mod1stack->indexOf(ui->mod1content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod2_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module2));
     ui->mod2stack->setCurrentIndex(ui->mod2stack->indexOf(ui->mod2content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod3_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module3));
     ui->mod3stack->setCurrentIndex(ui->mod3stack->indexOf(ui->mod3content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod4_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module4));
     ui->mod4stack->setCurrentIndex(ui->mod4stack->indexOf(ui->mod4content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod5_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module5));
     ui->mod5stack->setCurrentIndex(ui->mod5stack->indexOf(ui->mod5content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod6_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module6));
     ui->mod6stack->setCurrentIndex(ui->mod6stack->indexOf(ui->mod6content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod7_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module7));
     ui->mod7stack->setCurrentIndex(ui->mod7stack->indexOf(ui->mod7content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod8_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module8));
     ui->mod8stack->setCurrentIndex(ui->mod8stack->indexOf(ui->mod8content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod9_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module9));
     ui->mod9stack->setCurrentIndex(ui->mod9stack->indexOf(ui->mod9content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton1_clicked()
 {
     ui->mod1stack->setCurrentIndex(ui->mod1stack->indexOf(ui->mod1quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton2_clicked()
 {
     ui->mod2stack->setCurrentIndex(ui->mod2stack->indexOf(ui->mod2quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton3_clicked()
 {
     ui->mod3stack->setCurrentIndex(ui->mod3stack->indexOf(ui->mod3quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton4_clicked()
 {
     ui->mod4stack->setCurrentIndex(ui->mod4stack->indexOf(ui->mod4quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton5_clicked()
 {
     ui->mod5stack->setCurrentIndex(ui->mod5stack->indexOf(ui->mod5quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton6_clicked()
 {
     ui->mod6stack->setCurrentIndex(ui->mod6stack->indexOf(ui->mod6quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton7_clicked()
 {
     ui->mod7stack->setCurrentIndex(ui->mod7stack->indexOf(ui->mod7quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton8_clicked()
 {
     ui->mod8stack->setCurrentIndex(ui->mod8stack->indexOf(ui->mod8quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton9_clicked()
 {
     ui->mod9stack->setCurrentIndex(ui->mod9stack->indexOf(ui->mod9quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::resetQuiz(QWidget *quizContainer)
@@ -647,21 +711,29 @@ void Widget::on_submitQuiz9_clicked()
 void Widget::on_adminInfo_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->adminPage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_adminInfoBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_settings_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->settingPage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_settingBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
@@ -772,3 +844,5 @@ void Widget::on_emailChange_clicked()
         ui->emailChange->setChecked(false);
     }
 }
+
+

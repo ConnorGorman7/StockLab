@@ -41,7 +41,7 @@
       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="welcomePage">
       <property name="font">
@@ -1662,8 +1662,8 @@ Understanding how the stock market works and how major events can impact market 
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>639</width>
-                    <height>804</height>
+                    <width>507</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout">
@@ -2125,8 +2125,8 @@ Understanding the basics of stock trading is essential for anyone looking to inv
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>722</width>
-                    <height>804</height>
+                    <width>575</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -2580,8 +2580,8 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>695</width>
-                    <height>804</height>
+                    <width>551</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -3055,8 +3055,8 @@ Effective risk management and psychological discipline are crucial for long-term
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>739</width>
-                    <height>804</height>
+                    <width>586</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_28">
@@ -3618,8 +3618,8 @@ Understanding the basics of stock trading is essential for anyone looking to inv
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>747</width>
-                    <height>824</height>
+                    <width>594</width>
+                    <height>626</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_34">
@@ -4127,8 +4127,8 @@ By mastering advanced technical analysis tools like Fibonacci retracement, advan
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>591</width>
-                    <height>804</height>
+                    <width>469</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_40">
@@ -4633,8 +4633,8 @@ Derivatives and options offer powerful tools for both speculation and risk manag
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>750</width>
-                    <height>804</height>
+                    <width>596</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_46">
@@ -5163,8 +5163,8 @@ Effective portfolio management involves strategic asset allocation, regular reba
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>652</width>
-                    <height>804</height>
+                    <width>522</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_52">
@@ -5492,8 +5492,8 @@ Effective portfolio management involves strategic asset allocation, regular reba
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>679</width>
-                    <height>804</height>
+                    <width>541</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_22">
