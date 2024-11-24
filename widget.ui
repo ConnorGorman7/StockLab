@@ -41,7 +41,7 @@
       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="welcomePage">
       <property name="font">
@@ -287,7 +287,7 @@
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QCheckBox" name="passUpdate">
+           <widget class="QCheckBox" name="passwordUp">
             <property name="font">
              <font>
               <pointsize>9</pointsize>

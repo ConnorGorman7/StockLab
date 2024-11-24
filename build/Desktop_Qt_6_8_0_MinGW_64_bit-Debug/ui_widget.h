@@ -54,7 +54,7 @@ public:
     QGroupBox *accSettings;
     QGridLayout *gridLayout_26;
     QCheckBox *emailChange;
-    QCheckBox *passUpdate;
+    QCheckBox *passwordUp;
     QLabel *version;
     QSpacerItem *horizontalSpacer_14;
     QLabel *titleSetting;
@@ -689,11 +689,11 @@ public:
 
         gridLayout_26->addWidget(emailChange, 1, 0, 1, 1);
 
-        passUpdate = new QCheckBox(accSettings);
-        passUpdate->setObjectName("passUpdate");
-        passUpdate->setFont(font4);
+        passwordUp = new QCheckBox(accSettings);
+        passwordUp->setObjectName("passwordUp");
+        passwordUp->setFont(font4);
 
-        gridLayout_26->addWidget(passUpdate, 2, 0, 1, 1);
+        gridLayout_26->addWidget(passwordUp, 2, 0, 1, 1);
 
 
         gridLayout_24->addWidget(accSettings, 2, 0, 1, 4);
@@ -3111,7 +3111,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(1);
         moduleStack->setCurrentIndex(0);
 
 
@@ -3131,7 +3131,7 @@ public:
         notification->setText(QCoreApplication::translate("Widget", "Notifications", nullptr));
         accSettings->setTitle(QCoreApplication::translate("Widget", "Account Settings", nullptr));
         emailChange->setText(QCoreApplication::translate("Widget", "Change Email", nullptr));
-        passUpdate->setText(QCoreApplication::translate("Widget", "Update Password", nullptr));
+        passwordUp->setText(QCoreApplication::translate("Widget", "Update Password", nullptr));
         version->setText(QCoreApplication::translate("Widget", "Version 1.0.0 Developed by ELEC376 Group 2", nullptr));
         titleSetting->setText(QCoreApplication::translate("Widget", "Settings", nullptr));
         settingBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));

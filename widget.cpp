@@ -845,4 +845,73 @@ void Widget::on_emailChange_clicked()
     }
 }
 
+void Widget::on_passwordUp_clicked()
+{
+    if (ui->passwordUp->isChecked()) {
+        bool ok;
+        QString newPassword = QInputDialog::getText(this, tr("Update Password"),
+                                                    tr("Enter your new password:"), QLineEdit::Password,
+                                                    "", &ok);
 
+        if (ok && !newPassword.isEmpty()) {
+            QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+            QFile file(filePath);
+
+            if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+                ui->passwordUp->setChecked(false);
+                return;
+            }
+
+            QTextStream in(&file);
+            QString currentEmail = ui->loginEmailTE->toPlainText();
+            QStringList lines;
+            bool passwordUpdated = false;
+
+            while (!in.atEnd()) {
+                QString line = in.readLine();
+                lines.append(line);
+
+                // When the current email is found
+                if (line == currentEmail) {
+                    QString currentPassword = in.readLine(); // Read the current password
+                    QString userType = in.readLine();        // Read the "Student" or "Teacher" placeholder
+
+                    // Append updated password and placeholder
+                    lines.append(newPassword); // Update the password
+                    lines.append(userType);    // Append the user type
+                    passwordUpdated = true;
+
+                    // Skip the old password and user type
+                }
+            }
+
+            file.close();
+
+            if (!passwordUpdated) {
+                QMessageBox::warning(this, tr("Password Update Failed"), tr("The current user was not found in the file."));
+                ui->passwordUp->setChecked(false);
+                return;
+            }
+
+            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+                QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+                ui->passwordUp->setChecked(false);
+                return;
+            }
+
+            QTextStream out(&file);
+            for (const QString &line : lines) {
+                out << line << "\n";
+            }
+
+            file.close();
+
+            QMessageBox::information(this, tr("Success"), tr("Your password has been successfully updated."));
+        } else if (ok && newPassword.isEmpty()) {
+            QMessageBox::warning(this, tr("Empty Input"), tr("No password was entered. Please try again."));
+        }
+
+        ui->passwordUp->setChecked(false);
+    }
+}

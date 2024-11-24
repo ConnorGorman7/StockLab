@@ -77,6 +77,8 @@ private slots:
 
     void on_emailChange_clicked();
 
+    void on_passwordUp_clicked();
+
 private:
     Ui::Widget *ui;
     void setupReturnButtonConnections();
