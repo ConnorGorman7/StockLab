@@ -84,6 +84,8 @@ private slots:
     void on_editUserButton_clicked();
     void on_deleteUserButton_clicked();
 
+    void on_darkMode_clicked();
+
 private:
     Ui::Widget *ui;
     void setupReturnButtonConnections();

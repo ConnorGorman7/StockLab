@@ -95,7 +95,8 @@ constexpr auto qt_meta_stringdata_CLASSWidgetENDCLASS = QtMocHelpers::stringData
     "on_viewAllUsersButton_clicked",
     "on_addUserButton_clicked",
     "on_editUserButton_clicked",
-    "on_deleteUserButton_clicked"
+    "on_deleteUserButton_clicked",
+    "on_darkMode_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -108,7 +109,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSWidgetENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      55,   14, // methods
+      56,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -116,61 +117,62 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSWidgetENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  344,    2, 0x08,    1 /* Private */,
-       3,    0,  345,    2, 0x08,    2 /* Private */,
-       4,    0,  346,    2, 0x08,    3 /* Private */,
-       5,    0,  347,    2, 0x08,    4 /* Private */,
-       6,    0,  348,    2, 0x08,    5 /* Private */,
-       7,    0,  349,    2, 0x08,    6 /* Private */,
-       8,    0,  350,    2, 0x08,    7 /* Private */,
-       9,    0,  351,    2, 0x08,    8 /* Private */,
-      10,    0,  352,    2, 0x08,    9 /* Private */,
-      11,    0,  353,    2, 0x08,   10 /* Private */,
-      12,    0,  354,    2, 0x08,   11 /* Private */,
-      13,    0,  355,    2, 0x08,   12 /* Private */,
-      14,    0,  356,    2, 0x08,   13 /* Private */,
-      15,    0,  357,    2, 0x08,   14 /* Private */,
-      16,    0,  358,    2, 0x08,   15 /* Private */,
-      17,    0,  359,    2, 0x08,   16 /* Private */,
-      18,    0,  360,    2, 0x08,   17 /* Private */,
-      19,    0,  361,    2, 0x08,   18 /* Private */,
-      20,    0,  362,    2, 0x08,   19 /* Private */,
-      21,    0,  363,    2, 0x08,   20 /* Private */,
-      22,    0,  364,    2, 0x08,   21 /* Private */,
-      23,    0,  365,    2, 0x08,   22 /* Private */,
-      24,    0,  366,    2, 0x08,   23 /* Private */,
-      25,    0,  367,    2, 0x08,   24 /* Private */,
-      26,    0,  368,    2, 0x08,   25 /* Private */,
-      27,    0,  369,    2, 0x08,   26 /* Private */,
-      28,    0,  370,    2, 0x08,   27 /* Private */,
-      29,    0,  371,    2, 0x08,   28 /* Private */,
-      30,    0,  372,    2, 0x08,   29 /* Private */,
-      31,    0,  373,    2, 0x08,   30 /* Private */,
-      32,    0,  374,    2, 0x08,   31 /* Private */,
-      33,    0,  375,    2, 0x08,   32 /* Private */,
-      34,    1,  376,    2, 0x08,   33 /* Private */,
-      37,    0,  379,    2, 0x08,   35 /* Private */,
-      38,    0,  380,    2, 0x08,   36 /* Private */,
-      39,    0,  381,    2, 0x08,   37 /* Private */,
-      40,    0,  382,    2, 0x08,   38 /* Private */,
-      41,    0,  383,    2, 0x08,   39 /* Private */,
-      42,    0,  384,    2, 0x08,   40 /* Private */,
-      43,    0,  385,    2, 0x08,   41 /* Private */,
-      44,    0,  386,    2, 0x08,   42 /* Private */,
-      45,    0,  387,    2, 0x08,   43 /* Private */,
-      46,    0,  388,    2, 0x08,   44 /* Private */,
-      47,    0,  389,    2, 0x08,   45 /* Private */,
-      48,    0,  390,    2, 0x08,   46 /* Private */,
-      49,    0,  391,    2, 0x08,   47 /* Private */,
-      50,    0,  392,    2, 0x08,   48 /* Private */,
-      51,    1,  393,    2, 0x08,   49 /* Private */,
-      54,    0,  396,    2, 0x08,   51 /* Private */,
-      55,    0,  397,    2, 0x08,   52 /* Private */,
-      56,    0,  398,    2, 0x08,   53 /* Private */,
-      57,    0,  399,    2, 0x08,   54 /* Private */,
-      58,    0,  400,    2, 0x08,   55 /* Private */,
-      59,    0,  401,    2, 0x08,   56 /* Private */,
-      60,    0,  402,    2, 0x08,   57 /* Private */,
+       1,    0,  350,    2, 0x08,    1 /* Private */,
+       3,    0,  351,    2, 0x08,    2 /* Private */,
+       4,    0,  352,    2, 0x08,    3 /* Private */,
+       5,    0,  353,    2, 0x08,    4 /* Private */,
+       6,    0,  354,    2, 0x08,    5 /* Private */,
+       7,    0,  355,    2, 0x08,    6 /* Private */,
+       8,    0,  356,    2, 0x08,    7 /* Private */,
+       9,    0,  357,    2, 0x08,    8 /* Private */,
+      10,    0,  358,    2, 0x08,    9 /* Private */,
+      11,    0,  359,    2, 0x08,   10 /* Private */,
+      12,    0,  360,    2, 0x08,   11 /* Private */,
+      13,    0,  361,    2, 0x08,   12 /* Private */,
+      14,    0,  362,    2, 0x08,   13 /* Private */,
+      15,    0,  363,    2, 0x08,   14 /* Private */,
+      16,    0,  364,    2, 0x08,   15 /* Private */,
+      17,    0,  365,    2, 0x08,   16 /* Private */,
+      18,    0,  366,    2, 0x08,   17 /* Private */,
+      19,    0,  367,    2, 0x08,   18 /* Private */,
+      20,    0,  368,    2, 0x08,   19 /* Private */,
+      21,    0,  369,    2, 0x08,   20 /* Private */,
+      22,    0,  370,    2, 0x08,   21 /* Private */,
+      23,    0,  371,    2, 0x08,   22 /* Private */,
+      24,    0,  372,    2, 0x08,   23 /* Private */,
+      25,    0,  373,    2, 0x08,   24 /* Private */,
+      26,    0,  374,    2, 0x08,   25 /* Private */,
+      27,    0,  375,    2, 0x08,   26 /* Private */,
+      28,    0,  376,    2, 0x08,   27 /* Private */,
+      29,    0,  377,    2, 0x08,   28 /* Private */,
+      30,    0,  378,    2, 0x08,   29 /* Private */,
+      31,    0,  379,    2, 0x08,   30 /* Private */,
+      32,    0,  380,    2, 0x08,   31 /* Private */,
+      33,    0,  381,    2, 0x08,   32 /* Private */,
+      34,    1,  382,    2, 0x08,   33 /* Private */,
+      37,    0,  385,    2, 0x08,   35 /* Private */,
+      38,    0,  386,    2, 0x08,   36 /* Private */,
+      39,    0,  387,    2, 0x08,   37 /* Private */,
+      40,    0,  388,    2, 0x08,   38 /* Private */,
+      41,    0,  389,    2, 0x08,   39 /* Private */,
+      42,    0,  390,    2, 0x08,   40 /* Private */,
+      43,    0,  391,    2, 0x08,   41 /* Private */,
+      44,    0,  392,    2, 0x08,   42 /* Private */,
+      45,    0,  393,    2, 0x08,   43 /* Private */,
+      46,    0,  394,    2, 0x08,   44 /* Private */,
+      47,    0,  395,    2, 0x08,   45 /* Private */,
+      48,    0,  396,    2, 0x08,   46 /* Private */,
+      49,    0,  397,    2, 0x08,   47 /* Private */,
+      50,    0,  398,    2, 0x08,   48 /* Private */,
+      51,    1,  399,    2, 0x08,   49 /* Private */,
+      54,    0,  402,    2, 0x08,   51 /* Private */,
+      55,    0,  403,    2, 0x08,   52 /* Private */,
+      56,    0,  404,    2, 0x08,   53 /* Private */,
+      57,    0,  405,    2, 0x08,   54 /* Private */,
+      58,    0,  406,    2, 0x08,   55 /* Private */,
+      59,    0,  407,    2, 0x08,   56 /* Private */,
+      60,    0,  408,    2, 0x08,   57 /* Private */,
+      61,    0,  409,    2, 0x08,   58 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -221,6 +223,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSWidgetENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 52,   53,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -352,6 +355,8 @@ Q_CONSTINIT const QMetaObject Widget::staticMetaObject = { {
         // method 'on_editUserButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_deleteUserButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_darkMode_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -418,6 +423,7 @@ void Widget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 52: _t->on_addUserButton_clicked(); break;
         case 53: _t->on_editUserButton_clicked(); break;
         case 54: _t->on_deleteUserButton_clicked(); break;
+        case 55: _t->on_darkMode_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -453,13 +459,13 @@ int Widget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 55)
+        if (_id < 56)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 55;
+        _id -= 56;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 55)
+        if (_id < 56)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 55;
+        _id -= 56;
     }
     return _id;
 }
