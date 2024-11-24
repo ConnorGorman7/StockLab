@@ -87,7 +87,7 @@ int main(int argc, char *argv[]) {
         int count = 0;
         QDateTime windowEnd = currentStartDate.addDays(30);  // End of the current 30-day window
 
-        // Check that the window does not exceed the last available date
+        // Check that the window doesn't exceed the last available date
         if (windowEnd > lastDate) {
             windowEnd = lastDate;
         }
@@ -134,13 +134,27 @@ int main(int argc, char *argv[]) {
     QPushButton *shiftButton = new QPushButton("Next 30 Days");
     shiftButton->setGeometry(300, 520, 200, 40);  // Set button position and size manually
 
-    // Create a QLabel for the counter
+    // Create two buttons to increment and decrement the counter
+    QPushButton *incrementButton = new QPushButton("Increment");
+    incrementButton->setGeometry(550, 520, 100, 40);  // Set button position and size manually
+
+    QPushButton *decrementButton = new QPushButton("Decrement");
+    decrementButton->setGeometry(660, 520, 100, 40);  // Set button position and size manually
+
+    // Create a QLabel for the resetting counter
     QLabel *counterLabel = new QLabel("0", nullptr);
     counterLabel->setGeometry(750, 250, 50, 30);  // Position the label on the right side of the chart
     counterLabel->setAlignment(Qt::AlignCenter);
 
-    // Counter variable
+    // Create a QLabel for the static counter (this value does not reset)
+    QLabel *staticCounterLabel = new QLabel("0", nullptr);
+    staticCounterLabel->setGeometry(750, 280, 50, 30);  // Position this label just below the first one
+    staticCounterLabel->setAlignment(Qt::AlignCenter);
+
+    // Counter variable for the resetting label
     int counter = 0;
+    int staticCounter = 0;  // Static counter that will accumulate the value
+    float latestStockPrice = 0.0f;  // Latest stock price at the end of the window
 
     // Connect the button's clicked signal to update the graph window
     QObject::connect(shiftButton, &QPushButton::clicked, [&]() {
@@ -155,8 +169,29 @@ int main(int argc, char *argv[]) {
         // Update the graph with the new 30-day window
         updateGraph();
 
-        // Increment and update the counter
+        // Get the latest stock price (the last price in the current 30-day window)
+        latestStockPrice = sortedData.value(currentStartDate.addDays(30));
+
+        // Calculate the value to add or subtract from the static counter
+        staticCounter += counter * latestStockPrice;  // Add or subtract based on counter and latest stock price
+
+        // Update the static counter label
+        staticCounterLabel->setText(QString::number(staticCounter));
+
+        // Reset the counter to 0 for the resetting label
+        counter = 0;
+        counterLabel->setText(QString::number(counter));
+    });
+
+    // Connect the Increment button's clicked signal to increment the resetting counter
+    QObject::connect(incrementButton, &QPushButton::clicked, [&]() {
         counter++;
+        counterLabel->setText(QString::number(counter));
+    });
+
+    // Connect the Decrement button's clicked signal to decrement the resetting counter
+    QObject::connect(decrementButton, &QPushButton::clicked, [&]() {
+        counter--;
         counterLabel->setText(QString::number(counter));
     });
 
@@ -165,12 +200,18 @@ int main(int argc, char *argv[]) {
     mainWidget->setWindowTitle("AMZN Stock Price Chart");
     mainWidget->resize(800, 600);  // Resize the main window manually
 
-    // Add the chart view, button, and counter label to the main window
+    // Manually add the chart view, button, and labels to the window
+    mainWidget->setLayout(nullptr); // Disabling any layout manager
+
+    mainWidget->setGeometry(0, 0, 800, 600);  // Set window size
     chartView->setParent(mainWidget);
     shiftButton->setParent(mainWidget);
+    incrementButton->setParent(mainWidget);
+    decrementButton->setParent(mainWidget);
     counterLabel->setParent(mainWidget);
+    staticCounterLabel->setParent(mainWidget);
 
-    // Show the main window
+    // Show the window
     mainWidget->show();
 
     return a.exec();
