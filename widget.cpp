@@ -722,7 +722,6 @@ void Widget::on_adminInfo_clicked()
 {
     QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
 
-    // Prompt the user to enter teacher credentials
     bool ok;
     QString email = QInputDialog::getText(this, tr("Admin Login"), tr("Enter Teacher Email:"), QLineEdit::Normal, "", &ok);
     if (!ok || email.isEmpty()) {
@@ -750,7 +749,7 @@ void Widget::on_adminInfo_clicked()
         QString fileEmail = in.readLine();
         QString filePassword = in.readLine();
         QString role = in.readLine();
-        in.readLine(); // Skip the empty line between user entries
+        in.readLine();
 
         if (fileEmail == email && filePassword == password && role == "Teacher") {
             accessGranted = true;
@@ -822,15 +821,12 @@ void Widget::updateStatistics()
 void Widget::on_settings_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->settingPage));
-    QApplication::setPalette(QApplication::style()->standardPalette());
-    qApp->setStyleSheet("");
 }
 
 void Widget::on_settingBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
-    QApplication::setPalette(QApplication::style()->standardPalette());
-    qApp->setStyleSheet("");
+
 }
 
 void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
@@ -852,13 +848,14 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
         darkPalette.setColor(QPalette::HighlightedText, Qt::black);
 
         QApplication::setPalette(darkPalette);
-          qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
+
+        qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
     } else {
         QApplication::setPalette(QApplication::style()->standardPalette());
         qApp->setStyleSheet("");
     }
-
 }
+
 
 void Widget::on_emailChange_clicked()
 {
