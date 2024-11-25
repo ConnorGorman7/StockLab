@@ -24,6 +24,9 @@ Widget::Widget(QWidget *parent)
     qApp->setStyleSheet("");
 
     setupReturnButtonConnections();
+
+    ui->studentComboBox->addItem("Student 1");
+    ui->studentComboBox->addItem("Student 2");
 }
 
 Widget::~Widget()
@@ -142,6 +145,7 @@ void Widget::on_registerStudentBtn_clicked()
         file.close();
     } else {
         qDebug() << "Could not open file for reading.";
+        qDebug() << filePath;
     }
 
     if(file.open(QIODevice::Append | QIODevice::Text)) {
@@ -169,7 +173,7 @@ void Widget::on_registerStudentBtn_clicked()
 
 void Widget::on_registerTeacherBtn_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
     QFile file(filePath);
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");
@@ -216,7 +220,7 @@ void Widget::on_registerTeacherBtn_clicked()
 
 void Widget::on_loginScreenButton_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
     QFile file(filePath);
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");
@@ -248,6 +252,8 @@ void Widget::on_loginScreenButton_clicked()
                         return;
                     } else {
                         // switch to teacher home page
+                        ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->teacherHome));
+                        return;
                     }
                 } else {
                     QMessageBox::critical(this, "Incorrect password", "Incorrect password. Please try again.");
@@ -739,7 +745,7 @@ void Widget::on_submitQuiz9_clicked()
 
 void Widget::on_adminInfo_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
 
     bool ok;
     QString email = QInputDialog::getText(this, tr("Admin Login"), tr("Enter Teacher Email:"), QLineEdit::Normal, "", &ok);
@@ -800,7 +806,7 @@ void Widget::on_adminInfoBackButton_clicked()
 
 void Widget::updateStatistics()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -889,7 +895,7 @@ void Widget::on_emailChange_clicked()
             QRegularExpressionMatch match = emailRegex.match(newEmail);
 
             if (match.hasMatch()) {
-                QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+                QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
                 QFile file(filePath);
 
                 if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1118,7 +1124,7 @@ void Widget::on_passwordUp_clicked()
                                                     "", &ok);
 
         if (ok && !newPassword.isEmpty()) {
-            QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+            QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
             QFile file(filePath);
 
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1182,7 +1188,7 @@ void Widget::on_passwordUp_clicked()
 
 void Widget::on_viewAllUsersButton_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1235,7 +1241,7 @@ void Widget::on_addUserButton_clicked()
     QString email = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's email:"), QLineEdit::Normal, "", &ok);
     if (!ok || email.isEmpty()) return;
 
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
@@ -1285,7 +1291,7 @@ void Widget::on_addUserButton_clicked()
 
 void Widget::on_editUserButton_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1389,7 +1395,7 @@ void Widget::on_editUserButton_clicked()
 
 void Widget::on_deleteUserButton_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1473,8 +1479,26 @@ void Widget::on_deleteUserButton_clicked()
     updateStatistics();
 }
 
-void Widget::on_darkMode_clicked()
+void Widget::on_m1_button_clicked()
 {
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentPerformancePage));
+}
 
+
+void Widget::on_assignHwButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->assignPage));
+}
+
+
+void Widget::on_spBackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->teacherHome));
+}
+
+
+void Widget::on_assignBackButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->teacherHome));
 }
 
