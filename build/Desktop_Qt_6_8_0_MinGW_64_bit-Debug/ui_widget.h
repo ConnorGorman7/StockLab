@@ -203,18 +203,18 @@ public:
     QPushButton *backButton_3;
     QWidget *studentHome;
     QGridLayout *gridLayout_27;
-    QSpacerItem *horizontalSpacer;
-    QSpacerItem *verticalSpacer_2;
+    QPushButton *adminInfo;
+    QPushButton *settings;
+    QSpacerItem *horizontalSpacer_2;
     QSpacerItem *verticalSpacer;
     QLabel *studentHomeHeader;
-    QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *horizontalSpacer_2;
-    QPushButton *settings;
-    QPushButton *modules;
     QSpacerItem *horizontalSpacer_3;
-    QPushButton *dictionary;
-    QPushButton *adminInfo;
     QPushButton *logoutButton;
+    QPushButton *modules;
+    QPushButton *dictionary;
+    QSpacerItem *horizontalSpacer;
+    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *verticalSpacer_2;
     QWidget *adminPage;
     QGridLayout *gridLayout_35;
     QGroupBox *manageUsers;
@@ -1667,13 +1667,29 @@ public:
         studentHome->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
         gridLayout_27 = new QGridLayout(studentHome);
         gridLayout_27->setObjectName("gridLayout_27");
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        adminInfo = new QPushButton(studentHome);
+        adminInfo->setObjectName("adminInfo");
+        QSizePolicy sizePolicy6(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Maximum);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(adminInfo->sizePolicy().hasHeightForWidth());
+        adminInfo->setSizePolicy(sizePolicy6);
+        adminInfo->setMinimumSize(QSize(200, 50));
+        adminInfo->setMaximumSize(QSize(16777215, 16777215));
 
-        gridLayout_27->addItem(horizontalSpacer, 12, 0, 1, 1);
+        gridLayout_27->addWidget(adminInfo, 9, 2, 1, 1);
 
-        verticalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        settings = new QPushButton(studentHome);
+        settings->setObjectName("settings");
+        sizePolicy6.setHeightForWidth(settings->sizePolicy().hasHeightForWidth());
+        settings->setSizePolicy(sizePolicy6);
+        settings->setMinimumSize(QSize(200, 50));
 
-        gridLayout_27->addItem(verticalSpacer_2, 2, 0, 1, 3);
+        gridLayout_27->addWidget(settings, 9, 1, 1, 1);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_27->addItem(horizontalSpacer_2, 12, 3, 1, 1);
 
         verticalSpacer = new QSpacerItem(20, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
 
@@ -1685,83 +1701,63 @@ public:
         studentHomeHeader->setSizePolicy(sizePolicy);
         studentHomeHeader->setMinimumSize(QSize(0, 50));
         studentHomeHeader->setMaximumSize(QSize(16777215, 30));
-        QFont font11;
-        font11.setFamilies({QString::fromUtf8("Segoe UI")});
-        font11.setPointSize(20);
-        font11.setBold(true);
-        studentHomeHeader->setFont(font11);
+        studentHomeHeader->setFont(font1);
         studentHomeHeader->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
 ""));
         studentHomeHeader->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_27->addWidget(studentHomeHeader, 6, 0, 1, 4);
 
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_27->addItem(horizontalSpacer_4, 7, 3, 1, 1);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_27->addItem(horizontalSpacer_2, 12, 3, 1, 1);
-
-        settings = new QPushButton(studentHome);
-        settings->setObjectName("settings");
-        QSizePolicy sizePolicy6(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Maximum);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(settings->sizePolicy().hasHeightForWidth());
-        settings->setSizePolicy(sizePolicy6);
-        settings->setMinimumSize(QSize(200, 50));
-
-        gridLayout_27->addWidget(settings, 9, 1, 1, 1);
-
-        modules = new QPushButton(studentHome);
-        modules->setObjectName("modules");
-        QSizePolicy sizePolicy7(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Preferred);
-        sizePolicy7.setHorizontalStretch(0);
-        sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(modules->sizePolicy().hasHeightForWidth());
-        modules->setSizePolicy(sizePolicy7);
-        modules->setMinimumSize(QSize(200, 50));
-        modules->setMaximumSize(QSize(16777215, 16777215));
-
-        gridLayout_27->addWidget(modules, 7, 2, 1, 1);
-
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Minimum);
 
         gridLayout_27->addItem(horizontalSpacer_3, 7, 0, 1, 1);
 
-        dictionary = new QPushButton(studentHome);
-        dictionary->setObjectName("dictionary");
-        sizePolicy7.setHeightForWidth(dictionary->sizePolicy().hasHeightForWidth());
-        dictionary->setSizePolicy(sizePolicy7);
-        dictionary->setMinimumSize(QSize(200, 50));
-        dictionary->setMaximumSize(QSize(16777215, 50));
-
-        gridLayout_27->addWidget(dictionary, 7, 1, 1, 1);
-
-        adminInfo = new QPushButton(studentHome);
-        adminInfo->setObjectName("adminInfo");
-        sizePolicy6.setHeightForWidth(adminInfo->sizePolicy().hasHeightForWidth());
-        adminInfo->setSizePolicy(sizePolicy6);
-        adminInfo->setMinimumSize(QSize(200, 50));
-        adminInfo->setMaximumSize(QSize(16777215, 16777215));
-
-        gridLayout_27->addWidget(adminInfo, 9, 2, 1, 1);
-
         logoutButton = new QPushButton(studentHome);
         logoutButton->setObjectName("logoutButton");
-        QSizePolicy sizePolicy8(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Fixed);
-        sizePolicy8.setHorizontalStretch(0);
-        sizePolicy8.setVerticalStretch(0);
-        sizePolicy8.setHeightForWidth(logoutButton->sizePolicy().hasHeightForWidth());
-        logoutButton->setSizePolicy(sizePolicy8);
+        QSizePolicy sizePolicy7(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Fixed);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(logoutButton->sizePolicy().hasHeightForWidth());
+        logoutButton->setSizePolicy(sizePolicy7);
         logoutButton->setMinimumSize(QSize(50, 30));
         logoutButton->setMaximumSize(QSize(16777215, 16777215));
         logoutButton->setBaseSize(QSize(0, 0));
         logoutButton->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
 
         gridLayout_27->addWidget(logoutButton, 12, 1, 1, 2);
+
+        modules = new QPushButton(studentHome);
+        modules->setObjectName("modules");
+        QSizePolicy sizePolicy8(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Preferred);
+        sizePolicy8.setHorizontalStretch(0);
+        sizePolicy8.setVerticalStretch(0);
+        sizePolicy8.setHeightForWidth(modules->sizePolicy().hasHeightForWidth());
+        modules->setSizePolicy(sizePolicy8);
+        modules->setMinimumSize(QSize(200, 50));
+        modules->setMaximumSize(QSize(16777215, 16777215));
+
+        gridLayout_27->addWidget(modules, 7, 2, 1, 1);
+
+        dictionary = new QPushButton(studentHome);
+        dictionary->setObjectName("dictionary");
+        sizePolicy8.setHeightForWidth(dictionary->sizePolicy().hasHeightForWidth());
+        dictionary->setSizePolicy(sizePolicy8);
+        dictionary->setMinimumSize(QSize(200, 50));
+        dictionary->setMaximumSize(QSize(16777215, 50));
+
+        gridLayout_27->addWidget(dictionary, 7, 1, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_27->addItem(horizontalSpacer, 12, 0, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_27->addItem(horizontalSpacer_4, 7, 3, 1, 1);
+
+        verticalSpacer_2 = new QSpacerItem(20, 20, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+
+        gridLayout_27->addItem(verticalSpacer_2, 2, 0, 1, 3);
 
         stackedWidget->addWidget(studentHome);
         adminPage = new QWidget();
@@ -1839,10 +1835,10 @@ public:
         sizePolicy9.setHeightForWidth(adminInfoLabel->sizePolicy().hasHeightForWidth());
         adminInfoLabel->setSizePolicy(sizePolicy9);
         adminInfoLabel->setMaximumSize(QSize(16777215, 100));
-        QFont font12;
-        font12.setBold(true);
-        font12.setItalic(true);
-        adminInfoLabel->setFont(font12);
+        QFont font11;
+        font11.setBold(true);
+        font11.setItalic(true);
+        adminInfoLabel->setFont(font11);
         adminInfoLabel->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
 ""));
 
@@ -1851,10 +1847,10 @@ public:
         adminTitle = new QLabel(adminPage);
         adminTitle->setObjectName("adminTitle");
         adminTitle->setMaximumSize(QSize(16777215, 40));
-        QFont font13;
-        font13.setPointSize(22);
-        font13.setBold(true);
-        adminTitle->setFont(font13);
+        QFont font12;
+        font12.setPointSize(22);
+        font12.setBold(true);
+        adminTitle->setFont(font12);
         adminTitle->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
 ""));
         adminTitle->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -1974,10 +1970,10 @@ public:
         moduleWelcome = new QLabel(moduleHomepage);
         moduleWelcome->setObjectName("moduleWelcome");
         moduleWelcome->setMaximumSize(QSize(16777215, 30));
-        QFont font14;
-        font14.setPointSize(14);
-        font14.setBold(true);
-        moduleWelcome->setFont(font14);
+        QFont font13;
+        font13.setPointSize(14);
+        font13.setBold(true);
+        moduleWelcome->setFont(font13);
         moduleWelcome->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
 ""));
         moduleWelcome->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -2030,7 +2026,7 @@ public:
 
         mod1header = new QLabel(mod1content);
         mod1header->setObjectName("mod1header");
-        mod1header->setFont(font14);
+        mod1header->setFont(font13);
         mod1header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_12->addWidget(mod1header, 0, 2, 1, 1);
@@ -2211,7 +2207,7 @@ public:
 
         quiz1header = new QLabel(mod1quiz);
         quiz1header->setObjectName("quiz1header");
-        quiz1header->setFont(font14);
+        quiz1header->setFont(font13);
         quiz1header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_23->addWidget(quiz1header, 0, 0, 1, 1);
@@ -2253,7 +2249,7 @@ public:
 
         mod2header = new QLabel(mod2content);
         mod2header->setObjectName("mod2header");
-        mod2header->setFont(font14);
+        mod2header->setFont(font13);
         mod2header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_13->addWidget(mod2header, 0, 2, 1, 1);
@@ -2273,7 +2269,7 @@ public:
         gridLayout_22->setObjectName("gridLayout_22");
         quiz2header = new QLabel(mod2quiz);
         quiz2header->setObjectName("quiz2header");
-        quiz2header->setFont(font14);
+        quiz2header->setFont(font13);
 
         gridLayout_22->addWidget(quiz2header, 0, 0, 1, 1);
 
@@ -2472,7 +2468,7 @@ public:
 
         mod3header = new QLabel(mod3content);
         mod3header->setObjectName("mod3header");
-        mod3header->setFont(font14);
+        mod3header->setFont(font13);
         mod3header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_14->addWidget(mod3header, 0, 2, 1, 1);
@@ -2485,7 +2481,7 @@ public:
         verticalLayout_21->setObjectName("verticalLayout_21");
         quiz3header = new QLabel(mod3quiz);
         quiz3header->setObjectName("quiz3header");
-        quiz3header->setFont(font14);
+        quiz3header->setFont(font13);
 
         verticalLayout_21->addWidget(quiz3header);
 
@@ -2690,7 +2686,7 @@ public:
 
         mod5header = new QLabel(mod5content);
         mod5header->setObjectName("mod5header");
-        mod5header->setFont(font14);
+        mod5header->setFont(font13);
         mod5header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_16->addWidget(mod5header, 0, 2, 1, 1);
@@ -2703,7 +2699,7 @@ public:
         verticalLayout_3->setObjectName("verticalLayout_3");
         quiz5header = new QLabel(mod5quiz);
         quiz5header->setObjectName("quiz5header");
-        quiz5header->setFont(font14);
+        quiz5header->setFont(font13);
 
         verticalLayout_3->addWidget(quiz5header);
 
@@ -2905,7 +2901,7 @@ public:
 
         mod6header = new QLabel(mod6content);
         mod6header->setObjectName("mod6header");
-        mod6header->setFont(font14);
+        mod6header->setFont(font13);
         mod6header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_17->addWidget(mod6header, 0, 2, 1, 1);
@@ -2918,7 +2914,7 @@ public:
         verticalLayout_58->setObjectName("verticalLayout_58");
         quiz6header = new QLabel(mod6quiz);
         quiz6header->setObjectName("quiz6header");
-        quiz6header->setFont(font14);
+        quiz6header->setFont(font13);
 
         verticalLayout_58->addWidget(quiz6header);
 
@@ -3120,7 +3116,7 @@ public:
 
         mod7header = new QLabel(mod7content);
         mod7header->setObjectName("mod7header");
-        mod7header->setFont(font14);
+        mod7header->setFont(font13);
         mod7header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_18->addWidget(mod7header, 0, 2, 1, 1);
@@ -3133,7 +3129,7 @@ public:
         verticalLayout_59->setObjectName("verticalLayout_59");
         quiz7header = new QLabel(mod7quiz);
         quiz7header->setObjectName("quiz7header");
-        quiz7header->setFont(font14);
+        quiz7header->setFont(font13);
 
         verticalLayout_59->addWidget(quiz7header);
 
@@ -3335,7 +3331,7 @@ public:
 
         mod8header = new QLabel(mod8content);
         mod8header->setObjectName("mod8header");
-        mod8header->setFont(font14);
+        mod8header->setFont(font13);
         mod8header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_19->addWidget(mod8header, 0, 2, 1, 1);
@@ -3348,7 +3344,7 @@ public:
         verticalLayout_60->setObjectName("verticalLayout_60");
         quiz8header = new QLabel(mod8quiz);
         quiz8header->setObjectName("quiz8header");
-        quiz8header->setFont(font14);
+        quiz8header->setFont(font13);
 
         verticalLayout_60->addWidget(quiz8header);
 
@@ -3550,7 +3546,7 @@ public:
 
         mod9header = new QLabel(mod9content);
         mod9header->setObjectName("mod9header");
-        mod9header->setFont(font14);
+        mod9header->setFont(font13);
         mod9header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_20->addWidget(mod9header, 0, 2, 1, 1);
@@ -3563,7 +3559,7 @@ public:
         verticalLayout_61->setObjectName("verticalLayout_61");
         quiz9header = new QLabel(mod9quiz);
         quiz9header->setObjectName("quiz9header");
-        quiz9header->setFont(font14);
+        quiz9header->setFont(font13);
 
         verticalLayout_61->addWidget(quiz9header);
 
@@ -3748,7 +3744,7 @@ public:
         verticalLayout_2->setObjectName("verticalLayout_2");
         quiz4header = new QLabel(mod4quiz);
         quiz4header->setObjectName("quiz4header");
-        quiz4header->setFont(font14);
+        quiz4header->setFont(font13);
 
         verticalLayout_2->addWidget(quiz4header);
 
@@ -3941,7 +3937,7 @@ public:
 
         mod4header = new QLabel(mod4content);
         mod4header->setObjectName("mod4header");
-        mod4header->setFont(font14);
+        mod4header->setFont(font13);
         mod4header->setStyleSheet(QString::fromUtf8("color: white;"));
 
         gridLayout_15->addWidget(mod4header, 0, 2, 1, 1);
@@ -3961,7 +3957,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(9);
         moduleStack->setCurrentIndex(0);
 
 
@@ -4119,13 +4115,13 @@ public:
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
         label_11->setText(QCoreApplication::translate("Widget", "Password:", nullptr));
         backButton_3->setText(QCoreApplication::translate("Widget", "Go back", nullptr));
-        studentHomeHeader->setText(QCoreApplication::translate("Widget", "Student Homepage", nullptr));
-        settings->setText(QCoreApplication::translate("Widget", "Settings", nullptr));
-        modules->setText(QCoreApplication::translate("Widget", "Modules", nullptr));
-        dictionary->setText(QCoreApplication::translate("Widget", "Dictionary", nullptr));
         adminInfo->setText(QCoreApplication::translate("Widget", "Admin\n"
 "Information", nullptr));
+        settings->setText(QCoreApplication::translate("Widget", "Settings", nullptr));
+        studentHomeHeader->setText(QCoreApplication::translate("Widget", "TradeLab Homepage", nullptr));
         logoutButton->setText(QCoreApplication::translate("Widget", "Log out", nullptr));
+        modules->setText(QCoreApplication::translate("Widget", "Modules", nullptr));
+        dictionary->setText(QCoreApplication::translate("Widget", "Dictionary", nullptr));
         manageUsers->setTitle(QCoreApplication::translate("Widget", "Manage Users", nullptr));
         viewAllUsersButton->setText(QCoreApplication::translate("Widget", "View All Users", nullptr));
         addUserButton->setText(QCoreApplication::translate("Widget", "Add User", nullptr));

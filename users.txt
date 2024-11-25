@@ -13,17 +13,17 @@ Tristan Guevarra
 tristan
 Student
 
-John Teacher
+Mr. John
 jteacher@email.com
 TeacherTester
 Teacher
 
-Teacher B
+Mrs. Boyle
 teacher@email.com
 Hello
 Teacher
 
-Justin
+Justin James
 JJJustin@email.com
 JDawg
 Student
@@ -33,18 +33,28 @@ teachin@email.com
 teachin
 Teacher
 
-Testing Stu
-test@stu.com
-1
-Student
-
 Tristan Guevarra
 test1@test.com
 test1
 Student
 
-1
-1@1.com
-1
+Ben Beschta
+ben@email.com
+ben
+Student
+
+Allen Liu
+allen@email.com
+allen
+Student
+
+Connor Gorman
+connor@email.com
+connor
+Student
+
+Joel Prosser
+joel@email.com
+joel
 Student
 
