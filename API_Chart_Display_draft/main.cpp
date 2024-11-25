@@ -64,155 +64,193 @@ int main(int argc, char *argv[]) {
     // Get the last available date in the dataset
     QDateTime lastDate = sortedData.lastKey();
 
-    // Create axes for the chart (done once)
+    // Create axes for the chart
     QDateTimeAxis *axisX = new QDateTimeAxis();
     axisX->setFormat("MMM dd, yyyy");
     axisX->setTitleText("Date");
-    axisX->setGridLineVisible(true); // Show grid
 
     QValueAxis *axisY = new QValueAxis();
     axisY->setTitleText("Price (USD)");
-    axisY->setGridLineVisible(true); // Show grid
 
-    // Function to update the graph
+    // Store the last known price to hold if we encounter missing data
+    float lastValidPrice = 0.0f;
+
     auto updateGraph = [&]() {
-        // Clear previous data in the series
         series->clear();
 
-        // Variables to track min and max values for the Y-axis
         float minY = std::numeric_limits<float>::max();
         float maxY = std::numeric_limits<float>::lowest();
 
-        // Add data for the next 30 days
-        int count = 0;
-        QDateTime windowEnd = currentStartDate.addDays(30);  // End of the current 30-day window
-
-        // Check that the window doesn't exceed the last available date
+        QDateTime windowEnd = currentStartDate.addDays(30);
         if (windowEnd > lastDate) {
             windowEnd = lastDate;
         }
 
-        // Iterate through data for the next 30 days, up until the window end
-        for (auto it = sortedData.lowerBound(currentStartDate); it != sortedData.end() && it.key() <= windowEnd && count < 30; ++it, ++count) {
-            float price = it.value();
-            series->append(it.key().toMSecsSinceEpoch(), price);
-
-            // Update min and max values for Y-axis
-            if (price < minY) {
-                minY = price;
-            }
-            if (price > maxY) {
-                maxY = price;
+        for (QDateTime currentDate = currentStartDate; currentDate <= windowEnd; currentDate = currentDate.addDays(1)) {
+            if (sortedData.contains(currentDate)) {
+                float price = sortedData.value(currentDate);
+                series->append(currentDate.toMSecsSinceEpoch(), price);
+                minY = std::min(minY, price);
+                maxY = std::max(maxY, price);
+                lastValidPrice = price;
+            } else if (lastValidPrice != 0.0f) {
+                series->append(currentDate.toMSecsSinceEpoch(), lastValidPrice);
+                minY = std::min(minY, lastValidPrice);
+                maxY = std::max(maxY, lastValidPrice);
             }
         }
 
-        // Update the x-axis range to match the new data window
         axisX->setRange(currentStartDate, windowEnd);
-
-        // Dynamically adjust the Y-axis range based on the min and max values
-        axisY->setRange(minY - (minY * 0.05), maxY + (maxY * 0.05));  // Add a 5% buffer
+        axisY->setRange(minY - (minY * 0.05), maxY + (maxY * 0.05));
     };
 
-    // Limit to the first 30 entries
-    updateGraph();  // Initialize the graph with the first 30 days
+    updateGraph();
 
-    // Configure the chart
     chart->addSeries(series);
-    chart->setAxisX(axisX, series);  // Assign axisX to the series
-    chart->setAxisY(axisY, series);  // Assign axisY to the series
+    chart->setAxisX(axisX, series);
+    chart->setAxisY(axisY, series);
     chart->setTitle("AMZN Stock Price");
 
-    // Customize line appearance
-    series->setPen(QPen(Qt::blue));  // Set line color
+    series->setPen(QPen(Qt::blue));
 
-    // Create the chart view
     QChartView *chartView = new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
-    chartView->setGeometry(0, 0, 800, 500);  // Set chart position and size manually
+    chartView->setGeometry(0, 0, 800, 500);
 
-    // Create a button to shift the graph window by one day
     QPushButton *shiftButton = new QPushButton("Next 30 Days");
-    shiftButton->setGeometry(300, 520, 200, 40);  // Set button position and size manually
+    shiftButton->setGeometry(25, 520, 200, 40);
 
-    // Create two buttons to increment and decrement the counter
-    QPushButton *incrementButton = new QPushButton("Increment");
-    incrementButton->setGeometry(550, 520, 100, 40);  // Set button position and size manually
+    QPushButton *incrementButton = new QPushButton("Buy");
+    incrementButton->setGeometry(550, 520, 100, 40);
 
-    QPushButton *decrementButton = new QPushButton("Decrement");
-    decrementButton->setGeometry(660, 520, 100, 40);  // Set button position and size manually
+    QPushButton *decrementButton = new QPushButton("Sell");
+    decrementButton->setGeometry(660, 520, 100, 40);
 
-    // Create a QLabel for the resetting counter
     QLabel *counterLabel = new QLabel("0", nullptr);
-    counterLabel->setGeometry(750, 250, 50, 30);  // Position the label on the right side of the chart
+    counterLabel->setGeometry(450, 493, 50, 30);
     counterLabel->setAlignment(Qt::AlignCenter);
 
-    // Create a QLabel for the static counter (this value does not reset)
     QLabel *staticCounterLabel = new QLabel("0", nullptr);
-    staticCounterLabel->setGeometry(750, 280, 50, 30);  // Position this label just below the first one
+    staticCounterLabel->setGeometry(450, 513, 50, 30);
     staticCounterLabel->setAlignment(Qt::AlignCenter);
 
-    // Counter variable for the resetting label
+    QLabel *thirdStaticCounterLabel = new QLabel("0", nullptr);
+    thirdStaticCounterLabel->setGeometry(450, 533, 50, 30);
+    thirdStaticCounterLabel->setAlignment(Qt::AlignCenter);
+
+    QLabel *fourthStaticCounterLabel = new QLabel("0", nullptr);
+    fourthStaticCounterLabel->setGeometry(450, 553, 50, 30);
+    fourthStaticCounterLabel->setAlignment(Qt::AlignCenter);
+
+    QLabel *todaysInvestmentTextLabel = new QLabel("Today's Investment (Shares): ", nullptr);
+    todaysInvestmentTextLabel->setGeometry(300, 500, 150, 30);
+    todaysInvestmentTextLabel->setAlignment(Qt::AlignRight);
+
+    QLabel *totalInvestmentTextLabel = new QLabel("Total Investment ($): ", nullptr);
+    totalInvestmentTextLabel->setGeometry(300, 520, 150, 30);
+    totalInvestmentTextLabel->setAlignment(Qt::AlignRight);
+
+    QLabel *totalSharesTextLabel = new QLabel("Total (Shares): ", nullptr);
+    totalSharesTextLabel->setGeometry(300, 540, 150, 30);
+    totalSharesTextLabel->setAlignment(Qt::AlignRight);
+    \
+    QLabel *totalProfitTextLabel = new QLabel("Total Profit ($): ", nullptr);
+    totalProfitTextLabel->setGeometry(300, 560, 150, 30);
+    totalProfitTextLabel->setAlignment(Qt::AlignRight);
+
     int counter = 0;
-    int staticCounter = 0;  // Static counter that will accumulate the value
-    float latestStockPrice = 0.0f;  // Latest stock price at the end of the window
+    int staticCounter = 0;
+    int thirdStaticCounter = 0;
+    float latestStockPrice = 0.0f;
 
-    // Connect the button's clicked signal to update the graph window
     QObject::connect(shiftButton, &QPushButton::clicked, [&]() {
-        // Move the current window one day later
         currentStartDate = currentStartDate.addDays(1);
-
-        // Ensure the window doesn't exceed the last date
         if (currentStartDate.addDays(30) > lastDate) {
             currentStartDate = lastDate.addDays(-30);
         }
-
-        // Update the graph with the new 30-day window
         updateGraph();
 
-        // Get the latest stock price (the last price in the current 30-day window)
-        latestStockPrice = sortedData.value(currentStartDate.addDays(30));
+        QDateTime windowEnd = currentStartDate.addDays(30);
+        if (windowEnd > lastDate) {
+            windowEnd = lastDate;
+        }
 
-        // Calculate the value to add or subtract from the static counter
-        staticCounter += counter * latestStockPrice;  // Add or subtract based on counter and latest stock price
+        // Determine the most recent stock price in the window
+        latestStockPrice = 0.0f;
+        for (QDateTime currentDate = windowEnd; currentDate >= currentStartDate; currentDate = currentDate.addDays(-1)) {
+            if (sortedData.contains(currentDate)) {
+                latestStockPrice = sortedData.value(currentDate);
+                break;
+            }
+        }
 
-        // Update the static counter label
+        // Use the last valid price if no stock price is found in the window
+        if (latestStockPrice == 0.0f) {
+            latestStockPrice = lastValidPrice;
+        }
+
+        // Update static counters and labels
+        staticCounter += counter * latestStockPrice;
         staticCounterLabel->setText(QString::number(staticCounter));
 
-        // Reset the counter to 0 for the resetting label
+        thirdStaticCounter += counter;
+        thirdStaticCounterLabel->setText(QString::number(thirdStaticCounter));
+
+        float secondLabelValue = thirdStaticCounter * latestStockPrice;
+        staticCounterLabel->setText(QString::number(secondLabelValue));
+
+        // Add to the fourthStaticCounterLabel if counter is negative
+        if (counter < 0) {
+            float penalty = (-counter) * latestStockPrice;
+            float fourthLabelValue = fourthStaticCounterLabel->text().toFloat() + penalty;
+            fourthStaticCounterLabel->setText(QString::number(fourthLabelValue));
+        }
+
+        // Reset counter
         counter = 0;
         counterLabel->setText(QString::number(counter));
     });
 
-    // Connect the Increment button's clicked signal to increment the resetting counter
+
     QObject::connect(incrementButton, &QPushButton::clicked, [&]() {
         counter++;
         counterLabel->setText(QString::number(counter));
     });
 
-    // Connect the Decrement button's clicked signal to decrement the resetting counter
     QObject::connect(decrementButton, &QPushButton::clicked, [&]() {
         counter--;
         counterLabel->setText(QString::number(counter));
     });
 
-    // Set up the main window
     QWidget *mainWidget = new QWidget;
-    mainWidget->setWindowTitle("AMZN Stock Price Chart");
-    mainWidget->resize(800, 600);  // Resize the main window manually
-
-    // Manually add the chart view, button, and labels to the window
-    mainWidget->setLayout(nullptr); // Disabling any layout manager
-
-    mainWidget->setGeometry(0, 0, 800, 600);  // Set window size
-    chartView->setParent(mainWidget);
-    shiftButton->setParent(mainWidget);
-    incrementButton->setParent(mainWidget);
-    decrementButton->setParent(mainWidget);
-    counterLabel->setParent(mainWidget);
-    staticCounterLabel->setParent(mainWidget);
-
-    // Show the window
+    mainWidget->setWindowTitle("AMZN Stock Price Viewer");
+    mainWidget->setFixedSize(800, 600);
+    mainWidget->setGeometry(100, 100, 800, 600);
     mainWidget->show();
+    chartView->setParent(mainWidget);
+    chartView->show();
+    shiftButton->setParent(mainWidget);
+    shiftButton->show();
+    incrementButton->setParent(mainWidget);
+    incrementButton->show();
+    decrementButton->setParent(mainWidget);
+    decrementButton->show();
+    counterLabel->setParent(mainWidget);
+    counterLabel->show();
+    staticCounterLabel->setParent(mainWidget);
+    staticCounterLabel->show();
+    thirdStaticCounterLabel->setParent(mainWidget);
+    thirdStaticCounterLabel->show();
+    fourthStaticCounterLabel->setParent(mainWidget);
+    fourthStaticCounterLabel->show();
+    todaysInvestmentTextLabel->setParent(mainWidget);
+    todaysInvestmentTextLabel->show();
+    totalInvestmentTextLabel->setParent(mainWidget);
+    totalInvestmentTextLabel->show();
+    totalSharesTextLabel->setParent(mainWidget);
+    totalSharesTextLabel->show();
+    totalProfitTextLabel->setParent(mainWidget);
+    totalProfitTextLabel->show();
 
     return a.exec();
 }
