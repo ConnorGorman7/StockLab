@@ -15,6 +15,7 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
@@ -43,6 +44,27 @@ public:
     QPushButton *regStuButton;
     QLabel *label;
     QSpacerItem *horizontalSpacer_10;
+    QWidget *dictionaryPage;
+    QVBoxLayout *verticalLayout_62;
+    QGroupBox *getDef;
+    QLineEdit *getDefinitionStudentIDInput;
+    QPushButton *getDefinitionButton;
+    QTextEdit *definitionResultOutput;
+    QLabel *label_13;
+    QGroupBox *completeModule;
+    QLineEdit *studentIDforModule;
+    QPushButton *showModulesButton;
+    QLabel *label_16;
+    QTextEdit *completedModulesList;
+    QGroupBox *RegisterStudents;
+    QLineEdit *studentIDinput;
+    QLineEdit *lineEdit;
+    QPushButton *markCompletedButton;
+    QLabel *label_14;
+    QLabel *label_15;
+    QPushButton *markUncompletedButton;
+    QTextEdit *confirmOutput;
+    QPushButton *returnToMenu;
     QWidget *settingPage;
     QGridLayout *gridLayout_24;
     QPushButton *helpButton;
@@ -641,6 +663,76 @@ public:
         gridLayout_30->addItem(horizontalSpacer_10, 3, 2, 1, 1);
 
         stackedWidget->addWidget(welcomePage);
+        dictionaryPage = new QWidget();
+        dictionaryPage->setObjectName("dictionaryPage");
+        verticalLayout_62 = new QVBoxLayout(dictionaryPage);
+        verticalLayout_62->setObjectName("verticalLayout_62");
+        getDef = new QGroupBox(dictionaryPage);
+        getDef->setObjectName("getDef");
+        getDefinitionStudentIDInput = new QLineEdit(getDef);
+        getDefinitionStudentIDInput->setObjectName("getDefinitionStudentIDInput");
+        getDefinitionStudentIDInput->setGeometry(QRect(70, 20, 74, 22));
+        getDefinitionButton = new QPushButton(getDef);
+        getDefinitionButton->setObjectName("getDefinitionButton");
+        getDefinitionButton->setGeometry(QRect(9, 50, 131, 18));
+        definitionResultOutput = new QTextEdit(getDef);
+        definitionResultOutput->setObjectName("definitionResultOutput");
+        definitionResultOutput->setGeometry(QRect(10, 70, 770, 98));
+        label_13 = new QLabel(getDef);
+        label_13->setObjectName("label_13");
+        label_13->setGeometry(QRect(10, 20, 71, 16));
+
+        verticalLayout_62->addWidget(getDef);
+
+        completeModule = new QGroupBox(dictionaryPage);
+        completeModule->setObjectName("completeModule");
+        studentIDforModule = new QLineEdit(completeModule);
+        studentIDforModule->setObjectName("studentIDforModule");
+        studentIDforModule->setGeometry(QRect(80, 30, 74, 22));
+        showModulesButton = new QPushButton(completeModule);
+        showModulesButton->setObjectName("showModulesButton");
+        showModulesButton->setGeometry(QRect(9, 52, 141, 18));
+        label_16 = new QLabel(completeModule);
+        label_16->setObjectName("label_16");
+        label_16->setGeometry(QRect(10, 30, 61, 16));
+        completedModulesList = new QTextEdit(completeModule);
+        completedModulesList->setObjectName("completedModulesList");
+        completedModulesList->setGeometry(QRect(13, 83, 271, 81));
+
+        verticalLayout_62->addWidget(completeModule);
+
+        RegisterStudents = new QGroupBox(dictionaryPage);
+        RegisterStudents->setObjectName("RegisterStudents");
+        studentIDinput = new QLineEdit(RegisterStudents);
+        studentIDinput->setObjectName("studentIDinput");
+        studentIDinput->setGeometry(QRect(80, 20, 74, 22));
+        lineEdit = new QLineEdit(RegisterStudents);
+        lineEdit->setObjectName("lineEdit");
+        lineEdit->setGeometry(QRect(320, 50, 31, 22));
+        markCompletedButton = new QPushButton(RegisterStudents);
+        markCompletedButton->setObjectName("markCompletedButton");
+        markCompletedButton->setGeometry(QRect(10, 70, 121, 18));
+        label_14 = new QLabel(RegisterStudents);
+        label_14->setObjectName("label_14");
+        label_14->setGeometry(QRect(10, 50, 291, 16));
+        label_15 = new QLabel(RegisterStudents);
+        label_15->setObjectName("label_15");
+        label_15->setGeometry(QRect(10, 20, 61, 16));
+        markUncompletedButton = new QPushButton(RegisterStudents);
+        markUncompletedButton->setObjectName("markUncompletedButton");
+        markUncompletedButton->setGeometry(QRect(159, 70, 151, 20));
+        confirmOutput = new QTextEdit(RegisterStudents);
+        confirmOutput->setObjectName("confirmOutput");
+        confirmOutput->setGeometry(QRect(30, 100, 250, 61));
+
+        verticalLayout_62->addWidget(RegisterStudents);
+
+        returnToMenu = new QPushButton(dictionaryPage);
+        returnToMenu->setObjectName("returnToMenu");
+
+        verticalLayout_62->addWidget(returnToMenu);
+
+        stackedWidget->addWidget(dictionaryPage);
         settingPage = new QWidget();
         settingPage->setObjectName("settingPage");
         gridLayout_24 = new QGridLayout(settingPage);
@@ -3125,6 +3217,22 @@ public:
         regTeachButton->setText(QCoreApplication::translate("Widget", "Register as a Teacher", nullptr));
         regStuButton->setText(QCoreApplication::translate("Widget", "Register as a Student", nullptr));
         label->setText(QCoreApplication::translate("Widget", "Welcome To TradeApp", nullptr));
+        getDef->setTitle(QCoreApplication::translate("Widget", "Definitions", nullptr));
+        getDefinitionStudentIDInput->setText(QString());
+        getDefinitionButton->setText(QCoreApplication::translate("Widget", "Display Definitions", nullptr));
+        label_13->setText(QCoreApplication::translate("Widget", "Student ID", nullptr));
+        completeModule->setTitle(QCoreApplication::translate("Widget", "Completed Modules", nullptr));
+        studentIDforModule->setText(QString());
+        showModulesButton->setText(QCoreApplication::translate("Widget", "Show Modules", nullptr));
+        label_16->setText(QCoreApplication::translate("Widget", "Student ID:", nullptr));
+        RegisterStudents->setTitle(QCoreApplication::translate("Widget", "RegisterStudents", nullptr));
+        studentIDinput->setText(QString());
+        lineEdit->setText(QString());
+        markCompletedButton->setText(QCoreApplication::translate("Widget", "Mark Completed", nullptr));
+        label_14->setText(QCoreApplication::translate("Widget", "Add Completed Module # (Just type the number, ie: 1)", nullptr));
+        label_15->setText(QCoreApplication::translate("Widget", "Student ID:", nullptr));
+        markUncompletedButton->setText(QCoreApplication::translate("Widget", "Mark Uncompleted", nullptr));
+        returnToMenu->setText(QCoreApplication::translate("Widget", "Return", nullptr));
         helpButton->setText(QCoreApplication::translate("Widget", "Help and Support", nullptr));
         appPreference->setTitle(QCoreApplication::translate("Widget", "App Preferences", nullptr));
         darkMode->setText(QCoreApplication::translate("Widget", "Dark Mode", nullptr));

@@ -79,6 +79,31 @@ void Widget::on_regTeachButton_clicked()
 
 void Widget::on_registerStudentBtn_clicked()
 {
+    QString studentIDInput = ui->studentIDinput->text().trimmed(); // Bottom input field
+    if (studentIDInput.isEmpty()) {
+        ui->confirmOutput->setPlainText("Student ID is empty. Please enter a valid Student ID.");
+        return;
+    }
+
+    bool isNumeric;
+    int studentID = studentIDInput.toInt(&isNumeric);
+
+    if (!isNumeric || studentID <= 0) {
+        ui->confirmOutput->setPlainText("Invalid Student ID. Please enter a positive numeric ID.");
+        return;
+    }
+
+    // Automatically add the student to the dictionary if they don't exist
+    if (dictionary.students.find(studentID) == dictionary.students.end()) {
+        dictionary.students[studentID] = Student{studentID, {}};
+        ui->confirmOutput->setPlainText("Student ID: " + QString::number(studentID) + " registered successfully.");
+    } else {
+        ui->confirmOutput->setPlainText("Student already exists.");
+    }
+
+    // Clear the Student ID input field
+    ui->studentIDinput->clear();
+
     QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
@@ -772,3 +797,154 @@ void Widget::on_emailChange_clicked()
         ui->emailChange->setChecked(false);
     }
 }
+
+void Widget::on_dictionary_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->dictionaryPage));
+}
+
+void Widget::on_returnToMenu_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+}
+
+void Widget::on_getDefinitionButton_clicked()
+{
+    QString studentIDInput = ui->getDefinitionStudentIDInput->text().trimmed(); // Top input field
+    if (studentIDInput.isEmpty()) {
+        ui->definitionResultOutput->setPlainText("Student ID is empty. Please enter a valid Student ID.");
+        return;
+    }
+
+    bool isNumeric;
+    int studentID = studentIDInput.toInt(&isNumeric);
+
+    if (!isNumeric || studentID <= 0) {
+        ui->definitionResultOutput->setPlainText("Invalid Student ID. Please enter a positive numeric ID.");
+        return;
+    }
+
+    if (dictionary.students.find(studentID) == dictionary.students.end()) {
+        ui->definitionResultOutput->setPlainText("Student not found.");
+        return;
+    }
+
+    QString definitions;
+    for (const auto &entry : dictionary.dict) {
+        for (const auto &def : entry.second) {
+            if (dictionary.students[studentID].completedModules.find(def.module) != dictionary.students[studentID].completedModules.end()) {
+                definitions += QString::fromStdString(entry.first) + ": " + QString::fromStdString(def.meaning) + "\n";
+            }
+        }
+    }
+
+    ui->definitionResultOutput->setPlainText(definitions.isEmpty() ? "No definitions available." : definitions);
+}
+
+void Widget::on_showModulesButton_clicked()
+{
+    QString studentIDInput = ui->studentIDforModule->text().trimmed(); // Middle input field
+    if (studentIDInput.isEmpty()) {
+        ui->completedModulesList->setPlainText("Student ID is empty. Please enter a valid Student ID.");
+        return;
+    }
+
+    bool isNumeric;
+    int studentID = studentIDInput.toInt(&isNumeric);
+
+    if (!isNumeric || studentID <= 0) {
+        ui->completedModulesList->setPlainText("Invalid Student ID. Please enter a positive numeric ID.");
+        return;
+    }
+
+    if (dictionary.students.find(studentID) == dictionary.students.end()) {
+        ui->completedModulesList->setPlainText("Student not found.");
+        return;
+    }
+
+    QString modules;
+    for (const auto &module : dictionary.students[studentID].completedModules) {
+        modules += QString::fromStdString(module) + "\n";
+    }
+
+    ui->completedModulesList->setPlainText(modules.isEmpty() ? "No modules completed yet." : modules);
+}
+
+void Widget::on_markCompletedButton_clicked()
+{
+    QString studentIDInput = ui->studentIDinput->text().trimmed(); // Bottom input field
+    QString moduleInput = ui->lineEdit->text().trimmed();          // Module input field
+
+    qDebug() << "Mark Completed Button clicked!";
+    qDebug() << "Student ID Input:" << studentIDInput;
+    qDebug() << "Module Input:" << moduleInput;
+
+    if (studentIDInput.isEmpty()) {
+        ui->confirmOutput->setPlainText("Student ID is empty. Please enter a valid Student ID.");
+        return;
+    }
+
+    if (moduleInput.isEmpty()) {
+        ui->confirmOutput->setPlainText("Module is empty. Please enter a module number.");
+        return;
+    }
+
+    bool isNumeric;
+    int studentID = studentIDInput.toInt(&isNumeric);
+
+    if (!isNumeric || studentID <= 0) {
+        ui->confirmOutput->setPlainText("Invalid Student ID. Please enter a positive numeric ID.");
+        return;
+    }
+
+    if (dictionary.students.find(studentID) == dictionary.students.end()) {
+        dictionary.students[studentID] = Student{studentID, {}}; // Automatically add the student
+    }
+
+    dictionary.completeModule(studentID, moduleInput.toStdString());
+    ui->confirmOutput->setPlainText("Module '" + moduleInput + "' marked as completed for Student ID: " + QString::number(studentID));
+
+    ui->lineEdit->clear();
+}
+
+void Widget::on_markUncompletedButton_clicked()
+{
+    QString studentIDInput = ui->studentIDinput->text().trimmed(); // Bottom input field for Student ID
+    QString moduleInput = ui->lineEdit->text().trimmed();          // Input field for Module
+
+    qDebug() << "Uncomplete Module Button clicked!";
+    qDebug() << "Student ID Input:" << studentIDInput;
+    qDebug() << "Module Input:" << moduleInput;
+
+    if (studentIDInput.isEmpty()) {
+        ui->confirmOutput->setPlainText("Student ID is empty. Please enter a valid Student ID.");
+        return;
+    }
+
+    if (moduleInput.isEmpty()) {
+        ui->confirmOutput->setPlainText("Module is empty. Please enter a module number.");
+        return;
+    }
+
+    bool isNumeric;
+    int studentID = studentIDInput.toInt(&isNumeric);
+
+    if (!isNumeric || studentID <= 0) {
+        ui->confirmOutput->setPlainText("Invalid Student ID. Please enter a positive numeric ID.");
+        return;
+    }
+
+    if (dictionary.students.find(studentID) == dictionary.students.end()) {
+        ui->confirmOutput->setPlainText("Student not found.");
+        return;
+    }
+
+    if (dictionary.students[studentID].completedModules.erase(moduleInput.toStdString())) {
+        ui->confirmOutput->setPlainText("Module '" + moduleInput + "' removed for Student ID: " + QString::number(studentID));
+    } else {
+        ui->confirmOutput->setPlainText("Module '" + moduleInput + "' not found for Student ID: " + QString::number(studentID));
+    }
+
+    ui->lineEdit->clear();
+}
+

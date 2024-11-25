@@ -2,6 +2,7 @@
 #define WIDGET_H
 
 #include <QWidget>
+#include "dict.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -76,6 +77,21 @@ private slots:
     void on_passUpdate_clicked();
 
     void on_emailChange_clicked();
+
+    void on_getDefinitionButton_clicked();
+
+    void on_dictionary_clicked();
+
+    void on_returnToMenu_clicked();
+
+    void on_showModulesButton_clicked();
+
+    void on_markCompletedButton_clicked();
+
+    void on_markUncompletedButton_clicked();
+
+private:
+    Dict dictionary;
 
 private:
     Ui::Widget *ui;
