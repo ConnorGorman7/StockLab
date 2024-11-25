@@ -125,7 +125,6 @@ void Widget::on_registerStudentBtn_clicked()
     // Clear the Student ID input field
     ui->studentIDinput->clear();
 
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");

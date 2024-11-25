@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QLabel>
@@ -23,6 +24,7 @@
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -76,7 +78,7 @@ public:
     QGroupBox *accSettings;
     QGridLayout *gridLayout_26;
     QCheckBox *emailChange;
-    QCheckBox *passUpdate;
+    QCheckBox *passwordUp;
     QLabel *version;
     QSpacerItem *horizontalSpacer_14;
     QLabel *titleSetting;
@@ -84,17 +86,55 @@ public:
     QSpacerItem *horizontalSpacer_15;
     QWidget *loginPage;
     QGridLayout *gridLayout_25;
-    QLabel *label_4;
-    QPushButton *loginScreenButton;
-    QTextEdit *loginEmailTE;
-    QTextEdit *loginPwTE;
     QLabel *SPACER;
-    QSpacerItem *horizontalSpacer_11;
-    QLabel *SPACER2;
     QPushButton *backButton;
+    QSpacerItem *horizontalSpacer_11;
     QLabel *label_2;
-    QLabel *label_3;
+    QPushButton *loginScreenButton;
     QSpacerItem *horizontalSpacer_12;
+    QLabel *label_3;
+    QTextEdit *loginPwTE;
+    QTextEdit *loginEmailTE;
+    QLabel *label_4;
+    QLabel *SPACER2;
+    QWidget *teacherHome;
+    QLabel *label_131;
+    QComboBox *studentComboBox;
+    QLabel *label_141;
+    QLabel *label_151;
+    QLabel *label_161;
+    QLabel *label_17;
+    QPushButton *m1_button;
+    QPushButton *m2_button;
+    QPushButton *m3_button;
+    QPushButton *m4_button;
+    QPushButton *m5_button;
+    QPushButton *m6_button;
+    QPushButton *m7_button;
+    QPushButton *m8_button;
+    QPushButton *m9_button;
+    QWidget *studentPerformancePage;
+    QLabel *label_18;
+    QLabel *label_19;
+    QLabel *label_20;
+    QLabel *label_21;
+    QTextBrowser *textBrowser;
+    QTextBrowser *textBrowser_2;
+    QTextEdit *textEdit;
+    QPushButton *saveFileButton;
+    QPushButton *assignHwButton;
+    QPushButton *spBackButton;
+    QWidget *assignPage;
+    QLabel *label_22;
+    QComboBox *comboBox;
+    QLabel *label_23;
+    QLabel *label_24;
+    QLabel *label_25;
+    QTextEdit *textEdit_2;
+    QTextEdit *textEdit_3;
+    QPushButton *pushButton;
+    QTextBrowser *textBrowser_3;
+    QPushButton *assignBackButton;
     QWidget *studentReg;
     QGridLayout *gridLayout_28;
     QSpacerItem *horizontalSpacer_5;
@@ -142,6 +182,14 @@ public:
     QWidget *adminPage;
     QLabel *adminInfoLabel;
     QPushButton *adminInfoBackButton;
+    QLabel *adminTitle;
+    QGroupBox *manageUsers;
+    QPushButton *viewAllUsersButton;
+    QPushButton *addUserButton;
+    QPushButton *editUserButton;
+    QPushButton *deleteUserButton;
+    QGroupBox *statisticTitle;
+    QLabel *statisticsLabel;
     QWidget *moduleWidget;
     QGridLayout *gridLayout_21;
     QStackedWidget *moduleStack;
@@ -781,11 +829,11 @@ public:
 
         gridLayout_26->addWidget(emailChange, 1, 0, 1, 1);
 
-        passUpdate = new QCheckBox(accSettings);
-        passUpdate->setObjectName("passUpdate");
-        passUpdate->setFont(font4);
+        passwordUp = new QCheckBox(accSettings);
+        passwordUp->setObjectName("passwordUp");
+        passwordUp->setFont(font4);
 
-        gridLayout_26->addWidget(passUpdate, 2, 0, 1, 1);
+        gridLayout_26->addWidget(passwordUp, 2, 0, 1, 1);
 
 
         gridLayout_24->addWidget(accSettings, 2, 0, 1, 4);
@@ -833,44 +881,11 @@ public:
         gridLayout_25 = new QGridLayout(loginPage);
         gridLayout_25->setObjectName("gridLayout_25");
         gridLayout_25->setVerticalSpacing(0);
-        label_4 = new QLabel(loginPage);
-        label_4->setObjectName("label_4");
-        label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        gridLayout_25->addWidget(label_4, 4, 1, 1, 1);
-
-        loginScreenButton = new QPushButton(loginPage);
-        loginScreenButton->setObjectName("loginScreenButton");
-
-        gridLayout_25->addWidget(loginScreenButton, 5, 2, 1, 1);
-
-        loginEmailTE = new QTextEdit(loginPage);
-        loginEmailTE->setObjectName("loginEmailTE");
-        loginEmailTE->setMaximumSize(QSize(16777215, 30));
-
-        gridLayout_25->addWidget(loginEmailTE, 3, 2, 1, 1);
-
-        loginPwTE = new QTextEdit(loginPage);
-        loginPwTE->setObjectName("loginPwTE");
-        loginPwTE->setMaximumSize(QSize(16777215, 30));
-
-        gridLayout_25->addWidget(loginPwTE, 4, 2, 1, 1);
-
         SPACER = new QLabel(loginPage);
         SPACER->setObjectName("SPACER");
         SPACER->setMaximumSize(QSize(16777215, 0));
 
         gridLayout_25->addWidget(SPACER, 1, 1, 1, 1);
-
-        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        gridLayout_25->addItem(horizontalSpacer_11, 4, 0, 1, 1);
-
-        SPACER2 = new QLabel(loginPage);
-        SPACER2->setObjectName("SPACER2");
-        SPACER2->setMaximumSize(QSize(16777215, 50));
-
-        gridLayout_25->addWidget(SPACER2, 6, 2, 1, 1);
 
         backButton = new QPushButton(loginPage);
         backButton->setObjectName("backButton");
@@ -879,11 +894,24 @@ public:
 
         gridLayout_25->addWidget(backButton, 5, 1, 1, 1);
 
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_25->addItem(horizontalSpacer_11, 4, 0, 1, 1);
+
         label_2 = new QLabel(loginPage);
         label_2->setObjectName("label_2");
         label_2->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_25->addWidget(label_2, 3, 1, 1, 1);
+
+        loginScreenButton = new QPushButton(loginPage);
+        loginScreenButton->setObjectName("loginScreenButton");
+
+        gridLayout_25->addWidget(loginScreenButton, 5, 2, 1, 1);
+
+        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_25->addItem(horizontalSpacer_12, 4, 3, 1, 1);
 
         label_3 = new QLabel(loginPage);
         label_3->setObjectName("label_3");
@@ -893,11 +921,154 @@ public:
 
         gridLayout_25->addWidget(label_3, 2, 1, 1, 2);
 
-        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        loginPwTE = new QTextEdit(loginPage);
+        loginPwTE->setObjectName("loginPwTE");
+        loginPwTE->setMaximumSize(QSize(16777215, 30));
 
-        gridLayout_25->addItem(horizontalSpacer_12, 4, 3, 1, 1);
+        gridLayout_25->addWidget(loginPwTE, 4, 2, 1, 1);
+
+        loginEmailTE = new QTextEdit(loginPage);
+        loginEmailTE->setObjectName("loginEmailTE");
+        loginEmailTE->setMaximumSize(QSize(16777215, 30));
+
+        gridLayout_25->addWidget(loginEmailTE, 3, 2, 1, 1);
+
+        label_4 = new QLabel(loginPage);
+        label_4->setObjectName("label_4");
+        label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_25->addWidget(label_4, 4, 1, 1, 1);
+
+        SPACER2 = new QLabel(loginPage);
+        SPACER2->setObjectName("SPACER2");
+        SPACER2->setMaximumSize(QSize(16777215, 50));
+
+        gridLayout_25->addWidget(SPACER2, 6, 2, 1, 1);
 
         stackedWidget->addWidget(loginPage);
+        teacherHome = new QWidget();
+        teacherHome->setObjectName("teacherHome");
+        label_131 = new QLabel(teacherHome);
+        label_131->setObjectName("label_131");
+        label_131->setGeometry(QRect(240, 80, 63, 31));
+        studentComboBox = new QComboBox(teacherHome);
+        studentComboBox->setObjectName("studentComboBox");
+        studentComboBox->setGeometry(QRect(320, 80, 171, 28));
+        label_141 = new QLabel(teacherHome);
+        label_141->setObjectName("label_141");
+        label_141->setGeometry(QRect(260, 150, 301, 71));
+        label_141->setFont(font3);
+        label_141->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_151 = new QLabel(teacherHome);
+        label_151->setObjectName("label_151");
+        label_151->setGeometry(QRect(100, 230, 91, 20));
+        label_151->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_161 = new QLabel(teacherHome);
+        label_161->setObjectName("label_161");
+        label_161->setGeometry(QRect(350, 230, 91, 20));
+        label_161->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_17 = new QLabel(teacherHome);
+        label_17->setObjectName("label_17");
+        label_17->setGeometry(QRect(580, 230, 91, 20));
+        label_17->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        m1_button = new QPushButton(teacherHome);
+        m1_button->setObjectName("m1_button");
+        m1_button->setGeometry(QRect(60, 270, 181, 29));
+        m2_button = new QPushButton(teacherHome);
+        m2_button->setObjectName("m2_button");
+        m2_button->setGeometry(QRect(60, 340, 181, 29));
+        m3_button = new QPushButton(teacherHome);
+        m3_button->setObjectName("m3_button");
+        m3_button->setGeometry(QRect(60, 410, 181, 29));
+        m4_button = new QPushButton(teacherHome);
+        m4_button->setObjectName("m4_button");
+        m4_button->setGeometry(QRect(310, 270, 181, 29));
+        m5_button = new QPushButton(teacherHome);
+        m5_button->setObjectName("m5_button");
+        m5_button->setGeometry(QRect(310, 340, 181, 29));
+        m6_button = new QPushButton(teacherHome);
+        m6_button->setObjectName("m6_button");
+        m6_button->setGeometry(QRect(310, 410, 181, 29));
+        m7_button = new QPushButton(teacherHome);
+        m7_button->setObjectName("m7_button");
+        m7_button->setGeometry(QRect(550, 270, 181, 29));
+        m8_button = new QPushButton(teacherHome);
+        m8_button->setObjectName("m8_button");
+        m8_button->setGeometry(QRect(550, 340, 181, 29));
+        m9_button = new QPushButton(teacherHome);
+        m9_button->setObjectName("m9_button");
+        m9_button->setGeometry(QRect(550, 410, 181, 29));
+        stackedWidget->addWidget(teacherHome);
+        studentPerformancePage = new QWidget();
+        studentPerformancePage->setObjectName("studentPerformancePage");
+        label_18 = new QLabel(studentPerformancePage);
+        label_18->setObjectName("label_18");
+        label_18->setGeometry(QRect(250, 20, 271, 71));
+        label_18->setFont(font3);
+        label_18->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        label_19 = new QLabel(studentPerformancePage);
+        label_19->setObjectName("label_19");
+        label_19->setGeometry(QRect(100, 130, 151, 31));
+        label_20 = new QLabel(studentPerformancePage);
+        label_20->setObjectName("label_20");
+        label_20->setGeometry(QRect(100, 230, 121, 31));
+        label_21 = new QLabel(studentPerformancePage);
+        label_21->setObjectName("label_21");
+        label_21->setGeometry(QRect(100, 310, 181, 20));
+        textBrowser = new QTextBrowser(studentPerformancePage);
+        textBrowser->setObjectName("textBrowser");
+        textBrowser->setGeometry(QRect(280, 130, 111, 31));
+        textBrowser_2 = new QTextBrowser(studentPerformancePage);
+        textBrowser_2->setObjectName("textBrowser_2");
+        textBrowser_2->setGeometry(QRect(280, 230, 111, 31));
+        textEdit = new QTextEdit(studentPerformancePage);
+        textEdit->setObjectName("textEdit");
+        textEdit->setGeometry(QRect(100, 340, 641, 61));
+        saveFileButton = new QPushButton(studentPerformancePage);
+        saveFileButton->setObjectName("saveFileButton");
+        saveFileButton->setGeometry(QRect(320, 430, 151, 51));
+        assignHwButton = new QPushButton(studentPerformancePage);
+        assignHwButton->setObjectName("assignHwButton");
+        assignHwButton->setGeometry(QRect(320, 500, 151, 51));
+        spBackButton = new QPushButton(studentPerformancePage);
+        spBackButton->setObjectName("spBackButton");
+        spBackButton->setGeometry(QRect(50, 30, 83, 29));
+        stackedWidget->addWidget(studentPerformancePage);
+        assignPage = new QWidget();
+        assignPage->setObjectName("assignPage");
+        label_22 = new QLabel(assignPage);
+        label_22->setObjectName("label_22");
+        label_22->setGeometry(QRect(300, 40, 181, 20));
+        label_22->setFont(font3);
+        label_22->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        comboBox = new QComboBox(assignPage);
+        comboBox->setObjectName("comboBox");
+        comboBox->setGeometry(QRect(280, 100, 221, 28));
+        label_23 = new QLabel(assignPage);
+        label_23->setObjectName("label_23");
+        label_23->setGeometry(QRect(160, 190, 81, 31));
+        label_24 = new QLabel(assignPage);
+        label_24->setObjectName("label_24");
+        label_24->setGeometry(QRect(160, 240, 101, 31));
+        label_25 = new QLabel(assignPage);
+        label_25->setObjectName("label_25");
+        label_25->setGeometry(QRect(100, 320, 151, 20));
+        textEdit_2 = new QTextEdit(assignPage);
+        textEdit_2->setObjectName("textEdit_2");
+        textEdit_2->setGeometry(QRect(260, 190, 171, 31));
+        textEdit_3 = new QTextEdit(assignPage);
+        textEdit_3->setObjectName("textEdit_3");
+        textEdit_3->setGeometry(QRect(270, 240, 81, 31));
+        pushButton = new QPushButton(assignPage);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(350, 480, 83, 29));
+        textBrowser_3 = new QTextBrowser(assignPage);
+        textBrowser_3->setObjectName("textBrowser_3");
+        textBrowser_3->setGeometry(QRect(260, 320, 341, 91));
+        assignBackButton = new QPushButton(assignPage);
+        assignBackButton->setObjectName("assignBackButton");
+        assignBackButton->setGeometry(QRect(40, 30, 83, 29));
+        stackedWidget->addWidget(assignPage);
         studentReg = new QWidget();
         studentReg->setObjectName("studentReg");
         gridLayout_28 = new QGridLayout(studentReg);
@@ -1153,10 +1324,42 @@ public:
         adminPage->setObjectName("adminPage");
         adminInfoLabel = new QLabel(adminPage);
         adminInfoLabel->setObjectName("adminInfoLabel");
-        adminInfoLabel->setGeometry(QRect(160, 100, 241, 191));
+        adminInfoLabel->setGeometry(QRect(20, 80, 231, 31));
         adminInfoBackButton = new QPushButton(adminPage);
         adminInfoBackButton->setObjectName("adminInfoBackButton");
         adminInfoBackButton->setGeometry(QRect(20, 20, 75, 24));
+        adminTitle = new QLabel(adminPage);
+        adminTitle->setObjectName("adminTitle");
+        adminTitle->setGeometry(QRect(240, 50, 181, 16));
+        adminTitle->setFont(font5);
+        manageUsers = new QGroupBox(adminPage);
+        manageUsers->setObjectName("manageUsers");
+        manageUsers->setGeometry(QRect(20, 250, 291, 161));
+        manageUsers->setFont(font3);
+        viewAllUsersButton = new QPushButton(manageUsers);
+        viewAllUsersButton->setObjectName("viewAllUsersButton");
+        viewAllUsersButton->setGeometry(QRect(10, 30, 91, 24));
+        viewAllUsersButton->setFont(font4);
+        addUserButton = new QPushButton(manageUsers);
+        addUserButton->setObjectName("addUserButton");
+        addUserButton->setGeometry(QRect(10, 60, 91, 24));
+        addUserButton->setFont(font4);
+        editUserButton = new QPushButton(manageUsers);
+        editUserButton->setObjectName("editUserButton");
+        editUserButton->setGeometry(QRect(10, 90, 91, 24));
+        editUserButton->setFont(font4);
+        deleteUserButton = new QPushButton(manageUsers);
+        deleteUserButton->setObjectName("deleteUserButton");
+        deleteUserButton->setGeometry(QRect(10, 120, 91, 24));
+        deleteUserButton->setFont(font4);
+        statisticTitle = new QGroupBox(adminPage);
+        statisticTitle->setObjectName("statisticTitle");
+        statisticTitle->setGeometry(QRect(20, 140, 291, 111));
+        statisticTitle->setFont(font3);
+        statisticsLabel = new QLabel(statisticTitle);
+        statisticsLabel->setObjectName("statisticsLabel");
+        statisticsLabel->setGeometry(QRect(30, 30, 131, 61));
+        statisticsLabel->setFont(font4);
         stackedWidget->addWidget(adminPage);
         moduleWidget = new QWidget();
         moduleWidget->setObjectName("moduleWidget");
@@ -3198,13 +3401,13 @@ public:
 
         stackedWidget->addWidget(moduleWidget);
 
-        gridLayout_4->addWidget(stackedWidget, 1, 0, 1, 1);
+        gridLayout_4->addWidget(stackedWidget, 0, 0, 1, 1);
 
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(1);
-        moduleStack->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(5);
+        moduleStack->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -3239,20 +3442,15 @@ public:
         notification->setText(QCoreApplication::translate("Widget", "Notifications", nullptr));
         accSettings->setTitle(QCoreApplication::translate("Widget", "Account Settings", nullptr));
         emailChange->setText(QCoreApplication::translate("Widget", "Change Email", nullptr));
-        passUpdate->setText(QCoreApplication::translate("Widget", "Update Password", nullptr));
+        passwordUp->setText(QCoreApplication::translate("Widget", "Update Password", nullptr));
         version->setText(QCoreApplication::translate("Widget", "Version 1.0.0 Developed by ELEC376 Group 2", nullptr));
         titleSetting->setText(QCoreApplication::translate("Widget", "Settings", nullptr));
         settingBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        label_4->setText(QCoreApplication::translate("Widget", "Password:", nullptr));
+        SPACER->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
+        backButton->setText(QCoreApplication::translate("Widget", "Go back", nullptr));
+        label_2->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
         loginScreenButton->setText(QCoreApplication::translate("Widget", "Log in", nullptr));
-        loginEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        label_3->setText(QCoreApplication::translate("Widget", "Log In", nullptr));
         loginPwTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -3261,11 +3459,43 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        SPACER->setText(QCoreApplication::translate("Widget", "TextLabel", nullptr));
+        loginEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        label_4->setText(QCoreApplication::translate("Widget", "Password:", nullptr));
         SPACER2->setText(QString());
-        backButton->setText(QCoreApplication::translate("Widget", "Go back", nullptr));
-        label_2->setText(QCoreApplication::translate("Widget", "Email:", nullptr));
-        label_3->setText(QCoreApplication::translate("Widget", "Log In", nullptr));
+        label_131->setText(QCoreApplication::translate("Widget", "Student:", nullptr));
+        label_141->setText(QCoreApplication::translate("Widget", "Student Modules and Assignments", nullptr));
+        label_151->setText(QCoreApplication::translate("Widget", "Introductory", nullptr));
+        label_161->setText(QCoreApplication::translate("Widget", "Intermediate", nullptr));
+        label_17->setText(QCoreApplication::translate("Widget", "Advanced", nullptr));
+        m1_button->setText(QCoreApplication::translate("Widget", "M1 - Basic Intuition", nullptr));
+        m2_button->setText(QCoreApplication::translate("Widget", "M2 - Trading Basics", nullptr));
+        m3_button->setText(QCoreApplication::translate("Widget", "M3 - Fundamental Analysis", nullptr));
+        m4_button->setText(QCoreApplication::translate("Widget", "M4 - Technical Analysis", nullptr));
+        m5_button->setText(QCoreApplication::translate("Widget", "M5 - Risk Management", nullptr));
+        m6_button->setText(QCoreApplication::translate("Widget", "M6 - Trading Strategies", nullptr));
+        m7_button->setText(QCoreApplication::translate("Widget", "M7 - Adv. Tech. Analysis", nullptr));
+        m8_button->setText(QCoreApplication::translate("Widget", "M8 - Derivatives Options", nullptr));
+        m9_button->setText(QCoreApplication::translate("Widget", "M9 - Portfolio Mgmt.", nullptr));
+        label_18->setText(QCoreApplication::translate("Widget", "Student Performance Analysis", nullptr));
+        label_19->setText(QCoreApplication::translate("Widget", "Module Completion:", nullptr));
+        label_20->setText(QCoreApplication::translate("Widget", "Overall Grade:", nullptr));
+        label_21->setText(QCoreApplication::translate("Widget", "Instructor Comments:", nullptr));
+        saveFileButton->setText(QCoreApplication::translate("Widget", "Save to File", nullptr));
+        assignHwButton->setText(QCoreApplication::translate("Widget", "Assign Homework", nullptr));
+        spBackButton->setText(QCoreApplication::translate("Widget", "Back", nullptr));
+        label_22->setText(QCoreApplication::translate("Widget", "Course Name", nullptr));
+        label_23->setText(QCoreApplication::translate("Widget", "Deadline:", nullptr));
+        label_24->setText(QCoreApplication::translate("Widget", "Target Grade:", nullptr));
+        label_25->setText(QCoreApplication::translate("Widget", "Instructor Comments:", nullptr));
+        pushButton->setText(QCoreApplication::translate("Widget", "Assign", nullptr));
+        assignBackButton->setText(QCoreApplication::translate("Widget", "Back", nullptr));
         label_7->setText(QCoreApplication::translate("Widget", "Password:", nullptr));
         studentNameTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -3335,6 +3565,14 @@ public:
         logoutButton->setText(QCoreApplication::translate("Widget", "Log out", nullptr));
         adminInfoLabel->setText(QCoreApplication::translate("Widget", "Admin Information will be placed here.", nullptr));
         adminInfoBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        adminTitle->setText(QCoreApplication::translate("Widget", "Admin Information", nullptr));
+        manageUsers->setTitle(QCoreApplication::translate("Widget", "Manage Users", nullptr));
+        viewAllUsersButton->setText(QCoreApplication::translate("Widget", "View All Users", nullptr));
+        addUserButton->setText(QCoreApplication::translate("Widget", "Add User", nullptr));
+        editUserButton->setText(QCoreApplication::translate("Widget", "Edit User", nullptr));
+        deleteUserButton->setText(QCoreApplication::translate("Widget", "Delete User", nullptr));
+        statisticTitle->setTitle(QCoreApplication::translate("Widget", "Statistics", nullptr));
+        statisticsLabel->setText(QCoreApplication::translate("Widget", "statistics", nullptr));
         advancedLabel->setText(QCoreApplication::translate("Widget", "Advanced", nullptr));
         mod7->setText(QCoreApplication::translate("Widget", "M7 - Advanced Tech. Analysis", nullptr));
         mod9->setText(QCoreApplication::translate("Widget", "M9 - Portfolio Management", nullptr));
