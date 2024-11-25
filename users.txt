@@ -18,13 +18,18 @@ teacher@email.com
 Hello
 Teacher
 
-test
-11@11.com
-11
-Teacher
-
 Tristan Guevarra
 21tag10@queensu.ca
 tristan
 Student
+
+Justin
+JJJustin@email.com
+JDawg
+Student
+
+Teachin
+teachin@email.com
+teachin
+Teacher
 

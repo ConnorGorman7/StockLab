@@ -15,6 +15,7 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPlainTextEdit>
@@ -49,23 +50,27 @@ public:
     QWidget *dictionaryPage;
     QVBoxLayout *verticalLayout_62;
     QGroupBox *getDef;
+    QGridLayout *gridLayout_32;
+    QLabel *label_13;
     QLineEdit *getDefinitionStudentIDInput;
     QPushButton *getDefinitionButton;
     QTextEdit *definitionResultOutput;
-    QLabel *label_13;
     QGroupBox *completeModule;
+    QGridLayout *gridLayout_33;
     QLineEdit *studentIDforModule;
     QPushButton *showModulesButton;
     QLabel *label_16;
     QTextEdit *completedModulesList;
     QGroupBox *RegisterStudents;
-    QLineEdit *studentIDinput;
-    QLineEdit *lineEdit;
+    QGridLayout *gridLayout_34;
     QPushButton *markCompletedButton;
-    QLabel *label_14;
-    QLabel *label_15;
+    QSpacerItem *horizontalSpacer_16;
+    QLineEdit *lineEdit;
     QPushButton *markUncompletedButton;
     QTextEdit *confirmOutput;
+    QLabel *label_14;
+    QLabel *label_15;
+    QLineEdit *studentIDinput;
     QPushButton *returnToMenu;
     QWidget *settingPage;
     QGridLayout *gridLayout_24;
@@ -98,32 +103,37 @@ public:
     QLabel *label_4;
     QLabel *SPACER2;
     QWidget *teacherHome;
+    QGridLayout *gridLayout_36;
     QLabel *label_131;
     QComboBox *studentComboBox;
     QLabel *label_141;
+    QGridLayout *gridLayout_37;
+    QPushButton *m1_button;
+    QPushButton *m7_button;
+    QPushButton *m3_button;
     QLabel *label_151;
     QLabel *label_161;
-    QLabel *label_17;
-    QPushButton *m1_button;
-    QPushButton *m2_button;
-    QPushButton *m3_button;
-    QPushButton *m4_button;
-    QPushButton *m5_button;
-    QPushButton *m6_button;
-    QPushButton *m7_button;
-    QPushButton *m8_button;
     QPushButton *m9_button;
+    QPushButton *m8_button;
+    QPushButton *m4_button;
+    QPushButton *m2_button;
+    QPushButton *m6_button;
+    QPushButton *m5_button;
+    QLabel *label_17;
+    QSpacerItem *verticalSpacer_9;
     QWidget *studentPerformancePage;
-    QLabel *label_18;
-    QLabel *label_19;
+    QGridLayout *gridLayout_38;
     QLabel *label_20;
     QLabel *label_21;
+    QLabel *label_19;
+    QLabel *label_18;
     QTextBrowser *textBrowser;
     QTextBrowser *textBrowser_2;
+    QPushButton *spBackButton;
     QTextEdit *textEdit;
+    QHBoxLayout *horizontalLayout_3;
     QPushButton *saveFileButton;
     QPushButton *assignHwButton;
-    QPushButton *spBackButton;
     QWidget *assignPage;
     QLabel *label_22;
     QComboBox *comboBox;
@@ -180,16 +190,21 @@ public:
     QPushButton *adminInfo;
     QPushButton *logoutButton;
     QWidget *adminPage;
-    QLabel *adminInfoLabel;
-    QPushButton *adminInfoBackButton;
-    QLabel *adminTitle;
+    QGridLayout *gridLayout_35;
     QGroupBox *manageUsers;
+    QVBoxLayout *verticalLayout_64;
     QPushButton *viewAllUsersButton;
     QPushButton *addUserButton;
     QPushButton *editUserButton;
     QPushButton *deleteUserButton;
+    QSpacerItem *horizontalSpacer_18;
+    QSpacerItem *horizontalSpacer_17;
     QGroupBox *statisticTitle;
+    QVBoxLayout *verticalLayout_63;
     QLabel *statisticsLabel;
+    QPushButton *adminInfoBackButton;
+    QLabel *adminInfoLabel;
+    QLabel *adminTitle;
     QWidget *moduleWidget;
     QGridLayout *gridLayout_21;
     QStackedWidget *moduleStack;
@@ -717,61 +732,106 @@ public:
         verticalLayout_62->setObjectName("verticalLayout_62");
         getDef = new QGroupBox(dictionaryPage);
         getDef->setObjectName("getDef");
-        getDefinitionStudentIDInput = new QLineEdit(getDef);
-        getDefinitionStudentIDInput->setObjectName("getDefinitionStudentIDInput");
-        getDefinitionStudentIDInput->setGeometry(QRect(70, 20, 74, 22));
-        getDefinitionButton = new QPushButton(getDef);
-        getDefinitionButton->setObjectName("getDefinitionButton");
-        getDefinitionButton->setGeometry(QRect(9, 50, 131, 18));
-        definitionResultOutput = new QTextEdit(getDef);
-        definitionResultOutput->setObjectName("definitionResultOutput");
-        definitionResultOutput->setGeometry(QRect(10, 70, 770, 98));
+        gridLayout_32 = new QGridLayout(getDef);
+        gridLayout_32->setObjectName("gridLayout_32");
         label_13 = new QLabel(getDef);
         label_13->setObjectName("label_13");
-        label_13->setGeometry(QRect(10, 20, 71, 16));
+
+        gridLayout_32->addWidget(label_13, 0, 0, 1, 1);
+
+        getDefinitionStudentIDInput = new QLineEdit(getDef);
+        getDefinitionStudentIDInput->setObjectName("getDefinitionStudentIDInput");
+
+        gridLayout_32->addWidget(getDefinitionStudentIDInput, 0, 1, 1, 1);
+
+        getDefinitionButton = new QPushButton(getDef);
+        getDefinitionButton->setObjectName("getDefinitionButton");
+
+        gridLayout_32->addWidget(getDefinitionButton, 1, 0, 1, 2);
+
+        definitionResultOutput = new QTextEdit(getDef);
+        definitionResultOutput->setObjectName("definitionResultOutput");
+        definitionResultOutput->setReadOnly(true);
+
+        gridLayout_32->addWidget(definitionResultOutput, 2, 0, 1, 2);
+
 
         verticalLayout_62->addWidget(getDef);
 
         completeModule = new QGroupBox(dictionaryPage);
         completeModule->setObjectName("completeModule");
+        gridLayout_33 = new QGridLayout(completeModule);
+        gridLayout_33->setObjectName("gridLayout_33");
         studentIDforModule = new QLineEdit(completeModule);
         studentIDforModule->setObjectName("studentIDforModule");
-        studentIDforModule->setGeometry(QRect(80, 30, 74, 22));
+
+        gridLayout_33->addWidget(studentIDforModule, 0, 1, 1, 1);
+
         showModulesButton = new QPushButton(completeModule);
         showModulesButton->setObjectName("showModulesButton");
-        showModulesButton->setGeometry(QRect(9, 52, 141, 18));
+
+        gridLayout_33->addWidget(showModulesButton, 1, 0, 1, 2);
+
         label_16 = new QLabel(completeModule);
         label_16->setObjectName("label_16");
-        label_16->setGeometry(QRect(10, 30, 61, 16));
+
+        gridLayout_33->addWidget(label_16, 0, 0, 1, 1);
+
         completedModulesList = new QTextEdit(completeModule);
         completedModulesList->setObjectName("completedModulesList");
-        completedModulesList->setGeometry(QRect(13, 83, 271, 81));
+        completedModulesList->setReadOnly(true);
+
+        gridLayout_33->addWidget(completedModulesList, 2, 0, 1, 2);
+
 
         verticalLayout_62->addWidget(completeModule);
 
         RegisterStudents = new QGroupBox(dictionaryPage);
         RegisterStudents->setObjectName("RegisterStudents");
-        studentIDinput = new QLineEdit(RegisterStudents);
-        studentIDinput->setObjectName("studentIDinput");
-        studentIDinput->setGeometry(QRect(80, 20, 74, 22));
-        lineEdit = new QLineEdit(RegisterStudents);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(320, 50, 31, 22));
+        gridLayout_34 = new QGridLayout(RegisterStudents);
+        gridLayout_34->setObjectName("gridLayout_34");
         markCompletedButton = new QPushButton(RegisterStudents);
         markCompletedButton->setObjectName("markCompletedButton");
-        markCompletedButton->setGeometry(QRect(10, 70, 121, 18));
-        label_14 = new QLabel(RegisterStudents);
-        label_14->setObjectName("label_14");
-        label_14->setGeometry(QRect(10, 50, 291, 16));
-        label_15 = new QLabel(RegisterStudents);
-        label_15->setObjectName("label_15");
-        label_15->setGeometry(QRect(10, 20, 61, 16));
+
+        gridLayout_34->addWidget(markCompletedButton, 5, 0, 1, 2);
+
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_34->addItem(horizontalSpacer_16, 2, 3, 1, 1);
+
+        lineEdit = new QLineEdit(RegisterStudents);
+        lineEdit->setObjectName("lineEdit");
+
+        gridLayout_34->addWidget(lineEdit, 2, 2, 1, 1);
+
         markUncompletedButton = new QPushButton(RegisterStudents);
         markUncompletedButton->setObjectName("markUncompletedButton");
-        markUncompletedButton->setGeometry(QRect(159, 70, 151, 20));
+
+        gridLayout_34->addWidget(markUncompletedButton, 5, 2, 1, 2);
+
         confirmOutput = new QTextEdit(RegisterStudents);
         confirmOutput->setObjectName("confirmOutput");
-        confirmOutput->setGeometry(QRect(30, 100, 250, 61));
+        confirmOutput->setReadOnly(true);
+
+        gridLayout_34->addWidget(confirmOutput, 6, 0, 1, 4);
+
+        label_14 = new QLabel(RegisterStudents);
+        label_14->setObjectName("label_14");
+
+        gridLayout_34->addWidget(label_14, 2, 0, 1, 2);
+
+        label_15 = new QLabel(RegisterStudents);
+        label_15->setObjectName("label_15");
+        label_15->setMaximumSize(QSize(73, 28));
+        label_15->setAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
+
+        gridLayout_34->addWidget(label_15, 0, 0, 1, 1);
+
+        studentIDinput = new QLineEdit(RegisterStudents);
+        studentIDinput->setObjectName("studentIDinput");
+
+        gridLayout_34->addWidget(studentIDinput, 0, 1, 1, 3);
+
 
         verticalLayout_62->addWidget(RegisterStudents);
 
@@ -948,91 +1008,195 @@ public:
         stackedWidget->addWidget(loginPage);
         teacherHome = new QWidget();
         teacherHome->setObjectName("teacherHome");
+        gridLayout_36 = new QGridLayout(teacherHome);
+        gridLayout_36->setObjectName("gridLayout_36");
         label_131 = new QLabel(teacherHome);
         label_131->setObjectName("label_131");
-        label_131->setGeometry(QRect(240, 80, 63, 31));
+        label_131->setMaximumSize(QSize(60, 30));
+
+        gridLayout_36->addWidget(label_131, 0, 0, 1, 1);
+
         studentComboBox = new QComboBox(teacherHome);
         studentComboBox->setObjectName("studentComboBox");
-        studentComboBox->setGeometry(QRect(320, 80, 171, 28));
+        studentComboBox->setMaximumSize(QSize(16777215, 30));
+
+        gridLayout_36->addWidget(studentComboBox, 0, 1, 1, 1);
+
         label_141 = new QLabel(teacherHome);
         label_141->setObjectName("label_141");
-        label_141->setGeometry(QRect(260, 150, 301, 71));
-        label_141->setFont(font3);
+        QSizePolicy sizePolicy3(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label_141->sizePolicy().hasHeightForWidth());
+        label_141->setSizePolicy(sizePolicy3);
+        label_141->setMaximumSize(QSize(16777215, 50));
+        QFont font6;
+        font6.setPointSize(12);
+        font6.setBold(true);
+        label_141->setFont(font6);
         label_141->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        label_151 = new QLabel(teacherHome);
-        label_151->setObjectName("label_151");
-        label_151->setGeometry(QRect(100, 230, 91, 20));
-        label_151->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        label_161 = new QLabel(teacherHome);
-        label_161->setObjectName("label_161");
-        label_161->setGeometry(QRect(350, 230, 91, 20));
-        label_161->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        label_17 = new QLabel(teacherHome);
-        label_17->setObjectName("label_17");
-        label_17->setGeometry(QRect(580, 230, 91, 20));
-        label_17->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_36->addWidget(label_141, 2, 0, 1, 5);
+
+        gridLayout_37 = new QGridLayout();
+        gridLayout_37->setObjectName("gridLayout_37");
+        gridLayout_37->setSizeConstraint(QLayout::SizeConstraint::SetMinimumSize);
         m1_button = new QPushButton(teacherHome);
         m1_button->setObjectName("m1_button");
-        m1_button->setGeometry(QRect(60, 270, 181, 29));
-        m2_button = new QPushButton(teacherHome);
-        m2_button->setObjectName("m2_button");
-        m2_button->setGeometry(QRect(60, 340, 181, 29));
-        m3_button = new QPushButton(teacherHome);
-        m3_button->setObjectName("m3_button");
-        m3_button->setGeometry(QRect(60, 410, 181, 29));
-        m4_button = new QPushButton(teacherHome);
-        m4_button->setObjectName("m4_button");
-        m4_button->setGeometry(QRect(310, 270, 181, 29));
-        m5_button = new QPushButton(teacherHome);
-        m5_button->setObjectName("m5_button");
-        m5_button->setGeometry(QRect(310, 340, 181, 29));
-        m6_button = new QPushButton(teacherHome);
-        m6_button->setObjectName("m6_button");
-        m6_button->setGeometry(QRect(310, 410, 181, 29));
+        m1_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m1_button, 1, 0, 1, 1);
+
         m7_button = new QPushButton(teacherHome);
         m7_button->setObjectName("m7_button");
-        m7_button->setGeometry(QRect(550, 270, 181, 29));
-        m8_button = new QPushButton(teacherHome);
-        m8_button->setObjectName("m8_button");
-        m8_button->setGeometry(QRect(550, 340, 181, 29));
+        m7_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m7_button, 1, 2, 1, 1);
+
+        m3_button = new QPushButton(teacherHome);
+        m3_button->setObjectName("m3_button");
+        m3_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m3_button, 3, 0, 1, 1);
+
+        label_151 = new QLabel(teacherHome);
+        label_151->setObjectName("label_151");
+        label_151->setMaximumSize(QSize(16777215, 20));
+        QFont font7;
+        font7.setBold(true);
+        label_151->setFont(font7);
+        label_151->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_37->addWidget(label_151, 0, 0, 1, 1);
+
+        label_161 = new QLabel(teacherHome);
+        label_161->setObjectName("label_161");
+        label_161->setMaximumSize(QSize(16777215, 20));
+        label_161->setFont(font7);
+        label_161->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_37->addWidget(label_161, 0, 1, 1, 1);
+
         m9_button = new QPushButton(teacherHome);
         m9_button->setObjectName("m9_button");
-        m9_button->setGeometry(QRect(550, 410, 181, 29));
+        m9_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m9_button, 3, 2, 1, 1);
+
+        m8_button = new QPushButton(teacherHome);
+        m8_button->setObjectName("m8_button");
+        m8_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m8_button, 2, 2, 1, 1);
+
+        m4_button = new QPushButton(teacherHome);
+        m4_button->setObjectName("m4_button");
+        m4_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m4_button, 1, 1, 1, 1);
+
+        m2_button = new QPushButton(teacherHome);
+        m2_button->setObjectName("m2_button");
+        m2_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m2_button, 2, 0, 1, 1);
+
+        m6_button = new QPushButton(teacherHome);
+        m6_button->setObjectName("m6_button");
+        m6_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m6_button, 3, 1, 1, 1);
+
+        m5_button = new QPushButton(teacherHome);
+        m5_button->setObjectName("m5_button");
+        m5_button->setMinimumSize(QSize(0, 40));
+
+        gridLayout_37->addWidget(m5_button, 2, 1, 1, 1);
+
+        label_17 = new QLabel(teacherHome);
+        label_17->setObjectName("label_17");
+        label_17->setMaximumSize(QSize(16777215, 20));
+        label_17->setFont(font7);
+        label_17->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_37->addWidget(label_17, 0, 2, 1, 1);
+
+
+        gridLayout_36->addLayout(gridLayout_37, 3, 0, 1, 5);
+
+        verticalSpacer_9 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Maximum);
+
+        gridLayout_36->addItem(verticalSpacer_9, 4, 0, 1, 5);
+
         stackedWidget->addWidget(teacherHome);
         studentPerformancePage = new QWidget();
         studentPerformancePage->setObjectName("studentPerformancePage");
-        label_18 = new QLabel(studentPerformancePage);
-        label_18->setObjectName("label_18");
-        label_18->setGeometry(QRect(250, 20, 271, 71));
-        label_18->setFont(font3);
-        label_18->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        label_19 = new QLabel(studentPerformancePage);
-        label_19->setObjectName("label_19");
-        label_19->setGeometry(QRect(100, 130, 151, 31));
+        gridLayout_38 = new QGridLayout(studentPerformancePage);
+        gridLayout_38->setObjectName("gridLayout_38");
         label_20 = new QLabel(studentPerformancePage);
         label_20->setObjectName("label_20");
-        label_20->setGeometry(QRect(100, 230, 121, 31));
+
+        gridLayout_38->addWidget(label_20, 2, 0, 1, 1);
+
         label_21 = new QLabel(studentPerformancePage);
         label_21->setObjectName("label_21");
-        label_21->setGeometry(QRect(100, 310, 181, 20));
+
+        gridLayout_38->addWidget(label_21, 3, 0, 1, 2);
+
+        label_19 = new QLabel(studentPerformancePage);
+        label_19->setObjectName("label_19");
+
+        gridLayout_38->addWidget(label_19, 1, 0, 1, 1);
+
+        label_18 = new QLabel(studentPerformancePage);
+        label_18->setObjectName("label_18");
+        label_18->setFont(font3);
+        label_18->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_38->addWidget(label_18, 0, 1, 1, 2);
+
         textBrowser = new QTextBrowser(studentPerformancePage);
         textBrowser->setObjectName("textBrowser");
-        textBrowser->setGeometry(QRect(280, 130, 111, 31));
+        textBrowser->setMaximumSize(QSize(16777215, 30));
+
+        gridLayout_38->addWidget(textBrowser, 1, 2, 1, 1);
+
         textBrowser_2 = new QTextBrowser(studentPerformancePage);
         textBrowser_2->setObjectName("textBrowser_2");
-        textBrowser_2->setGeometry(QRect(280, 230, 111, 31));
-        textEdit = new QTextEdit(studentPerformancePage);
-        textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(100, 340, 641, 61));
-        saveFileButton = new QPushButton(studentPerformancePage);
-        saveFileButton->setObjectName("saveFileButton");
-        saveFileButton->setGeometry(QRect(320, 430, 151, 51));
-        assignHwButton = new QPushButton(studentPerformancePage);
-        assignHwButton->setObjectName("assignHwButton");
-        assignHwButton->setGeometry(QRect(320, 500, 151, 51));
+        textBrowser_2->setMaximumSize(QSize(16777215, 30));
+
+        gridLayout_38->addWidget(textBrowser_2, 2, 2, 1, 1);
+
         spBackButton = new QPushButton(studentPerformancePage);
         spBackButton->setObjectName("spBackButton");
-        spBackButton->setGeometry(QRect(50, 30, 83, 29));
+
+        gridLayout_38->addWidget(spBackButton, 0, 0, 1, 1);
+
+        textEdit = new QTextEdit(studentPerformancePage);
+        textEdit->setObjectName("textEdit");
+        QSizePolicy sizePolicy4(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(textEdit->sizePolicy().hasHeightForWidth());
+        textEdit->setSizePolicy(sizePolicy4);
+
+        gridLayout_38->addWidget(textEdit, 5, 0, 1, 3);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        saveFileButton = new QPushButton(studentPerformancePage);
+        saveFileButton->setObjectName("saveFileButton");
+
+        horizontalLayout_3->addWidget(saveFileButton);
+
+        assignHwButton = new QPushButton(studentPerformancePage);
+        assignHwButton->setObjectName("assignHwButton");
+
+        horizontalLayout_3->addWidget(assignHwButton);
+
+
+        gridLayout_38->addLayout(horizontalLayout_3, 6, 0, 1, 3);
+
         stackedWidget->addWidget(studentPerformancePage);
         assignPage = new QWidget();
         assignPage->setObjectName("assignPage");
@@ -1243,11 +1407,11 @@ public:
         studentHomeHeader->setSizePolicy(sizePolicy);
         studentHomeHeader->setMinimumSize(QSize(0, 50));
         studentHomeHeader->setMaximumSize(QSize(16777215, 30));
-        QFont font6;
-        font6.setFamilies({QString::fromUtf8("Segoe UI")});
-        font6.setPointSize(20);
-        font6.setBold(true);
-        studentHomeHeader->setFont(font6);
+        QFont font8;
+        font8.setFamilies({QString::fromUtf8("Segoe UI")});
+        font8.setPointSize(20);
+        font8.setBold(true);
+        studentHomeHeader->setFont(font8);
         studentHomeHeader->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_27->addWidget(studentHomeHeader, 6, 0, 1, 4);
@@ -1262,22 +1426,22 @@ public:
 
         settings = new QPushButton(studentHome);
         settings->setObjectName("settings");
-        QSizePolicy sizePolicy3(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Maximum);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(settings->sizePolicy().hasHeightForWidth());
-        settings->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy5(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Maximum);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(settings->sizePolicy().hasHeightForWidth());
+        settings->setSizePolicy(sizePolicy5);
         settings->setMinimumSize(QSize(200, 50));
 
         gridLayout_27->addWidget(settings, 9, 1, 1, 1);
 
         modules = new QPushButton(studentHome);
         modules->setObjectName("modules");
-        QSizePolicy sizePolicy4(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Preferred);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(modules->sizePolicy().hasHeightForWidth());
-        modules->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy6(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Preferred);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(modules->sizePolicy().hasHeightForWidth());
+        modules->setSizePolicy(sizePolicy6);
         modules->setMinimumSize(QSize(200, 50));
         modules->setMaximumSize(QSize(16777215, 16777215));
 
@@ -1289,8 +1453,8 @@ public:
 
         dictionary = new QPushButton(studentHome);
         dictionary->setObjectName("dictionary");
-        sizePolicy4.setHeightForWidth(dictionary->sizePolicy().hasHeightForWidth());
-        dictionary->setSizePolicy(sizePolicy4);
+        sizePolicy6.setHeightForWidth(dictionary->sizePolicy().hasHeightForWidth());
+        dictionary->setSizePolicy(sizePolicy6);
         dictionary->setMinimumSize(QSize(200, 50));
         dictionary->setMaximumSize(QSize(16777215, 50));
 
@@ -1298,8 +1462,8 @@ public:
 
         adminInfo = new QPushButton(studentHome);
         adminInfo->setObjectName("adminInfo");
-        sizePolicy3.setHeightForWidth(adminInfo->sizePolicy().hasHeightForWidth());
-        adminInfo->setSizePolicy(sizePolicy3);
+        sizePolicy5.setHeightForWidth(adminInfo->sizePolicy().hasHeightForWidth());
+        adminInfo->setSizePolicy(sizePolicy5);
         adminInfo->setMinimumSize(QSize(200, 50));
         adminInfo->setMaximumSize(QSize(16777215, 16777215));
 
@@ -1307,11 +1471,11 @@ public:
 
         logoutButton = new QPushButton(studentHome);
         logoutButton->setObjectName("logoutButton");
-        QSizePolicy sizePolicy5(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Fixed);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(logoutButton->sizePolicy().hasHeightForWidth());
-        logoutButton->setSizePolicy(sizePolicy5);
+        QSizePolicy sizePolicy7(QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Fixed);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(logoutButton->sizePolicy().hasHeightForWidth());
+        logoutButton->setSizePolicy(sizePolicy7);
         logoutButton->setMinimumSize(QSize(50, 30));
         logoutButton->setMaximumSize(QSize(16777215, 16777215));
         logoutButton->setBaseSize(QSize(0, 0));
@@ -1322,44 +1486,88 @@ public:
         stackedWidget->addWidget(studentHome);
         adminPage = new QWidget();
         adminPage->setObjectName("adminPage");
-        adminInfoLabel = new QLabel(adminPage);
-        adminInfoLabel->setObjectName("adminInfoLabel");
-        adminInfoLabel->setGeometry(QRect(20, 80, 231, 31));
-        adminInfoBackButton = new QPushButton(adminPage);
-        adminInfoBackButton->setObjectName("adminInfoBackButton");
-        adminInfoBackButton->setGeometry(QRect(20, 20, 75, 24));
-        adminTitle = new QLabel(adminPage);
-        adminTitle->setObjectName("adminTitle");
-        adminTitle->setGeometry(QRect(240, 50, 181, 16));
-        adminTitle->setFont(font5);
+        gridLayout_35 = new QGridLayout(adminPage);
+        gridLayout_35->setObjectName("gridLayout_35");
         manageUsers = new QGroupBox(adminPage);
         manageUsers->setObjectName("manageUsers");
-        manageUsers->setGeometry(QRect(20, 250, 291, 161));
         manageUsers->setFont(font3);
+        verticalLayout_64 = new QVBoxLayout(manageUsers);
+        verticalLayout_64->setObjectName("verticalLayout_64");
+        verticalLayout_64->setContentsMargins(-1, 0, -1, 0);
         viewAllUsersButton = new QPushButton(manageUsers);
         viewAllUsersButton->setObjectName("viewAllUsersButton");
-        viewAllUsersButton->setGeometry(QRect(10, 30, 91, 24));
         viewAllUsersButton->setFont(font4);
+
+        verticalLayout_64->addWidget(viewAllUsersButton);
+
         addUserButton = new QPushButton(manageUsers);
         addUserButton->setObjectName("addUserButton");
-        addUserButton->setGeometry(QRect(10, 60, 91, 24));
         addUserButton->setFont(font4);
+
+        verticalLayout_64->addWidget(addUserButton);
+
         editUserButton = new QPushButton(manageUsers);
         editUserButton->setObjectName("editUserButton");
-        editUserButton->setGeometry(QRect(10, 90, 91, 24));
         editUserButton->setFont(font4);
+
+        verticalLayout_64->addWidget(editUserButton);
+
         deleteUserButton = new QPushButton(manageUsers);
         deleteUserButton->setObjectName("deleteUserButton");
-        deleteUserButton->setGeometry(QRect(10, 120, 91, 24));
         deleteUserButton->setFont(font4);
+
+        verticalLayout_64->addWidget(deleteUserButton);
+
+
+        gridLayout_35->addWidget(manageUsers, 5, 0, 1, 2);
+
+        horizontalSpacer_18 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_35->addItem(horizontalSpacer_18, 0, 1, 1, 1);
+
+        horizontalSpacer_17 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        gridLayout_35->addItem(horizontalSpacer_17, 0, 3, 1, 1);
+
         statisticTitle = new QGroupBox(adminPage);
         statisticTitle->setObjectName("statisticTitle");
-        statisticTitle->setGeometry(QRect(20, 140, 291, 111));
         statisticTitle->setFont(font3);
+        verticalLayout_63 = new QVBoxLayout(statisticTitle);
+        verticalLayout_63->setObjectName("verticalLayout_63");
         statisticsLabel = new QLabel(statisticTitle);
         statisticsLabel->setObjectName("statisticsLabel");
-        statisticsLabel->setGeometry(QRect(30, 30, 131, 61));
         statisticsLabel->setFont(font4);
+        statisticsLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        verticalLayout_63->addWidget(statisticsLabel);
+
+
+        gridLayout_35->addWidget(statisticTitle, 5, 2, 1, 2);
+
+        adminInfoBackButton = new QPushButton(adminPage);
+        adminInfoBackButton->setObjectName("adminInfoBackButton");
+
+        gridLayout_35->addWidget(adminInfoBackButton, 0, 0, 1, 1);
+
+        adminInfoLabel = new QLabel(adminPage);
+        adminInfoLabel->setObjectName("adminInfoLabel");
+        QSizePolicy sizePolicy8(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Ignored);
+        sizePolicy8.setHorizontalStretch(0);
+        sizePolicy8.setVerticalStretch(0);
+        sizePolicy8.setHeightForWidth(adminInfoLabel->sizePolicy().hasHeightForWidth());
+        adminInfoLabel->setSizePolicy(sizePolicy8);
+        adminInfoLabel->setMaximumSize(QSize(16777215, 100));
+
+        gridLayout_35->addWidget(adminInfoLabel, 4, 0, 1, 4);
+
+        adminTitle = new QLabel(adminPage);
+        adminTitle->setObjectName("adminTitle");
+        adminTitle->setMaximumSize(QSize(16777215, 40));
+        adminTitle->setFont(font5);
+        adminTitle->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_35->addWidget(adminTitle, 1, 0, 1, 4);
+
         stackedWidget->addWidget(adminPage);
         moduleWidget = new QWidget();
         moduleWidget->setObjectName("moduleWidget");
@@ -1376,8 +1584,6 @@ public:
         advancedLabel = new QLabel(moduleHomepage);
         advancedLabel->setObjectName("advancedLabel");
         advancedLabel->setMaximumSize(QSize(16777215, 25));
-        QFont font7;
-        font7.setBold(true);
         advancedLabel->setFont(font7);
         advancedLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
@@ -1961,11 +2167,11 @@ public:
         verticalLayout_15->setContentsMargins(3, 3, 3, 3);
         M3Question1 = new QGroupBox(quiz3scrollWidget);
         M3Question1->setObjectName("M3Question1");
-        QSizePolicy sizePolicy6(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(M3Question1->sizePolicy().hasHeightForWidth());
-        M3Question1->setSizePolicy(sizePolicy6);
+        QSizePolicy sizePolicy9(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
+        sizePolicy9.setHorizontalStretch(0);
+        sizePolicy9.setVerticalStretch(0);
+        sizePolicy9.setHeightForWidth(M3Question1->sizePolicy().hasHeightForWidth());
+        M3Question1->setSizePolicy(sizePolicy9);
         M3Question1->setCheckable(false);
         verticalLayout_16 = new QVBoxLayout(M3Question1);
         verticalLayout_16->setObjectName("verticalLayout_16");
@@ -2176,8 +2382,8 @@ public:
         verticalLayout_28->setContentsMargins(3, 3, 3, 3);
         M5Question1 = new QGroupBox(quiz5scrollWidget);
         M5Question1->setObjectName("M5Question1");
-        sizePolicy6.setHeightForWidth(M5Question1->sizePolicy().hasHeightForWidth());
-        M5Question1->setSizePolicy(sizePolicy6);
+        sizePolicy9.setHeightForWidth(M5Question1->sizePolicy().hasHeightForWidth());
+        M5Question1->setSizePolicy(sizePolicy9);
         M5Question1->setCheckable(false);
         verticalLayout_29 = new QVBoxLayout(M5Question1);
         verticalLayout_29->setObjectName("verticalLayout_29");
@@ -2388,8 +2594,8 @@ public:
         verticalLayout_34->setContentsMargins(3, 3, 3, 3);
         M6Question1 = new QGroupBox(quiz6scrollWidget);
         M6Question1->setObjectName("M6Question1");
-        sizePolicy6.setHeightForWidth(M6Question1->sizePolicy().hasHeightForWidth());
-        M6Question1->setSizePolicy(sizePolicy6);
+        sizePolicy9.setHeightForWidth(M6Question1->sizePolicy().hasHeightForWidth());
+        M6Question1->setSizePolicy(sizePolicy9);
         M6Question1->setCheckable(false);
         verticalLayout_35 = new QVBoxLayout(M6Question1);
         verticalLayout_35->setObjectName("verticalLayout_35");
@@ -2600,8 +2806,8 @@ public:
         verticalLayout_40->setContentsMargins(3, 3, 3, 3);
         M7Question1 = new QGroupBox(quiz7scrollWidget);
         M7Question1->setObjectName("M7Question1");
-        sizePolicy6.setHeightForWidth(M7Question1->sizePolicy().hasHeightForWidth());
-        M7Question1->setSizePolicy(sizePolicy6);
+        sizePolicy9.setHeightForWidth(M7Question1->sizePolicy().hasHeightForWidth());
+        M7Question1->setSizePolicy(sizePolicy9);
         M7Question1->setCheckable(false);
         verticalLayout_41 = new QVBoxLayout(M7Question1);
         verticalLayout_41->setObjectName("verticalLayout_41");
@@ -2812,8 +3018,8 @@ public:
         verticalLayout_46->setContentsMargins(3, 3, 3, 3);
         M8Question1 = new QGroupBox(quiz8scrollWidget);
         M8Question1->setObjectName("M8Question1");
-        sizePolicy6.setHeightForWidth(M8Question1->sizePolicy().hasHeightForWidth());
-        M8Question1->setSizePolicy(sizePolicy6);
+        sizePolicy9.setHeightForWidth(M8Question1->sizePolicy().hasHeightForWidth());
+        M8Question1->setSizePolicy(sizePolicy9);
         M8Question1->setCheckable(false);
         verticalLayout_47 = new QVBoxLayout(M8Question1);
         verticalLayout_47->setObjectName("verticalLayout_47");
@@ -3024,8 +3230,8 @@ public:
         verticalLayout_52->setContentsMargins(3, 3, 3, 3);
         M9Question1 = new QGroupBox(quiz9scrollWidget);
         M9Question1->setObjectName("M9Question1");
-        sizePolicy6.setHeightForWidth(M9Question1->sizePolicy().hasHeightForWidth());
-        M9Question1->setSizePolicy(sizePolicy6);
+        sizePolicy9.setHeightForWidth(M9Question1->sizePolicy().hasHeightForWidth());
+        M9Question1->setSizePolicy(sizePolicy9);
         M9Question1->setCheckable(false);
         verticalLayout_53 = new QVBoxLayout(M9Question1);
         verticalLayout_53->setObjectName("verticalLayout_53");
@@ -3207,8 +3413,8 @@ public:
         verticalLayout_22->setContentsMargins(3, 3, 3, 3);
         M4Question1 = new QGroupBox(quiz4scrollWidget);
         M4Question1->setObjectName("M4Question1");
-        sizePolicy6.setHeightForWidth(M4Question1->sizePolicy().hasHeightForWidth());
-        M4Question1->setSizePolicy(sizePolicy6);
+        sizePolicy9.setHeightForWidth(M4Question1->sizePolicy().hasHeightForWidth());
+        M4Question1->setSizePolicy(sizePolicy9);
         M4Question1->setCheckable(false);
         verticalLayout_23 = new QVBoxLayout(M4Question1);
         verticalLayout_23->setObjectName("verticalLayout_23");
@@ -3364,11 +3570,8 @@ public:
         gridLayout_15->setObjectName("gridLayout_15");
         mod4text = new QPlainTextEdit(mod4content);
         mod4text->setObjectName("mod4text");
-        QSizePolicy sizePolicy7(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
-        sizePolicy7.setHorizontalStretch(0);
-        sizePolicy7.setVerticalStretch(0);
-        sizePolicy7.setHeightForWidth(mod4text->sizePolicy().hasHeightForWidth());
-        mod4text->setSizePolicy(sizePolicy7);
+        sizePolicy4.setHeightForWidth(mod4text->sizePolicy().hasHeightForWidth());
+        mod4text->setSizePolicy(sizePolicy4);
         mod4text->setReadOnly(true);
 
         gridLayout_15->addWidget(mod4text, 2, 0, 1, 4);
@@ -3406,8 +3609,8 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(5);
-        moduleStack->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(4);
+        moduleStack->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Widget);
@@ -3421,20 +3624,20 @@ public:
         regStuButton->setText(QCoreApplication::translate("Widget", "Register as a Student", nullptr));
         label->setText(QCoreApplication::translate("Widget", "Welcome To TradeApp", nullptr));
         getDef->setTitle(QCoreApplication::translate("Widget", "Definitions", nullptr));
+        label_13->setText(QCoreApplication::translate("Widget", "Student ID:", nullptr));
         getDefinitionStudentIDInput->setText(QString());
         getDefinitionButton->setText(QCoreApplication::translate("Widget", "Display Definitions", nullptr));
-        label_13->setText(QCoreApplication::translate("Widget", "Student ID", nullptr));
         completeModule->setTitle(QCoreApplication::translate("Widget", "Completed Modules", nullptr));
         studentIDforModule->setText(QString());
         showModulesButton->setText(QCoreApplication::translate("Widget", "Show Modules", nullptr));
         label_16->setText(QCoreApplication::translate("Widget", "Student ID:", nullptr));
-        RegisterStudents->setTitle(QCoreApplication::translate("Widget", "RegisterStudents", nullptr));
-        studentIDinput->setText(QString());
-        lineEdit->setText(QString());
+        RegisterStudents->setTitle(QCoreApplication::translate("Widget", "Register Student Modules", nullptr));
         markCompletedButton->setText(QCoreApplication::translate("Widget", "Mark Completed", nullptr));
+        lineEdit->setText(QString());
+        markUncompletedButton->setText(QCoreApplication::translate("Widget", "Mark Uncompleted", nullptr));
         label_14->setText(QCoreApplication::translate("Widget", "Add Completed Module # (Just type the number, ie: 1)", nullptr));
         label_15->setText(QCoreApplication::translate("Widget", "Student ID:", nullptr));
-        markUncompletedButton->setText(QCoreApplication::translate("Widget", "Mark Uncompleted", nullptr));
+        studentIDinput->setText(QString());
         returnToMenu->setText(QCoreApplication::translate("Widget", "Return", nullptr));
         helpButton->setText(QCoreApplication::translate("Widget", "Help and Support", nullptr));
         appPreference->setTitle(QCoreApplication::translate("Widget", "App Preferences", nullptr));
@@ -3471,25 +3674,25 @@ public:
         SPACER2->setText(QString());
         label_131->setText(QCoreApplication::translate("Widget", "Student:", nullptr));
         label_141->setText(QCoreApplication::translate("Widget", "Student Modules and Assignments", nullptr));
+        m1_button->setText(QCoreApplication::translate("Widget", "M1 - Basic Intuition", nullptr));
+        m7_button->setText(QCoreApplication::translate("Widget", "M7 - Adv. Tech. Analysis", nullptr));
+        m3_button->setText(QCoreApplication::translate("Widget", "M3 - Fundamental Analysis", nullptr));
         label_151->setText(QCoreApplication::translate("Widget", "Introductory", nullptr));
         label_161->setText(QCoreApplication::translate("Widget", "Intermediate", nullptr));
-        label_17->setText(QCoreApplication::translate("Widget", "Advanced", nullptr));
-        m1_button->setText(QCoreApplication::translate("Widget", "M1 - Basic Intuition", nullptr));
-        m2_button->setText(QCoreApplication::translate("Widget", "M2 - Trading Basics", nullptr));
-        m3_button->setText(QCoreApplication::translate("Widget", "M3 - Fundamental Analysis", nullptr));
-        m4_button->setText(QCoreApplication::translate("Widget", "M4 - Technical Analysis", nullptr));
-        m5_button->setText(QCoreApplication::translate("Widget", "M5 - Risk Management", nullptr));
-        m6_button->setText(QCoreApplication::translate("Widget", "M6 - Trading Strategies", nullptr));
-        m7_button->setText(QCoreApplication::translate("Widget", "M7 - Adv. Tech. Analysis", nullptr));
-        m8_button->setText(QCoreApplication::translate("Widget", "M8 - Derivatives Options", nullptr));
         m9_button->setText(QCoreApplication::translate("Widget", "M9 - Portfolio Mgmt.", nullptr));
-        label_18->setText(QCoreApplication::translate("Widget", "Student Performance Analysis", nullptr));
-        label_19->setText(QCoreApplication::translate("Widget", "Module Completion:", nullptr));
+        m8_button->setText(QCoreApplication::translate("Widget", "M8 - Derivatives Options", nullptr));
+        m4_button->setText(QCoreApplication::translate("Widget", "M4 - Technical Analysis", nullptr));
+        m2_button->setText(QCoreApplication::translate("Widget", "M2 - Trading Basics", nullptr));
+        m6_button->setText(QCoreApplication::translate("Widget", "M6 - Trading Strategies", nullptr));
+        m5_button->setText(QCoreApplication::translate("Widget", "M5 - Risk Management", nullptr));
+        label_17->setText(QCoreApplication::translate("Widget", "Advanced", nullptr));
         label_20->setText(QCoreApplication::translate("Widget", "Overall Grade:", nullptr));
         label_21->setText(QCoreApplication::translate("Widget", "Instructor Comments:", nullptr));
+        label_19->setText(QCoreApplication::translate("Widget", "Module Completion:", nullptr));
+        label_18->setText(QCoreApplication::translate("Widget", "Student Performance Analysis", nullptr));
+        spBackButton->setText(QCoreApplication::translate("Widget", "Back", nullptr));
         saveFileButton->setText(QCoreApplication::translate("Widget", "Save to File", nullptr));
         assignHwButton->setText(QCoreApplication::translate("Widget", "Assign Homework", nullptr));
-        spBackButton->setText(QCoreApplication::translate("Widget", "Back", nullptr));
         label_22->setText(QCoreApplication::translate("Widget", "Course Name", nullptr));
         label_23->setText(QCoreApplication::translate("Widget", "Deadline:", nullptr));
         label_24->setText(QCoreApplication::translate("Widget", "Target Grade:", nullptr));
@@ -3563,9 +3766,6 @@ public:
         adminInfo->setText(QCoreApplication::translate("Widget", "Admin\n"
 "Information", nullptr));
         logoutButton->setText(QCoreApplication::translate("Widget", "Log out", nullptr));
-        adminInfoLabel->setText(QCoreApplication::translate("Widget", "Admin Information will be placed here.", nullptr));
-        adminInfoBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
-        adminTitle->setText(QCoreApplication::translate("Widget", "Admin Information", nullptr));
         manageUsers->setTitle(QCoreApplication::translate("Widget", "Manage Users", nullptr));
         viewAllUsersButton->setText(QCoreApplication::translate("Widget", "View All Users", nullptr));
         addUserButton->setText(QCoreApplication::translate("Widget", "Add User", nullptr));
@@ -3573,6 +3773,9 @@ public:
         deleteUserButton->setText(QCoreApplication::translate("Widget", "Delete User", nullptr));
         statisticTitle->setTitle(QCoreApplication::translate("Widget", "Statistics", nullptr));
         statisticsLabel->setText(QCoreApplication::translate("Widget", "statistics", nullptr));
+        adminInfoBackButton->setText(QCoreApplication::translate("Widget", "Return", nullptr));
+        adminInfoLabel->setText(QCoreApplication::translate("Widget", "Admin Information will be placed here.", nullptr));
+        adminTitle->setText(QCoreApplication::translate("Widget", "Admin Information", nullptr));
         advancedLabel->setText(QCoreApplication::translate("Widget", "Advanced", nullptr));
         mod7->setText(QCoreApplication::translate("Widget", "M7 - Advanced Tech. Analysis", nullptr));
         mod9->setText(QCoreApplication::translate("Widget", "M9 - Portfolio Management", nullptr));

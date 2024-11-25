@@ -99,31 +99,7 @@ void Widget::on_regTeachButton_clicked()
 
 void Widget::on_registerStudentBtn_clicked()
 {
-    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
-    QString studentIDInput = ui->studentIDinput->text().trimmed(); // Bottom input field
-    if (studentIDInput.isEmpty()) {
-        ui->confirmOutput->setPlainText("Student ID is empty. Please enter a valid Student ID.");
-        return;
-    }
-
-    bool isNumeric;
-    int studentID = studentIDInput.toInt(&isNumeric);
-
-    if (!isNumeric || studentID <= 0) {
-        ui->confirmOutput->setPlainText("Invalid Student ID. Please enter a positive numeric ID.");
-        return;
-    }
-
-    // Automatically add the student to the dictionary if they don't exist
-    if (dictionary.students.find(studentID) == dictionary.students.end()) {
-        dictionary.students[studentID] = Student{studentID, {}};
-        ui->confirmOutput->setPlainText("Student ID: " + QString::number(studentID) + " registered successfully.");
-    } else {
-        ui->confirmOutput->setPlainText("Student already exists.");
-    }
-
-    // Clear the Student ID input field
-    ui->studentIDinput->clear();
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
 
     QFile file(filePath);
     QApplication::setPalette(QApplication::style()->standardPalette());
@@ -167,12 +143,37 @@ void Widget::on_registerStudentBtn_clicked()
     } else {
         qDebug() << "Could not open file for writing.";
     }
+
+    QString studentIDInput = ui->studentIDinput->text().trimmed(); // Bottom input field
+    if (studentIDInput.isEmpty()) {
+        ui->confirmOutput->setPlainText("Student ID is empty. Please enter a valid Student ID.");
+        return;
+    }
+
+    bool isNumeric;
+    int studentID = studentIDInput.toInt(&isNumeric);
+
+    if (!isNumeric || studentID <= 0) {
+        ui->confirmOutput->setPlainText("Invalid Student ID. Please enter a positive numeric ID.");
+        return;
+    }
+
+    // Automatically add the student to the dictionary if they don't exist
+    if (dictionary.students.find(studentID) == dictionary.students.end()) {
+        dictionary.students[studentID] = Student{studentID, {}};
+        ui->confirmOutput->setPlainText("Student ID: " + QString::number(studentID) + " registered successfully.");
+    } else {
+        ui->confirmOutput->setPlainText("Student already exists.");
+    }
+
+    // Clear the Student ID input field
+    ui->studentIDinput->clear();
 }
 
 
 void Widget::on_registerTeacherBtn_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");
@@ -219,7 +220,7 @@ void Widget::on_registerTeacherBtn_clicked()
 
 void Widget::on_loginScreenButton_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");
@@ -744,7 +745,7 @@ void Widget::on_submitQuiz9_clicked()
 
 void Widget::on_adminInfo_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
 
     bool ok;
     QString email = QInputDialog::getText(this, tr("Admin Login"), tr("Enter Teacher Email:"), QLineEdit::Normal, "", &ok);
@@ -805,7 +806,7 @@ void Widget::on_adminInfoBackButton_clicked()
 
 void Widget::updateStatistics()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -894,7 +895,7 @@ void Widget::on_emailChange_clicked()
             QRegularExpressionMatch match = emailRegex.match(newEmail);
 
             if (match.hasMatch()) {
-                QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+                QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
                 QFile file(filePath);
 
                 if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -998,7 +999,7 @@ void Widget::on_getDefinitionButton_clicked()
     for (const auto &entry : dictionary.dict) {
         for (const auto &def : entry.second) {
             if (dictionary.students[studentID].completedModules.find(def.module) != dictionary.students[studentID].completedModules.end()) {
-                definitions += QString::fromStdString(entry.first) + ": " + QString::fromStdString(def.meaning) + "\n";
+                definitions += QString::fromStdString(entry.first) + ": " + QString::fromStdString(def.meaning) + " ";
             }
         }
     }
@@ -1123,7 +1124,7 @@ void Widget::on_passwordUp_clicked()
                                                     "", &ok);
 
         if (ok && !newPassword.isEmpty()) {
-            QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+            QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
             QFile file(filePath);
 
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1187,7 +1188,7 @@ void Widget::on_passwordUp_clicked()
 
 void Widget::on_viewAllUsersButton_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1240,7 +1241,7 @@ void Widget::on_addUserButton_clicked()
     QString email = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's email:"), QLineEdit::Normal, "", &ok);
     if (!ok || email.isEmpty()) return;
 
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
@@ -1290,7 +1291,7 @@ void Widget::on_addUserButton_clicked()
 
 void Widget::on_editUserButton_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1394,7 +1395,7 @@ void Widget::on_editUserButton_clicked()
 
 void Widget::on_deleteUserButton_clicked()
 {
-    QString filePath = "C:/Qt/Projects/tradeApp/users.txt";
+    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
