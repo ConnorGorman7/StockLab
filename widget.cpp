@@ -122,7 +122,7 @@ void Widget::on_regTeachButton_clicked()
 
 void Widget::on_registerStudentBtn_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
 
     QFile file(filePath);
     QApplication::setPalette(QApplication::style()->standardPalette());
@@ -243,7 +243,7 @@ void Widget::on_registerTeacherBtn_clicked()
 
 void Widget::on_loginScreenButton_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");
@@ -768,7 +768,7 @@ void Widget::on_submitQuiz9_clicked()
 
 void Widget::on_adminInfo_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
 
     bool ok;
     QString email = QInputDialog::getText(this, tr("Admin Login"), tr("Enter Teacher Email:"), QLineEdit::Normal, "", &ok);
@@ -829,7 +829,7 @@ void Widget::on_adminInfoBackButton_clicked()
 
 void Widget::updateStatistics()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -935,7 +935,7 @@ void Widget::on_emailChange_clicked()
             QRegularExpressionMatch match = emailRegex.match(newEmail);
 
             if (match.hasMatch()) {
-                QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+                QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
                 QFile file(filePath);
 
                 if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1164,7 +1164,7 @@ void Widget::on_passwordUp_clicked()
                                                     "", &ok);
 
         if (ok && !newPassword.isEmpty()) {
-            QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+            QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
             QFile file(filePath);
 
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1228,7 +1228,7 @@ void Widget::on_passwordUp_clicked()
 
 void Widget::on_viewAllUsersButton_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1281,7 +1281,7 @@ void Widget::on_addUserButton_clicked()
     QString email = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's email:"), QLineEdit::Normal, "", &ok);
     if (!ok || email.isEmpty()) return;
 
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
@@ -1331,7 +1331,7 @@ void Widget::on_addUserButton_clicked()
 
 void Widget::on_editUserButton_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1435,7 +1435,7 @@ void Widget::on_editUserButton_clicked()
 
 void Widget::on_deleteUserButton_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:\\Users\\trist\\OneDrive\\Documents\\376 sprint 1\\code\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {

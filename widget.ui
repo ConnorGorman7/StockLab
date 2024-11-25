@@ -62,7 +62,7 @@ QPushButton:pressed {
       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>11</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="welcomePage">
       <property name="font">
@@ -197,6 +197,9 @@ QPushButton:pressed {
            <pointsize>24</pointsize>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
          <property name="text">
           <string>Welcome To TradeApp</string>
@@ -833,6 +836,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <height>30</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Student:</string>
          </property>
@@ -845,6 +851,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <width>16777215</width>
            <height>30</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
         </widget>
        </item>
@@ -867,6 +876,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <pointsize>12</pointsize>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
          <property name="text">
           <string>Student Modules and Assignments</string>
@@ -933,6 +945,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
              <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
            <property name="text">
             <string>Introductory</string>
            </property>
@@ -953,6 +968,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
             <font>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
            </property>
            <property name="text">
             <string>Intermediate</string>
@@ -1053,6 +1071,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
              <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">color: white;</string>
+           </property>
            <property name="text">
             <string>Advanced</string>
            </property>
@@ -1076,6 +1097,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <layout class="QGridLayout" name="gridLayout_38">
        <item row="2" column="0">
         <widget class="QLabel" name="label_20">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Overall Grade:</string>
          </property>
@@ -1083,6 +1107,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="3" column="0" colspan="2">
         <widget class="QLabel" name="label_21">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Instructor Comments:</string>
          </property>
@@ -1090,6 +1117,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_19">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Module Completion:</string>
          </property>
@@ -1101,6 +1131,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
           <font>
            <pointsize>12</pointsize>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
          <property name="text">
           <string>Student Performance Analysis</string>
@@ -1273,6 +1306,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="4" column="1">
         <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Password:</string>
          </property>
@@ -1288,6 +1324,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <width>16777215</width>
            <height>30</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1319,6 +1358,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="2" column="1">
         <widget class="QLabel" name="label_8">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Name:</string>
          </property>
@@ -1334,6 +1376,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <width>16777215</width>
            <height>30</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1362,6 +1407,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="3" column="1">
         <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Email:</string>
          </property>
@@ -1377,6 +1425,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <width>16777215</width>
            <height>30</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1444,6 +1495,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <bold>false</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>            Register as a Student</string>
          </property>
@@ -1463,6 +1517,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <width>16777215</width>
            <height>30</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1491,6 +1548,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <bold>false</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Register as a Teacher</string>
          </property>
@@ -1513,6 +1573,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <width>16777215</width>
            <height>30</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1560,6 +1623,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="3" column="1">
         <widget class="QLabel" name="label_10">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Email:</string>
          </property>
@@ -1570,6 +1636,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="2" column="1">
         <widget class="QLabel" name="label_9">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Name:</string>
          </property>
@@ -1586,6 +1655,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <height>30</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1600,6 +1672,9 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="4" column="1">
         <widget class="QLabel" name="label_11">
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
          <property name="text">
           <string>Password:</string>
          </property>
@@ -2448,6 +2523,9 @@ Information</string>
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 1 - Understanding Movements &amp; Major Events</string>
                  </property>
@@ -2455,6 +2533,9 @@ Information</string>
                </item>
                <item row="1" column="0" colspan="3">
                 <widget class="QPlainTextEdit" name="mod1text">
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -2569,8 +2650,8 @@ Understanding how the stock market works and how major events can impact market 
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>639</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout">
@@ -2606,6 +2687,9 @@ Understanding how the stock market works and how major events can impact market 
                       </property>
                       <item>
                        <widget class="QRadioButton" name="M1Q1A1">
+                        <property name="styleSheet">
+                         <string notr="true">color: white;</string>
+                        </property>
                         <property name="text">
                          <string>A) To allow companies to buy other companies</string>
                         </property>
@@ -2613,6 +2697,9 @@ Understanding how the stock market works and how major events can impact market 
                       </item>
                       <item>
                        <widget class="QRadioButton" name="M1Q1A2_C">
+                        <property name="styleSheet">
+                         <string notr="true">color: white;</string>
+                        </property>
                         <property name="text">
                          <string>B) To provide a platform where investors buy and sell shares of publicly traded companies.</string>
                         </property>
@@ -2620,6 +2707,9 @@ Understanding how the stock market works and how major events can impact market 
                       </item>
                       <item>
                        <widget class="QRadioButton" name="M1Q1A3">
+                        <property name="styleSheet">
+                         <string notr="true">color: white;</string>
+                        </property>
                         <property name="text">
                          <string>C) To control the economy through government policies.</string>
                         </property>
@@ -2627,6 +2717,9 @@ Understanding how the stock market works and how major events can impact market 
                       </item>
                       <item>
                        <widget class="QRadioButton" name="M1Q1A4">
+                        <property name="styleSheet">
+                         <string notr="true">color: white;</string>
+                        </property>
                         <property name="text">
                          <string>D) To set interest rates for banks.</string>
                         </property>
@@ -2637,6 +2730,9 @@ Understanding how the stock market works and how major events can impact market 
                    </item>
                    <item>
                     <widget class="QGroupBox" name="M1Question2">
+                     <property name="styleSheet">
+                      <string notr="true">color: white;</string>
+                     </property>
                      <property name="title">
                       <string>Question 2: In a bull market, investor sentiment is typically characterized by:</string>
                      </property>
@@ -2655,6 +2751,9 @@ Understanding how the stock market works and how major events can impact market 
                       </property>
                       <item>
                        <widget class="QRadioButton" name="M1Q2A1">
+                        <property name="styleSheet">
+                         <string notr="true">color: white;</string>
+                        </property>
                         <property name="text">
                          <string>A) Pessimism and selling off stocks.</string>
                         </property>
@@ -2686,6 +2785,9 @@ Understanding how the stock market works and how major events can impact market 
                    </item>
                    <item>
                     <widget class="QGroupBox" name="M1Question3">
+                     <property name="styleSheet">
+                      <string notr="true">color: white;</string>
+                     </property>
                      <property name="title">
                       <string>Question 3: Which of the following is NOT a factor influencing stock prices?</string>
                      </property>
@@ -2735,6 +2837,9 @@ Understanding how the stock market works and how major events can impact market 
                    </item>
                    <item>
                     <widget class="QGroupBox" name="M1Question4">
+                     <property name="styleSheet">
+                      <string notr="true">color: white;</string>
+                     </property>
                      <property name="title">
                       <string>Question 4: What was one of the main causes of the 2008 financial crisis?</string>
                      </property>
@@ -2784,6 +2889,9 @@ Understanding how the stock market works and how major events can impact market 
                    </item>
                    <item>
                     <widget class="QGroupBox" name="M1Question5">
+                     <property name="styleSheet">
+                      <string notr="true">color: white;</string>
+                     </property>
                      <property name="title">
                       <string>Question 5: What is a key lesson learned from the 2008 financial crisis?</string>
                      </property>
@@ -2843,6 +2951,9 @@ Understanding how the stock market works and how major events can impact market 
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 1 - Understanding Movements &amp; Major Events</string>
                  </property>
@@ -2862,6 +2973,9 @@ Understanding how the stock market works and how major events can impact market 
           </layout>
          </widget>
          <widget class="QWidget" name="module2">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
           <layout class="QGridLayout" name="gridLayout_3">
            <property name="leftMargin">
             <number>0</number>
@@ -2916,6 +3030,9 @@ Understanding how the stock market works and how major events can impact market 
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 2 - Trading Basics</string>
                  </property>
@@ -2923,6 +3040,9 @@ Understanding how the stock market works and how major events can impact market 
                </item>
                <item row="1" column="0" colspan="3">
                 <widget class="QPlainTextEdit" name="mod2text">
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -3008,6 +3128,9 @@ Understanding the basics of stock trading is essential for anyone looking to inv
               </layout>
              </widget>
              <widget class="QWidget" name="mod2quiz">
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
               <layout class="QGridLayout" name="gridLayout_22">
                <item row="0" column="0">
                 <widget class="QLabel" name="quiz2header">
@@ -3032,8 +3155,8 @@ Understanding the basics of stock trading is essential for anyone looking to inv
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>722</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -3331,6 +3454,9 @@ Understanding the basics of stock trading is essential for anyone looking to inv
               <layout class="QGridLayout" name="gridLayout_14">
                <item row="2" column="0" colspan="4">
                 <widget class="QPlainTextEdit" name="mod3text">
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -3455,6 +3581,9 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 3 - Fundamental Analysis</string>
                  </property>
@@ -3463,6 +3592,9 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
               </layout>
              </widget>
              <widget class="QWidget" name="mod3quiz">
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_21">
                <item>
                 <widget class="QLabel" name="quiz3header">
@@ -3487,8 +3619,8 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>695</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_15">
@@ -3808,6 +3940,9 @@ Fundamental analysis is a critical tool for investors aiming to make informed de
                </item>
                <item row="2" column="0" colspan="5">
                 <widget class="QPlainTextEdit" name="mod5text">
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -3930,6 +4065,9 @@ Effective risk management and psychological discipline are crucial for long-term
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 5 - Risk Management &amp; Trading Psychology</string>
                  </property>
@@ -3938,6 +4076,9 @@ Effective risk management and psychological discipline are crucial for long-term
               </layout>
              </widget>
              <widget class="QWidget" name="mod5quiz">
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_3">
                <item>
                 <widget class="QLabel" name="quiz5header">
@@ -3962,8 +4103,8 @@ Effective risk management and psychological discipline are crucial for long-term
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>739</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_28">
@@ -4270,6 +4411,9 @@ Effective risk management and psychological discipline are crucial for long-term
               <layout class="QGridLayout" name="gridLayout_17">
                <item row="2" column="0" colspan="4">
                 <widget class="QPlainTextEdit" name="mod6text">
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -4493,6 +4637,9 @@ Understanding the basics of stock trading is essential for anyone looking to inv
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 6 - Types of Trading Strategies</string>
                  </property>
@@ -4501,6 +4648,9 @@ Understanding the basics of stock trading is essential for anyone looking to inv
               </layout>
              </widget>
              <widget class="QWidget" name="mod6quiz">
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_58">
                <item>
                 <widget class="QLabel" name="quiz6header">
@@ -4525,8 +4675,8 @@ Understanding the basics of stock trading is essential for anyone looking to inv
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>747</width>
-                    <height>824</height>
+                    <width>765</width>
+                    <height>626</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_34">
@@ -4834,6 +4984,9 @@ before the market closes.</string>
               <layout class="QGridLayout" name="gridLayout_18">
                <item row="2" column="0" colspan="4">
                 <widget class="QPlainTextEdit" name="mod7text">
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -5002,6 +5155,9 @@ By mastering advanced technical analysis tools like Fibonacci retracement, advan
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 7 - Advanced Technical Analysis Tools</string>
                  </property>
@@ -5010,6 +5166,9 @@ By mastering advanced technical analysis tools like Fibonacci retracement, advan
               </layout>
              </widget>
              <widget class="QWidget" name="mod7quiz">
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_59">
                <item>
                 <widget class="QLabel" name="quiz7header">
@@ -5034,8 +5193,8 @@ By mastering advanced technical analysis tools like Fibonacci retracement, advan
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>761</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_40">
@@ -5342,6 +5501,9 @@ By mastering advanced technical analysis tools like Fibonacci retracement, advan
               <layout class="QGridLayout" name="gridLayout_19">
                <item row="2" column="0" colspan="4">
                 <widget class="QPlainTextEdit" name="mod8text">
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -5508,6 +5670,9 @@ Derivatives and options offer powerful tools for both speculation and risk manag
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 8 - Derivatives &amp; Options Trading</string>
                  </property>
@@ -5516,6 +5681,9 @@ Derivatives and options offer powerful tools for both speculation and risk manag
               </layout>
              </widget>
              <widget class="QWidget" name="mod8quiz">
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_60">
                <item>
                 <widget class="QLabel" name="quiz8header">
@@ -5540,8 +5708,8 @@ Derivatives and options offer powerful tools for both speculation and risk manag
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>750</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_46">
@@ -5848,6 +6016,9 @@ Derivatives and options offer powerful tools for both speculation and risk manag
               <layout class="QGridLayout" name="gridLayout_20">
                <item row="2" column="0" colspan="4">
                 <widget class="QPlainTextEdit" name="mod9text">
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -6038,6 +6209,9 @@ Effective portfolio management involves strategic asset allocation, regular reba
                    <bold>true</bold>
                   </font>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="text">
                   <string>Mod 9 - Portfolio Management</string>
                  </property>
@@ -6046,6 +6220,9 @@ Effective portfolio management involves strategic asset allocation, regular reba
               </layout>
              </widget>
              <widget class="QWidget" name="mod9quiz">
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_61">
                <item>
                 <widget class="QLabel" name="quiz9header">
@@ -6070,8 +6247,8 @@ Effective portfolio management involves strategic asset allocation, regular reba
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>652</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_52">
@@ -6359,6 +6536,9 @@ Effective portfolio management involves strategic asset allocation, regular reba
           </layout>
          </widget>
          <widget class="QWidget" name="module4">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
           <layout class="QGridLayout" name="gridLayout_6">
            <property name="leftMargin">
             <number>0</number>
@@ -6375,6 +6555,9 @@ Effective portfolio management involves strategic asset allocation, regular reba
            <item row="0" column="0">
             <widget class="QStackedWidget" name="mod4stack">
              <widget class="QWidget" name="mod4quiz">
+              <property name="styleSheet">
+               <string notr="true">color: white;</string>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_2">
                <item>
                 <widget class="QLabel" name="quiz4header">
@@ -6399,8 +6582,8 @@ Effective portfolio management involves strategic asset allocation, regular reba
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>761</width>
-                    <height>804</height>
+                    <width>765</width>
+                    <height>610</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_22">
@@ -6693,6 +6876,9 @@ Effective portfolio management involves strategic asset allocation, regular reba
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
+                 </property>
                  <property name="readOnly">
                   <bool>true</bool>
                  </property>
@@ -6853,6 +7039,9 @@ Technical analysis provides traders with tools to interpret market data and make
                    <pointsize>14</pointsize>
                    <bold>true</bold>
                   </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: white;</string>
                  </property>
                  <property name="text">
                   <string>Mod 4 - Technical Analysis</string>

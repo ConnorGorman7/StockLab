@@ -8,6 +8,11 @@ john.smith@email.com
 JSmith123
 Student
 
+Tristan Guevarra
+21tag10@queensu.ca
+tristan
+Student
+
 John Teacher
 jteacher@email.com
 TeacherTester
@@ -18,11 +23,6 @@ teacher@email.com
 Hello
 Teacher
 
-Tristan Guevarra
-21tag10@queensu.ca
-tristan
-Student
-
 Justin
 JJJustin@email.com
 JDawg
@@ -32,4 +32,9 @@ Teachin
 teachin@email.com
 teachin
 Teacher
+
+Testing Stu
+test@stu.com
+1
+Student
 
