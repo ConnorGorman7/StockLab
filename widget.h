@@ -112,6 +112,8 @@ private slots:
 
     void on_accSettings_clicked();
 
+    void on_helpButton_clicked();
+
 private:
     Dict dictionary;
 

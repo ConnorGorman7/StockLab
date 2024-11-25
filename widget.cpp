@@ -13,6 +13,8 @@
 #include <QDialog>
 #include <QTableWidget>
 #include <QVBoxLayout>
+#include <QDesktopServices>
+#include <QUrl>
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -23,18 +25,18 @@ Widget::Widget(QWidget *parent)
     // Set default dark mode stylesheet
     this->setStyleSheet(R"(
         QWidget {
-            background-color: #2B2B2B; /* Dark grey background */
+            background-color: #4F4F51; /* Dark grey background */
         }
 
         QPushButton {
-            border: 2px solid purple;
+            border: 2px solid #E8B1BD;
             border-radius: 5px;
             color: white;
             background-color: transparent;
         }
 
         QPushButton:hover {
-            background-color: purple;
+            background-color: #F2C4CE;
             color: white;
         }
 
@@ -263,6 +265,11 @@ void Widget::on_registerTeacherBtn_clicked()
     }
 }
 
+void Widget::on_helpButton_clicked()
+{
+    QString email = "mailto:tradelab@helpsupport.com";
+    QUrl emailUrl(email);
+}
 
 void Widget::on_loginScreenButton_clicked()
 {
@@ -1532,26 +1539,25 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
     if (arg1 == Qt::Checked) {
         // Dark Mode
         this->setStyleSheet(R"(
-            QWidget {
-                background-color: #2B2B2B; /* Dark grey background */
-                color: white; /* Default text color */
-            }
+        QWidget {
+            background-color: #4F4F51; /* Dark grey background */
+        }
 
-            QPushButton {
-                border: 2px solid purple;
-                border-radius: 5px;
-                color: white;
-                background-color: transparent;
-            }
+        QPushButton {
+            border: 2px solid #E8B1BD;
+            border-radius: 5px;
+            color: white;
+            background-color: transparent;
+        }
 
-            QPushButton:hover {
-                background-color: purple;
-                color: white;
-            }
+        QPushButton:hover {
+            background-color: #F2C4CE;
+            color: white;
+        }
 
-            QPushButton:pressed {
-                background-color: #4B0082;
-            }
+        QPushButton:pressed {
+            background-color: #4B0082;
+        }
 
             QLabel, QCheckBox {
                 color: white; /* White text for labels and checkboxes */
@@ -1586,5 +1592,11 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
             }
         )");
     }
+}
+
+
+void Widget::on_pushButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->loginPage));
 }
 
