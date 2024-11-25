@@ -108,6 +108,8 @@ private slots:
 
     void on_darkMode_clicked();
 
+    void on_studentComboBox_activated(int index);
+
 private:
     Dict dictionary;
 

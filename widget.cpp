@@ -20,6 +20,7 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // Set default dark mode stylesheet
     this->setStyleSheet(R"(
         QWidget {
             background-color: #2B2B2B; /* Dark grey background */
@@ -43,14 +44,17 @@ Widget::Widget(QWidget *parent)
     )");
 
     ui->stackedWidget->setCurrentIndex(0);
-    QApplication::setPalette(QApplication::style()->standardPalette());
-    qApp->setStyleSheet("");
 
     setupReturnButtonConnections();
 
+    // Populate the student combo box
     ui->studentComboBox->addItem("Student 1");
     ui->studentComboBox->addItem("Student 2");
+
+    // Connect the dark mode state change
+    connect(ui->darkMode, &QCheckBox::checkStateChanged, this, &Widget::on_darkMode_checkStateChanged);
 }
+
 
 Widget::~Widget()
 {
@@ -877,50 +881,6 @@ void Widget::on_settingBackButton_clicked()
 
 }
 
-void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
-{
-    if (arg1 == Qt::Checked) {
-        QPalette darkPalette;
-        darkPalette.setColor(QPalette::Window, QColor(53, 53, 53)); // Dark grey
-        darkPalette.setColor(QPalette::WindowText, Qt::white);      // Text white
-        darkPalette.setColor(QPalette::Base, QColor(25, 25, 25));
-        darkPalette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
-        darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
-        darkPalette.setColor(QPalette::ToolTipText, Qt::white);
-        darkPalette.setColor(QPalette::Text, Qt::white);
-        darkPalette.setColor(QPalette::Button, QColor(53, 53, 53));
-        darkPalette.setColor(QPalette::ButtonText, Qt::white);
-        darkPalette.setColor(QPalette::BrightText, Qt::red);
-        darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
-        darkPalette.setColor(QPalette::Highlight, QColor(42, 130, 218));
-        darkPalette.setColor(QPalette::HighlightedText, Qt::black);
-
-        QApplication::setPalette(darkPalette);
-
-        qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
-    } else {
-        QPalette lightPalette;
-        lightPalette.setColor(QPalette::Window, Qt::white);           // Set background to white
-        lightPalette.setColor(QPalette::WindowText, Qt::black);       // Set text to black
-        lightPalette.setColor(QPalette::Base, Qt::white);
-        lightPalette.setColor(QPalette::AlternateBase, QColor(240, 240, 240));
-        lightPalette.setColor(QPalette::ToolTipBase, Qt::black);
-        lightPalette.setColor(QPalette::ToolTipText, Qt::white);
-        lightPalette.setColor(QPalette::Text, Qt::black);
-        lightPalette.setColor(QPalette::Button, Qt::white);
-        lightPalette.setColor(QPalette::ButtonText, Qt::black);
-        lightPalette.setColor(QPalette::BrightText, Qt::red);
-        lightPalette.setColor(QPalette::Link, QColor(0, 0, 255));
-        lightPalette.setColor(QPalette::Highlight, QColor(0, 120, 215));
-        lightPalette.setColor(QPalette::HighlightedText, Qt::white);
-
-        QApplication::setPalette(lightPalette);
-
-        qApp->setStyleSheet(""); // Clear any dark mode-specific styles
-    }
-}
-
-
 
 void Widget::on_emailChange_clicked()
 {
@@ -1548,9 +1508,53 @@ void Widget::on_backButton_4_clicked()
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
 }
 
-
-void Widget::on_darkMode_clicked()
+void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
 {
+    if (arg1 == Qt::Checked) {
+        // Dark Mode
+        this->setStyleSheet(R"(
+            QWidget {
+                background-color: #2B2B2B; /* Dark grey background */
+            }
 
+            QPushButton {
+                border: 2px solid purple;
+                border-radius: 5px;
+                color: white;
+                background-color: transparent;
+            }
+
+            QPushButton:hover {
+                background-color: purple;
+                color: white;
+            }
+
+            QPushButton:pressed {
+                background-color: #4B0082;
+            }
+        )");
+    } else if (arg1 == Qt::Unchecked) {
+        // Light Mode
+        this->setStyleSheet(R"(
+            QWidget {
+                background-color: #FFFFFF; /* White background */
+            }
+
+            QPushButton {
+                border: 2px solid blue;
+                border-radius: 5px;
+                color: black;
+                background-color: transparent;
+            }
+
+            QPushButton:hover {
+                background-color: lightblue;
+                color: black;
+            }
+
+            QPushButton:pressed {
+                background-color: #87CEEB;
+            }
+        )");
+    }
 }
-

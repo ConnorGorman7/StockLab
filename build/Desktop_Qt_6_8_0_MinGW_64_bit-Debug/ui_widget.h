@@ -3797,7 +3797,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(2);
         moduleStack->setCurrentIndex(0);
 
 
