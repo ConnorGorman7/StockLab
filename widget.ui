@@ -19,6 +19,27 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2B2B2B; /* Dark grey background */
+
+QPushButton {
+    border: 2px solid purple;
+    border-radius: 5px;
+    color: white;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    background-color: purple;
+    color: white;
+}
+
+QPushButton:pressed {
+    background-color: #4B0082;
+}
+
+</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout_4">
    <property name="leftMargin">
     <number>0</number>
@@ -41,7 +62,7 @@
       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>11</number>
      </property>
      <widget class="QWidget" name="welcomePage">
       <property name="font">
@@ -51,49 +72,6 @@
        </font>
       </property>
       <layout class="QGridLayout" name="gridLayout_30">
-       <item row="2" column="1">
-        <widget class="QPushButton" name="loginButton">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>80</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Segoe UI</family>
-           <pointsize>12</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Log In</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QPushButton" name="regTeachButton">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>80</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Segoe UI</family>
-           <pointsize>12</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Register as a Teacher</string>
-         </property>
-        </widget>
-       </item>
        <item row="3" column="0">
         <spacer name="horizontalSpacer_9">
          <property name="orientation">
@@ -106,38 +84,6 @@
           <size>
            <width>200</width>
            <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="1">
-        <spacer name="verticalSpacer_6">
-         <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Policy::Maximum</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>200</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="5" column="1">
-        <spacer name="verticalSpacer_5">
-         <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Policy::Maximum</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>160</height>
           </size>
          </property>
         </spacer>
@@ -168,20 +114,62 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
-        <widget class="QLabel" name="label">
+       <item row="5" column="1">
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Policy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>160</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="regTeachButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>80</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>Segoe UI</family>
-           <pointsize>16</pointsize>
+           <pointsize>12</pointsize>
            <bold>false</bold>
           </font>
          </property>
          <property name="text">
-          <string>Welcome To TradeApp</string>
+          <string>Register as a Teacher</string>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignCenter</set>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="loginButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Log In</string>
          </property>
         </widget>
        </item>
@@ -201,18 +189,43 @@
          </property>
         </spacer>
        </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>24</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Welcome To TradeApp</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="dictionaryPage">
       <layout class="QVBoxLayout" name="verticalLayout_62">
        <item>
         <widget class="QGroupBox" name="getDef">
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="title">
           <string>Definitions</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_32">
           <item row="0" column="0">
            <widget class="QLabel" name="label_13">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="text">
              <string>Student ID:</string>
             </property>
@@ -220,6 +233,10 @@
           </item>
           <item row="0" column="1">
            <widget class="QLineEdit" name="getDefinitionStudentIDInput">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -234,6 +251,10 @@
           </item>
           <item row="2" column="0" colspan="2">
            <widget class="QTextEdit" name="definitionResultOutput">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -244,12 +265,20 @@
        </item>
        <item>
         <widget class="QGroupBox" name="completeModule">
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="title">
           <string>Completed Modules</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_33">
           <item row="0" column="1">
            <widget class="QLineEdit" name="studentIDforModule">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -264,6 +293,10 @@
           </item>
           <item row="0" column="0">
            <widget class="QLabel" name="label_16">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="text">
              <string>Student ID:</string>
             </property>
@@ -271,6 +304,10 @@
           </item>
           <item row="2" column="0" colspan="2">
            <widget class="QTextEdit" name="completedModulesList">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -281,6 +318,10 @@
        </item>
        <item>
         <widget class="QGroupBox" name="RegisterStudents">
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="title">
           <string>Register Student Modules</string>
          </property>
@@ -307,6 +348,10 @@
           </item>
           <item row="2" column="2">
            <widget class="QLineEdit" name="lineEdit">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -321,6 +366,10 @@
           </item>
           <item row="6" column="0" colspan="4">
            <widget class="QTextEdit" name="confirmOutput">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -328,6 +377,10 @@
           </item>
           <item row="2" column="0" colspan="2">
            <widget class="QLabel" name="label_14">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="text">
              <string>Add Completed Module # (Just type the number, ie: 1)</string>
             </property>
@@ -341,6 +394,10 @@
               <height>28</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="text">
              <string>Student ID:</string>
             </property>
@@ -351,6 +408,10 @@
           </item>
           <item row="0" column="1" colspan="3">
            <widget class="QLineEdit" name="studentIDinput">
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -397,6 +458,10 @@
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="title">
           <string>App Preferences</string>
          </property>
@@ -407,6 +472,10 @@
              <font>
               <pointsize>9</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
             </property>
             <property name="text">
              <string>Dark Mode</string>
@@ -419,6 +488,10 @@
              <font>
               <pointsize>9</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
             </property>
             <property name="text">
              <string>Notifications</string>
@@ -435,6 +508,10 @@
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="title">
           <string>Account Settings</string>
          </property>
@@ -445,6 +522,10 @@
              <font>
               <pointsize>9</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
             </property>
             <property name="text">
              <string>Change Email</string>
@@ -457,6 +538,10 @@
              <font>
               <pointsize>9</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
             </property>
             <property name="text">
              <string>Update Password</string>
@@ -473,6 +558,10 @@
            <width>16777215</width>
            <height>40</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
          </property>
          <property name="text">
           <string>Version 1.0.0 Developed by ELEC376 Group 2</string>
@@ -508,6 +597,10 @@
          </property>
          <property name="layoutDirection">
           <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
          </property>
          <property name="text">
           <string>Settings</string>
@@ -594,6 +687,10 @@
        </item>
        <item row="3" column="1">
         <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="text">
           <string>Email:</string>
          </property>
@@ -637,6 +734,10 @@
            <bold>false</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="text">
           <string>Log In</string>
          </property>
@@ -652,6 +753,10 @@
            <width>16777215</width>
            <height>30</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -673,6 +778,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <height>30</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -687,6 +796,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
        </item>
        <item row="4" column="1">
         <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="text">
           <string>Password:</string>
          </property>
@@ -735,7 +848,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
          </property>
         </widget>
        </item>
-       <item row="2" column="0" colspan="5">
+       <item row="2" column="0" colspan="3">
         <widget class="QLabel" name="label_14">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -763,7 +876,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
          </property>
         </widget>
        </item>
-       <item row="3" column="0" colspan="5">
+       <item row="3" column="0" colspan="3">
         <layout class="QGridLayout" name="gridLayout_37">
          <property name="sizeConstraint">
           <enum>QLayout::SizeConstraint::SetMinimumSize</enum>
@@ -950,21 +1063,12 @@ li.checked::marker { content: &quot;\2612&quot;; }
          </item>
         </layout>
        </item>
-       <item row="4" column="0" colspan="5">
-        <spacer name="verticalSpacer_9">
-         <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
+       <item row="4" column="0" colspan="3">
+        <widget class="QPushButton" name="backButton_4">
+         <property name="text">
+          <string>Return</string>
          </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Policy::Maximum</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -1064,132 +1168,90 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </layout>
      </widget>
      <widget class="QWidget" name="assignPage">
-      <widget class="QLabel" name="label_22">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>40</y>
-         <width>181</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Course Name</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignmentFlag::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="comboBox">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>100</y>
-         <width>221</width>
-         <height>28</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_23">
-       <property name="geometry">
-        <rect>
-         <x>160</x>
-         <y>190</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Deadline:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_24">
-       <property name="geometry">
-        <rect>
-         <x>160</x>
-         <y>240</y>
-         <width>101</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Target Grade:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_25">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>320</y>
-         <width>151</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Instructor Comments:</string>
-       </property>
-      </widget>
-      <widget class="QTextEdit" name="textEdit_2">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>190</y>
-         <width>171</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QTextEdit" name="textEdit_3">
-       <property name="geometry">
-        <rect>
-         <x>270</x>
-         <y>240</y>
-         <width>81</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton">
-       <property name="geometry">
-        <rect>
-         <x>350</x>
-         <y>480</y>
-         <width>83</width>
-         <height>29</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Assign</string>
-       </property>
-      </widget>
-      <widget class="QTextBrowser" name="textBrowser_3">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>320</y>
-         <width>341</width>
-         <height>91</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="assignBackButton">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>30</y>
-         <width>83</width>
-         <height>29</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Back</string>
-       </property>
-      </widget>
+      <layout class="QGridLayout" name="gridLayout_39">
+       <item row="2" column="1" colspan="5">
+        <widget class="QTextEdit" name="deadline">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>Target Grade:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="assignBackButton">
+         <property name="text">
+          <string>Back</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>Deadline:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="4">
+        <widget class="QLabel" name="label_22">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Course Name</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QComboBox" name="comboBox"/>
+       </item>
+       <item row="3" column="1" colspan="5">
+        <widget class="QTextEdit" name="tgtGrade">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_25">
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Instructor Comments:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="5">
+        <widget class="QTextBrowser" name="comments"/>
+       </item>
+       <item row="5" column="0" colspan="6">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Assign</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="studentReg">
       <layout class="QGridLayout" name="gridLayout_28">
@@ -1664,6 +1726,10 @@ li.checked::marker { content: &quot;\2612&quot;; }
            <bold>true</bold>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="text">
           <string>Student Homepage</string>
          </property>
@@ -1857,6 +1923,10 @@ Information</string>
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="title">
           <string>Manage Users</string>
          </property>
@@ -1951,6 +2021,10 @@ Information</string>
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="title">
           <string>Statistics</string>
          </property>
@@ -1961,6 +2035,10 @@ Information</string>
              <font>
               <pointsize>9</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: white; /* Set the text color to white */
+</string>
             </property>
             <property name="text">
              <string>statistics</string>
@@ -1994,6 +2072,10 @@ Information</string>
            <height>100</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
+         </property>
          <property name="text">
           <string>Admin Information will be placed here.</string>
          </property>
@@ -2012,6 +2094,10 @@ Information</string>
            <pointsize>14</pointsize>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; /* Set the text color to white */
+</string>
          </property>
          <property name="text">
           <string>Admin Information</string>
@@ -2063,6 +2149,10 @@ Information</string>
                <bold>true</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">color: white; /* Set the text color to white */
+</string>
+             </property>
              <property name="text">
               <string>Advanced</string>
              </property>
@@ -2110,6 +2200,10 @@ Information</string>
                <bold>true</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">color: white; /* Set the text color to white */
+</string>
+             </property>
              <property name="text">
               <string>Introductory</string>
              </property>
@@ -2151,6 +2245,10 @@ Information</string>
                <bold>true</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">color: white; /* Set the text color to white */
+</string>
+             </property>
              <property name="text">
               <string>Intermediate</string>
              </property>
@@ -2180,6 +2278,10 @@ Information</string>
            </item>
            <item row="11" column="0">
             <widget class="QProgressBar" name="beginProgress">
+             <property name="styleSheet">
+              <string notr="true">color: white; /* Set the text color to white */
+</string>
+             </property>
              <property name="value">
               <number>0</number>
              </property>
@@ -2200,6 +2302,10 @@ Information</string>
            </item>
            <item row="11" column="1">
             <widget class="QProgressBar" name="interProgress">
+             <property name="styleSheet">
+              <string notr="true">color: white; /* Set the text color to white */
+</string>
+             </property>
              <property name="value">
               <number>0</number>
              </property>
@@ -2239,6 +2345,10 @@ Information</string>
                <bold>true</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">color: white; /* Set the text color to white */
+</string>
+             </property>
              <property name="text">
               <string>Module Home - Are you ready to learn?</string>
              </property>
@@ -2262,6 +2372,10 @@ Information</string>
            </item>
            <item row="11" column="2">
             <widget class="QProgressBar" name="advProgress">
+             <property name="styleSheet">
+              <string notr="true">color: white; /* Set the text color to white */
+</string>
+             </property>
              <property name="value">
               <number>0</number>
              </property>
@@ -4920,7 +5034,7 @@ By mastering advanced technical analysis tools like Fibonacci retracement, advan
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>591</width>
+                    <width>761</width>
                     <height>804</height>
                    </rect>
                   </property>
@@ -6285,7 +6399,7 @@ Effective portfolio management involves strategic asset allocation, regular reba
                    <rect>
                     <x>0</x>
                     <y>0</y>
-                    <width>679</width>
+                    <width>761</width>
                     <height>804</height>
                    </rect>
                   </property>

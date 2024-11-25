@@ -104,6 +104,10 @@ private slots:
 
     void on_markUncompletedButton_clicked();
 
+    void on_backButton_4_clicked();
+
+    void on_darkMode_clicked();
+
 private:
     Dict dictionary;
 

@@ -19,6 +19,29 @@ Widget::Widget(QWidget *parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
+
+    this->setStyleSheet(R"(
+        QWidget {
+            background-color: #2B2B2B; /* Dark grey background */
+        }
+
+        QPushButton {
+            border: 2px solid purple;
+            border-radius: 5px;
+            color: white;
+            background-color: transparent;
+        }
+
+        QPushButton:hover {
+            background-color: purple;
+            color: white;
+        }
+
+        QPushButton:pressed {
+            background-color: #4B0082;
+        }
+    )");
+
     ui->stackedWidget->setCurrentIndex(0);
     QApplication::setPalette(QApplication::style()->standardPalette());
     qApp->setStyleSheet("");
@@ -858,8 +881,8 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
 {
     if (arg1 == Qt::Checked) {
         QPalette darkPalette;
-        darkPalette.setColor(QPalette::Window, QColor(53, 53, 53));
-        darkPalette.setColor(QPalette::WindowText, Qt::white);
+        darkPalette.setColor(QPalette::Window, QColor(53, 53, 53)); // Dark grey
+        darkPalette.setColor(QPalette::WindowText, Qt::white);      // Text white
         darkPalette.setColor(QPalette::Base, QColor(25, 25, 25));
         darkPalette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
         darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
@@ -876,10 +899,27 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
 
         qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
     } else {
-        QApplication::setPalette(QApplication::style()->standardPalette());
-        qApp->setStyleSheet("");
+        QPalette lightPalette;
+        lightPalette.setColor(QPalette::Window, Qt::white);           // Set background to white
+        lightPalette.setColor(QPalette::WindowText, Qt::black);       // Set text to black
+        lightPalette.setColor(QPalette::Base, Qt::white);
+        lightPalette.setColor(QPalette::AlternateBase, QColor(240, 240, 240));
+        lightPalette.setColor(QPalette::ToolTipBase, Qt::black);
+        lightPalette.setColor(QPalette::ToolTipText, Qt::white);
+        lightPalette.setColor(QPalette::Text, Qt::black);
+        lightPalette.setColor(QPalette::Button, Qt::white);
+        lightPalette.setColor(QPalette::ButtonText, Qt::black);
+        lightPalette.setColor(QPalette::BrightText, Qt::red);
+        lightPalette.setColor(QPalette::Link, QColor(0, 0, 255));
+        lightPalette.setColor(QPalette::Highlight, QColor(0, 120, 215));
+        lightPalette.setColor(QPalette::HighlightedText, Qt::white);
+
+        QApplication::setPalette(lightPalette);
+
+        qApp->setStyleSheet(""); // Clear any dark mode-specific styles
     }
 }
+
 
 
 void Widget::on_emailChange_clicked()
@@ -1500,5 +1540,17 @@ void Widget::on_spBackButton_clicked()
 void Widget::on_assignBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->teacherHome));
+}
+
+
+void Widget::on_backButton_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+}
+
+
+void Widget::on_darkMode_clicked()
+{
+
 }
 
