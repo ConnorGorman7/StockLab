@@ -78,6 +78,15 @@ private slots:
 
     void on_emailChange_clicked();
 
+    void on_passwordUp_clicked();
+
+    void on_viewAllUsersButton_clicked();
+    void on_addUserButton_clicked();
+    void on_editUserButton_clicked();
+    void on_deleteUserButton_clicked();
+
+    void on_darkMode_clicked();
+
     void on_getDefinitionButton_clicked();
 
     void on_dictionary_clicked();
@@ -96,8 +105,12 @@ private:
 private:
     Ui::Widget *ui;
     void setupReturnButtonConnections();
+    void updateStatistics();
     QString generateRandomAdminInfo();
 };
+
+
+
 
 
 #endif // WIDGET_H

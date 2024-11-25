@@ -10,6 +10,9 @@
 #include <QInputDialog>
 #include <QMessageBox>
 #include <QRegularExpression>
+#include <QDialog>
+#include <QTableWidget>
+#include <QVBoxLayout>
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -17,6 +20,8 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 
     setupReturnButtonConnections();
 }
@@ -44,41 +49,54 @@ void Widget::setupReturnButtonConnections()
 void Widget::on_loginButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->loginPage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_backButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_backButton_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_backButton_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_regStuButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentReg));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_regTeachButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->teacherReg));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 
 void Widget::on_registerStudentBtn_clicked()
 {
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QString studentIDInput = ui->studentIDinput->text().trimmed(); // Bottom input field
     if (studentIDInput.isEmpty()) {
         ui->confirmOutput->setPlainText("Student ID is empty. Please enter a valid Student ID.");
@@ -106,6 +124,8 @@ void Widget::on_registerStudentBtn_clicked()
 
     QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
     QFile file(filePath);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 
     QString email = ui->studentEmailTE->toPlainText();
 
@@ -149,8 +169,10 @@ void Widget::on_registerStudentBtn_clicked()
 
 void Widget::on_registerTeacherBtn_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 
     QString email = ui->teachEmailTE->toPlainText();
 
@@ -194,8 +216,10 @@ void Widget::on_registerTeacherBtn_clicked()
 
 void Widget::on_loginScreenButton_clicked()
 {
-    QString filePath = "C:\\Users\\benbe\\OneDrive\\Elec376_F24_group2\\users.txt";
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 
     QString email = ui->loginEmailTE->toPlainText();
     QString password = ui->loginPwTE->toPlainText();
@@ -249,122 +273,166 @@ void Widget::on_loginScreenButton_clicked()
 void Widget::on_logoutButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->welcomePage));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_menu_clicked()
 {
     ui->moduleStack->setCurrentIndex(0);
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_modules_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->moduleWidget));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
     ui->moduleStack->setCurrentIndex(0);
 }
 
 void Widget::on_RETURNBTN_clicked()
 {
     ui->moduleStack->setCurrentIndex(0);
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod1_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module1));
     ui->mod1stack->setCurrentIndex(ui->mod1stack->indexOf(ui->mod1content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod2_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module2));
     ui->mod2stack->setCurrentIndex(ui->mod2stack->indexOf(ui->mod2content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod3_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module3));
     ui->mod3stack->setCurrentIndex(ui->mod3stack->indexOf(ui->mod3content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod4_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module4));
     ui->mod4stack->setCurrentIndex(ui->mod4stack->indexOf(ui->mod4content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod5_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module5));
     ui->mod5stack->setCurrentIndex(ui->mod5stack->indexOf(ui->mod5content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod6_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module6));
     ui->mod6stack->setCurrentIndex(ui->mod6stack->indexOf(ui->mod6content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod7_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module7));
     ui->mod7stack->setCurrentIndex(ui->mod7stack->indexOf(ui->mod7content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod8_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module8));
     ui->mod8stack->setCurrentIndex(ui->mod8stack->indexOf(ui->mod8content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_mod9_clicked()
 {
     ui->moduleStack->setCurrentIndex(ui->moduleStack->indexOf(ui->module9));
     ui->mod9stack->setCurrentIndex(ui->mod9stack->indexOf(ui->mod9content));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton1_clicked()
 {
     ui->mod1stack->setCurrentIndex(ui->mod1stack->indexOf(ui->mod1quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton2_clicked()
 {
     ui->mod2stack->setCurrentIndex(ui->mod2stack->indexOf(ui->mod2quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton3_clicked()
 {
     ui->mod3stack->setCurrentIndex(ui->mod3stack->indexOf(ui->mod3quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton4_clicked()
 {
     ui->mod4stack->setCurrentIndex(ui->mod4stack->indexOf(ui->mod4quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton5_clicked()
 {
     ui->mod5stack->setCurrentIndex(ui->mod5stack->indexOf(ui->mod5quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton6_clicked()
 {
     ui->mod6stack->setCurrentIndex(ui->mod6stack->indexOf(ui->mod6quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton7_clicked()
 {
     ui->mod7stack->setCurrentIndex(ui->mod7stack->indexOf(ui->mod7quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton8_clicked()
 {
     ui->mod8stack->setCurrentIndex(ui->mod8stack->indexOf(ui->mod8quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::on_quizButton9_clicked()
 {
     ui->mod9stack->setCurrentIndex(ui->mod9stack->indexOf(ui->mod9quiz));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
 
 void Widget::resetQuiz(QWidget *quizContainer)
@@ -671,13 +739,103 @@ void Widget::on_submitQuiz9_clicked()
 
 void Widget::on_adminInfo_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->adminPage));
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+
+    bool ok;
+    QString email = QInputDialog::getText(this, tr("Admin Login"), tr("Enter Teacher Email:"), QLineEdit::Normal, "", &ok);
+    if (!ok || email.isEmpty()) {
+        QMessageBox::warning(this, tr("Access Denied"), tr("Email input canceled."));
+        return;
+    }
+
+    QString password = QInputDialog::getText(this, tr("Admin Login"), tr("Enter Teacher Password:"), QLineEdit::Password, "", &ok);
+    if (!ok || password.isEmpty()) {
+        QMessageBox::warning(this, tr("Access Denied"), tr("Password input canceled."));
+        return;
+    }
+
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QTextStream in(&file);
+    bool accessGranted = false;
+
+    while (!in.atEnd()) {
+        QString name = in.readLine();
+        QString fileEmail = in.readLine();
+        QString filePassword = in.readLine();
+        QString role = in.readLine();
+        in.readLine();
+
+        if (fileEmail == email && filePassword == password && role == "Teacher") {
+            accessGranted = true;
+            break;
+        }
+    }
+
+    file.close();
+
+    if (accessGranted) {
+        QMessageBox::information(this, tr("Access Granted"), tr("Welcome to the Admin Page."));
+        updateStatistics();
+        ui->stackedWidget->setCurrentWidget(ui->adminPage);
+        QApplication::setPalette(QApplication::style()->standardPalette());
+        qApp->setStyleSheet("");
+    } else {
+        QMessageBox::critical(this, tr("Access Denied"), tr("Invalid credentials or not a teacher. Access denied."));
+    }
 }
+
 
 void Widget::on_adminInfoBackButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+    ui->stackedWidget->setCurrentWidget(ui->studentHome);
+
+    QApplication::setPalette(QApplication::style()->standardPalette());
+    qApp->setStyleSheet("");
 }
+
+void Widget::updateStatistics()
+{
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QTextStream in(&file);
+    int studentCount = 0;
+    int teacherCount = 0;
+
+    while (!in.atEnd()) {
+        QString line = in.readLine().trimmed();
+        if (line == "Student") {
+            studentCount++;
+        } else if (line == "Teacher") {
+            teacherCount++;
+        }
+    }
+
+    file.close();
+
+    QString statistics = QString(
+                             "Total Registered Users: %1\n"
+                             "Students: %2\n"
+                             "Teachers: %3\n"
+                             ).arg(studentCount + teacherCount).arg(studentCount).arg(teacherCount);
+
+    if (ui->statisticsLabel) { // Check if QLabel exists to avoid crashing
+        ui->statisticsLabel->setText(statistics);
+    } else {
+        QMessageBox::critical(this, tr("Error"), tr("Statistics label not found in the UI."));
+    }
+}
+
 
 void Widget::on_settings_clicked()
 {
@@ -687,6 +845,7 @@ void Widget::on_settings_clicked()
 void Widget::on_settingBackButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
+
 }
 
 void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
@@ -708,13 +867,14 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
         darkPalette.setColor(QPalette::HighlightedText, Qt::black);
 
         QApplication::setPalette(darkPalette);
-          qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
+
+        qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
     } else {
         QApplication::setPalette(QApplication::style()->standardPalette());
         qApp->setStyleSheet("");
     }
-
 }
+
 
 void Widget::on_emailChange_clicked()
 {
@@ -946,5 +1106,375 @@ void Widget::on_markUncompletedButton_clicked()
     }
 
     ui->lineEdit->clear();
+}
+
+
+void Widget::on_passwordUp_clicked()
+{
+    if (ui->passwordUp->isChecked()) {
+        bool ok;
+        QString newPassword = QInputDialog::getText(this, tr("Update Password"),
+                                                    tr("Enter your new password:"), QLineEdit::Password,
+                                                    "", &ok);
+
+        if (ok && !newPassword.isEmpty()) {
+            QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+            QFile file(filePath);
+
+            if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+                ui->passwordUp->setChecked(false);
+                return;
+            }
+
+            QTextStream in(&file);
+            QString currentEmail = ui->loginEmailTE->toPlainText();
+            QStringList lines;
+            bool passwordUpdated = false;
+
+            while (!in.atEnd()) {
+                QString line = in.readLine();
+                lines.append(line);
+
+                // When the current email is found
+                if (line == currentEmail) {
+                    QString currentPassword = in.readLine(); // Read the current password
+                    QString userType = in.readLine();        // Read the "Student" or "Teacher" placeholder
+
+                    // Append updated password and placeholder
+                    lines.append(newPassword); // Update the password
+                    lines.append(userType);    // Append the user type
+                    passwordUpdated = true;
+
+                    // Skip the old password and user type
+                }
+            }
+
+            file.close();
+
+            if (!passwordUpdated) {
+                QMessageBox::warning(this, tr("Password Update Failed"), tr("The current user was not found in the file."));
+                ui->passwordUp->setChecked(false);
+                return;
+            }
+
+            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+                QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+                ui->passwordUp->setChecked(false);
+                return;
+            }
+
+            QTextStream out(&file);
+            for (const QString &line : lines) {
+                out << line << "\n";
+            }
+
+            file.close();
+
+            QMessageBox::information(this, tr("Success"), tr("Your password has been successfully updated."));
+        } else if (ok && newPassword.isEmpty()) {
+            QMessageBox::warning(this, tr("Empty Input"), tr("No password was entered. Please try again."));
+        }
+
+        ui->passwordUp->setChecked(false);
+    }
+}
+
+void Widget::on_viewAllUsersButton_clicked()
+{
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QDialog usersDialog(this);
+    usersDialog.setWindowTitle("All Registered Users");
+
+    QTableWidget *table = new QTableWidget(&usersDialog);
+    table->setColumnCount(4);
+    table->setHorizontalHeaderLabels({"Name", "Email", "Password", "Role"});
+    table->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    table->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    QTextStream in(&file);
+    int row = 0;
+
+    while (!in.atEnd()) {
+        QString name = in.readLine();
+        QString email = in.readLine();
+        QString password = in.readLine();
+        QString role = in.readLine();
+        in.readLine();
+
+        table->insertRow(row);
+        table->setItem(row, 0, new QTableWidgetItem(name));
+        table->setItem(row, 1, new QTableWidgetItem(email));
+        table->setItem(row, 2, new QTableWidgetItem(password));
+        table->setItem(row, 3, new QTableWidgetItem(role));
+        row++;
+    }
+
+    file.close();
+
+    QVBoxLayout *layout = new QVBoxLayout(&usersDialog);
+    layout->addWidget(table);
+    usersDialog.setLayout(layout);
+
+    usersDialog.exec();
+}
+
+void Widget::on_addUserButton_clicked()
+{
+    bool ok;
+    QString name = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's name:"), QLineEdit::Normal, "", &ok);
+    if (!ok || name.isEmpty()) return;
+
+    QString email = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's email:"), QLineEdit::Normal, "", &ok);
+    if (!ok || email.isEmpty()) return;
+
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QTextStream in(&file);
+    bool emailExists = false;
+    while (!in.atEnd()) {
+        QString existingName = in.readLine();
+        QString existingEmail = in.readLine();
+        in.readLine();
+        in.readLine();
+        in.readLine();
+
+        if (existingEmail == email) {
+            emailExists = true;
+            break;
+        }
+    }
+    file.close();
+
+    if (emailExists) {
+        QMessageBox::warning(this, tr("Error"), tr("This email already exists."));
+        return;
+    }
+
+    QString password = QInputDialog::getText(this, tr("Add User"), tr("Enter the user's password:"), QLineEdit::Password, "", &ok);
+    if (!ok || password.isEmpty()) return;
+
+    QStringList roles = {"Student", "Teacher"};
+    QString role = QInputDialog::getItem(this, tr("Add User"), tr("Select the user's role:"), roles, 0, false, &ok);
+    if (!ok) return;
+
+    if (!file.open(QIODevice::Append | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+        return;
+    }
+
+    QTextStream out(&file);
+    out << name << "\n" << email << "\n" << password << "\n" << role << "\n\n";
+    file.close();
+
+    QMessageBox::information(this, tr("Success"), tr("User has been successfully added."));
+    updateStatistics();
+}
+
+void Widget::on_editUserButton_clicked()
+{
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QDialog usersDialog(this);
+    usersDialog.setWindowTitle("Select User to Edit");
+
+    QTableWidget *table = new QTableWidget(&usersDialog);
+    table->setColumnCount(4);
+    table->setHorizontalHeaderLabels({"Name", "Email", "Password", "Role"});
+    table->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    QTextStream in(&file);
+    int row = 0;
+
+    QStringList lines;
+    while (!in.atEnd()) {
+        QString name = in.readLine();
+        QString email = in.readLine();
+        QString password = in.readLine();
+        QString role = in.readLine();
+        in.readLine();
+
+        lines << name << email << password << role << "";
+
+        table->insertRow(row);
+        table->setItem(row, 0, new QTableWidgetItem(name));
+        table->setItem(row, 1, new QTableWidgetItem(email));
+        table->setItem(row, 2, new QTableWidgetItem(password));
+        table->setItem(row, 3, new QTableWidgetItem(role));
+        row++;
+    }
+    file.close();
+
+    QVBoxLayout *layout = new QVBoxLayout(&usersDialog);
+    layout->addWidget(table);
+
+    QPushButton *editButton = new QPushButton("Edit Selected User");
+    layout->addWidget(editButton);
+
+    usersDialog.setLayout(layout);
+
+    connect(editButton, &QPushButton::clicked, &usersDialog, [&]() {
+        int selectedRow = table->currentRow();
+        if (selectedRow < 0) {
+            QMessageBox::warning(&usersDialog, tr("Error"), tr("No user selected."));
+            return;
+        }
+
+        QString name = table->item(selectedRow, 0)->text();
+        QString email = table->item(selectedRow, 1)->text();
+        QString password = table->item(selectedRow, 2)->text();
+        QString role = table->item(selectedRow, 3)->text();
+
+        bool ok;
+        name = QInputDialog::getText(&usersDialog, tr("Edit User"), tr("Name:"), QLineEdit::Normal, name, &ok);
+        if (!ok || name.isEmpty()) return;
+
+        email = QInputDialog::getText(&usersDialog, tr("Edit User"), tr("Email:"), QLineEdit::Normal, email, &ok);
+        if (!ok || email.isEmpty()) return;
+
+        password = QInputDialog::getText(&usersDialog, tr("Edit User"), tr("Password:"), QLineEdit::Normal, password, &ok);
+        if (!ok || password.isEmpty()) return;
+
+        role = QInputDialog::getItem(&usersDialog, tr("Edit User"), tr("Role:"), {"Student", "Teacher"}, role == "Teacher" ? 1 : 0, false, &ok);
+        if (!ok) return;
+
+        table->setItem(selectedRow, 0, new QTableWidgetItem(name));
+        table->setItem(selectedRow, 1, new QTableWidgetItem(email));
+        table->setItem(selectedRow, 2, new QTableWidgetItem(password));
+        table->setItem(selectedRow, 3, new QTableWidgetItem(role));
+
+        int lineIndex = selectedRow * 5;
+        lines[lineIndex] = name;
+        lines[lineIndex + 1] = email;
+        lines[lineIndex + 2] = password;
+        lines[lineIndex + 3] = role;
+
+        QMessageBox::information(&usersDialog, tr("Success"), tr("User details updated."));
+    });
+
+    usersDialog.exec();
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+        return;
+    }
+
+    QTextStream out(&file);
+    for (const QString &line : lines) {
+        out << line << "\n";
+    }
+    file.close();
+
+    QMessageBox::information(this, tr("Success"), tr("User data has been updated."));
+    updateStatistics();
+}
+
+void Widget::on_deleteUserButton_clicked()
+{
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for reading."));
+        return;
+    }
+
+    QDialog usersDialog(this);
+    usersDialog.setWindowTitle("Select User to Delete");
+
+    QTableWidget *table = new QTableWidget(&usersDialog);
+    table->setColumnCount(4);
+    table->setHorizontalHeaderLabels({"Name", "Email", "Password", "Role"});
+    table->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    QTextStream in(&file);
+    int row = 0;
+
+    QStringList lines;
+    while (!in.atEnd()) {
+        QString name = in.readLine();
+        QString email = in.readLine();
+        QString password = in.readLine();
+        QString role = in.readLine();
+        in.readLine();
+
+        lines << name << email << password << role << "";
+
+        table->insertRow(row);
+        table->setItem(row, 0, new QTableWidgetItem(name));
+        table->setItem(row, 1, new QTableWidgetItem(email));
+        table->setItem(row, 2, new QTableWidgetItem(password));
+        table->setItem(row, 3, new QTableWidgetItem(role));
+        row++;
+    }
+    file.close();
+
+    QVBoxLayout *layout = new QVBoxLayout(&usersDialog);
+    layout->addWidget(table);
+
+    QPushButton *deleteButton = new QPushButton("Delete Selected User");
+    layout->addWidget(deleteButton);
+
+    usersDialog.setLayout(layout);
+
+    connect(deleteButton, &QPushButton::clicked, &usersDialog, [&]() {
+        int selectedRow = table->currentRow();
+        if (selectedRow < 0) {
+            QMessageBox::warning(&usersDialog, tr("Error"), tr("No user selected."));
+            return;
+        }
+
+        int ret = QMessageBox::warning(&usersDialog, tr("Delete User"),
+                                       tr("Are you sure you want to delete this user?"),
+                                       QMessageBox::Yes | QMessageBox::No);
+        if (ret == QMessageBox::No) return;
+
+        table->removeRow(selectedRow);
+        int lineIndex = selectedRow * 5;
+        for (int i = 0; i < 5; ++i) {
+            lines.removeAt(lineIndex);
+        }
+
+        QMessageBox::information(&usersDialog, tr("Success"), tr("User deleted."));
+    });
+
+    usersDialog.exec();
+
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the file for writing."));
+        return;
+    }
+
+    QTextStream out(&file);
+    for (const QString &line : lines) {
+        out << line << "\n";
+    }
+    file.close();
+
+    QMessageBox::information(this, tr("Success"), tr("User data has been updated."));
+    updateStatistics();
+}
+
+void Widget::on_darkMode_clicked()
+{
+
 }
 
