@@ -903,8 +903,7 @@ public:
         QFont font3;
         font3.setPointSize(12);
         appPreference->setFont(font3);
-        appPreference->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
-""));
+        appPreference->setStyleSheet(QString::fromUtf8(""));
         gridLayout_31 = new QGridLayout(appPreference);
         gridLayout_31->setObjectName("gridLayout_31");
         darkMode = new QCheckBox(appPreference);
@@ -912,16 +911,14 @@ public:
         QFont font4;
         font4.setPointSize(9);
         darkMode->setFont(font4);
-        darkMode->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
-""));
+        darkMode->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout_31->addWidget(darkMode, 0, 0, 1, 1);
 
         notification = new QCheckBox(appPreference);
         notification->setObjectName("notification");
         notification->setFont(font4);
-        notification->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
-""));
+        notification->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout_31->addWidget(notification, 1, 0, 1, 1);
 
@@ -931,23 +928,20 @@ public:
         accSettings = new QGroupBox(settingPage);
         accSettings->setObjectName("accSettings");
         accSettings->setFont(font3);
-        accSettings->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
-""));
+        accSettings->setStyleSheet(QString::fromUtf8(""));
         gridLayout_26 = new QGridLayout(accSettings);
         gridLayout_26->setObjectName("gridLayout_26");
         emailChange = new QCheckBox(accSettings);
         emailChange->setObjectName("emailChange");
         emailChange->setFont(font4);
-        emailChange->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
-""));
+        emailChange->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout_26->addWidget(emailChange, 1, 0, 1, 1);
 
         passwordUp = new QCheckBox(accSettings);
         passwordUp->setObjectName("passwordUp");
         passwordUp->setFont(font4);
-        passwordUp->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
-""));
+        passwordUp->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout_26->addWidget(passwordUp, 2, 0, 1, 1);
 
@@ -975,8 +969,7 @@ public:
         font5.setBold(true);
         titleSetting->setFont(font5);
         titleSetting->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
-        titleSetting->setStyleSheet(QString::fromUtf8("color: white; /* Set the text color to white */\n"
-""));
+        titleSetting->setStyleSheet(QString::fromUtf8(""));
         titleSetting->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_24->addWidget(titleSetting, 1, 1, 1, 1);

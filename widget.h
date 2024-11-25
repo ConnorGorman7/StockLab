@@ -110,6 +110,8 @@ private slots:
 
     void on_studentComboBox_activated(int index);
 
+    void on_accSettings_clicked();
+
 private:
     Dict dictionary;
 

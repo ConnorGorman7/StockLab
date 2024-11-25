@@ -47,13 +47,32 @@ Widget::Widget(QWidget *parent)
 
     setupReturnButtonConnections();
 
-    // Populate the student combo box
-    ui->studentComboBox->addItem("Student 1");
-    ui->studentComboBox->addItem("Student 2");
+    // Load students dynamically from users.txt
+    QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
+    QFile file(filePath);
 
-    // Connect the dark mode state change
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open users.txt for reading."));
+    } else {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            QString name = in.readLine();       // Read name
+            QString email = in.readLine();     // Skip email
+            QString password = in.readLine();  // Skip password
+            QString role = in.readLine();      // Read role
+            in.readLine();                     // Skip empty line
+
+            if (role == "Student") {
+                ui->studentComboBox->addItem(name);
+            }
+        }
+        file.close();
+    }
+
+    // Connect dark mode toggle to the slot
     connect(ui->darkMode, &QCheckBox::checkStateChanged, this, &Widget::on_darkMode_checkStateChanged);
 }
+
 
 
 Widget::~Widget()
@@ -1515,6 +1534,7 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
         this->setStyleSheet(R"(
             QWidget {
                 background-color: #2B2B2B; /* Dark grey background */
+                color: white; /* Default text color */
             }
 
             QPushButton {
@@ -1532,12 +1552,17 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
             QPushButton:pressed {
                 background-color: #4B0082;
             }
+
+            QLabel, QCheckBox {
+                color: white; /* White text for labels and checkboxes */
+            }
         )");
     } else if (arg1 == Qt::Unchecked) {
         // Light Mode
         this->setStyleSheet(R"(
             QWidget {
                 background-color: #FFFFFF; /* White background */
+                color: black; /* Default text color */
             }
 
             QPushButton {
@@ -1555,6 +1580,11 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
             QPushButton:pressed {
                 background-color: #87CEEB;
             }
+
+            QLabel, QCheckBox {
+                color: black; /* Black text for labels and checkboxes */
+            }
         )");
     }
 }
+
