@@ -34,7 +34,6 @@ private slots:
     void on_mod3_clicked();
     void on_mod4_clicked();
     void on_mod5_clicked();
-    void on_pushButton_clicked();
     void on_RETURNBTN_clicked();
     void on_menu_clicked();
     void on_mod6_clicked();
@@ -62,7 +61,7 @@ private slots:
     void on_submitQuiz9_clicked();
 
     // New slots for Admin Information
-    void on_adminInfoButton_clicked();
+    // void on_adminInfoButton_clicked();
     void on_adminInfoBackButton_clicked();
 
     void on_adminInfo_clicked();
@@ -73,7 +72,7 @@ private slots:
 
     void on_darkMode_checkStateChanged(const Qt::CheckState &arg1);
 
-    void on_passUpdate_clicked();
+    // void on_passUpdate_clicked();
 
     void on_emailChange_clicked();
 
@@ -84,7 +83,13 @@ private slots:
     void on_editUserButton_clicked();
     void on_deleteUserButton_clicked();
 
-    void on_darkMode_clicked();
+    void on_m1_button_clicked();
+
+    void on_assignHwButton_clicked();
+
+    void on_spBackButton_clicked();
+
+    void on_assignBackButton_clicked();
 
 private:
     Ui::Widget *ui;
