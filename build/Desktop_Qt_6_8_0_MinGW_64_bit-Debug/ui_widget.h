@@ -1092,10 +1092,10 @@ public:
         checkBox_5->setFont(font5);
         pushButton_2 = new QPushButton(groupBox);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(20, 310, 75, 24));
+        pushButton_2->setGeometry(QRect(20, 310, 81, 24));
         pushButton_3 = new QPushButton(groupBox);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(20, 360, 75, 24));
+        pushButton_3->setGeometry(QRect(20, 360, 81, 24));
 
         gridLayout_24->addWidget(groupBox, 2, 3, 2, 1);
 
@@ -3961,7 +3961,7 @@ public:
 
         retranslateUi(Widget);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(1);
         moduleStack->setCurrentIndex(0);
 
 
@@ -4007,8 +4007,8 @@ public:
         checkBox_3->setText(QCoreApplication::translate("Widget", "Media Quality", nullptr));
         checkBox_4->setText(QCoreApplication::translate("Widget", "Language", nullptr));
         checkBox_5->setText(QCoreApplication::translate("Widget", "Privacy", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Widget", "PushButton", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("Widget", "PushButton", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("Widget", "Add Account", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("Widget", "Log Out", nullptr));
         backButton->setText(QCoreApplication::translate("Widget", "Go back", nullptr));
         loginEmailTE->setHtml(QCoreApplication::translate("Widget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"

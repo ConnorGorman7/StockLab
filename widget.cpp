@@ -1025,7 +1025,7 @@ void Widget::on_getDefinitionButton_clicked()
     for (const auto &entry : dictionary.dict) {
         for (const auto &def : entry.second) {
             if (dictionary.students[studentID].completedModules.find(def.module) != dictionary.students[studentID].completedModules.end()) {
-                definitions += QString::fromStdString(entry.first) + ": " + QString::fromStdString(def.meaning) + " ";
+                definitions += QString::fromStdString(entry.first) + ": " + QString::fromStdString(def.meaning) + "\n";
             }
         }
     }

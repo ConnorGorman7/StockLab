@@ -74,7 +74,7 @@ QPushButton:pressed {
       <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="welcomePage">
       <property name="font">
