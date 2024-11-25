@@ -49,7 +49,6 @@ Widget::Widget(QWidget *parent)
 
     setupReturnButtonConnections();
 
-    // Load students dynamically from users.txt
     QString filePath = "C:/Users/trist/OneDrive/Documents/376 sprint 1/code/Elec376_F24_group2/users.txt";
     QFile file(filePath);
 
@@ -58,11 +57,11 @@ Widget::Widget(QWidget *parent)
     } else {
         QTextStream in(&file);
         while (!in.atEnd()) {
-            QString name = in.readLine();       // Read name
-            QString email = in.readLine();     // Skip email
-            QString password = in.readLine();  // Skip password
-            QString role = in.readLine();      // Read role
-            in.readLine();                     // Skip empty line
+            QString name = in.readLine();
+            QString email = in.readLine();
+            QString password = in.readLine();
+            QString role = in.readLine();
+            in.readLine();
 
             if (role == "Student") {
                 ui->studentComboBox->addItem(name);
@@ -71,9 +70,17 @@ Widget::Widget(QWidget *parent)
         file.close();
     }
 
-    // Connect dark mode toggle to the slot
+    ui->comboBox_2->addItem("English");
+    ui->comboBox_2->addItem("Spanish");
+    ui->comboBox_2->addItem("French");
+
+    ui->comboBox_2->setCurrentIndex(0);
+
     connect(ui->darkMode, &QCheckBox::checkStateChanged, this, &Widget::on_darkMode_checkStateChanged);
+
+    connect(ui->comboBox_2, &QComboBox::activated, this, &Widget::on_comboBox_2_activated);
 }
+
 
 
 
@@ -269,7 +276,12 @@ void Widget::on_helpButton_clicked()
 {
     QString email = "mailto:tradelab@helpsupport.com";
     QUrl emailUrl(email);
+
+    if (!QDesktopServices::openUrl(emailUrl)) {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open email client."));
+    }
 }
+
 
 void Widget::on_loginScreenButton_clicked()
 {
@@ -1598,5 +1610,26 @@ void Widget::on_darkMode_checkStateChanged(const Qt::CheckState &arg1)
 void Widget::on_pushButton_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->loginPage));
+}
+
+
+void Widget::on_comboBox_2_activated(int index)
+{
+    QString selectedLanguage = ui->comboBox_2->itemText(index);
+    QMessageBox::information(this, tr("Language Selected"), tr("You selected: %1").arg(selectedLanguage));
+}
+
+
+
+void Widget::on_pushButton_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->stockPage));
+
+}
+
+
+void Widget::on_pushButton_5_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(ui->stackedWidget->indexOf(ui->studentHome));
 }
 
